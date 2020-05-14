@@ -3,5 +3,5 @@
 Design interface for touchscreens
 
 ## Hardware
-BrightSign Expanded I/O Player 
+BrightSign XT1144 Expanded I/O Player.  
 Touchscreen (portrait display)
