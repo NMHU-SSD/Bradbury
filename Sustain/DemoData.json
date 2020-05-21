@@ -1,0 +1,13 @@
+{
+    "contents":[
+        {
+            "title": "Title from data",
+            "body": "fjfjajf jfljfoein oivijfaoi ofijaieonfjfjajf jfljfoein oivijfaoi ofijaieonfjfjajf jfljfoein oivijfaoi ofijaieonfjfjajf jfljfoein oivijfaoi ofijaieon",
+            "featuredMedia": {
+				"src": "https://picsum.photos/500",
+				"caption": "placeholder image"
+        }
+        }
+        
+    ]
+}
