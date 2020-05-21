@@ -1,6 +1,6 @@
 //routes
 var routes = [
-    {path:'/', component: ComponentBox}
+    {path:'/', component: CarouselComponent}
 ];
 
 //router
