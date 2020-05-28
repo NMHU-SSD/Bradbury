@@ -19,7 +19,7 @@
 	<div id="app">	
 		<main>
             <div v-for="(zone,index) in zones">
-				<carouselComponent v-bind:slides="zone.slides" :id="index"></carouselComponent>
+				<carousel-component v-bind:slides="zone.slides" :id="index"></carousel-component>
             </div>
 		</main>
 	</div>
@@ -42,8 +42,6 @@
 	<!-- Vue Components -->
 	<script src="/components/CarouselComponent.vue.js"></script>
 	
-	<!-- Vue Pages -->
-	<script src="/pages/Page.vue.js"></script>
 	
 	<!-- Vue App / Router -->
 	<script src="app.js"></script>

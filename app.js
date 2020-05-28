@@ -1,17 +1,16 @@
 //register components
 Vue.component('carouselComponent', CarouselComponent)
 
-
 //Vue
 var app = new Vue({
     el: '#app',
-    router: router,
     data:{
         zones:[]
     },
     mounted: function(){
         this.GetData()
     },
+    
     methods:{
         GetData: function(){
             fetch("./Data.json")
@@ -20,7 +19,8 @@ var app = new Vue({
                 this.zones = data.zones;
                 console.log(data);
             })
-            .catch((error) => {console.error('Error:', error);
+            .catch((error) => {
+                console.error('Error:', error);
             });
         }
     }
