@@ -34,7 +34,7 @@ var CarouselComponent = {
     </div>
   
 
-  <a class="carousel-control-prev" v-if="index " :href="'#carouselMain'+id" role="button" data-slide="prev">
+  <a class="carousel-control-prev" :href="'#carouselMain'+id" role="button" data-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
     <span class="sr-only">Previous</span>
   </a>
