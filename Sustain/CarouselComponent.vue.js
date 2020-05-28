@@ -2,7 +2,7 @@ var CarouselComponent = {
     name: "carouselComponent",
     props: ['contents'],
     template:
-    `<div v-if="contents > 0">
+    `<div v-if="contents.length > 0">
         <div v-for="(content,index) in contents" id="carouselMain" class="carousel slide" data-ride="carousel" data-interval=false>
 
             <div v-for="slide in content" :class="['carousel-item', (index===0 ? 'active' : '')]">

@@ -7,7 +7,8 @@ var TitleComponent={
         }
     },*/
     template:
-    `<div v-for="(content,index) in contents" :id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+    `<div v-if="contents.length > 0">
+    <div v-for="n in contents" :id="['carousel' + n]" class="carousel slide" data-ride="carousel" data-interval=false>
         <div class="carousel-inner">
             
             <div class="carousel-item active">
@@ -41,13 +42,14 @@ var TitleComponent={
         </div>
             
         <!-- Carousel Controls-->
-        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+        <a class="carousel-control-prev" :href="['#carousel' + n]" role="button" data-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="sr-only">Previous</span>
         </a>
-        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+        <a class="carousel-control-next" :href="['#carousel' + n]" role="button" data-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="sr-only">Next</span>
         </a>
+    </div>
     </div>`
 }
