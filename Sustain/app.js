@@ -1,6 +1,6 @@
 //routes
 var routes = [
-    {path:'/', component: CarouselComponent}
+    {path:'/', component: TitleComponent}
 ];
 
 //router
@@ -23,7 +23,8 @@ var app = new Vue({
         GetData: function(){
             fetch("./DemoData.json")
             .then(response => response.json())
-            .then(data =>{this.contents = data.contents; 
+            .then(data =>{this.contents = data.contents;
+                          console.log(data.contents);
             })
             .catch((error) => {console.error('Error:', error);
             });
