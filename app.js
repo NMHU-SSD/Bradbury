@@ -1,5 +1,5 @@
 //register components
-Vue.component('carouselComponent', CarouselComponent)
+Vue.component('carousel-component', CarouselComponent)
 
 //Vue
 var app = new Vue({

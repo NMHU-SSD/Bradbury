@@ -1,5 +1,5 @@
 var CarouselComponent = {
-    name: "carouselComponent",
+    name: "carousel-component",
     props: ['slides', 'id'],
     template:
     `<div :id="'carouselMain'+id" class="carousel slide" data-ride="carousel" >
@@ -7,7 +7,7 @@ var CarouselComponent = {
             <template v-for="(slide,index) in slides">
                 <div :class="['carousel-item', (index==0 ? 'active' : '')]" >
 
-                  <--!<img src="https://picsum.photos/1000" class="d-block w-100" alt="..."> !-->
+                  <!-- <img src="https://picsum.photos/1000" class="d-block w-100" alt="..."> -->
 
                   <div class="carousel-caption">
                     <h5>{{slide.title}}</h5>
