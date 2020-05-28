@@ -9,7 +9,7 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
    
         <!-- CSS --->
-        <link rel="stylesheet" href="DemoStyle.css">
+        <link rel="stylesheet" href="/assets/DemoStyle.css">
 
     <title>Vue Test</title>
   </head>
@@ -18,8 +18,9 @@
   <body>	
 	<div id="app">	
 		<main>
-            
-            <router-view v-bind:contents="contents"></router-view>
+            <div v-for="(zone,index) in zones">
+				<carouselComponent v-bind:slides="zone.slides" :id="index"></carouselComponent>
+            </div>
 		</main>
 	</div>
 
@@ -36,16 +37,13 @@
 	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 	<!-- Vue production version, optimized for size and speed -->
 	<!-- <script src="https://cdn.jsdelivr.net/npm/vue"></script> -->
+
 	
-	<!-- Vue Router -->
-	<script src="https://unpkg.com/vue-router"></script>
-	
-	<!-- App Contnt -->
-	<!-- <script src="data.js"></script> -->
+	<!-- Vue Components -->
+	<script src="/components/CarouselComponent.vue.js"></script>
 	
 	<!-- Vue Pages -->
-	<script src="CarouselComponent.vue.js"></script>
-	<script src="TitleComponent.vue.js"></script>
+	<script src="/pages/Page.vue.js"></script>
 	
 	<!-- Vue App / Router -->
 	<script src="app.js"></script>

@@ -1,30 +1,24 @@
-//routes
-var routes = [
-    {path:'/', component: TitleComponent}
-];
+//register components
+Vue.component('carouselComponent', CarouselComponent)
 
-//router
-var router = new VueRouter({
-    routes: routes,
-    base:'/'
-});
 
 //Vue
 var app = new Vue({
     el: '#app',
     router: router,
     data:{
-        contents:[]
+        zones:[]
     },
     mounted: function(){
         this.GetData()
     },
     methods:{
         GetData: function(){
-            fetch("./DemoData.json")
+            fetch("./Data.json")
             .then(response => response.json())
-            .then(data =>{this.contents = data.contents;
-                          console.log(data.contents);
+            .then(data =>{
+                this.zones = data.zones;
+                console.log(data);
             })
             .catch((error) => {console.error('Error:', error);
             });
