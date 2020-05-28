@@ -15,11 +15,16 @@ var CarouselComponent = {
                         <div class="col">
                             <p>{{slide.body}}</p>
                         </div>
-                        <div class="col">
+                        <div class="col" v-if="slide.featuredMedia">
                             <div class="img-wrapper">
                                 <img :src="slide.featuredMedia.src">
                             </div>
                             <p>{{ slide.featuredMedia.caption }}</p>
+                        </div>
+                        <div class="col-6" v-if="slide.video">
+                            <div class="vid-wrapper">
+				  				<iframe :src="slide.video" frameborder="0" allow="picture-in-picture" allowfullscreen></iframe>
+                            </div>
                         </div>
                     </div>
                   </div>
@@ -29,7 +34,7 @@ var CarouselComponent = {
     </div>
   
 
-<a class="carousel-control-prev" v-if="index " :href="'#carouselMain'+id" role="button" data-slide="prev">
+  <a class="carousel-control-prev" v-if="index " :href="'#carouselMain'+id" role="button" data-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
     <span class="sr-only">Previous</span>
   </a>
