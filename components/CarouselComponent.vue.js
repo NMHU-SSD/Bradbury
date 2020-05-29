@@ -12,7 +12,7 @@ var CarouselComponent = {
         }
     },
     template:
-    `<div :id="'carouselMain'+id" class="carousel slide" data-ride="carousel" data-interval="30000">
+    `<div :id="'carouselMain'+id" class="carousel" data-ride="carousel" data-interval="30000">
         <div class="carousel-inner" :style="{ height: setHeight + 'px' }">
             <template v-for="(slide,index) in slides">
                 <div :class="['carousel-item', (index==0 ? 'active' : '')]" >
