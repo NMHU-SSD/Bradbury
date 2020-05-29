@@ -1,9 +1,19 @@
 var CarouselComponent = {
     name: "carousel-component",
-    props: ['slides', 'id'],
+    props: ['slides', 'id', 'height'],
+    computed: {
+        setHeight: function(){
+            if(this.height){
+                return this.height;
+            }
+            else{
+                return 400;
+            }
+        }
+    },
     template:
-    `<div :id="'carouselMain'+id" class="carousel slide" data-ride="carousel" >
-        <div class="carousel-inner">
+    `<div :id="'carouselMain'+id" class="carousel slide" data-ride="carousel" data-interval="30000">
+        <div class="carousel-inner" :style="{ height: setHeight + 'px' }">
             <template v-for="(slide,index) in slides">
                 <div :class="['carousel-item', (index==0 ? 'active' : '')]" >
 
@@ -11,7 +21,7 @@ var CarouselComponent = {
 
                   <div class="carousel-caption">
                     <h5>{{slide.title}}</h5>
-                    <div class="row">
+                    <div class="row" :style="{ height: setHeight + 'px' }">
                         <div class="col">
                             <p>{{slide.body}}</p>
                         </div>
@@ -19,7 +29,7 @@ var CarouselComponent = {
                             <div class="img-wrapper">
                                 <img :src="slide.featuredMedia.src">
                             </div>
-                            <p>{{ slide.featuredMedia.caption }}</p>
+                            <p class="caption-text">{{ slide.featuredMedia.caption }}</p>
                         </div>
                         <div class="col-6" v-if="slide.video">
                             <div class="vid-wrapper">
