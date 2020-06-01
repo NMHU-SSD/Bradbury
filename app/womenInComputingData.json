@@ -1,0 +1,76 @@
+{
+    "womenComputingData":
+    {
+            "header":"Women in Los Alamos Computing",
+            "slides":
+            [
+                {
+                    "title":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                    "body":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                    "media": { 
+                        "main": "Women%20in%20Computing%20Images/Human%20Computers%20at%20NASA%20public%20domain.jpg",
+                        "minor": "https://picsum.photos/500",
+                        "caption":"NASA computing group circa 1955 using Friden mechanical calculators"
+                    }
+                },
+                {
+                    "title":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
+                    "body":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                    "media": { 
+                        "main": "Women%20in%20Computing%20Images/001%20MANIAC%20II%201958.jpg",
+                        "minor": "https://picsum.photos/500"
+                    }
+                },
+                {
+                    "title":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
+                    "body":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.",
+                    "media": { 
+                        "main": "Women%20in%20Computing%20Images/feature15.jpg",
+                        "minor": "https://picsum.photos/500"
+                    }
+                }
+            ]
+    },
+    
+    "buildingFutureData":
+    {
+            "Header":"Header Text Sample",
+            "slides":
+            [
+                {
+                    "title":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Magna eget est lorem ipsum dolor sit.",
+                    "media": "Women%20in%20Computing%20Images/WACs%20Los%20Alamos%202.jpg"
+                },
+                {
+                    "title":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.",
+                    "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Aliquam ut porttitor leo a diam sollicitudin tempor id. Amet consectetur adipiscing elit duis tristique.",
+                    "media": "Women%20in%20Computing%20Images/Lois%20Cook%20Leurgans.jpg"
+                },
+                {
+                    "title":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                    "body": "Aliquam ut porttitor leo a diam sollicitudin tempor id. Amet consectetur adipiscing elit duis tristique.",
+                    "media": "Women%20in%20Computing%20Images/001%20Cray%201%201977.jpg"
+                },
+                {
+                    "title":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Aliquam ut porttitor leo a diam sollicitudin tempor id. Amet consectetur adipiscing elit duis tristique.",
+                    "media": "Women%20in%20Computing%20Images/Ann%20Hayes%20LA%2011216%20MS%20page%2024%20(3).jpg"
+                },
+                {
+                    "body":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dui nunc mattis enim ut tellus elementum sagittis vitae et. Adipiscing elit duis tristique sollicitudin nibh sit amet commodo nulla.\n Sagittis orci a scelerisque purus semper eget duis at tellus.",
+                    "media": "Women%20in%20Computing%20Images/Cindy%20Martin%20and%20Joann%20Campbell.jpg"
+                }
+            ]
+    },
+    
+    "inTheirWordsData":
+    {
+            "body":"",
+            
+            "videos":
+            [
+                {
+                    "link":""
+                }
+            ]
+    }
+}

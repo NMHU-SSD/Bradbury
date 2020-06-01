@@ -1,0 +1,89 @@
+/*General CSS*/
+#app{
+    background-color: black;
+}
+
+.carousel{
+    margin-bottom: 10px;
+}
+.carousel-inner{
+    height: 700px;
+}
+.carousel-caption{
+    max-width: 100%;
+    width: 100%;
+    left: 0px;
+    top: 0px;
+    padding-top: 0px;
+}
+
+/*General img CSS*/
+.img-shadow{
+    border-radius: 50%;
+    box-shadow: 0px 0px 20px 10px #000;
+}
+
+.kens-wrapper{
+    background-color: black;
+    overflow: hidden;
+}
+.kens-wrapper img{
+    height: 100%;
+    animation: kenburns 30s infinite;
+}
+@keyframes kenburns{
+    0%{
+        transform: scale3d(1.1, 1.1, 1)
+            translate3d(30px, 40px, 0px);
+    }
+    40%{
+        transform: scale3d(1.2, 1.2, 1)
+            translate3d(-100px, 20px, 0px);
+    }
+    70%{
+        transform: scale3d(1.5, 1.5, 1)
+            translate3d(-60px, 70px, 0px);
+    }
+    100%{
+        transform: scale3d(1.1, 1.1, 1)
+            translate3d(30px, 40px, 0px);
+    }
+}
+
+/*Building Future CSS*/
+.img-main-large{
+    position: absolute;
+    top: 20%;
+    right: 5%;
+    height: 900px;
+    width: 900px;
+}
+
+/*In Their Words CSS*/
+.container p{
+    color: white;
+    width: 40%;
+    padding-top: 10px;
+    padding-bottom: 15px;
+}
+.vid-thumb{
+    padding-bottom: 20px;
+    width: 100%;
+}
+.vid-top{
+    padding-top: 10%;
+}
+
+/*Women in Computing CSS*/
+.img-main{
+    height: 700px;
+}
+.side-widget{
+    padding-top: 3%;
+}
+.img-widget{
+    position: absolute;
+    height: 55%;
+    bottom: -10%;
+    left: 35%;
+}
