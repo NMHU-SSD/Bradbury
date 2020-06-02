@@ -1,27 +1,31 @@
 var womanComputing = {
     name: "woman-computing",
-    props: ['slides'],
+    props: ['slides', 'header'],
     template:
     `<div id="carouselComputing" class="carousel" data-ride="carousel" data-interval="30000">
         <div class="carousel-inner">
             <template v-for="(slide, index) in slides">
                 <div :class="['carousel-item', (index==0 ? 'active' : '')]" >
-                    <!--img src="https://picsum.photos/1000/800" class="d-block w-100" alt="..."-->
 
                   <div class="carousel-caption">
-                      <div class="row">
-                          <div class="col-8 img-main">
+                      <div class="row no-gutters">
+                          <div class="col-7 img-main inner-shadow">
                               <div class="kens-wrapper img-main">
                               <img :src="slide.media.main" class="">
                               </div>
                           </div>
-                          <div class="col-4 side-widget">
+                          <div class="col-5">
+                              <div class="red" style="height: 50px;"></div>
                               <h3>{{ slide.title }}</h3>
                               <p>{{ slide.body }}</p>
                               <img :src="slide.media.minor" class="img-widget img-shadow">
                           </div>
                       </div>
-                      <!--img src="https://picsum.photos/700/200"-->
+                      <div class="banner-bottom">
+                          <div class="yellow"></div>
+                          <div class="red"></div>
+                          <img :src="header" class="banner-img-left">
+                      </div>
                   </div>
                 </div>
             

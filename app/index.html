@@ -19,9 +19,9 @@
 	<div id="app">	
 		<main>          
             
-            <building-future v-bind:slides="buildingFutureData.slides"></building-future>
-            <woman-computing v-bind:slides="womenComputingData.slides"></woman-computing>
-            <their-words></their-words>
+            <building-future v-bind:slides="buildingFutureData.slides" v-bind:header="buildingFutureData.header"></building-future>
+            <woman-computing v-bind:slides="womenComputingData.slides" v-bind:header="womenComputingData.header"></woman-computing>
+            <their-words v-bind:note="inTheirWordsData.body"></their-words>
             
 		</main>
 	</div>

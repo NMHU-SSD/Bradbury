@@ -1,33 +1,37 @@
 var theirWords = {
     name: "their-words",
-    props: ['videos'],
+    props: ['videos', 'note'],
     template:
-    `<div>
+    `<div style="height: 700px;">
         <div class="container">
             <div class="row vid-top">
                 <div class="col">
-                    <img src="https://picsum.photos/300/200" class="vid-thumb">
+                    <img src="https://picsum.photos/300/170" class="vid-thumb shadow">
                 </div>
                 <div class="col">
-                    <img src="https://picsum.photos/300/200" class="vid-thumb">
+                    <img src="https://picsum.photos/300/170" class="vid-thumb shadow">
                 </div>
                 <div class="col">
-                    <img src="https://picsum.photos/300/200" class="vid-thumb">
+                    <img src="https://picsum.photos/300/170" class="vid-thumb shadow">
                 </div>
             </div>
             <div class="row">
                 <div class="col">
-                    <img src="https://picsum.photos/300/200" class="vid-thumb">
+                    <img src="https://picsum.photos/300/170" class="vid-thumb shadow">
                 </div>
                 <div class="col">
-                    <img src="https://picsum.photos/300/200" class="vid-thumb">
+                    <img src="https://picsum.photos/300/170" class="vid-thumb shadow">
                 </div>
                 <div class="col">
-                    <img src="https://picsum.photos/300/200" class="vid-thumb">
+                    <img src="https://picsum.photos/300/170" class="vid-thumb shadow">
                 </div>
             </div>
-            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
         </div>
+
+              <h4 class="red-text">{{ note }}</h4>
+              <div class="yellow"></div>
+              <div class="red"></div>
+              <img src="https://picsum.photos/700/170" class="banner-img">
         
     </div>`
 }

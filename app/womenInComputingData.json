@@ -1,12 +1,12 @@
 {
     "womenComputingData":
     {
-            "header":"Women in Los Alamos Computing",
+            "header":"https://picsum.photos/700/200",
             "slides":
             [
                 {
-                    "title":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-                    "body":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                    "title":"At Los Alamos and elsewhere, the first computers were humans who did calculations by hand, sometimes with the help of a desktop calculator.",
+                    "body":"Most of these human computers were women. Although not always recognized, their word propelled science and engineering forward for decades.",
                     "media": { 
                         "main": "Women%20in%20Computing%20Images/Human%20Computers%20at%20NASA%20public%20domain.jpg",
                         "minor": "https://picsum.photos/500",
@@ -14,16 +14,16 @@
                     }
                 },
                 {
-                    "title":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
-                    "body":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                    "title":"when electronic computers were introduced, women were often the first programmers and computer operators.",
+                    "body":"Their pioneering application of the new machines to scientific and national security challenges mad possible the rapid technical advances in the years that followed.",
                     "media": { 
                         "main": "Women%20in%20Computing%20Images/001%20MANIAC%20II%201958.jpg",
                         "minor": "https://picsum.photos/500"
                     }
                 },
                 {
-                    "title":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
-                    "body":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.",
+                    "title":"The legacy of women building the future through computing continues at Los Alamos today.",
+                    "body":"Discover more about the legacy and ongoing contributions of women in computing at Los Alamos.",
                     "media": { 
                         "main": "Women%20in%20Computing%20Images/feature15.jpg",
                         "minor": "https://picsum.photos/500"
@@ -34,29 +34,29 @@
     
     "buildingFutureData":
     {
-            "Header":"Header Text Sample",
+            "header":"https://picsum.photos/700/300",
             "slides":
             [
                 {
-                    "title":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Magna eget est lorem ipsum dolor sit.",
+                    "title":"The first computers at Los Alamos were mostly women from the town's civilian community. Professional computers from the Woman's Army Corps (WACs) soon grew the ranks of human computers at the Lab to about twenty. Without their skilled and tireless computing work, Los Alamos' wartime mission would not have succeeded.",
                     "media": "Women%20in%20Computing%20Images/WACs%20Los%20Alamos%202.jpg"
                 },
                 {
-                    "title":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.",
-                    "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Aliquam ut porttitor leo a diam sollicitudin tempor id. Amet consectetur adipiscing elit duis tristique.",
+                    "title":"After World War II, women from the Lab's hand-computing group became the world's first programmers (then called \"coders\").",
+                    "body": "Human computers had the skills needed to translate complex problems into the software \"code\" that an electronic computer could understand. Women with degrees in science and mathematics came to Los Alamos from all over the United States to meet the Lab's urgent Cold War need for computing expertise.",
                     "media": "Women%20in%20Computing%20Images/Lois%20Cook%20Leurgans.jpg"
                 },
                 {
-                    "title":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-                    "body": "Aliquam ut porttitor leo a diam sollicitudin tempor id. Amet consectetur adipiscing elit duis tristique.",
+                    "title":"The 1970's brought many changes to Los Alamos. The Cray-1 revolutionized supercomputer performance and computer networking made the lab a smaller (and faster) place.",
+                    "body": "Women stepped up to a growing number of roles in computing - from networking technicians to group leaders - to make sure Los Alamos continued to set the pace in supercomputer technology and scientific research.",
                     "media": "Women%20in%20Computing%20Images/001%20Cray%201%201977.jpg"
                 },
                 {
-                    "title":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Aliquam ut porttitor leo a diam sollicitudin tempor id. Amet consectetur adipiscing elit duis tristique.",
+                    "title":"Stockpile Stewardship gave new importance to supercomputer simulations at Los Alamos in the 1990s. Women played key roles in researching and evaluating new technologies (such as cluster computing) that would guide Los Alamos into the twenty-first century of supercomputing, and without the need for live weapons testing.",
                     "media": "Women%20in%20Computing%20Images/Ann%20Hayes%20LA%2011216%20MS%20page%2024%20(3).jpg"
                 },
                 {
-                    "body":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dui nunc mattis enim ut tellus elementum sagittis vitae et. Adipiscing elit duis tristique sollicitudin nibh sit amet commodo nulla.\n Sagittis orci a scelerisque purus semper eget duis at tellus.",
+                    "body":"Today, women are security experts protecting Los Alamos computer networks; they are computer scientists designing programs to combat climate change; they are systems analysts who keep the lab's supercomputers working to serve the national interest; they experts who make Los Alamos make a difference.\n Much has changed at Los Alamos since human computers powered the Manhattan Project, but the legacy of women building the future through computing continues.",
                     "media": "Women%20in%20Computing%20Images/Cindy%20Martin%20and%20Joann%20Campbell.jpg"
                 }
             ]
@@ -64,7 +64,7 @@
     
     "inTheirWordsData":
     {
-            "body":"",
+            "body":"Hear more about the groundbreaking discoveries and contributions women make at Los Alamos, in their own words.",
             
             "videos":
             [

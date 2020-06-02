@@ -1,22 +1,25 @@
 var buildingFuture = {
     name: "building-future",
-    props: ['slides'],
+    props: ['slides', 'header'],
     template:
     `<div id="carouselHistory" class="carousel" data-ride="carousel" data-interval="30000">
         <div class="carousel-inner">
             <template v-for="(slide, index) in slides">
                 <div :class="['carousel-item', (index==0 ? 'active' : '')]" >
-                    <!--img src="https://picsum.photos/1000/800" class="d-block w-100" alt="..."-->
 
                   <div class="carousel-caption">
+                      <div class="banner">
+                          <div class="yellow"></div>
+                          <div class="red"></div>
+                          <img :src="header" class="banner-img-top">
+                      </div>
                       <div class="row">
-                          <!--img src="https://picsum.photos/700/200"-->
                           <div class="col-6">
                               <div class="kens-wrapper img-main-large img-shadow">
                               <img :src="slide.media">
                               </div>
                           </div>
-                          <div class="col">
+                          <div class="col side-widget">
                               <h3>{{ slide.title }}</h3>
                               <p>{{ slide.body }}</p>
                           </div>
