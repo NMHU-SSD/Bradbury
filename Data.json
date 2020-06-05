@@ -1,147 +1,254 @@
 {
-	"zones": 
-		[	
-			{	"height": 200,
-				"slides": 
+	"sustainSupercomputing": 
+		{
+            "name":"sustainSupercomputing",
+            "height": 400,
+			"slides": 
 					[
 						{
-								"title": "What is sustainability?",
-								"body": "  How is it connected to supercomputers and the simulation capabilities they provide?",
-                                "featuredMedia": { 
-									"src": "https://picsum.photos/500"
+								"highlight": "In 2003, sustainable computing was still a novel concept, but LANL computer scientists Wu-chun Feng, Eric Weigle, and Michael Warren were ahead of the curve.",
+                                "title":"Green Denstiny",
+								"body": "They created an experimental, sustainable cluster computer called \"Green Destiny\" using energy-efficient processors and a fault-tolerant design that eliminated the need for the costly cooling systems found on other supercomputers.",
+                                "src": "https://picsum.photos/500",
+		               		 	"featuredMedia": {
+                                    "header":"Inventing\n sustainable supercomputing",
+									"caption": "Los Alamos National Laboratory's Green Destiny sustainable cluster computer"
 								}
 		            	},
                         {
-								"title": "What is sustainability?",
-								"body": "\"Sustainability\" is about finding ways to meet our needs in the present without compromising the ability of future generations to meet their own needs.  It's a single term that encompasses a range of technical and social challenges—and also the opportunities we create—to improve the quality of our lives and those who will follow after us.  Explore this panel to discover more about how supercomputers play an important part in creating a sustainable future. ",
-                                "featuredMedia": { 
-									"src": "https://picsum.photos/500"
+								"body": "Despite being as powerful as a high-end supercomputer of just a few years before, Green Destiny used only as much electricity as two hairdryers.\n Green Destiny was a successful proof-of-concept for energy-saving features that found their way into mainstream supercomputers, winning the coveted R&D 100 Award for innovation in science and technology in the process.",
+                                "src": "https://picsum.photos/500",
+		               		 	"featuredMedia": {
+                                    "header":"Inventing\n sustainable supercomputing",
+									"title": "Consider this...",
+                                    "body": "How have the technologies important to you become more efficient over time?"
+                                    
+								}
+		            	},
+                        {
+		              			"highlight": "...In 2007, Los Alamos computer scientist Wu-chun Feng and Kirk W. Cameron at Virginia Tech created the Green500 List?",
+                                "title":"Green500 List",
+		                		"body": "The Green500 List ranked supercomputers around the world based on their energy efficiency, bringing a shared set of sustainability assessment tools and criteria to the high-performance computing community.\n The List made it easier for supercomputer users and manufacturers alike to consider a machine's performance versus its energy-consumption when purchasing or designing new supercomputer systems.",
+                                "src":"https://picsum.photos/500",
+				                "video": "https://www.youtube.com/watch?v=s_4rIQmOw28",
+		               		 	"featuredMedia": {
+                                    "header":"Did you know...",
+									"title": "Consider this...",
+                                    "body": "How do individuals and communities sharing knowledge about the efficiency of products help everyone make more informed decisions about sustainability?"
+                                    
+								}
+		           	 	},
+                        {
+		              			"highlight": "In 2008, the Roadrunner supercomputer proved that performance did not have to mean sacrificing energy efficiency. ",
+                                "title":"Roadrunner",
+		                		"body": "Co-designed by LANL and IBM, Roadrunner was equipped with multiple kinds of processing chips, rather than the usual single type of microprocessor.  This made Roadrunner the first large \"hybrid\" supercomputer, an approach considered \"radical\" at the time.",
+				                "src": "https://picsum.photos/500",
+		               		 	"featuredMedia": {
+                                    "header":"An efficient revolution",
+									"caption": "The Cell accelerator chip helped LANL's Roadrunner break speed and efficiency records."
+                                }
+		           	 	},
+                        {
+		              			"body": "With careful programming, Roadrunner used the chip best suited for a task; either its conventional AMD microprocessors—like those in a desktop computer—or its energy-efficient \"Cell\" accelerator chips from IBM—similar to the Cell chip found in the Sony Playstation 3.\n This \"hybrid\" approach made Roadrunner the fastest in the world, and extremely efficient, using only 1/3 of the power of equivalent, non-hybrid supercomputers.\n After Roadrunner pioneered the concept, hybrid supercomputers have since become the norm.",
+				                "src": "https://picsum.photos/500",
+		               		 	"featuredMedia": {
+                                    "header":"An efficient revolution",
+									"title": "Consider this...",
+                                    "body": "Can you think of other commonplace ways of doing things today that were once considered \"radical\"?"
+                                }
+		           	 	},
+                        {
+		                        "highlight": "Los Alamos used the high-energy beam from LANSCE (the Los Alamos Neutron Science Center) to shoot running processor boards taken from Roadrunner?",
+                                "title":"Cosmic rays and supercomputers",
+                                "body": "The results helped Lab computer experts better identify and mitigate the effects of cosmic rays on full-scale supercomputers, preventing wasteful computer downtime and errors.",
+				                "src": "https://picsum.photos/500",
+		               		 	"featuredMedia": {
+                                    "header":"Did you know...",
+									"title": "Consider this...",
+                                    "body": "What are some other instances where being better informed has meant reducing waste?"
+                                }
+		           	 	},
+                        {
+		                        "highlight": "Cooling towers for the supercomputers of the Strategic Computing Center account for a large proportion of the total water used at the Lab.",
+                                "title":"Sanitary Effluent Reclamation Facility",
+                                "body": "To conserve the limited water supply of arid Northern New Mexico, reclaimed water from across the Lab is cleaned and filtered through the Sanitary Effluent Reclamation Facility (SERF).  Water from SERF supplies almost 100% of LANL’s cooling tower demand, and allows the same water to be reused up to four times.",
+				                "src": "https://picsum.photos/500",
+		               		 	"featuredMedia": {
+                                    "header":"Keeping cool while conserving water",
+									"title": "Consider this...",
+                                    "body": "What other limited resources can be reused rather than discarded?"
+                                }
+		           	 	},
+                        {
+		                        "highlight": "...Gary Grider, leader of the Lab's High-Performance Computing Division, cam up with the idea of creating a cluster of 750 Raspberry Pi computers as a \"pilot cluster\" to develop scalable systems software for the Trinity supercomputer?",
+                                "title":"BitScope Raspberry Pi cluster",
+                                "body": "This test-bed cluster let the Lab’s supercomputing experts replicate the extreme scale of Trinity, while only using 4,000 watts of electricity!  Grider said, “The Raspberry Pi modules let developers figure out how to write this software and get it to work reliably without having a dedicated testbed of the same size, which would cost a quarter billion dollars and use 25 megawatts of electricity./”",
+				                "src": "https://picsum.photos/500",
+		               		 	"featuredMedia": {
+                                    "header":"Did you know...",
+									"title": "Consider this...",
+                                    "body": "What are some other creative solutions that have made it possible to do the same work, while using fewer resources?"
+                                }
+		           	 	},
+                        {
+		                        "highlight": "The popularity of smartphones and portable electronics means that chip makers have invested vast sums into making processing chips that are powerful and energy efficient.",
+                                "title":"Advanced RISC Machine (ARM)",
+                                "body": "One type of chip in particular, the Advanced RISC Machine or \"ARM\" chip, was already found in a variety of mobile devices, from Android phones to inexpensive Raspberry Pi computers.",
+				                "src": "https://picsum.photos/500",
+		               		 	"featuredMedia": {
+                                    "header":"Efficient and high-performance computing",
+									"caption":"The Fujitsu A64FX ARM processor powered the first commercially available ARM-based supercomputer."
+                                }
+		           	 	},
+                        {
+		                        "body": "Now, the ARM chips that make the smallest computers so capable are making the largest computers more energy efficient.  In November 2019, Cray and Fujitsu partnered to produce the first-ever commercial supercomputer powered by an ARM-based processor, pushing the envelope of supercomputer performance, while reducing the environmental impact.  \n The first customers, including Los Alamos and Oak Ridge National Laboratory, quickly signed up to take advantage of this alliance between highly efficient computing and high-performance computing.",
+				               "src": "https://picsum.photos/500",
+		               		 	"featuredMedia": {
+                                    "header":"Efficient and high-performance computing",
+									"title": "Consider this...",
+                                    "body": "What are some other instances where improvements in one technology has benefited another?"
+                                    
+								}
+		           	 	},
+                        {
+		                        "highlight": "LANL's powerful and efficient Roadrunner was the fastest supercomputer in the world on the Top500 List benchmarking site while, at the same time, it was the most power-efficient large computer on the Green500 List?",
+                                "title":"Roadrunner",
+                                "body": "Roadrunner only lost the top spot on the Green500 List to a much-smaller computer that likewise ran on the same \"hybrid\" architecture as Roadrunner.",
+				               "src": "https://picsum.photos/500",
+		               		 	"featuredMedia": {
+                                    "header":"Did you know...",
+									"title": "Consider this...",
+                                    "body": "How does simultaneously seeking greater usefulness and efficiency from a technology help to spark innovation?"
+                                }
+		           	 	}
+		            ]
+        },
+    "drivesSupercomputing":
+        {
+            "name":"drivesSupercomputing",
+            "height": 700,
+            "slides":
+                    [
+                        {
+								"highlight": "There are over 250 million internal-combustion-engine vehicles in the United States alone.",
+                                "title":"FEARCE software",
+								"body": "The Fast, Easy, Accurate, and Robust Continuum Engineering (FEARCE) software developed at Los Alamos is a cost-effective near- to mid-term sustainability solution that helps automotive engineers improve and optimize engine designs through computer modeling",
+                                "src": "https://picsum.photos/500",
+		               		 	"featuredMedia": {
+                                    "header":"Better Engines Through Better Software?",
+									"caption": "Computer simulations allow automotive engineers to develop more efficient engines by modeling what will happen inside an engine that does not yet exist."
+								}
+		            	},
+                        {
+								"body": "Because the FEARCE software allows engineers to simulate how possible design changes impact the efficiency of an engine (without having to build the engine in the real world), new, more efficient engines can be developed in much less time, and for lower cost.",
+                                "src": "https://picsum.photos/500",
+		               		 	"featuredMedia": {
+                                    "header":"Better Engines Through Better Software?",
+									"title": "Consider this...",
+                                    "body": "What are some other, older technologies that have been given new life through a better understanding of how they work?"
+								}
+		            	},
+                        {
+								"highlight": "That asteroids and other Near-Earth Objects vary wildly in composition, density, and behavior?",
+                                "title":"Deflecting an asteroid",
+                                "body": "Knowing how to deflect a potential killer requires fast and accurate computer modeling for every object.",
+                                "src": "https://picsum.photos/500",
+		               		 	"featuredMedia": {
+                                    "header":"Did you know...",
+									"title": "Consider this...",
+                                    "body": "What are some other technical challenges where a one-size-fits-all solution is not the best solution"
+								}
+		            	},
+                        {
+								"highlight": "Converting carbon-dioxide emissions into a liquid and burying it deep underground has, for a long time, been an alternative to releasing greenhouse gases into the atmosphere.",
+                                "title":"Carbon capture SimCCS software",
+                                "body": "Carbon capture has struggled to become economically viable.  Linking up carbon producers, like power plants and other industries, with places geologically suitable for storing the carbon underground was the biggest hurdle, until now.",
+                                "src": "https://picsum.photos/500",
+		               		 	"featuredMedia": {
+                                    "header":"Making Carbon Capture Practical and Profitable",
+									"caption":"LANL's SimCCS software identifies cost-effective links between carbon sources (red dots) with storage sinks (blue dots) using pipelines (green lines)."
+								}
+		            	},
+                        {
+								"body": "The SimCCS software, developed and distributed for free by Los Alamos, uses computer models to identify and link together the carbon sources, pipelines, and storage sinks that need to find one another.  \n By being able to turn a profit from selling the carbon dioxide they produce, commercial and government agencies are incentivized to capture and dispose of greenhouse gases safely.",
+                                "src": "https://picsum.photos/500",
+		               		 	"featuredMedia": {
+                                    "header":"Making Carbon Capture Practical and Profitable",
+									"title": "Consider this...",
+                                    "body": "What other seemingly small hurdles to better sustainability have been overcome with improved collaboration?"
+								}
+		            	},
+                        {
+								"highlight": "That fluid-flow simulations on a Cray-2 supercomputer of the 1980s allowed Dow Chemical to design a disposable diaper that was superabsorbent, yet used less material (and sent less to the landfill) than previous diapers?",
+                                "title":"Cray-2",
+                                "body": "Supercomputers, like this iconic Cray-2 from the 1980s, have made many parts of our lives more sustainable without us realizing, including disposable diapers!",
+                                "src": "https://picsum.photos/500",
+		               		 	"featuredMedia": {
+                                    "header":"Did you know...",
+									"title": "Consider this...",
+                                    "body": "What are some other ways that computers have had a positive impact on sustainability in your life?"
+								}
+		            	},
+                        {
+								"highlight": "The CICE (pronounced \"sise\") computer model simulates the growth, melt, and movement of sea ice.",
+                                "title":"Los Alamos sea ice model",
+                                "body": "Elizabeth Hunke, lead developer of CICE, began development of the model at Los Alamos in 1994, with the first version being released in 1998.  Now on version 6.0 of CICE, Hunke states that \"our model is essential to helping agencies predict the polar sea conditions for developing infrastructure, shipping, and transportation plans.\"",
+                                "src": "https://picsum.photos/500",
+		               		 	"featuredMedia": {
+                                    "header":"Modeling sea ice",
+									"caption":"Elizabeth Hunke with a simulation of Arctic sea ice thickness produced by the Los Alamos sea ice model, CICE. Hunke’s work promotes a better understanding of how sea ice responds to and helps modulate the global climate."
+								}
+		            	},
+                        {
+								"body": "CICE is now maintained and developed by the CICE Consortium, an international group of institutions in North America and Europe.  \n A key part of the Arctic predictive capability for the U.S. Navy, the National Oceanic and Atmospheric Association, and the National Ice Center, CICE is also widely used for earth-system research in academic and government institutions worldwide.",
+                                "src": "https://picsum.photos/500",
+		               		 	"featuredMedia": {
+                                    "header":"Modeling sea ice",
+									"title": "Consider this...",
+                                    "body": "Many physical systems shape the world around us, even if they are not always apparent. What are some other physical systems, like sea ice, that shape the world you experience?"
+								}
+		            	},
+                        {
+								"highlight":"LANL’s Atmosphere, Climate, and Ecosystem Science Team (ACES) engages in experimental and observational research, from wildfire emissions to permafrost melting?",
+                                "title":"Real data for better models",
+                                "body": "The collected data on real-world environmental processes is used to build and calibrate better computer models of the impacts of climate change, ensuring that LANL's climate models are accurate and reliable.\n LEFT: ACES team members sample snow pits to understand the interconnection of permafrost melting with changes in climate and the ecosystem.",
+                                "src": "https://picsum.photos/500",
+		               		 	"featuredMedia": {
+                                    "header":"Did you know...",
+									"title": "Consider this...",
+                                    "body": "What are some other areas where science and computing support each other?"
+								}
+		            	},
+                        {
+								"highlight": "As sea levels rise, the rapid erosion of US coastlines impacts national security, threatening power stations, water-treatment facilities, and military bases.",
+                                "title":"Coastal erosion",
+                                "body": "Most extreme weather models do not take the threat into account.  The Los Alamos-developed NESMA (New Science for Multisector Adaptation) computer model uses complex algorithms (instructions that tell a computer how to solve a problem) and machine learning (the ability of a computer program to improve through experience, without needing to be programmed) to simulate the impact of coastline erosion on the infrastructure we depend upon.",
+                                "src": "https://picsum.photos/500",
+		               		 	"featuredMedia": {
+                                    "header":"Modeling Eroding Coastlines to Prepare for Hurricanes"
+								}
+		            	},
+                        {
+								"body": "Having access to this information allows policy makers to prevent and reduce the severity of property damage, power outages, and other consequences of erosion.  According to Donatella Pasqualini, leader of the NeSMA team, the model forecasts “every imaginable situation, which helps you understand the things you could do to best prepare./”",
+                                "src": "https://picsum.photos/500",
+		               		 	"featuredMedia": {
+                                    "header":"Modeling Eroding Coastlines to Prepare for Hurricanes",
+                                    "title": "Consider this...",
+                                    "body": "How has being forewarned of a potential problem helped you prevent it, or at least keep it from becoming worse than it could have been?"
+								}
+		            	},
+                        {
+								"highlight": "Supercomputers provide the number-crunching muscle to model the Earth’s complex global climate?",
+                                "title":"Better climate models? Just add ice",
+                                "body": "LANL scientists used the Lab’s supercomputers to couple multiple models of Antarctic ice-sheet movement to sharpen the predictive capabilities of global-climate models.  Predictive models improve our understanding of climate change, and help us mitigate its impact.\n LEFT: Coupling ice-sheet models with climate models improves the predictive abilities of both.",
+                                "src": "https://picsum.photos/500",
+		               		 	"featuredMedia": {
+                                    "header":"Did you know...",
+									"title": "Consider this...",
+                                    "body": "Understanding climate change is only the first step.  How can the predictive abilities of supercomputer models help us find solutions?"
 								}
 		            	}
-		            ]
-			},
-			
-			{
-				"slides": 
-					[
-			            {
-								"title": "Inventing Sustainable Supercomputing",
-								"body": "In 2003, sustainable computing was still a novel concept, but LANL computer scientists Wu-chun Feng, Eric Weigle, and Michael Warren were ahead of the curve.\t They created an experimental, sustainable cluster computer called \"Green Destiny\" using energy-efficient processors and a fault-tolerant design that eliminated the need for the costly cooling systems found on other supercomputers.",
-		               		 	"featuredMedia": { 
-									"src": "https://picsum.photos/500",
-									"caption": "LANL's Green Destiny sustainable cluster computer"
-								}
-		            	},
-                        {
-								"title": "Inventing Sustainable Supercomputing",
-								"body": "Despite being as powerful as a high-end supercomputer of just a few years before, Green Destiny used only as much electricity as two hairdryers.  \t Green Destiny was a successful proof-of-concept for energy-saving features that found their way into mainstream supercomputers, winning the coveted R&D 100 Award for innovation in science and technology in the process.",
-		               		 	"featuredMedia": { 
-									"src": "https://picsum.photos/500",
-									"caption": "LANL's Green Destiny sustainable cluster computer"
-								}
-		            	},
-		           		{
-		              			"title": "An Efficient Revolution",
-		                		"body": "In 2008, the Roadrunner supercomputer proved that performance did not have to mean sacrificing energy efficiency.  \t Co-designed by LANL and IBM, Roadrunner was equipped with multiple kinds of processing chips, rather than the usual single type of microprocessor.  This made Roadrunner the first large \"hybrid\" supercomputer, an approach considered \"radical\" at the time.  \t With careful programming, Roadrunner used the chip best suited for a task; either its conventional AMD microprocessors—like those in a desktop computer—or its energy-efficient \"Cell\" accelerator chips from IBM—similar to the Cell chip found in the Sony Playstation 3.",
-				                "video": "https://www.youtube.com/watch?v=s_4rIQmOw28"
-		           	 	},
-                        {
-		              			"title": "An Efficient Revolution",
-		                		"body": "This \"hybrid\" approach made Roadrunner the fastest in the world, and extremely efficient, using only 1/3 of the power of equivalent, non-hybrid supercomputers.  \t After Roadrunner pioneered the concept, hybrid supercomputers have since become the norm.",
-				                "video": "https://www.youtube.com/watch?v=s_4rIQmOw28"
-		           	 	},
-                        {
-		              			"title": "Keeping Cool While Conserving Water",
-		                		"body": "Cooling towers for the supercomputers of the Strategic Computing Center account for a large proportion of the total water used at LANL.  \t To conserve the limited water supply of arid Northern New Mexico, reclaimed water from across the Lab is cleaned and filtered through the Sanitary Effluent Reclamation Facility (SERF).  Water from SERF supplies almost 100% of LANL’s cooling tower demand, and allows the same water to be reused up to four times.",
-				                "video": "https://www.youtube.com/watch?v=Y9CgznV4EHY&t=1s"
-		           	 	},
-                        {
-		                		"body": "The popularity of smartphones and portable electronics means that chip makers have invested vast sums into making processing chips that are powerful and energy efficient.  \t One type of chip in particular, the Advanced RISC Machine or \"ARM\" chip, was already found in a variety of mobile devices, from Android phones to inexpensive Raspberry Pi computers.",
-				                "featuredMedia": { 
-									"src": "https://picsum.photos/500",
-									"caption": "The Fujitsu A64FX ARM processor powered the first commercially available ARM-based supercomputer."
-								}
-		           	 	},
-                        {
-		                		"body": "Now, the ARM chips that make the smallest computers so capable are making the largest computers more energy efficient.  In November 2019, Cray and Fujitsu partnered to produce the first-ever commercial supercomputer powered by an ARM-based processor, pushing the envelope of supercomputer performance, while reducing the environmental impact.  \t The first customers, including Los Alamos and Oak Ridge National Laboratory, quickly signed up to take advantage of this alliance between highly efficient computing and high-performance computing.",
-				                "featuredMedia": { 
-									"src": "https://picsum.photos/500",
-									"caption": "The Fujitsu A64FX ARM processor powered the first commercially available ARM-based supercomputer."
-								}
-		           	 	}
-					]
-			}
-	],
-    "zones": 
-		[	
-			{
-                "height": 200,
-				"slides": 
-					[
-						{
-								"title": "Sustainable Supercomputing",
-                                "featuredMedia": { 
-									"src": "https://picsum.photos/500"
-								}
-		            	},
-                        {
-								"body": "Supercomputers have large appetites for electricity and cooling, but smarter design and support strategies are making even the largest of these simulation powerhouses more sustainable.  Read more about how LANL and the supercomputing community are responding to the need for greater sustainability, while still pushing the performance envelope.",
-                                "featuredMedia": { 
-									"src": "https://picsum.photos/500"
-								}
-		            	}
-		            ]
-			},
-			
-			{
-				"slides": 
-					[
-			            {
-								"title": "Inventing Sustainable Supercomputing",
-								"body": "In 2003, sustainable computing was still a novel concept, but LANL computer scientists Wu-chun Feng, Eric Weigle, and Michael Warren were ahead of the curve.\t They created an experimental, sustainable cluster computer called \"Green Destiny\" using energy-efficient processors and a fault-tolerant design that eliminated the need for the costly cooling systems found on other supercomputers.",
-		               		 	"featuredMedia": { 
-									"src": "https://picsum.photos/500",
-									"caption": "LANL's Green Destiny sustainable cluster computer"
-								}
-		            	},
-                        {
-								"title": "Inventing Sustainable Supercomputing",
-								"body": "Despite being as powerful as a high-end supercomputer of just a few years before, Green Destiny used only as much electricity as two hairdryers.  \t Green Destiny was a successful proof-of-concept for energy-saving features that found their way into mainstream supercomputers, winning the coveted R&D 100 Award for innovation in science and technology in the process.",
-		               		 	"featuredMedia": { 
-									"src": "https://picsum.photos/500",
-									"caption": "LANL's Green Destiny sustainable cluster computer"
-								}
-		            	},
-		           		{
-		              			"title": "An Efficient Revolution",
-		                		"body": "In 2008, the Roadrunner supercomputer proved that performance did not have to mean sacrificing energy efficiency.  \t Co-designed by LANL and IBM, Roadrunner was equipped with multiple kinds of processing chips, rather than the usual single type of microprocessor.  This made Roadrunner the first large \"hybrid\" supercomputer, an approach considered \"radical\" at the time.  \t With careful programming, Roadrunner used the chip best suited for a task; either its conventional AMD microprocessors—like those in a desktop computer—or its energy-efficient \"Cell\" accelerator chips from IBM—similar to the Cell chip found in the Sony Playstation 3.",
-				                "video": "https://www.youtube.com/watch?v=s_4rIQmOw28"
-		           	 	},
-                        {
-		              			"title": "An Efficient Revolution",
-		                		"body": "This \"hybrid\" approach made Roadrunner the fastest in the world, and extremely efficient, using only 1/3 of the power of equivalent, non-hybrid supercomputers.  \t After Roadrunner pioneered the concept, hybrid supercomputers have since become the norm.",
-				                "video": "https://www.youtube.com/watch?v=s_4rIQmOw28"
-		           	 	},
-                        {
-		              			"title": "Keeping Cool While Conserving Water",
-		                		"body": "Cooling towers for the supercomputers of the Strategic Computing Center account for a large proportion of the total water used at LANL.  \t To conserve the limited water supply of arid Northern New Mexico, reclaimed water from across the Lab is cleaned and filtered through the Sanitary Effluent Reclamation Facility (SERF).  Water from SERF supplies almost 100% of LANL’s cooling tower demand, and allows the same water to be reused up to four times.",
-				                "video": "https://www.youtube.com/watch?v=Y9CgznV4EHY&t=1s"
-		           	 	},
-                        {
-		                		"body": "The popularity of smartphones and portable electronics means that chip makers have invested vast sums into making processing chips that are powerful and energy efficient.  \t One type of chip in particular, the Advanced RISC Machine or \"ARM\" chip, was already found in a variety of mobile devices, from Android phones to inexpensive Raspberry Pi computers.",
-				                "featuredMedia": { 
-									"src": "https://picsum.photos/500",
-									"caption": "The Fujitsu A64FX ARM processor powered the first commercially available ARM-based supercomputer."
-								}
-		           	 	},
-                        {
-		                		"body": "Now, the ARM chips that make the smallest computers so capable are making the largest computers more energy efficient.  In November 2019, Cray and Fujitsu partnered to produce the first-ever commercial supercomputer powered by an ARM-based processor, pushing the envelope of supercomputer performance, while reducing the environmental impact.  \t The first customers, including Los Alamos and Oak Ridge National Laboratory, quickly signed up to take advantage of this alliance between highly efficient computing and high-performance computing.",
-				                "featuredMedia": { 
-									"src": "https://picsum.photos/500",
-									"caption": "The Fujitsu A64FX ARM processor powered the first commercially available ARM-based supercomputer."
-								}
-		           	 	}
-					]
-			}
-	]	
+                    ]
+        }
+				
 }

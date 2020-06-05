@@ -18,10 +18,13 @@
   <body>	
 	<div id="app">	
 		<main>
-            <div v-for="(zone,index) in zones">
-				<carousel-component v-bind:slides="zone.slides" :id="index" :height="zone.height"></carousel-component>
+            <div>
+				<carousel-component v-bind:slides="sustainSupercomputing.slides" :id="sustainSupercomputing.name" :height="sustainSupercomputing.height"></carousel-component>
+                <carousel-component v-bind:slides="drivesSupercomputing.slides" :id="drivesSupercomputing.name" :height="drivesSupercomputing.height"></carousel-component>
             </div>
 		</main>
+        
+        
 	</div>
 
 

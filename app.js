@@ -5,7 +5,8 @@ Vue.component('carousel-component', CarouselComponent)
 var app = new Vue({
     el: '#app',
     data:{
-        zones:[]
+        sustainSupercomputing:"",
+        drivesSupercomputing:""
     },
     mounted: function(){
         this.GetData()
@@ -16,7 +17,8 @@ var app = new Vue({
             fetch("./Data.json")
             .then(response => response.json())
             .then(data =>{
-                this.zones = data.zones;
+                this.sustainSupercomputing = data.sustainSupercomputing;
+                this.drivesSupercomputing = data.drivesSupercomputing;
                 console.log(data);
             })
             .catch((error) => {
