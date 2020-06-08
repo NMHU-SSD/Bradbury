@@ -20,9 +20,13 @@
 		<main>          
             
             <building-future v-bind:slides="buildingFutureData.slides" v-bind:header="buildingFutureData.header"></building-future>
-            <woman-computing v-bind:slides="womenComputingData.slides" v-bind:header="womenComputingData.header"></woman-computing>
-            <their-words v-bind:note="inTheirWordsData.body"></their-words>
+            <woman-computing :slides="womenComputingData.slides" :header="womenComputingData.header" :timeout="timeout" :quitout="quitout"></woman-computing>
+            <their-words :note="inTheirWordsData.body" :videos1="inTheirWordsData.videos1" :videos2="inTheirWordsData.videos2"></their-words>
             
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalTemp">Launch modal</button>
+            <modal-overlay></modal-overlay>
+
+
 		</main>
 	</div>
     
@@ -44,7 +48,8 @@
 	<!-- Vue Components-->
 	<script src="/components/buildingFuture.vue.js"></script>
 	<script src="/components/theirWords.vue.js"></script>
-      <script src="/components/womenComputing.vue.js"></script>
+    <script src="/components/womenComputing.vue.js"></script>
+    <script src="components/modalOverlay.vue.js"></script>
 	
 	
 	<!-- Vue App / Router -->

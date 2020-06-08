@@ -5,6 +5,12 @@
             "slides":
             [
                 {
+                    
+                    "media": { 
+                        "main": "Women%20in%20Computing%20Images/Human%20Computers%20at%20NASA%20public%20domain.jpg"
+                    }
+                },
+                {
                     "title":"At Los Alamos and elsewhere, the first computers were humans who did calculations by hand, sometimes with the help of a desktop calculator.",
                     "body":"Most of these human computers were women. Although not always recognized, their word propelled science and engineering forward for decades.",
                     "media": { 
@@ -38,6 +44,9 @@
             "slides":
             [
                 {
+                    "media": "Women%20in%20Computing%20Images/WACs%20Los%20Alamos%202.jpg"
+                },
+                {
                     "title":"The first computers at Los Alamos were mostly women from the town's civilian community. Professional computers from the Woman's Army Corps (WACs) soon grew the ranks of human computers at the Lab to about twenty. Without their skilled and tireless computing work, Los Alamos' wartime mission would not have succeeded.",
                     "media": "Women%20in%20Computing%20Images/WACs%20Los%20Alamos%202.jpg"
                 },
@@ -66,8 +75,26 @@
     {
             "body":"Hear more about the groundbreaking discoveries and contributions women make at Los Alamos, in their own words.",
             
-            "videos":
+            "videos1":
             [
+                {
+                    "link":""
+                },
+                {
+                    "link":""
+                },
+                {
+                    "link":""
+                }
+            ],
+            "videos2":
+            [
+                {
+                    "link":""
+                },
+                {
+                    "link":""
+                },
                 {
                     "link":""
                 }

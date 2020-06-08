@@ -2,6 +2,7 @@
 Vue.component('womanComputing', womanComputing)
 Vue.component('buildingFuture', buildingFuture)
 Vue.component('theirWords', theirWords)
+Vue.component('modalOverlay', modalOverlay)
 
 //Vue
 var app = new Vue({
@@ -9,7 +10,10 @@ var app = new Vue({
     data:{
         womenComputingData:"",
         buildingFutureData:"",
-        inTheirWordsData:""
+        inTheirWordsData:"",
+        slideSpeed:4000,
+        timeout:3000,
+        quitout:3000
     },
     mounted: function(){
         this.GetData()
