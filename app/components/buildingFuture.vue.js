@@ -6,7 +6,7 @@ var buildingFuture = {
             t: null,
             afk: null
         }
-    },/*
+    },
     mounted:function(){
         this.setTimer()
     },
@@ -15,6 +15,14 @@ var buildingFuture = {
         setTimer:function(){
             window.onload = this.resetTimer;
             document.onmousemove = this.resetTimer;
+        },
+        resetTimer:function(){
+            clearTimeout(this.t);
+            this.t = setTimeout(this.toAlert, this.timeout);
+            clearTimeout(this.afk);
+            $('#carouselHistory').carousel({
+                pause: false
+            });
         },
         toAlert:function(){
             console.log("timer");
@@ -25,15 +33,11 @@ var buildingFuture = {
             document.onmousemove = this.setTimer;
         },
         toDefault:function(){
-            console.log("second timer");
+            console.log("defaulted");
             $('#carouselHistory').carousel(0);
+            $('#carouselHistory').carousel('pause');
         },
-        resetTimer:function(){
-            clearTimeout(this.t);
-            this.t = setTimeout(this.toAlert, this.timeout);
-            clearTimeout(this.afk);
-        }
-    },*/
+    },
     template:
     `<div id="carouselHistory" class="carousel" data-ride="carousel" :data-interval="slideSpeed">
         <div class="carousel-inner">

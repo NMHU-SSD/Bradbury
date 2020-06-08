@@ -19,7 +19,7 @@
 	<div id="app">	
 		<main>          
             
-            <building-future v-bind:slides="buildingFutureData.slides" v-bind:header="buildingFutureData.header"></building-future>
+            <building-future v-bind:slides="buildingFutureData.slides" v-bind:header="buildingFutureData.header" :timeout="timeout" :quitout="quitout"></building-future>
             <woman-computing :slides="womenComputingData.slides" :header="womenComputingData.header" :timeout="timeout" :quitout="quitout"></woman-computing>
             <their-words :note="inTheirWordsData.body" :videos1="inTheirWordsData.videos1" :videos2="inTheirWordsData.videos2"></their-words>
             

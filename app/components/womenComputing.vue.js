@@ -3,8 +3,8 @@ var womanComputing = {
     props: ['slides', 'header', 'height', 'slideSpeed','timeout','quitout'],
     data: function(){
         return{
-            t: null,
-            afk: null,
+            t2: null,
+            afk2: null,
             defaulted: true
         }
     },
@@ -16,6 +16,14 @@ var womanComputing = {
         setTimer:function(){
             window.onload = this.resetTimer;
             document.onmousemove = this.resetTimer;
+        },
+        resetTimer:function(){
+            clearTimeout(this.t);
+            this.t = setTimeout(this.toAlert, this.timeout);
+            clearTimeout(this.afk);
+            $('#carouselComputing').carousel({
+                pause: false
+            });
         },
         toAlert:function(){
             console.log("timer");
@@ -29,14 +37,6 @@ var womanComputing = {
             console.log("defaulted");
             $('#carouselComputing').carousel(0);
             $('#carouselComputing').carousel('pause');
-        },
-        resetTimer:function(){
-            clearTimeout(this.t);
-            this.t = setTimeout(this.toAlert, this.timeout);
-            clearTimeout(this.afk);
-            $('#carouselComputing').carousel({
-                pause: false
-            });
         }
     },
     components:{
