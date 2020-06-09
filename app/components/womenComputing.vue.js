@@ -27,20 +27,18 @@ var womanComputing = {
         },
         toAlert:function(){
             console.log("timer");
-            this.afkTimer();
-        },
-        afkTimer:function(){
             this.afk = setTimeout(this.toDefault, this.quitout);
+            this.callModal();
             document.onmousemove = this.setTimer;
         },
         toDefault:function(){
             console.log("defaulted");
             $('#carouselComputing').carousel(0);
             $('#carouselComputing').carousel('pause');
+        },
+        callModal:function(){
+            this.$emit('callmodal', this.quitout)
         }
-    },
-    components:{
-        //modalOverlay: 'modalOverlay'
     },
     template:
     `<div id="carouselComputing" class="carousel" data-ride="carousel" data-wrap=false :data-interval="slideSpeed">
@@ -88,8 +86,6 @@ var womanComputing = {
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="sr-only">Next</span>
   </a>
-  
-    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalTemp">Launch modal</button>
-            <modal-overlay></modal-overlay>
+
 </div>`
 }

@@ -13,7 +13,8 @@ var app = new Vue({
         inTheirWordsData:"",
         slideSpeed:4000,
         timeout:3000,
-        quitout:3000
+        quitout:3000,
+        countdown: 3
     },
     mounted: function(){
         this.GetData()
@@ -32,6 +33,11 @@ var app = new Vue({
             .catch((error) => {
                 console.error('Error:', error);
             });
+        },
+        displayModal:function(){
+            $('#modalTemp').modal();
+            this.$refs.modal.timer();
+            setTimeout(function(){$('#modalTemp').modal('hide')}, this.quitout);
         }
     }
 })

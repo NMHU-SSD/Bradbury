@@ -20,11 +20,10 @@
 		<main>          
             
             <building-future v-bind:slides="buildingFutureData.slides" v-bind:header="buildingFutureData.header" :timeout="timeout" :quitout="quitout"></building-future>
-            <woman-computing :slides="womenComputingData.slides" :header="womenComputingData.header" :timeout="timeout" :quitout="quitout"></woman-computing>
+            <woman-computing :slides="womenComputingData.slides" :header="womenComputingData.header" :timeout="timeout" :quitout="quitout" v-on:callmodal="displayModal($event)"></woman-computing>
             <their-words :note="inTheirWordsData.body" :videos1="inTheirWordsData.videos1" :videos2="inTheirWordsData.videos2"></their-words>
             
-            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalTemp">Launch modal</button>
-            <modal-overlay></modal-overlay>
+            <modal-overlay countdown="3" ref="modal"></modal-overlay>
 
 
 		</main>

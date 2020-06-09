@@ -1,6 +1,6 @@
 var modalOverlay= {
     name:"modal-overlay",
-    props:['countDown'],
+    props:['countdown'],
     data:function(){
         return{
             count: 3,
@@ -8,20 +8,21 @@ var modalOverlay= {
         }
     },
     methods:{
-        activated:function(){
-            this.active = true;
-        },
         timer:function(){
             if(this.count > 0){
                 setTimeout(()=> {
                     this.count -= 1;
                     this.timer()
-                }, 1000)
+                }, 1000);
             }
+            //this.reset();
+        },
+        reset:function(){
+            this.count = 3;
         }
     },
     template:
-    `<div class="modal" id="modalTemp" tabindex="-1" role="dialog">
+    `<div class="modal" id="modalTemp" tabindex="-1" role="dialog" v-on:displayModal="timer">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
