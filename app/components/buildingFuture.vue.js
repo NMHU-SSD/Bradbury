@@ -1,9 +1,9 @@
 var buildingFuture = {
     name: "building-future",
-    props: ['slides', 'header', 'height', 'speed'],
+    props: ['slides', 'header', 'height', 'id', 'speed'],
     
     template:
-    `<div id="carouselHistory" class="carousel" data-ride="carousel" :data-interval="speed">
+    `<div :id="id" class="carousel" data-ride="carousel" :data-interval="speed">
         <div class="carousel-inner">
             <template v-for="(slide, index) in slides">
                 <div :class="['carousel-item', (index==0 ? 'active' : '')]" >
@@ -37,11 +37,11 @@ var buildingFuture = {
     </div>
   
 
-  <a class="carousel-control-prev" href="#carouselHistory" role="button" data-slide="prev">
+  <a class="carousel-control-prev" :href="['#' + id]" role="button" data-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
     <span class="sr-only">Previous</span>
   </a>
-  <a class="carousel-control-next" href="#carouselHistory" role="button" data-slide="next">
+  <a class="carousel-control-next" :href="['#' + id]" role="button" data-slide="next">
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="sr-only">Next</span>
   </a>

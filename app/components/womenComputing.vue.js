@@ -16,6 +16,9 @@ var womanComputing = {
             }else{
                 $('#carouselComputing').carousel('cycle');
             }
+        },
+        paused:function(){
+            
         }
     },
     template:

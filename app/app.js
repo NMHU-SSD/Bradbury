@@ -43,10 +43,11 @@ var app = new Vue({
             $('#carouselHistory').carousel('cycle');
             $('#carouselComputing').carousel('cycle');
             this.t = setTimeout(this.toAlert, this.timeout);
+            document.onmousedown = this.resetTimer;
         },
         toAlert:function(){
             console.log("timer");
-            document.onmousedown = this.setTimer;
+            document.onmousedown = this.resetTimer;
             this.displayModal();
             this.afk = setTimeout(this.toDefault, this.quitout);
         },
@@ -62,7 +63,7 @@ var app = new Vue({
             $('#modalTemp').modal();
             this.$refs.modal.timer();
             setTimeout(function(){$('#modalTemp').modal('hide')}, this.quitout);
-            document.onmousedown = this.setTimer;
+            document.onmousedown = this.resetTimer;
         }
         //selection
     }
