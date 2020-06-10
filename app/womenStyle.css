@@ -1,26 +1,50 @@
 /*General CSS*/
-#app{
+body{
+    height: 3840px;
+    width: 2160px;
+}
+
+#app, main{
     background-color: #4A6C6A;
-    width: 1080;
+    height: 100%;
+    width: 100%;
 }
 .yellow{
     background-color: #C6C643;
-    height: 100px;
+    height: 70%;
 }
 .red{
     background-color: #772530;
-    height: 30px;
+    height: 30%;
 }
+/*banners*/
+.banner, .banner-bottom, .banner-span{
+    position: relative;
+    height: 15%;
+}
+
+/*content text*/
+.content-head{
+    font-size: 42px;
+}
+.content-body{
+    font-size: 30px;
+}
+
 /*carousel*/
-.carousel-inner{
-    height: 700px;
+#carouselHistory, #carouselComputing, #theirWords{
+    height: 33%;
+}
+.carousel-inner, .carousel-item, .carousel-caption, .carousel-caption,
+.title-screen, .row, .img-main{
+    height: 100%;
 }
 .carousel-caption{
     max-width: 100%;
     width: 100%;
     left: 0px;
     top: 0px;
-    padding-top: 0px;
+    padding: 0px;
     text-align: left;
 }
 .carousel-caption p, h3{
@@ -67,35 +91,59 @@
 }
 
 /*Building Future CSS*/
-.title-screen{
-    height: 700px;
-}
 .banner-img-top{
     position: relative;
     left: 50%;
     bottom: 220px;
 }
 .banner{
-    height: 100px;
-    position: relative;
     top: 100px;
     margin-bottom: -100px;
 }
 .img-main-large{
     position: absolute;
     top: 10%;
-    right: 10px;
-    height: 900px;
-    width: 900px;
+    right: 5%;
+    height: 1200px;
+    width: 1200px;
 }
 .side-widget{
     margin-top: 20%;
+    margin-left: -5%;
+    height: 50%;
+    overflow: hidden;
+}
+
+/*Women in Computing CSS*/
+.banner-bottom{
+    bottom: 20%;
+}
+.banner-img-left{
+    position: relative;
+    bottom: 170px;
+    left: 20px;
+}
+
+.inner-shadow{
+    box-shadow: 20px 20px 500px 10px #2a2b2b inset;
+}
+.img-widget{
+    position: absolute;
+    height: 55%;
+    top: 60%;
+    left: 15%;
+    z-index: 5;
 }
 
 /*In Their Words CSS*/
-.container{
-    height: 70%;
+.container-fluid{
+    padding-left: 5%;
+    padding-right: 5%;
 }
+.banner-span{
+    top: 5%;
+}
+
 .banner-img{
     position: relative;
     bottom: 150px;
@@ -103,43 +151,18 @@
 }
 .red-text{
     color: #772530;
-    font-size: 20px;
+    font-size: 30px;
     width: 35%;
-    position: relative;
-    top: 50px;
     margin-left: 13%;
-    margin-bottom: -30px;
+    position: relative;
+    bottom: 100%;
+    padding-top: 10px;
 }
 .vid-thumb{
-    margin-bottom: 20px;
+    margin-bottom: 5%;
     width: 100%;
     box-shadow: 10px 10px 20px 5px #2a2b2b;
 }
 .vid-top{
     padding-top: 5%;
-}
-
-/*Women in Computing CSS*/
-.banner-bottom{
-    height: 100px;
-    position: relative;
-    bottom: 170px;
-}
-.banner-img-left{
-    position: relative;
-    bottom: 170px;
-    left: 20px;
-}
-.img-main{
-    height: 700px;
-}
-.inner-shadow{
-    box-shadow: 20px 20px 500px 10px #2a2b2b inset;
-}
-.img-widget{
-    position: absolute;
-    height: 80%;
-    top: 50%;
-    left: 15%;
-    z-index: 5;
 }

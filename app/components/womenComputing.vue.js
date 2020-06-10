@@ -1,47 +1,25 @@
 var womanComputing = {
     name: "woman-computing",
-    props: ['slides', 'header', 'height', 'slideSpeed','timeout','quitout'],
-    data: function(){
+    props: ['slides', 'header', 'height', 'speed','id'],
+    data:function(){
         return{
-            t2: null,
-            afk2: null,
-            defaulted: true
+            active:false
         }
     },
-    mounted:function(){
-        this.setTimer()
-    },
     methods:{
-        //Timer functions
-        setTimer:function(){
-            window.onload = this.resetTimer;
-            document.onmousemove = this.resetTimer;
+        selected:function(){
+          this.$emit('selected', 'carouselComputing')  
         },
-        resetTimer:function(){
-            clearTimeout(this.t);
-            this.t = setTimeout(this.toAlert, this.timeout);
-            clearTimeout(this.afk);
-            $('#carouselComputing').carousel({
-                pause: false
-            });
-        },
-        toAlert:function(){
-            console.log("timer");
-            this.afk = setTimeout(this.toDefault, this.quitout);
-            this.callModal();
-            document.onmousemove = this.setTimer;
-        },
-        toDefault:function(){
-            console.log("defaulted");
-            $('#carouselComputing').carousel(0);
-            $('#carouselComputing').carousel('pause');
-        },
-        callModal:function(){
-            this.$emit('callmodal', this.quitout)
+        toggle:function(index){
+            if(index==0){
+                $('#carouselComputing').carousel('pause');
+            }else{
+                $('#carouselComputing').carousel('cycle');
+            }
         }
     },
     template:
-    `<div id="carouselComputing" class="carousel" data-ride="carousel" data-wrap=false :data-interval="slideSpeed">
+    `<div :id="id" class="carousel" data-ride="carousel" data-wrap=false :data-interval="speed">
         <div class="carousel-inner">
             <template v-for="(slide, index) in slides">
                 <div :class="['carousel-item', (index==0 ? 'active' : '')]" >
@@ -54,15 +32,15 @@ var womanComputing = {
 
                   <div v-if="index!=0" class="carousel-caption">
                       <div class="row no-gutters">
-                          <div class="col-7 img-main inner-shadow">
+                          <div class="col-8 img-main inner-shadow">
                               <div class="kens-wrapper img-main">
                               <img :src="slide.media.main" class="">
                               </div>
                           </div>
-                          <div class="col-5">
-                              <div class="red" style="height: 50px;"></div>
-                              <h3>{{ slide.title }}</h3>
-                              <p>{{ slide.body }}</p>
+                          <div class="col-4">
+                              <div class="red" style="height: 7%;"></div>
+                              <h3 class="content-head">{{ slide.title }}</h3>
+                              <p class="content-body">{{ slide.body }}</p>
                               <img :src="slide.media.minor" class="img-widget img-shadow">
                           </div>
                       </div>
@@ -78,11 +56,11 @@ var womanComputing = {
     </div>
   
 
-  <a class="carousel-control-prev" href="#carouselComputing" role="button" data-slide="prev">
+  <a class="carousel-control-prev" :href="['#' + id]" role="button" data-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
     <span class="sr-only">Previous</span>
   </a>
-  <a class="carousel-control-next" href="#carouselComputing" role="button" data-slide="next">
+  <a class="carousel-control-next" :href="['#' + id]" role="button" data-slide="next">
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="sr-only">Next</span>
   </a>

@@ -1,45 +1,9 @@
 var buildingFuture = {
     name: "building-future",
-    props: ['slides', 'header', 'height', 'slideSpeed','timeout','quitout'],
-    data: function(){
-        return{
-            t: null,
-            afk: null
-        }
-    },
-    mounted:function(){
-        this.setTimer()
-    },
-    methods:{
-        //Timer functions
-        setTimer:function(){
-            window.onload = this.resetTimer;
-            document.onmousemove = this.resetTimer;
-        },
-        resetTimer:function(){
-            clearTimeout(this.t);
-            this.t = setTimeout(this.toAlert, this.timeout);
-            clearTimeout(this.afk);
-            $('#carouselHistory').carousel({
-                pause: false
-            });
-        },
-        toAlert:function(){
-            console.log("timer");
-            this.afkTimer();
-        },
-        afkTimer:function(){
-            this.afk = setTimeout(this.toDefault, this.quitout);
-            document.onmousemove = this.setTimer;
-        },
-        toDefault:function(){
-            console.log("defaulted");
-            $('#carouselHistory').carousel(0);
-            $('#carouselHistory').carousel('pause');
-        },
-    },
+    props: ['slides', 'header', 'height', 'speed'],
+    
     template:
-    `<div id="carouselHistory" class="carousel" data-ride="carousel" :data-interval="slideSpeed">
+    `<div id="carouselHistory" class="carousel" data-ride="carousel" :data-interval="speed">
         <div class="carousel-inner">
             <template v-for="(slide, index) in slides">
                 <div :class="['carousel-item', (index==0 ? 'active' : '')]" >
@@ -62,8 +26,8 @@ var buildingFuture = {
                               </div>
                           </div>
                           <div class="col side-widget">
-                              <h3 v-if="slide.title">{{ slide.title }}</h3>
-                              <p v-if="slide.body">{{ slide.body }}</p>
+                              <h3 v-if="slide.title" class="content-head">{{ slide.title }}</h3>
+                              <p v-if="slide.body" class="content-body">{{ slide.body }}</p>
                           </div>
                       </div>
                   </div>

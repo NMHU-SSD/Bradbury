@@ -19,13 +19,11 @@
 	<div id="app">	
 		<main>          
             
-            <building-future v-bind:slides="buildingFutureData.slides" v-bind:header="buildingFutureData.header" :timeout="timeout" :quitout="quitout"></building-future>
-            <woman-computing :slides="womenComputingData.slides" :header="womenComputingData.header" :timeout="timeout" :quitout="quitout" v-on:callmodal="displayModal($event)"></woman-computing>
+            <modal-overlay countdown="3" ref="modal"></modal-overlay>
+            <building-future v-bind:slides="buildingFutureData.slides" :speed = "slideSpeed"></building-future>
+            <woman-computing :slides="womenComputingData.slides" id="carouselComputing" :speed = "slideSpeed"></woman-computing>
             <their-words :note="inTheirWordsData.body" :videos1="inTheirWordsData.videos1" :videos2="inTheirWordsData.videos2"></their-words>
             
-            <modal-overlay countdown="3" ref="modal"></modal-overlay>
-
-
 		</main>
 	</div>
     
@@ -45,9 +43,9 @@
 
 	
 	<!-- Vue Components-->
-	<script src="/components/buildingFuture.vue.js"></script>
-	<script src="/components/theirWords.vue.js"></script>
-    <script src="/components/womenComputing.vue.js"></script>
+	<script src="components/buildingFuture.vue.js"></script>
+	<script src="components/theirWords.vue.js"></script>
+    <script src="components/womenComputing.vue.js"></script>
     <script src="components/modalOverlay.vue.js"></script>
 	
 	
