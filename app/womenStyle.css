@@ -32,8 +32,9 @@ body{
 }
 
 /*carousel*/
-#carouselHistory, #carouselComputing, #theirWords{
+#carouselHistory, #carouselComputing, #theirWords, #timeline{
     height: 33%;
+    padding-bottom: 20px;
 }
 .carousel-inner, .carousel-item, .carousel-caption, .carousel-caption,
 .title-screen, .row, .img-main{
@@ -165,4 +166,18 @@ body{
 }
 .vid-top{
     padding-top: 5%;
+}
+/*modal*/
+.center {
+    position: absolute;
+    float: left;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.modal-dialog{
+    max-width: 100%;
+}
+.helper{
+    
 }

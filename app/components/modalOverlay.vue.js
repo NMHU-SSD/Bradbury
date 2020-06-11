@@ -3,27 +3,29 @@ var modalOverlay= {
     props:['countdown'],
     data:function(){
         return{
-            count: 3,
+            count: 0,
             active: false
         }
+    },
+    mounted:function(){
+        this.reset();
     },
     methods:{
         timer:function(){
             if(this.count > 0){
                 setTimeout(()=> {
                     this.count -= 1;
-                    this.timer()
+                    this.timer();
                 }, 1000);
             }
-            //this.reset();
         },
         reset:function(){
-            this.count = 3;
+            this.count = Math.floor(this.countdown / 1000);
         }
     },
     template:
-    `<div class="modal" id="modalTemp" tabindex="-1" role="dialog" v-on:displayModal="timer">
-      <div class="modal-dialog" role="document">
+    `<div class="modal center" id="modalTemp" tabindex="-1" role="dialog" v-on:displayModal="timer">
+      <div class="modal-dialog helper" role="document">
         <div class="modal-content">
           <div class="modal-header">
             <h5 class="modal-title">Are you still there?</h5>

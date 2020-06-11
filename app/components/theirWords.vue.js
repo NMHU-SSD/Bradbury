@@ -1,6 +1,11 @@
 var theirWords = {
     name: "their-words",
     props: ['videos1','videos2','note'],
+    data:function(){
+        return{
+            timeline: true
+        }
+    },
     template:
     `<div id="theirWords">
         <div class="container-fluid">

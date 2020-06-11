@@ -3,6 +3,7 @@ Vue.component('womanComputing', womanComputing)
 Vue.component('buildingFuture', buildingFuture)
 Vue.component('theirWords', theirWords)
 Vue.component('modalOverlay', modalOverlay)
+Vue.component('timeLine', timeLine)
 
 //Vue
 var app = new Vue({
@@ -11,7 +12,7 @@ var app = new Vue({
         womenComputingData:"",
         buildingFutureData:"",
         inTheirWordsData:"",
-        slideSpeed:40000,
+        slideSpeed:2000,
         timeout:7000,
         quitout:3000,
         countdown: 3,
@@ -48,8 +49,9 @@ var app = new Vue({
         toAlert:function(){
             console.log("timer");
             document.onmousedown = this.resetTimer;
+            this.$refs.modal.reset();
             this.displayModal();
-            this.afk = setTimeout(this.toDefault, this.quitout);
+            //this.afk = setTimeout(this.toDefault, this.quitout);
         },
         toDefault:function(){
             console.log("defaulted");
@@ -62,8 +64,10 @@ var app = new Vue({
         displayModal:function(){
             $('#modalTemp').modal();
             this.$refs.modal.timer();
-            setTimeout(function(){$('#modalTemp').modal('hide')}, this.quitout);
+            setTimeout(function(){
+                $('#modalTemp').modal('hide')}, this.quitout);
             document.onmousedown = this.resetTimer;
+            
         }
         //selection
     }

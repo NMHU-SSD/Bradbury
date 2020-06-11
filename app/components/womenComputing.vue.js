@@ -7,25 +7,30 @@ var womanComputing = {
         }
     },
     methods:{
+        toggle:function(){
+            //@mouseenter="toggle" @mouseleave="toggle"
+            this.active = !this.active;
+            console.log(this.active);
+            if(this.active){
+                $('#carouselComputing').carousel('cycle');
+            }else{
+                $('#carouselComputing').carousel('pause');
+                $('#carouselComputing').carousel(0);
+            }
+        },
         selected:function(){
           this.$emit('selected', 'carouselComputing')  
         },
-        toggle:function(index){
-            if(index==0){
-                $('#carouselComputing').carousel('pause');
-            }else{
-                $('#carouselComputing').carousel('cycle');
-            }
-        },
         paused:function(){
-            
+            this.active = false;
+            $('#carouselComputing').carousel('pause');
         }
     },
     template:
-    `<div :id="id" class="carousel" data-ride="carousel" data-wrap=false :data-interval="speed">
+    `<div :id="id" style="height: 756px;" class="carousel" data-ride="carousel" data-wrap=true :data-interval="speed">
         <div class="carousel-inner">
             <template v-for="(slide, index) in slides">
-                <div :class="['carousel-item', (index==0 ? 'active' : '')]" >
+                <div :class="['carousel-item', (index==0 ? 'active' : '')]">
                   
                   <div v-if="index==0" class="carousel-caption">
                     <div class="kens-wrapper title-screen">
@@ -35,14 +40,16 @@ var womanComputing = {
 
                   <div v-if="index!=0" class="carousel-caption">
                       <div class="row no-gutters">
+                          <div class="col-2">
+                              <h3 class="content-head">{{ slide.title }}</h3>
+                          </div>
                           <div class="col-8 img-main inner-shadow">
                               <div class="kens-wrapper img-main">
                               <img :src="slide.media.main" class="">
                               </div>
                           </div>
-                          <div class="col-4">
+                          <div class="col-2">
                               <div class="red" style="height: 7%;"></div>
-                              <h3 class="content-head">{{ slide.title }}</h3>
                               <p class="content-body">{{ slide.body }}</p>
                               <img :src="slide.media.minor" class="img-widget img-shadow">
                           </div>
