@@ -36,7 +36,8 @@ body{
     height: 33%;
     padding-bottom: 20px;
 }
-.carousel-inner, .carousel-item, .carousel-caption, .carousel-caption,
+.carousel-inner, .carousel-item, 
+.carousel-caption, .carousel-caption,
 .title-screen, .row, .img-main{
     height: 100%;
 }
@@ -52,6 +53,10 @@ body{
     padding-left: 10%;
     padding-right: 20%;
     margin-top: 20px;
+}
+.carousel-control-next, .carousel-control-prev{
+    height: 20%;
+    top: 80%;
 }
 
 /*General img CSS*/
@@ -128,6 +133,16 @@ body{
 .inner-shadow{
     box-shadow: 20px 20px 500px 10px #2a2b2b inset;
 }
+.img-tubie{
+    position: absolute;
+    z-index: 5;
+    background-color: transparent;
+    padding-bottom: 5%;
+    bottom: 5%;
+}
+.img-tubie img{
+    width: 60%;
+}
 .img-widget{
     position: absolute;
     height: 55%;
@@ -168,16 +183,32 @@ body{
     padding-top: 5%;
 }
 /*modal*/
-.center {
-    position: absolute;
-    float: left;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-}
 .modal-dialog{
-    max-width: 100%;
+    max-width: 60%;
+    width: 100%;
+    margin: auto;
+    overflow-y: auto;
 }
-.helper{
-    
+.modal-dialog h5, .modal-dialog p{
+    font-size: 160%;
+}
+.modal-footer button{
+    font-size: 170%;
+}
+
+.web-wrapper{
+    position: relative;
+    padding-bottom: 56.25%;
+    overflow: hidden;
+}
+.web-wrapper iframe{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.img-wrapper{
+    display: block;
+    width: 100%;
 }

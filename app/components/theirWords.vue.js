@@ -3,7 +3,13 @@ var theirWords = {
     props: ['videos1','videos2','note'],
     data:function(){
         return{
-            timeline: true
+            timeline: true,
+            test:'https://www.youtube.com/watch?v=s_4rIQmOw28'
+        }
+    },
+    methods:{
+        seturl:function(url){
+            this.$emit('seturl', url);
         }
     },
     template:
@@ -11,7 +17,7 @@ var theirWords = {
         <div class="container-fluid">
             <div class="row vid-top">
                 <div v-for="video in videos1" class="col">
-                    <img src="https://picsum.photos/700/400" class="vid-thumb shadow">
+                    <img src="https://picsum.photos/700/400" class="vid-thumb shadow" @click="seturl(test)">
                 </div>
             </div>
             <div class="row">

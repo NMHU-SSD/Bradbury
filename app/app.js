@@ -4,6 +4,7 @@ Vue.component('buildingFuture', buildingFuture)
 Vue.component('theirWords', theirWords)
 Vue.component('modalOverlay', modalOverlay)
 Vue.component('timeLine', timeLine)
+Vue.component('tubieOverlay', tubieOverlay)
 
 //Vue
 var app = new Vue({
@@ -12,16 +13,17 @@ var app = new Vue({
         womenComputingData:"",
         buildingFutureData:"",
         inTheirWordsData:"",
+        modalTimer:'modalTimer',
+        modalVideo:'modalVideo',
         slideSpeed:2000,
         timeout:7000,
-        quitout:3000,
-        countdown: 3,
+        quitout:20000,
         t: null,
         afk: null,
     },
     mounted: function(){
         this.GetData();
-        this.resetTimer();
+        //this.resetTimer();
     },
     
     methods:{
@@ -49,9 +51,9 @@ var app = new Vue({
         toAlert:function(){
             console.log("timer");
             document.onmousedown = this.resetTimer;
-            this.$refs.modal.reset();
+            this.$refs.timeModal.reset();
             this.displayModal();
-            //this.afk = setTimeout(this.toDefault, this.quitout);
+            this.afk = setTimeout(this.toDefault, this.quitout);
         },
         toDefault:function(){
             console.log("defaulted");
@@ -62,12 +64,18 @@ var app = new Vue({
         },
         //modal popup
         displayModal:function(){
-            $('#modalTemp').modal();
-            this.$refs.modal.timer();
+            $('#'+'modalTimer').modal();
+            this.$refs.timeModal.timer();
             setTimeout(function(){
-                $('#modalTemp').modal('hide')}, this.quitout);
+                $('#'+'modalTimer').modal('hide')}, this.quitout);
             document.onmousedown = this.resetTimer;
             
+        },
+        displayVideo:function(url){
+            clearTimeout(this.t);
+            clearTimeout(this.afk);
+            $('#'+'modalVideo').modal();
+            this.$refs.vidModal.geturl(url);
         }
         //selection
     }
