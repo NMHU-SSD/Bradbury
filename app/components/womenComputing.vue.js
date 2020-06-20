@@ -1,37 +1,40 @@
 var womanComputing = {
     name: "woman-computing",
-    props: ['slides', 'header', 'height', 'speed','id'],
+    props: ['slides', 'helper', 'header', 'height', 'speed','id'],
     data:function(){
         return{
             active:false
         }
     },
+    mounted:function(){
+    },
     methods:{
         toggle:function(){
             this.active = !this.active;
             if(this.active){
-                $('#carouselComputing').carousel('cycle');
+                $('#'+this.id).carousel('cycle');
             }else{
-                $('#carouselComputing').carousel('pause');
-                $('#carouselComputing').carousel(0);
+                $('#'+this.id).carousel(0);
+                $('#'+this.id).carousel('pause');
             }
         },
         paused:function(){
-            this.active = false;
-            $('#carouselComputing').carousel('pause');
+            //this.active = false;
+            //$('#'+this.id).carousel('pause');
+        },
+        tubieClicked:function(index){
+            this.$emit('tubieclicked', index);
         }
     },
     template:
     `<div :id="id" style="height: 756px;" class="carousel" data-ride="carousel" data-wrap=false :data-interval="speed">
-        <div class="carousel-inner" @mouseenter="toggle" @mouseleave="toggle">
+        <div class="carousel-inner" @click="toggle">
             <template v-for="(slide, index) in slides">
                 <div :class="['carousel-item', (index==0 ? 'active' : '')]">
                   
                   <div v-if="index==0" class="carousel-caption">
-                    <div class="kens-wrapper title-screen">
-                        <img :src="slide.media.main">
-                    </div>
-                    <!--div class="row">
+                    
+                    <div class="row">
                         <div class="col-4">
                             <div class="img-main-large img-shadow red">
                                 <h2>TEST TEXT</h2>
@@ -39,10 +42,10 @@ var womanComputing = {
                         </div>
                         <div class="col">
                             <div class="kens-wrapper title-screen">
-                                <img :src="slide.media.main">
+                                <img :src="slide.medias.main">
                             </div>
                         </div>
-                    </div-->
+                    </div>
                   </div>
 
                   <div v-if="index!=0" class="carousel-caption">
@@ -52,14 +55,16 @@ var womanComputing = {
                           </div>
                           <div class="col-6 img-main inner-shadow">
                               <div class="kens-wrapper img-main">
-                              <img :src="slide.media.main" class="">
+                              <img :src="slide.medias.main" class="">
                               </div>
                           </div>
                           <div class="col-3">
                               <div class="red" style="height: 7%;"></div>
                               <p class="content-body">{{ slide.body }}</p>
-                              <button type="button" class="img-tubie" data-toggle="modal" data-target="#tubie">
-                                  <!--img :src="slide.media.minor" class="img-widget img-shadow"---><img src="Toobie/Toobie_1.png">
+                              <button type="button" class="img-tubie" data-toggle="modal" data-target="#tubie" @click="tubieClicked(index)">
+                                  <div class="tubie-wrapper">
+                                      <img src="Toobie/Toobie_solo2.png">
+                                  </div>
                               </button>
                           </div>
                       </div>
@@ -73,7 +78,10 @@ var womanComputing = {
             
         </template>
     </div>
-  
+    
+    <ol class="carousel-indicators">
+        <li v-for="(slide, index) in slides" :data-target="['#' + id]" :data-slide-to="index" :class="(index==0 ? 'active' : '')"></li>
+    </ol>
 
   <a class="carousel-control-prev" :href="['#' + id]" role="button" data-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>

@@ -3,37 +3,41 @@ body{
     height: 3840px;
     width: 2160px;
 }
-
 #app, main{
     background-color: #4A6C6A;
     height: 100%;
     width: 100%;
 }
+h3, p{
+    padding-left: 5%;
+    padding-right: 20%;
+    margin-top: 20px;
+    color: white;
+}
 .yellow{
     background-color: #C6C643;
-    height: 70%;
 }
 .red{
     background-color: #772530;
-    height: 30%;
 }
-/*banners*/
-.banner, .banner-bottom, .banner-span{
-    position: relative;
-    height: 15%;
-}
-
 /*content text*/
 .content-head{
-    font-size: 42px;
+    font-size: 220%;
 }
 .content-body{
-    font-size: 30px;
+    font-size: 180%;
+}
+
+/*banners*/
+.banner{
+    position: relative;
+    height: 13%;
+    bottom: 13%;
+    z-index: 5;
 }
 
 /*carousel*/
 #carouselHistory, #carouselComputing, #theirWords, #timeline{
-    height: 33%;
     padding-bottom: 20px;
 }
 .carousel-inner, .carousel-item, 
@@ -49,20 +53,42 @@ body{
     padding: 0px;
     text-align: left;
 }
-.carousel-caption p, h3{
-    padding-left: 10%;
-    padding-right: 20%;
-    margin-top: 20px;
+/*carousel controllers*/
+.carousel-icons{
+    height: 30%;
+    width: 50%;
 }
-.carousel-control-next, .carousel-control-prev{
-    height: 20%;
-    top: 80%;
+.carousel-control-prev,
+.carousel-control-next{
+    height: 60%;
+}
+.carousel-control-prev{
+    margin-left: -3%;
+}
+.carousel-control-next{
+    margin-right: -3%;
+}
+/*carousel indicators*/
+.carousel-indicators{
+    height: 10%;
+}
+.carousel-indicators li{
+    height: 100%;
+    width: 5%;
+    border-radius: 50%;
+    background: transparent;
+    border: 5px solid #4A6C6A;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+.carousel-indicators li.active{
+    background-color: #4A6C6A;
 }
 
 /*General img CSS*/
 .img-shadow{
     border-radius: 50%;
-    box-shadow: 0px 0px 20px 10px #2a2b2b;
+    box-shadow: 0px 0px 50px 20px #2a2b2b;
 }
 
 .kens-wrapper{
@@ -70,7 +96,7 @@ body{
     overflow: hidden;
 }
 .kens-wrapper img{
-    height: 100%;
+    width: 100%;
     animation: kenburns 30s infinite;
 }
 @keyframes kenburns{
@@ -96,28 +122,47 @@ body{
     }
 }
 
-/*Building Future CSS*/
-.banner-img-top{
+/*Tubie CSS*/
+.img-tubie{
+    position: absolute;
+    background-color: #f09d18;
+    bottom: 0;
+    right: 0;
+    width: 75%;
+    height: 30%;
+}
+.tubie-wrapper{
     position: relative;
-    left: 50%;
-    bottom: 220px;
+    width: 100%;
+    height: 100%;
 }
-.banner{
-    top: 100px;
-    margin-bottom: -100px;
+.tubie-wrapper img{
+    position: absolute;
+    height: 150%;
+    right: 15%;
+    bottom: 0;
 }
+
+/*Building Future CSS*/
 .img-main-large{
     position: absolute;
-    top: 10%;
-    right: 5%;
-    height: 1200px;
-    width: 1200px;
+    left: 20%;
+    top: -40%;
+    height: 140%;
+    width: 170%;
 }
 .side-widget{
-    margin-top: 20%;
-    margin-left: -5%;
-    height: 50%;
+    margin-left: 30%;
+    overflow-y: hidden;
+}
+.circle-wrap{
+    background-color: black;
     overflow: hidden;
+}
+.circle-wrap img{
+    width: 100%;
+    position: absolute;
+    top: 28%;
 }
 
 /*Women in Computing CSS*/
@@ -132,23 +177,6 @@ body{
 
 .inner-shadow{
     box-shadow: 20px 20px 500px 10px #2a2b2b inset;
-}
-.img-tubie{
-    position: absolute;
-    z-index: 5;
-    background-color: transparent;
-    padding-bottom: 5%;
-    bottom: 5%;
-}
-.img-tubie img{
-    width: 60%;
-}
-.img-widget{
-    position: absolute;
-    height: 55%;
-    top: 60%;
-    left: 15%;
-    z-index: 5;
 }
 
 /*In Their Words CSS*/
@@ -211,4 +239,17 @@ body{
 .img-wrapper{
     display: block;
     width: 100%;
+}
+
+/*NAV Bar*/
+.nav-wrapper{
+    height: 100%;
+}
+li{
+    width: 100%;
+    margin-left: 90%;
+    transition: .5s;
+}
+.open{
+    margin-left: 0px;
 }

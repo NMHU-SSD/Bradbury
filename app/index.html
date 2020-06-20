@@ -19,16 +19,31 @@
 	<div id="app">	
 		<main>
             
-            <tubie-overlay id="tubie"></tubie-overlay>
-            
+            <tubie-overlay id="tubie" :display="toobiesays"></tubie-overlay>           
             <modal-overlay :id="modalTimer" exitout="true" :countdown="quitout" ref="timeModal"></modal-overlay>
             <modal-overlay :id="modalVideo" exitout="false" :countdown="quitout" ref="vidModal"></modal-overlay>
-            <building-future :slides="buildingFutureData.slides" id="carouselHistory" :speed = "slideSpeed"></building-future>
-            <woman-computing :slides="womenComputingData.slides" id="carouselComputing" :speed = "slideSpeed"></woman-computing>
             
-            <their-words :note="inTheirWordsData.body" :videos1="inTheirWordsData.videos1" :videos2="inTheirWordsData.videos2" v-on:seturl="displayVideo($event)"></their-words>
+            <building-future :slides="buildingFutureData.slides" id="carouselHistory" :speed = "slideSpeed" height="25%" @tubieclicked="setTubie($event, 'building')"></building-future><building-future :slides="womenComputingData.slides" id="carouselComputing" :speed = "slideSpeed" height="25%" @tubieclicked="setTubie($event, 'building')"></building-future>
+            <!--woman-computing :slides="womenComputingData.slides" id="carouselComputing" :speed = "slideSpeed" @tubieclicked="setTubie($event, 'computing')"></woman-computing-->
+            
+            <their-words :note="inTheirWordsData.body" :videos="inTheirWordsData.videos" v-on:seturl="displayVideo($event)"></their-words>
             
             <time-line v-show=false></time-line>
+            
+            <!--div class="nav-wrapper">
+                <ul class="list-unstyled">
+                    <li type="radio" id="list1" @click="itemtoggle($event)">
+                       <woman-computing :slides="womenComputingData.slides" id="carouselComputing" :speed = "slideSpeed" @tubieclicked="setTubie($event, 'computing')"></woman-computing>
+                    </li>
+                    <li type="radio" id="list2" @mouseenter="itemtoggle($event)" @mouseleave="itemtoggle($event)">
+                        <woman-computing :slides="womenComputingData.slides" id="test" :speed = "slideSpeed"></woman-computing>
+                    </li>
+                    <li>
+                        <h2>PlaceHolder 3</h2>
+                    </li>
+                </ul>
+            </div-->
+            
             
 		</main>
 	</div>

@@ -13,6 +13,8 @@ var app = new Vue({
         womenComputingData:"",
         buildingFutureData:"",
         inTheirWordsData:"",
+        toobieData:"",
+        toobiesays: null,
         modalTimer:'modalTimer',
         modalVideo:'modalVideo',
         slideSpeed:2000,
@@ -34,6 +36,15 @@ var app = new Vue({
                 this.womenComputingData = data.womenComputingData;
                 this.buildingFutureData = data.buildingFutureData;
                 this.inTheirWordsData = data.inTheirWordsData;
+            })
+            .catch((error) => {
+                console.error('Error:', error);
+            });
+            
+            fetch("toobieData.json")
+            .then(response => response.json())
+            .then(data =>{
+                this.toobieData = data.toobieData;
             })
             .catch((error) => {
                 console.error('Error:', error);
@@ -76,7 +87,22 @@ var app = new Vue({
             clearTimeout(this.afk);
             $('#'+'modalVideo').modal();
             this.$refs.vidModal.geturl(url);
-        }
+        },
         //selection
+        itemtoggle:function(item){
+            target = item.currentTarget.id;
+            $('#'+target).toggleClass('open');
+        },
+        //tubie
+        setTubie:function(index, type){
+            console.log(index);
+            console.log(type);
+            
+            if(type=='computing'){
+                this.toobiesays = this.toobieData.computing[index];
+            }else{
+                this.toobiesays = this.toobieData.computing[index];
+            }
+        }
     }
 })
