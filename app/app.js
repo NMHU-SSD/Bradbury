@@ -5,6 +5,7 @@ Vue.component('theirWords', theirWords)
 Vue.component('modalOverlay', modalOverlay)
 Vue.component('timeLine', timeLine)
 Vue.component('tubieOverlay', tubieOverlay)
+Vue.component('slideshowComponent', slideshowComponent)
 
 //Vue
 var app = new Vue({

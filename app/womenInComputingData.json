@@ -2,6 +2,7 @@
     "womenComputingData":
     {
             "header":"https://picsum.photos/700/200",
+            "height":"700px",
             "slides":
             [
                 {
@@ -9,30 +10,17 @@
                 },
                 {
                     "title":"At Los Alamos and elsewhere, the first computers were humans who did calculations by hand, sometimes with the help of a desktop calculator.",
-                    "body":"Most of these human computers were women. Although not always recognized, their word propelled science and engineering forward for decades.", "media":"Women%20in%20Computing%20Images/Human%20Computers%20at%20NASA%20public%20domain.jpg",
-                    "medias": { 
-                        "main": "Women%20in%20Computing%20Images/Human%20Computers%20at%20NASA%20public%20domain.jpg",
-                        "minor": "https://picsum.photos/500",
-                        "caption":"NASA computing group circa 1955 using Friden mechanical calculators"
-                    }
+                    "body":"Most of these human computers were women. Although not always recognized, their word propelled science and engineering forward for decades.", "media":"Women%20in%20Computing%20Images/Human%20Computers%20at%20NASA%20public%20domain.jpg"
                 },
                 {
                     "title":"when electronic computers were introduced, women were often the first programmers and computer operators.",
                     "body":"Their pioneering application of the new machines to scientific and national security challenges mad possible the rapid technical advances in the years that followed.",
-                    "media":"Women%20in%20Computing%20Images/001%20MANIAC%20II%201958.jpg",
-                    "medias": { 
-                        "main": "Women%20in%20Computing%20Images/001%20MANIAC%20II%201958.jpg",
-                        "minor": "https://picsum.photos/500"
-                    }
+                    "media":"Women%20in%20Computing%20Images/001%20MANIAC%20II%201958.jpg"
                 },
                 {
                     "title":"The legacy of women building the future through computing continues at Los Alamos today.",
                     "body":"Discover more about the legacy and ongoing contributions of women in computing at Los Alamos.",
-                    "media": "Women%20in%20Computing%20Images/feature15.jpg",
-                    "medias": { 
-                        "main": "Women%20in%20Computing%20Images/feature15.jpg",
-                        "minor": "https://picsum.photos/500"
-                    }
+                    "media": "Women%20in%20Computing%20Images/feature15.jpg"
                 }
             ]
     },
@@ -40,6 +28,7 @@
     "buildingFutureData":
     {
             "header":"https://picsum.photos/700/300",
+            "height": "700px",
             "slides":
             [
                 {
@@ -111,5 +100,11 @@
                     "link":""
                 }
             ]
+    },
+    
+    "timeline":
+    {
+        "height": "700px"
     }
+
 }

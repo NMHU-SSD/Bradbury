@@ -23,7 +23,8 @@
             <modal-overlay :id="modalTimer" exitout="true" :countdown="quitout" ref="timeModal"></modal-overlay>
             <modal-overlay :id="modalVideo" exitout="false" :countdown="quitout" ref="vidModal"></modal-overlay>
             
-            <building-future :slides="buildingFutureData.slides" id="carouselHistory" :speed = "slideSpeed" height="25%" @tubieclicked="setTubie($event, 'building')"></building-future><building-future :slides="womenComputingData.slides" id="carouselComputing" :speed = "slideSpeed" height="25%" @tubieclicked="setTubie($event, 'building')"></building-future>
+            <building-future :slides="womenComputingData.slides" id="carouselComputing" :speed = "slideSpeed" :height="womenComputingData.height" @tubieclicked="setTubie($event, 'building')"></building-future>
+            <building-future :slides="buildingFutureData.slides" id="carouselHistory" :speed = "slideSpeed" :height="buildingFutureData.height" @tubieclicked="setTubie($event, 'building')"></building-future>
             <!--woman-computing :slides="womenComputingData.slides" id="carouselComputing" :speed = "slideSpeed" @tubieclicked="setTubie($event, 'computing')"></woman-computing-->
             
             <their-words :note="inTheirWordsData.body" :videos="inTheirWordsData.videos" v-on:seturl="displayVideo($event)"></their-words>
@@ -70,6 +71,7 @@
     <script src="components/modalOverlay.vue.js"></script>
     <script src="components/timeLine.vue.js"></script>
     <script src="components/tubieOverlay.vue.js"></script>
+    <script src="components/slideshowComponent.vue.js"></script>
 	
 	<!-- Vue App / Router -->
 	<script src="app.js"></script>

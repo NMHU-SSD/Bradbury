@@ -3,31 +3,9 @@ var buildingFuture = {
     props: ['id', 'slides',  'speed', 'header', 'height'],
     data:function(){
         return{
-            active:false,
+            fade:true,
             img:0,
             currentImg:null
-        }
-    },
-    mounted:function(){
-      this.slideshow();  
-    },
-    methods:{
-        tubieClicked:function(index){
-            this.$emit('tubieclicked', index);
-        },
-        slideshow:function(){
-            if(this.slides!=null){
-                imgList= this.slides[0].media;
-                this.currentImg = imgList[this.img].img;
-                console.log(this.img);
-
-                if(this.img < imgList.length-1){
-                    this.img++;
-                }else{
-                    this.img=0;
-                }
-                setTimeout("this.slideshow", 1000);
-            }
         }
     },
     template:
@@ -38,15 +16,13 @@ var buildingFuture = {
 
                     <div class="row">
                           <div class="col-4 red">
-                              <div  @mouseenter="slideshow()" class="img-main-large circle-wrap img-shadow">
+                              <div class="img-main-large circle-wrap img-shadow">
 
                                 <div v-if="index==0">
-                                    <transition name="fade">
-                                    <img :src="currentImg">
-                                    </transition>
+                                    <slideshow-component :images="slide.media"/>
                                 </div>
 
-                                <!--img v-else :src="slide.media"-->
+                                <img v-else :src="slide.media">
                               </div>
                           </div>
                           <div class="col side-widget">
