@@ -14,6 +14,13 @@ h3, p{
     margin-top: 20px;
     color: white;
 }
+.gradient-green{
+    background-image: linear-gradient(
+        to bottom,
+        #4A6C6A 20%,
+        #96b0a2
+    );
+}
 .yellow{
     background-color: #C6C643;
 }
@@ -23,9 +30,11 @@ h3, p{
 /*content text*/
 .content-head{
     font-size: 220%;
+    overflow: hidden;
 }
 .content-body{
     font-size: 180%;
+    overflow: hidden;
 }
 
 /*banners*/
@@ -55,7 +64,7 @@ h3, p{
 }
 /*carousel controllers*/
 .carousel-icons{
-    height: 30%;
+    height: 25%;
     width: 50%;
 }
 .carousel-control-prev,
@@ -125,7 +134,9 @@ h3, p{
 /*Tubie CSS*/
 .img-tubie{
     position: absolute;
-    background-color: #f09d18;
+    background: #f09d18;
+    outline: none;
+    border: none;
     bottom: 0;
     right: 0;
     width: 75%;
@@ -163,6 +174,23 @@ h3, p{
     width: 100%;
     position: absolute;
     top: 28%;
+}
+/*Slideshow*/
+.fade-enter-active, .fade-leave-active{
+    transition: opacity .5s;
+}
+.fade-enter, .fade-leave-to{
+    opacity: 0;
+}
+
+.fade-in{
+    animation: fadeIn 8s infinite;
+}
+@keyframes fadeIn{
+    0% { opacity: 0%}
+    15% { opacity: 100%}
+    80% { opacity: 100%}
+    100% { opacity: 0%}
 }
 
 /*Women in Computing CSS*/
@@ -241,15 +269,3 @@ h3, p{
     width: 100%;
 }
 
-/*NAV Bar*/
-.nav-wrapper{
-    height: 100%;
-}
-li{
-    width: 100%;
-    margin-left: 90%;
-    transition: .5s;
-}
-.open{
-    margin-left: 0px;
-}

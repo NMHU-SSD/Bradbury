@@ -7,9 +7,6 @@ var modalOverlay= {
             active: false
         }
     },
-    mounted:function(){
-        
-    },
     methods:{
         setPurpose:function(){
             if(this.exitout){
