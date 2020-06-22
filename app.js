@@ -1,12 +1,12 @@
 //register components
 Vue.component('carousel-component', CarouselComponent)
+Vue.component('slideshow-component', SlideshowComponent)
 
 //Vue
 var app = new Vue({
     el: '#app',
     data:{
-        sustainSupercomputing:"",
-        drivesSupercomputing:""
+        zones:[]
     },
     mounted: function(){
         this.GetData()
@@ -17,8 +17,7 @@ var app = new Vue({
             fetch("./Data.json")
             .then(response => response.json())
             .then(data =>{
-                this.sustainSupercomputing = data.sustainSupercomputing;
-                this.drivesSupercomputing = data.drivesSupercomputing;
+                this.zones = data.zones;
                 console.log(data);
             })
             .catch((error) => {
