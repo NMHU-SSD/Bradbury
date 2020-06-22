@@ -1,0 +1,911 @@
+%!Adobe-FontList 1.13
+%Locale:0x409
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:HelveticaNeue-BlackCond
+FamilyName:Helvetica Neue
+StyleName:97 Black Condensed
+MenuName:HelveticaNeue BlackCond
+StyleBits:2
+WeightClass:900
+WidthClass:3
+AngleClass:0
+FullName:Helvetica 97 Black Condensed
+WritingScript:Roman
+OutlineFileName:\HelveNeuBlaCon
+DataFormat:POSTResource
+UsesStandardEncoding:yes
+isCFF:no
+FileLength:32980
+FileModTime:815234700
+DesignSize:-1
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:HelveticaNeue-BlackCondObl
+FamilyName:Helvetica Neue
+StyleName:97 Black Condensed Oblique
+MenuName:HelveticaNeue BlackCond
+StyleBits:3
+WeightClass:900
+WidthClass:3
+AngleClass:1
+FullName:Helvetica 97 Black Condensed Oblique
+WritingScript:Roman
+OutlineFileName:\HelveNeuBlaConObl
+DataFormat:POSTResource
+UsesStandardEncoding:yes
+isCFF:no
+FileLength:46230
+FileModTime:815234700
+DesignSize:-1
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:HelveticaNeue-BoldCond
+FamilyName:Helvetica Neue
+StyleName:77 Bold Condensed
+MenuName:HelveticaNeue Condensed
+StyleBits:2
+WeightClass:700
+WidthClass:3
+AngleClass:0
+FullName:Helvetica 77 Bold Condensed
+WritingScript:Roman
+OutlineFileName:\HelveNeuBolCon
+DataFormat:POSTResource
+UsesStandardEncoding:yes
+isCFF:no
+FileLength:29613
+FileModTime:815234700
+DesignSize:-1
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:HelveticaNeue-BoldCondObl
+FamilyName:Helvetica Neue
+StyleName:77 Bold Condensed Oblique
+MenuName:HelveticaNeue Condensed
+StyleBits:3
+WeightClass:700
+WidthClass:3
+AngleClass:1
+FullName:Helvetica 77 Bold Condensed Oblique
+WritingScript:Roman
+OutlineFileName:\HelveNeuBolConObl
+DataFormat:POSTResource
+UsesStandardEncoding:yes
+isCFF:no
+FileLength:39798
+FileModTime:815234700
+DesignSize:-1
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:HelveticaNeue-Condensed
+FamilyName:Helvetica Neue
+StyleName:57 Condensed
+MenuName:HelveticaNeue Condensed
+StyleBits:0
+WeightClass:400
+WidthClass:3
+AngleClass:0
+FullName:Helvetica 57 Condensed
+WritingScript:Roman
+OutlineFileName:\HelveNeuCon
+DataFormat:POSTResource
+UsesStandardEncoding:yes
+isCFF:no
+FileLength:29102
+FileModTime:815234701
+DesignSize:-1
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:HelveticaNeue-CondensedObl
+FamilyName:Helvetica Neue
+StyleName:57 Condensed Oblique
+MenuName:HelveticaNeue Condensed
+StyleBits:1
+WeightClass:400
+WidthClass:3
+AngleClass:1
+FullName:Helvetica 57 Condensed Oblique
+WritingScript:Roman
+OutlineFileName:\HelveNeuConObl
+DataFormat:POSTResource
+UsesStandardEncoding:yes
+isCFF:no
+FileLength:39103
+FileModTime:815234701
+DesignSize:-1
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:HelveticaNeue-ExtBlackCond
+FamilyName:Helvetica Neue
+StyleName:107 Extra Black Condensed
+MenuName:HelveticaNeue ExtBlackCond
+StyleBits:2
+WeightClass:950
+WidthClass:3
+AngleClass:0
+FullName:Helvetica 107 Extra Black Condensed
+WritingScript:Roman
+OutlineFileName:\HelveNeuExtBlaCon
+DataFormat:POSTResource
+UsesStandardEncoding:yes
+isCFF:no
+FileLength:33097
+FileModTime:815234701
+DesignSize:-1
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:HelveticaNeue-ExtBlackCondObl
+FamilyName:Helvetica Neue
+StyleName:107 Extra Black Cond Oblique
+MenuName:HelveticaNeue ExtBlackCond
+StyleBits:3
+WeightClass:950
+WidthClass:3
+AngleClass:1
+FullName:Helvetica 107 Extra Black Condensed Oblique
+WritingScript:Roman
+OutlineFileName:\HelveNeuExtBlaConObl
+DataFormat:POSTResource
+UsesStandardEncoding:yes
+isCFF:no
+FileLength:46429
+FileModTime:815234701
+DesignSize:-1
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:HelveticaNeue-HeavyCond
+FamilyName:Helvetica Neue
+StyleName:87 Heavy Condensed
+MenuName:HelveticaNeue MediumCond
+StyleBits:2
+WeightClass:850
+WidthClass:3
+AngleClass:0
+FullName:Helvetica 87 Heavy Condensed
+WritingScript:Roman
+OutlineFileName:\HelveNeuHeaCon
+DataFormat:POSTResource
+UsesStandardEncoding:yes
+isCFF:no
+FileLength:31881
+FileModTime:815234701
+DesignSize:-1
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:HelveticaNeue-HeavyCondObl
+FamilyName:Helvetica Neue
+StyleName:87 Heavy Condensed Oblique
+MenuName:HelveticaNeue MediumCond
+StyleBits:3
+WeightClass:850
+WidthClass:3
+AngleClass:1
+FullName:Helvetica 87 Heavy Condensed Oblique
+WritingScript:Roman
+OutlineFileName:\HelveNeuHeaConObl
+DataFormat:POSTResource
+UsesStandardEncoding:yes
+isCFF:no
+FileLength:44243
+FileModTime:815234701
+DesignSize:-1
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:HelveticaNeue-LightCond
+FamilyName:Helvetica Neue
+StyleName:47 Light Condensed
+MenuName:HelveticaNeue LightCond
+StyleBits:0
+WeightClass:300
+WidthClass:3
+AngleClass:0
+FullName:Helvetica 47 Light Condensed
+WritingScript:Roman
+OutlineFileName:\HelveNeuLigCon
+DataFormat:POSTResource
+UsesStandardEncoding:yes
+isCFF:no
+FileLength:28974
+FileModTime:815234702
+DesignSize:-1
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:HelveticaNeue-LightCondObl
+FamilyName:Helvetica Neue
+StyleName:47 Light Condensed Oblique
+MenuName:HelveticaNeue LightCond
+StyleBits:1
+WeightClass:300
+WidthClass:3
+AngleClass:1
+FullName:Helvetica 47 Light Condensed Oblique
+WritingScript:Roman
+OutlineFileName:\HelveNeuLigConObl
+DataFormat:POSTResource
+UsesStandardEncoding:yes
+isCFF:no
+FileLength:38850
+FileModTime:815234702
+DesignSize:-1
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:HelveticaNeue-MediumCond
+FamilyName:Helvetica Neue
+StyleName:67 Medium Condensed
+MenuName:HelveticaNeue MediumCond
+StyleBits:0
+WeightClass:500
+WidthClass:3
+AngleClass:0
+FullName:Helvetica 67 Medium Condensed
+WritingScript:Roman
+OutlineFileName:\HelveNeuMedCon
+DataFormat:POSTResource
+UsesStandardEncoding:yes
+isCFF:no
+FileLength:29561
+FileModTime:815234703
+DesignSize:-1
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:HelveticaNeue-MediumCondObl
+FamilyName:Helvetica Neue
+StyleName:67 Medium Condensed Oblique
+MenuName:HelveticaNeue MediumCond
+StyleBits:1
+WeightClass:500
+WidthClass:3
+AngleClass:1
+FullName:Helvetica 67 Medium Condensed Oblique
+WritingScript:Roman
+OutlineFileName:\HelveNeuMedConObl
+DataFormat:POSTResource
+UsesStandardEncoding:yes
+isCFF:no
+FileLength:39554
+FileModTime:815234703
+DesignSize:-1
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Suitcase
+FontName:HelveticaNeue-UltraLigCond
+OutlineFileName:\Helvetica Neue Condensed 1
+ResourceID:8775
+MacStyle:0
+FileLength:154049
+FileModTime:793902190
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Suitcase
+FontName:HelveticaNeue-UltraLigCondObl
+OutlineFileName:\Helvetica Neue Condensed 1
+ResourceID:8775
+MacStyle:2
+FileLength:154049
+FileModTime:793902190
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Suitcase
+FontName:HelveticaNeue-UltraLigCondObl
+OutlineFileName:\Helvetica Neue Condensed 1
+ResourceID:8753
+MacStyle:0
+FileLength:154049
+FileModTime:793902190
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Suitcase
+FontName:HelveticaNeue-BlackCond
+OutlineFileName:\Helvetica Neue Condensed 1
+ResourceID:8754
+MacStyle:0
+FileLength:154049
+FileModTime:793902190
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Suitcase
+FontName:HelveticaNeue-BlackCondObl
+OutlineFileName:\Helvetica Neue Condensed 1
+ResourceID:8754
+MacStyle:2
+FileLength:154049
+FileModTime:793902190
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Suitcase
+FontName:HelveticaNeue-BlackCondObl
+OutlineFileName:\Helvetica Neue Condensed 1
+ResourceID:8755
+MacStyle:0
+FileLength:154049
+FileModTime:793902190
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Suitcase
+FontName:HelveticaNeue-ExtBlackCond
+OutlineFileName:\Helvetica Neue Condensed 1
+ResourceID:5755
+MacStyle:0
+FileLength:154049
+FileModTime:793902190
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Suitcase
+FontName:HelveticaNeue-ExtBlackCondObl
+OutlineFileName:\Helvetica Neue Condensed 1
+ResourceID:5755
+MacStyle:2
+FileLength:154049
+FileModTime:793902190
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Suitcase
+FontName:HelveticaNeue-ExtBlackCondObl
+OutlineFileName:\Helvetica Neue Condensed 1
+ResourceID:8794
+MacStyle:0
+FileLength:154049
+FileModTime:793902190
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Suitcase
+FontName:HelveticaNeue-ThinCond
+OutlineFileName:\Helvetica Neue Condensed 2
+ResourceID:8737
+MacStyle:0
+FileLength:148561
+FileModTime:793902188
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Suitcase
+FontName:HelveticaNeue-ThinCondObl
+OutlineFileName:\Helvetica Neue Condensed 2
+ResourceID:8737
+MacStyle:2
+FileLength:148561
+FileModTime:793902188
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Suitcase
+FontName:HelveticaNeue-ThinCondObl
+OutlineFileName:\Helvetica Neue Condensed 2
+ResourceID:8740
+MacStyle:0
+FileLength:148561
+FileModTime:793902188
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Suitcase
+FontName:HelveticaNeue-Condensed
+OutlineFileName:\Helvetica Neue Condensed 2
+ResourceID:5796
+MacStyle:0
+FileLength:148561
+FileModTime:793902188
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Suitcase
+FontName:HelveticaNeue-BoldCond
+OutlineFileName:\Helvetica Neue Condensed 2
+ResourceID:5796
+MacStyle:1
+FileLength:148561
+FileModTime:793902188
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Suitcase
+FontName:HelveticaNeue-CondensedObl
+OutlineFileName:\Helvetica Neue Condensed 2
+ResourceID:5796
+MacStyle:2
+FileLength:148561
+FileModTime:793902188
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Suitcase
+FontName:HelveticaNeue-BoldCondObl
+OutlineFileName:\Helvetica Neue Condensed 2
+ResourceID:5796
+MacStyle:3
+FileLength:148561
+FileModTime:793902188
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Suitcase
+FontName:HelveticaNeue-BoldCond
+OutlineFileName:\Helvetica Neue Condensed 2
+ResourceID:8772
+MacStyle:0
+FileLength:148561
+FileModTime:793902188
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Suitcase
+FontName:HelveticaNeue-BoldCondObl
+OutlineFileName:\Helvetica Neue Condensed 2
+ResourceID:8772
+MacStyle:2
+FileLength:148561
+FileModTime:793902188
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Suitcase
+FontName:HelveticaNeue-CondensedObl
+OutlineFileName:\Helvetica Neue Condensed 2
+ResourceID:8765
+MacStyle:0
+FileLength:148561
+FileModTime:793902188
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Suitcase
+FontName:HelveticaNeue-BoldCondObl
+OutlineFileName:\Helvetica Neue Condensed 2
+ResourceID:8765
+MacStyle:1
+FileLength:148561
+FileModTime:793902188
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Suitcase
+FontName:HelveticaNeue-BoldCondObl
+OutlineFileName:\Helvetica Neue Condensed 2
+ResourceID:8773
+MacStyle:0
+FileLength:148561
+FileModTime:793902188
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Suitcase
+FontName:HelveticaNeue-LightCond
+OutlineFileName:\Helvetica Neue Condensed 3
+ResourceID:5823
+MacStyle:0
+FileLength:154017
+FileModTime:793902189
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Suitcase
+FontName:HelveticaNeue-LightCondObl
+OutlineFileName:\Helvetica Neue Condensed 3
+ResourceID:5823
+MacStyle:2
+FileLength:154017
+FileModTime:793902189
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Suitcase
+FontName:HelveticaNeue-LightCondObl
+OutlineFileName:\Helvetica Neue Condensed 3
+ResourceID:5824
+MacStyle:0
+FileLength:154017
+FileModTime:793902189
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Suitcase
+FontName:HelveticaNeue-MediumCond
+OutlineFileName:\Helvetica Neue Condensed 3
+ResourceID:5825
+MacStyle:0
+FileLength:154017
+FileModTime:793902189
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Suitcase
+FontName:HelveticaNeue-HeavyCond
+OutlineFileName:\Helvetica Neue Condensed 3
+ResourceID:5825
+MacStyle:1
+FileLength:154017
+FileModTime:793902189
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Suitcase
+FontName:HelveticaNeue-MediumCondObl
+OutlineFileName:\Helvetica Neue Condensed 3
+ResourceID:5825
+MacStyle:2
+FileLength:154017
+FileModTime:793902189
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Suitcase
+FontName:HelveticaNeue-HeavyCondObl
+OutlineFileName:\Helvetica Neue Condensed 3
+ResourceID:5825
+MacStyle:3
+FileLength:154017
+FileModTime:793902189
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Suitcase
+FontName:HelveticaNeue-HeavyCond
+OutlineFileName:\Helvetica Neue Condensed 3
+ResourceID:5827
+MacStyle:0
+FileLength:154017
+FileModTime:793902189
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Suitcase
+FontName:HelveticaNeue-HeavyCondObl
+OutlineFileName:\Helvetica Neue Condensed 3
+ResourceID:5827
+MacStyle:2
+FileLength:154017
+FileModTime:793902189
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Suitcase
+FontName:HelveticaNeue-MediumCondObl
+OutlineFileName:\Helvetica Neue Condensed 3
+ResourceID:5826
+MacStyle:0
+FileLength:154017
+FileModTime:793902189
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Suitcase
+FontName:HelveticaNeue-HeavyCondObl
+OutlineFileName:\Helvetica Neue Condensed 3
+ResourceID:5826
+MacStyle:1
+FileLength:154017
+FileModTime:793902189
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Suitcase
+FontName:HelveticaNeue-HeavyCondObl
+OutlineFileName:\Helvetica Neue Condensed 3
+ResourceID:5828
+MacStyle:0
+FileLength:154017
+FileModTime:793902189
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Suitcase
+FontName:Serifa-Roman
+OutlineFileName:\Serifa Screen Fonts
+ResourceID:14718
+MacStyle:0
+FileLength:163189
+FileModTime:980952110
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Suitcase
+FontName:Serifa-Black
+OutlineFileName:\Serifa Screen Fonts
+ResourceID:14718
+MacStyle:1
+FileLength:163189
+FileModTime:980952110
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Suitcase
+FontName:Serifa-Italic
+OutlineFileName:\Serifa Screen Fonts
+ResourceID:14718
+MacStyle:2
+FileLength:163189
+FileModTime:980952110
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Suitcase
+FontName:Serifa-LightItalic
+OutlineFileName:\Serifa Screen Fonts
+ResourceID:14719
+MacStyle:0
+FileLength:163189
+FileModTime:980952110
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Suitcase
+FontName:Serifa-Light
+OutlineFileName:\Serifa Screen Fonts
+ResourceID:14720
+MacStyle:0
+FileLength:163189
+FileModTime:980952110
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Suitcase
+FontName:Serifa-Bold
+OutlineFileName:\Serifa Screen Fonts
+ResourceID:14720
+MacStyle:1
+FileLength:163189
+FileModTime:980952110
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Suitcase
+FontName:Serifa-LightItalic
+OutlineFileName:\Serifa Screen Fonts
+ResourceID:14720
+MacStyle:2
+FileLength:163189
+FileModTime:980952110
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Suitcase
+FontName:Serifa-Italic
+OutlineFileName:\Serifa Screen Fonts
+ResourceID:14717
+MacStyle:0
+FileLength:163189
+FileModTime:980952110
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Suitcase
+FontName:Serifa-Bold
+OutlineFileName:\Serifa Screen Fonts
+ResourceID:14716
+MacStyle:0
+FileLength:163189
+FileModTime:980952110
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Suitcase
+FontName:Serifa-Black
+OutlineFileName:\Serifa Screen Fonts
+ResourceID:14715
+MacStyle:0
+FileLength:163189
+FileModTime:980952110
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:SerifaStd-Black
+FamilyName:Serifa Std
+StyleName:75 Black
+MenuName:Serifa Std 55 Roman
+StyleBits:2
+WeightClass:850
+WidthClass:5
+AngleClass:0
+FullName:Serifa Std 75 Black
+WritingScript:Roman
+OutlineFileName:\SerifaStd-Black.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+FileLength:29512
+FileModTime:1263232482
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:SerifaStd-Bold
+FamilyName:Serifa Std
+StyleName:65 Bold
+MenuName:Serifa Std 45 Light
+StyleBits:2
+WeightClass:700
+WidthClass:5
+AngleClass:0
+FullName:Serifa Std 65 Bold
+WritingScript:Roman
+OutlineFileName:\SerifaStd-Bold.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+FileLength:27772
+FileModTime:1263232482
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:SerifaStd-Light
+FamilyName:Serifa Std
+StyleName:45 Light
+MenuName:Serifa Std 45 Light
+StyleBits:0
+WeightClass:300
+WidthClass:5
+AngleClass:0
+FullName:Serifa Std 45 Light
+WritingScript:Roman
+OutlineFileName:\SerifaStd-Light.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+FileLength:27440
+FileModTime:1263232482
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:SerifaStd-LightItalic
+FamilyName:Serifa Std
+StyleName:46 Light Italic
+MenuName:Serifa Std 45 Light
+StyleBits:1
+WeightClass:300
+WidthClass:5
+AngleClass:1
+FullName:Serifa Std 46 Light Italic
+WritingScript:Roman
+OutlineFileName:\SerifaStd-LightItalic.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+FileLength:28260
+FileModTime:1263232482
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:SerifaStd-Roman
+FamilyName:Serifa Std
+StyleName:55 Roman
+MenuName:Serifa Std 55 Roman
+StyleBits:0
+WeightClass:400
+WidthClass:5
+AngleClass:0
+FullName:Serifa Std 55 Roman
+WritingScript:Roman
+OutlineFileName:\SerifaStd-Roman.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+FileLength:27452
+FileModTime:1263232482
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:Serifa-Black
+FamilyName:Serifa
+StyleName:75 Black
+MenuName:Serifa 55 Roman
+StyleBits:2
+WeightClass:900
+WidthClass:5
+AngleClass:0
+FullName:12 Serifa** 75 Black   09235
+WritingScript:Roman
+OutlineFileName:\SerifBla
+DataFormat:POSTResource
+UsesStandardEncoding:yes
+isCFF:no
+FileLength:42802
+FileModTime:600103957
+DesignSize:-1
+%EndFont
+
