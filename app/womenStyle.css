@@ -1,4 +1,4 @@
-/*General CSS*/
+/********General CSS*/
 body{
     height: auto;
     width: 100%;
@@ -12,31 +12,45 @@ h3, p{
     padding-left: 5%;
     padding-right: 20%;
     margin-top: 20px;
-    color: white;
 }
 .gradient-green{
     background-image: linear-gradient(
         to bottom,
         #4A6C6A 20%,
-        #96b0a2
+        #bcd1bc
     );
 }
 .yellow{
-    background-color: #C6C643;
+    background-color: #BBC356;
 }
 .red{
-    background-color: #772530;
+    background-color: #8d2446;
+}
+@font-face{
+    font-family: 'HelveMedCon';
+    src: url(assets/MuseumFonts2012/HelveNeuMedCon.otf);
+}
+@font-face{
+    font-family: 'testFonts';
+    src: url(assets/MuseumFonts2012/SerifBla.otf);
 }
 /*content text*/
 .content-head{
-    font-size: 220%;
+    font-size: 40px;
     overflow: hidden;
+    color: white;
 }
 .content-body{
-    font-size: 180%;
+    font-size: 36px;
     overflow: hidden;
+    color: white;
 }
-
+.section-header{
+    position: absolute;
+    bottom: -7%;
+    z-index: 10;
+    width: 900px;
+}
 /*banners*/
 .banner{
     position: relative;
@@ -45,13 +59,13 @@ h3, p{
     z-index: 5;
 }
 
-/*carousel*/
+/******Carousel*/
 #carouselHistory, #carouselComputing, #theirWords, #timeline{
     padding-bottom: 20px;
 }
 .carousel-inner, .carousel-item, 
 .carousel-caption, .carousel-caption,
-.title-screen, .row, .img-main{
+.title-screen, .img-main, .row-full{
     height: 100%;
 }
 .carousel-caption{
@@ -79,11 +93,11 @@ h3, p{
 }
 /*carousel indicators*/
 .carousel-indicators{
-    height: 10%;
+    height: 70px;
 }
 .carousel-indicators li{
-    height: 100%;
-    width: 5%;
+    height: 50px;
+    width: 50px;
     border-radius: 50%;
     background: transparent;
     border: 5px solid #4A6C6A;
@@ -106,7 +120,7 @@ h3, p{
 }
 .kens-wrapper img{
     width: 100%;
-    animation: kenburns 30s infinite;
+    animation: kenburns 60s infinite;
 }
 @keyframes kenburns{
     0%{
@@ -132,48 +146,72 @@ h3, p{
 }
 
 /*Tubie CSS*/
-.img-tubie{
+.tubie-container{
     position: absolute;
-    background: #f09d18;
-    outline: none;
-    border: none;
-    bottom: 0;
-    right: 0;
-    width: 75%;
-    height: 30%;
+    background: #d78954;
+    border-radius: 50%;
+    bottom: 10%;
+    right: 5%;
+    width: 200px;
+    height: 200px;
+    z-index: 7;
 }
 .tubie-wrapper{
     position: relative;
     width: 100%;
     height: 100%;
+    bottom: 0%;
 }
 .tubie-wrapper img{
     position: absolute;
+    left: -25%;
+    top: -25%;
+    object-fit: contain;
     height: 150%;
-    right: 15%;
-    bottom: 0;
+}
+/*Tubie Popover*/
+.popover{
+    max-width: 100%;
+    width: 30%;
+    margin-left: -10%;
+    margin-top: -3%;
+}
+.popover-header{
+    font-size: 50px;
+}
+.popover-body{
+    font-size: 30px;
 }
 
 /*Building Future CSS*/
-.img-main-large{
-    position: absolute;
-    left: 20%;
-    top: -40%;
-    height: 140%;
-    width: 170%;
-}
 .side-widget{
-    margin-left: 30%;
+    margin-left: 25%;
     overflow-y: hidden;
 }
+.img-main-large{
+    position: relative;
+    width: 100%;
+}
+.img-main-large:after{
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+}
 .circle-wrap{
+    position: absolute;
+    width: 150%;
+    height: 150%;
+    left: 20%;
+    bottom: -10%;
     background-color: black;
     overflow: hidden;
 }
 .circle-wrap img{
     width: 100%;
-    position: absolute;
-    top: 28%;
+    margin-top: 20%;
+}
+.vid-slide{
+    margin-left: -10%;
 }
 /*Slideshow*/
 .fade-enter-active, .fade-leave-active{
@@ -208,27 +246,14 @@ h3, p{
 }
 
 /*In Their Words CSS*/
-.container-fluid{
-    padding-left: 5%;
-    padding-right: 5%;
+.holder{
+    height: 20%;
 }
-.banner-span{
-    top: 5%;
-}
-
-.banner-img{
-    position: relative;
-    bottom: 150px;
-    left: 50%;
-}
-.red-text{
-    color: #772530;
-    font-size: 30px;
-    width: 35%;
-    margin-left: 13%;
-    position: relative;
-    bottom: 100%;
-    padding-top: 10px;
+.header{
+    width: 130%;
+    margin-left: -10%;
+    margin-bottom: -30%;
+    margin-top: -3%;
 }
 .vid-thumb{
     margin-bottom: 5%;
@@ -236,7 +261,7 @@ h3, p{
     box-shadow: 10px 10px 20px 5px #2a2b2b;
 }
 .vid-top{
-    padding-top: 5%;
+    padding-top: 10%;
 }
 /*modal*/
 .modal-dialog{

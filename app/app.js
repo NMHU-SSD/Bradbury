@@ -19,8 +19,8 @@ var app = new Vue({
         modalTimer:'modalTimer',
         modalVideo:'modalVideo',
         slideSpeed:2000,
-        timeout:7000,
-        quitout:20000,
+        timeout:30000,
+        quitout:10000,
         t: null,
         afk: null,
     },
@@ -93,17 +93,6 @@ var app = new Vue({
         itemtoggle:function(item){
             target = item.currentTarget.id;
             $('#'+target).toggleClass('open');
-        },
-        //tubie
-        setTubie:function(index, type){
-            console.log(index);
-            console.log(type);
-            
-            if(type=='computing'){
-                this.toobiesays = this.toobieData.computing[index];
-            }else{
-                this.toobiesays = this.toobieData.computing[index];
-            }
         }
     }
 })

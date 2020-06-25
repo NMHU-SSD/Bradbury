@@ -1,9 +1,9 @@
 var modalOverlay= {
     name:"modal-overlay",
-    props:['countdown', 'id', 'exitout'],
+    props:['resettime','countdown', 'id', 'exitout'],
     data:function(){
         return{
-            count: 0,
+            count:null,
             active: false
         }
     },

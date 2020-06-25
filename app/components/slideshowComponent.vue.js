@@ -3,37 +3,31 @@ var slideshowComponent={
     props:['images'],
     data:function(){
         return{
+            index:0,
             currentImg: null,
             fade:true
         }
     },
     mounted:function(){
       this.slideshow();
-        console.log(this.images);
-        console.log(this.currentImg);
     },
     methods:{
-        tubieClicked:function(index){
-            this.$emit('tubieclicked', index);
-        },
         slideshow:function(){
+            this.currentImg = this.images[this.index].img; 
+            //console.log(this.currentImg);
             
-            imgList= this.images[0].media;
-            this.currentImg = imgList[this.img].img;           
             this.fade=false;
-
-            if(this.img < imgList.length-1){
-                this.img++;
+            if(this.index < this.images.length-1){
+                this.index++;
             }else{
-                this.img=0;
+                this.index=0;
             }
-            setTimeout(this.slideshow, 5000);
-        }
+            setTimeout(this.slideshow, 10000);}
     },
     watch:{
         images:function(){
             if(this.images != null){
-                this.slideshow();
+                //this.slideshow();
             }
         },
         currentImg:function(){
@@ -42,6 +36,6 @@ var slideshowComponent={
     },
     template:
     `<transition name="fade">
-        <img v-show="fade" :src="currentImg">
+        <img v-show="fade" class="d-block w-100 object-fit" :src="currentImg">
     </transition>`
 }

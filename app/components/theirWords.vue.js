@@ -1,6 +1,6 @@
 var theirWords = {
     name: "their-words",
-    props: ['videos','note'],
+    props: ['videos','note','header'],
     data:function(){
         return{
             timeline: true,
@@ -13,26 +13,32 @@ var theirWords = {
         }
     },
     template:
-    `<div id="theirWords">
+    `<div class="holder">
         <div class="container-fluid">
-            <div class="row vid-top">
-                <div v-for="video in (videos || []).slice(0, 3)" class="col">
-                    <img src="https://picsum.photos/700/400" class="vid-thumb shadow" @click="seturl(test)">
-                </div>
-            </div>
             <div class="row">
-                <div v-for="video in (videos || []).slice(3)" class="col">
-                    <img src="https://picsum.photos/700/400" class="vid-thumb shadow">
+                <div class="col-6">
+                    <div class="row vid-top">
+                        <div v-for="video in (videos || []).slice(0, 2)" class="col">
+                            <img src="https://picsum.photos/700/400" class="vid-thumb shadow" @click="seturl(test)">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div v-for="video in (videos || []).slice(2,4)" class="col">
+                            <img src="https://picsum.photos/700/400" class="vid-thumb shadow">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div v-for="video in (videos || []).slice(4,6)" class="col">
+                            <img src="https://picsum.photos/700/400" class="vid-thumb shadow">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <img class="header" :src="header">
+                    <p class="content-body">{{ note }}</p>
                 </div>
             </div>
         </div>
-
-              <div class="banner-span">
-                          <div class="yellow"></div>
-                          <div class="red"></div>
-                          <h4 class="red-text">{{ note }}</h4>
-              </div>
-              <!--img src="https://picsum.photos/700/170" class="banner-img"-->
         
     </div>`
 }

@@ -19,15 +19,15 @@
 	<div id="app">	
 		<main>
             
-            <tubie-overlay id="tubie" :display="toobiesays"></tubie-overlay>           
+                       
             <modal-overlay :id="modalTimer" exitout="true" :countdown="quitout" ref="timeModal"></modal-overlay>
             <modal-overlay :id="modalVideo" exitout="false" :countdown="quitout" ref="vidModal"></modal-overlay>
             
-            <building-future :slides="womenComputingData.slides" id="carouselComputing" :speed = "slideSpeed" :height="womenComputingData.height" @tubieclicked="setTubie($event, 'building')"></building-future>
-            <building-future :slides="buildingFutureData.slides" id="carouselHistory" :speed = "slideSpeed" :height="buildingFutureData.height" @tubieclicked="setTubie($event, 'building')"></building-future>
+            <building-future id="carouselComputing" :slides="womenComputingData.slides" :header="womenComputingData.header" :height="womenComputingData.height"></building-future>
+            <building-future id="carouselHistory" @seturl="displayVideo($event)" :slides="buildingFutureData.slides" :header="buildingFutureData.header" :height="buildingFutureData.height" :videosdata="inTheirWordsData"></building-future>
             <!--woman-computing :slides="womenComputingData.slides" id="carouselComputing" :speed = "slideSpeed" @tubieclicked="setTubie($event, 'computing')"></woman-computing-->
             
-            <their-words :note="inTheirWordsData.body" :videos="inTheirWordsData.videos" v-on:seturl="displayVideo($event)"></their-words>
+            <their-words @seturl="displayVideo($event)" :note="inTheirWordsData.body" :videos="inTheirWordsData.videos" :header="inTheirWordsData.header"></their-words>
             
             <!--time-line v-show=false></time-line-->
             
