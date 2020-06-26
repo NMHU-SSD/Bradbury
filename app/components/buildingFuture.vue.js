@@ -8,13 +8,14 @@ var buildingFuture = {
         }
     },
     mounted:function(){
-        //this.checkitem();
+        this.checkitem();
     },
     methods:{
         seturl:function(url){
             this.$emit('seturl', url);
         },
         checkitem:function(){
+            console.log("Logged event");
             var $this=$('#' + this.id);
             if($('.carousel-inner .item:first').hasClass('active')) {
                 $this.children('.left.carousel-control').hide();
@@ -25,6 +26,10 @@ var buildingFuture = {
             } else {
                 $this.children('.carousel-control').show();
             }
+        },
+        changeSlide:function(){
+            console.log("clicked");
+            //$('#' + this.id).on('slid.bs.carousel', this.checkitem);
         }
     },
     watch:{
@@ -47,33 +52,32 @@ var buildingFuture = {
 
                     <div class="row row-full">
                         <div v-if="index==0" class="col red">
-                            <slideshow-component :images="slideImages"/>
+                            <slideshow-component :images="slideImages" :speed="speed"/>
                         </div>
 
                         <div v-else class="col-4 red">
                             <div v-if="slide.media" class="img-main-large">
-                                <div class="circle-wrap img-shadow kens-wrapper">
+                                <div class="circle-wrap img-shadow">
                                     <img :src="slide.media">
                                 </div>
                             </div>
                         </div>
 
-                          <div v-if="index!=0" :class="['col', (slide.media ? 'side-widget' : 'vid-slide')]">
+                          <div v-if="index!=0" :class="['col', (slide.media ? 'side-widget' : 'add-slide')]">
                               <p v-if="slide.title" class="content-body">{{ slide.title }}</p>
                               <p v-if="slide.body" class="content-body">{{ slide.body }}</p>
 
                             <div class="slide-holder">
-                                <their-words v-if="!slide.media" style="height: 75%" @seturl="seturl($event)" :note="videoData.body" :videos="videoData.videos" :header="videoData.header"/>
+                                <their-words v-if="slide.videoSlide" @seturl="seturl($event)" :note="videoData.body" :videos="videoData.videos" :header="videoData.header"/>
                             </div>
                           </div>
                       </div>
 
-                        <div class="banner yellow">
-                            <div v-if="index!=0" class="tubie-container">
-                                  <tubie-overlay id="tubie" :display="slide.tubie"/>
-                            </div>
-                        </div>
+                        <div class="banner yellow"></div>
                         <img v-if="index!=0" class="section-header" :src="header">
+                        <div v-if="index!=0" class="tubie-container">
+                              <tubie-overlay id="tubie" :display="slide.tubie"/>
+                        </div>
                 </div>          
         </template>
     </div>
@@ -82,12 +86,12 @@ var buildingFuture = {
         <li v-for="(slide, index) in slides" :data-target="['#' + id]" :data-slide-to="index" :class="(index==0 ? 'active' : '')"></li>
     </ol>
 
-  <a class="carousel-control-prev" :href="['#' + id]" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon carousel-icons" aria-hidden="true"></span>
+  <a class="carousel-control-prev" :href="['#' + id]" @click="changeSlide()" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
     <span class="sr-only">Previous</span>
   </a>
-  <a class="carousel-control-next" :href="['#' + id]" role="button" data-slide="next">
-    <span class="carousel-control-next-icon carousel-icons" aria-hidden="true"></span>
+  <a class="carousel-control-next" :href="['#' + id]" @click="changeSlide()" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="sr-only">Next</span>
   </a>
 

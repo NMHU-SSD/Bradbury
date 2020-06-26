@@ -13,8 +13,7 @@ var theirWords = {
         }
     },
     template:
-    `<div class="holder">
-        <div class="container-fluid">
+    `<div class="container-fluid">
             <div class="row">
                 <div class="col-6">
                     <div class="row vid-top">
@@ -34,11 +33,9 @@ var theirWords = {
                     </div>
                 </div>
                 <div class="col-6">
-                    <img class="header" :src="header">
+                    <img class="words-header" :src="header">
                     <p class="content-body">{{ note }}</p>
                 </div>
             </div>
-        </div>
-        
-    </div>`
+        </div>`
 }

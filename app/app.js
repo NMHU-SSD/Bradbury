@@ -14,11 +14,10 @@ var app = new Vue({
         womenComputingData:"",
         buildingFutureData:"",
         inTheirWordsData:"",
-        toobieData:"",
-        toobiesays: null,
         modalTimer:'modalTimer',
         modalVideo:'modalVideo',
-        slideSpeed:2000,
+        historyId:'carouselHistory',
+        computeId:'carouselComputing',
         timeout:30000,
         quitout:10000,
         t: null,
@@ -69,10 +68,10 @@ var app = new Vue({
         },
         toDefault:function(){
             console.log("defaulted");
-            $('#carouselHistory').carousel(0);
-            $('#carouselComputing').carousel(0);
-            $('#carouselHistory').carousel('pause');
-            $('#carouselComputing').carousel('pause');
+            $('#'+this.historyId).carousel(0);
+            $('#'+this.computeId).carousel(0);
+            $('#'+this.historyId).carousel('pause');
+            $('#'+this.computeId).carousel('pause');
         },
         //modal popup
         displayModal:function(){
