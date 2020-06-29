@@ -75,7 +75,7 @@ var buildingFuture = {
 
                         <div class="banner yellow"></div>
                         <img v-if="index!=0" class="section-header" :src="header">
-                        <div v-if="index!=0" class="tubie-container">
+                        <div v-if="index!=0" class="tubie-container-right">
                               <tubie-overlay id="tubie" :display="slide.tubie"/>
                         </div>
                 </div>          

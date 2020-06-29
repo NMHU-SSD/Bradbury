@@ -14,6 +14,7 @@ var app = new Vue({
         womenComputingData:"",
         buildingFutureData:"",
         inTheirWordsData:"",
+        timelineData:"",
         modalTimer:'modalTimer',
         modalVideo:'modalVideo',
         historyId:'carouselHistory',
@@ -36,15 +37,7 @@ var app = new Vue({
                 this.womenComputingData = data.womenComputingData;
                 this.buildingFutureData = data.buildingFutureData;
                 this.inTheirWordsData = data.inTheirWordsData;
-            })
-            .catch((error) => {
-                console.error('Error:', error);
-            });
-            
-            fetch("toobieData.json")
-            .then(response => response.json())
-            .then(data =>{
-                this.toobieData = data.toobieData;
+                this.timelineData = data.timelineData;
             })
             .catch((error) => {
                 console.error('Error:', error);

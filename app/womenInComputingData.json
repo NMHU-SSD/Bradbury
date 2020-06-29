@@ -163,9 +163,15 @@
             ]
     },
     
-    "timeline":
+    "timelineData":
     {
-        "height": "700px"
+        "height": "700px",
+        "url":"",
+        "tubie":{
+            "image":"Toobie/tubie_yellow-03.png",
+            "header":"title data",
+            "body":"explaination"
+        }
     }
 
 }
