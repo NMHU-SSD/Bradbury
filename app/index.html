@@ -13,40 +13,19 @@
 
     <title>Women in Computing</title>
   </head>
-    
-    
+ 
   <body>	
 	<div id="app">	
 		<main>
+            <!-- Pop overs --->
             <modal-overlay :id="modalTimer" exitout="true" :countdown="quitout" ref="timeModal"></modal-overlay>
-            <modal-overlay :id="modalVideo" exitout="false" :countdown="quitout" ref="vidModal"></modal-overlay>
-            
-            <time-line :height="timelineData.height" :tubie="timelineData.tubie"></time-line>
-            
-            <building-future :id="computeId" :slides="womenComputingData.slides" :header="womenComputingData.header" :height="womenComputingData.height" :speed="womenComputingData.slidespeed"></building-future>
-            <building-future :id="historyId" @seturl="displayVideo($event)" :slides="buildingFutureData.slides" :header="buildingFutureData.header" :height="buildingFutureData.height" :speed="buildingFutureData.slidespeed" :videosdata="inTheirWordsData"></building-future>
-            <!--woman-computing :slides="womenComputingData.slides" id="carouselComputing" :speed = "slideSpeed" @tubieclicked="setTubie($event, 'computing')"></woman-computing-->
-            
-            <their-words v-show=false @seturl="displayVideo($event)" :note="inTheirWordsData.body" :videos="inTheirWordsData.videos" :header="inTheirWordsData.header"></their-words>
-            
-            
-            
-            <!--div class="nav-wrapper">
-                <ul class="list-unstyled">
-                    <li type="radio" id="list1" @click="itemtoggle($event)">
-                       <woman-computing :slides="womenComputingData.slides" id="carouselComputing" :speed = "slideSpeed" @tubieclicked="setTubie($event, 'computing')"></woman-computing>
-                    </li>
-                    <li type="radio" id="list2" @mouseenter="itemtoggle($event)" @mouseleave="itemtoggle($event)">
-                        <woman-computing :slides="womenComputingData.slides" id="test" :speed = "slideSpeed"></woman-computing>
-                    </li>
-                    <li>
-                        <h2>PlaceHolder 3</h2>
-                    </li>
-                </ul>
-            </div-->
-            
-            
-		</main>
+            <modal-overlay :id="modalVideo" exitout="false" :countdown="quitout" ref="vidModal"></modal-overlay> 
+            <!--- Main Layout components --->
+            <title-bar height="200px"></title-bar>
+            <woman-computing :id="computeId" :slides="womenComputingData.slides" :header="womenComputingData.header" :height="womenComputingData.height" :speed="womenComputingData.slidespeed" @selected="itemselect($event)"></woman-computing>
+            <building-future :id="historyId" :slides="buildingFutureData.slides" :header="buildingFutureData.header" :height="buildingFutureData.height" :speed="buildingFutureData.slidespeed" :videosdata="inTheirWordsData" @seturl="displayVideo($event)" @selected="itemselect($event)"></building-future>
+            <time-line id="timeline" :height="timelineData.height" :tubie="timelineData.tubie" :webpage="timelineData.url" @seturl="displayVideo($event)" @selected="itemselect($event)"></time-line>
+        </main>
 	</div>
     
 
@@ -65,8 +44,8 @@
 
 	
 	<!-- Vue Components-->
-	<script src="components/buildingFuture.vue.js"></script>
-	<script src="components/theirWords.vue.js"></script>
+    <script src="components/titleBar.vue.js"></script>
+    <script src="components/buildingFuture.vue.js"></script>
     <script src="components/womenComputing.vue.js"></script>
     <script src="components/modalOverlay.vue.js"></script>
     <script src="components/timeLine.vue.js"></script>

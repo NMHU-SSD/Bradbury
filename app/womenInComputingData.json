@@ -2,7 +2,7 @@
     "womenComputingData":
     {
             "header":"assets/TitleLogo/Title-WomeninLosAlamosComputing.svg",
-            "height":"700px",
+            "height":"900px",
             "slidespeed": 30000,
             "slides":
             [
@@ -25,7 +25,7 @@
                     "tubie":{
                         "image":"Toobie/tubie_yellow-04.png",
                         "header":"title data",
-                        "body":"body contents"
+                        "body":"Women in Computing"
                     }
                 },
                 {
@@ -55,7 +55,7 @@
     {
             "header":"assets/TitleLogo/Title-AHistoryofBuildingtheFuture.svg",
             "height": "900px",
-            "slidespeed": 30000,
+            "slidespeed": 15000,
             "slides":
             [
                 {
@@ -83,7 +83,7 @@
                     "tubie":{
                         "image":"Toobie/tubie_yellow-04.png",
                         "header":"title data",
-                        "body":"body contents"
+                        "body":"Building the Future"
                     }
                 },
                 {
@@ -139,38 +139,36 @@
     {
             "header":"assets/TitleLogo/Title-InTheirOwnWords.svg",
             "body":"Hear more about the groundbreaking discoveries and contributions women make at Los Alamos, in their own words.",
-            
             "videos":
             [
                 {
-                    "link":""
+                    "link":"video0"
                 },
                 {
-                    "link":""
+                    "link":"video1"
                 },
                 {
-                    "link":""
+                    "link":"video2"
                 },
                 {
-                    "link":""
+                    "link":"video3"
                 },
                 {
-                    "link":""
+                    "link":"video4"
                 },
                 {
-                    "link":""
+                    "link":"video5"
                 }
             ]
     },
     
     "timelineData":
     {
-        "height": "700px",
-        "url":"",
+        "height": "1000px",
+        "url":"embedded url",
         "tubie":{
             "image":"Toobie/tubie_yellow-03.png",
-            "header":"title data",
-            "body":"explaination"
+            "vid":"tubie tutorial"
         }
     }
 

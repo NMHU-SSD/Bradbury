@@ -1,7 +1,7 @@
 //register components
-Vue.component('womanComputing', womanComputing)
+Vue.component('titleBar', titleBar)
 Vue.component('buildingFuture', buildingFuture)
-Vue.component('theirWords', theirWords)
+Vue.component('womanComputing', womanComputing)
 Vue.component('modalOverlay', modalOverlay)
 Vue.component('timeLine', timeLine)
 Vue.component('tubieOverlay', tubieOverlay)
@@ -23,10 +23,12 @@ var app = new Vue({
         quitout:10000,
         t: null,
         afk: null,
+        lastActive: null
     },
     mounted: function(){
         this.GetData();
         //this.resetTimer();
+        
     },
     
     methods:{
@@ -53,7 +55,6 @@ var app = new Vue({
             document.onmousedown = this.resetTimer;
         },
         toAlert:function(){
-            console.log("timer");
             document.onmousedown = this.resetTimer;
             this.$refs.timeModal.reset();
             this.displayModal();
@@ -63,8 +64,6 @@ var app = new Vue({
             console.log("defaulted");
             $('#'+this.historyId).carousel(0);
             $('#'+this.computeId).carousel(0);
-            $('#'+this.historyId).carousel('pause');
-            $('#'+this.computeId).carousel('pause');
         },
         //modal popup
         displayModal:function(){
@@ -82,9 +81,15 @@ var app = new Vue({
             this.$refs.vidModal.geturl(url);
         },
         //selection
-        itemtoggle:function(item){
-            target = item.currentTarget.id;
-            $('#'+target).toggleClass('open');
+        itemselect:function(item){
+            var target = item;
+            if(item!=this.lastActive){
+                console.log(this.lastActive);
+                if(this.lastActive!=null){
+                    $('#'+this.lastActive).carousel(0);
+                }
+                this.lastActive = target;
+            }
         }
     }
 })

@@ -1,93 +1,94 @@
 var womanComputing = {
     name: "woman-computing",
-    props: ['slides', 'helper', 'header', 'height', 'speed','id'],
+    props: ['id', 'slides', 'header', 'speed', 'header', 'height'],
     data:function(){
         return{
-            active:false
+            slideImages: null
         }
     },
     mounted:function(){
+        this.checkitem();
     },
     methods:{
-        toggle:function(){
-            this.active = !this.active;
-            if(this.active){
-                $('#'+this.id).carousel('cycle');
-            }else{
-                $('#'+this.id).carousel(0);
-                $('#'+this.id).carousel('pause');
+        seturl:function(url){
+            this.$emit('seturl', url);
+        },
+        checkitem:function(){
+            console.log("Logged event");
+            var $this=$('#' + this.id);
+            if($('.carousel-inner .item:first').hasClass('active')) {
+                $this.children('.left.carousel-control').hide();
+                $this.children('.right.carousel-control').show();
+            } else if($('.carousel-inner .item:last').hasClass('active')) {
+                $this.children('.left.carousel-control').show();
+                $this.children('.right.carousel-control').hide();
+            } else {
+                $this.children('.carousel-control').show();
             }
         },
-        paused:function(){
-            //this.active = false;
-            //$('#'+this.id).carousel('pause');
+        changeSlide:function(){
+            console.log("clicked");
+            //$('#' + this.id).on('slid.bs.carousel', this.checkitem);
         },
-        tubieClicked:function(index){
-            this.$emit('tubieclicked', index);
+        selected:function(){
+            this.$emit('selected', this.id);
+        }
+    },
+    watch:{
+        slides:function(){
+            if(this.slides!=null){
+                this.slideImages = this.slides[0].media;
+            }
         }
     },
     template:
-    `<div :id="id" style="height: 756px;" class="carousel" data-ride="carousel" data-wrap=false :data-interval="speed">
-        <div class="carousel-inner" @click="toggle">
+    `<div :id="id" :style="{height: this.height}" class="carousel" data-ride="carousel" data-wrap=false data-interval=false @click="selected">
+        <div class="carousel-inner gradient-green">
             <template v-for="(slide, index) in slides">
-                <div :class="['carousel-item', (index==0 ? 'active' : '')]">
-                  
-                  <div v-if="index==0" class="carousel-caption">
-                    
-                    <div class="row">
-                        <div class="col-4">
-                            <div class="img-main-large img-shadow red">
-                                <h2>TEST TEXT</h2>
-                            </div>
-                        </div>
+                <div :class="['carousel-item', (index==0 ? 'active' : '')]" >
+                    <div v-if="index==0" class="row row-full">
                         <div class="col">
-                            <div class="kens-wrapper title-screen">
-                                <img :src="slide.medias.main">
-                            </div>
+                            <slideshow-component :id="'slide-'+id" :images="slideImages" :speed="speed" :height="height" :header="header" position="left"/>
                         </div>
                     </div>
-                  </div>
+                    <div v-else class="row row-full">
 
-                  <div v-if="index!=0" class="carousel-caption">
-                      <div class="row no-gutters">
-                          <div class="col-3">
-                              <h3 class="content-head">{{ slide.title }}</h3>
+                <!--- Slides Layout Appearence --->
+                          <div class="col-2"/>
+                          <div class="col">
+                              <img class="img-main" :src="slide.media">
                           </div>
-                          <div class="col-6 img-main inner-shadow">
-                              <div class="kens-wrapper img-main">
-                              <img :src="slide.medias.main" class="">
-                              </div>
+                          <div class="col-4">
+                              <p v-if="slide.title" class="content-body">{{ slide.title }}</p>
+                              <p v-if="slide.body" class="content-body">{{ slide.body }}</p>
                           </div>
-                          <div class="col-3">
-                              <div class="red" style="height: 7%;"></div>
-                              <p class="content-body">{{ slide.body }}</p>
-                              <button type="button" class="img-tubie" data-toggle="modal" data-target="#tubie" @click="tubieClicked(index)">
-                                  <div class="tubie-wrapper">
-                                      <img src="Toobie/Toobie_solo2.png">
-                                  </div>
-                              </button>
-                          </div>
-                      </div>
-                      <div class="banner-bottom">
-                          <div class="yellow"></div>
-                          <div class="red"></div>
-                          <!--img :src="header" class="banner-img-left"-->
-                      </div>
-                  </div>
-                </div>
-            
+                <!-- End of slides --->
+
+                    </div>
+                <!-- Banner --->
+                    <div v-if="index!=0" class="section-header-computing">
+                        <div class="computing-header red">
+                            <img :src="header">
+                        </div>
+                    </div>
+                <!-- End of Banner --->
+                    <div class="banner yellow"></div>
+                    <div v-if="index!=0" class="tubie-container-right">
+                          <tubie-overlay id="tubie" :display="slide.tubie"/>
+                    </div>
+                </div>          
         </template>
     </div>
-    
+  
     <ol class="carousel-indicators">
         <li v-for="(slide, index) in slides" :data-target="['#' + id]" :data-slide-to="index" :class="(index==0 ? 'active' : '')"></li>
     </ol>
 
-  <a class="carousel-control-prev" :href="['#' + id]" role="button" data-slide="prev">
+  <a class="carousel-control-prev" :href="['#' + id]" @click="changeSlide()" role="button" data-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
     <span class="sr-only">Previous</span>
   </a>
-  <a class="carousel-control-next" :href="['#' + id]" role="button" data-slide="next">
+  <a class="carousel-control-next" :href="['#' + id]" @click="changeSlide()" role="button" data-slide="next">
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="sr-only">Next</span>
   </a>
