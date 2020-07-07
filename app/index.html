@@ -18,12 +18,12 @@
 	<div id="app">	
 		<main>
             <!-- Pop overs --->
-            <modal-overlay :id="modalTimer" exitout="true" :countdown="quitout" ref="timeModal"></modal-overlay>
+            <modal-overlay :id="modalTimer" exitout="true" :countdown="quitout" :message="timeData.message" ref="timeModal"></modal-overlay>
             <modal-overlay :id="modalVideo" exitout="false" :countdown="quitout" ref="vidModal"></modal-overlay> 
             <!--- Main Layout components --->
             <title-bar height="200px"></title-bar>
-            <woman-computing :id="computeId" :slides="womenComputingData.slides" :header="womenComputingData.header" :height="womenComputingData.height" :speed="womenComputingData.slidespeed" @selected="itemselect($event)"></woman-computing>
-            <building-future :id="historyId" :slides="buildingFutureData.slides" :header="buildingFutureData.header" :height="buildingFutureData.height" :speed="buildingFutureData.slidespeed" :videosdata="inTheirWordsData" @seturl="displayVideo($event)" @selected="itemselect($event)"></building-future>
+            <woman-computing :id="computeId" :slides="womenComputingData.slides" :header="womenComputingData.header" :height="womenComputingData.height" :speed="womenComputingData.slidespeed" @selected="itemselect($event)" :ref="computeId"></woman-computing>
+            <building-future :id="historyId" :slides="buildingFutureData.slides" :header="buildingFutureData.header" :height="buildingFutureData.height" :speed="buildingFutureData.slidespeed" :videosdata="inTheirWordsData" @seturl="displayVideo($event)" @selected="itemselect($event)" :ref="historyId"></building-future>
             <time-line id="timeline" :height="timelineData.height" :tubie="timelineData.tubie" :webpage="timelineData.url" @seturl="displayVideo($event)" @selected="itemselect($event)"></time-line>
         </main>
 	</div>

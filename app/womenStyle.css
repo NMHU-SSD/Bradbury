@@ -213,18 +213,19 @@ h3, p{
 .slideshow-container{
     width: 100%;
 }
-.splash-img{
-    padding-top: 5%;
-    padding-bottom: 5%;
+.splash-background{
     background-image: linear-gradient(
         to left,
         #4A6C6A 20%,
         #bcd1bc
     );
-    position: relative;
-    z-index: 6;
+}
+.slash-img{
+    max-height: 80%;
 }
 .splash-img img{
+    padding-top: 5%;
+    padding-bottom: 5%;
     height: 100%;
     width: 100%;
     object-fit: cover;
@@ -254,7 +255,7 @@ h3, p{
     object-fit: contain;
     width: 50%;
     position: relative;
-    top: 25%;
+    top: 20%;
     left: 10%;
 }
 .splash-title-left{
@@ -270,8 +271,8 @@ h3, p{
     object-fit: contain;
     width: 50%;
     position: absolute;
-    bottom: 25%;
-    right: 10%;
+    bottom: 27%;
+    right: 8%;
 }
 /******** Title Bar */
 .title-header{
@@ -357,8 +358,8 @@ h3, p{
 }
 .computing-header img{
     position: absolute;
-    top: 50%;
-    left: 50%;
+    top: 45%;
+    left: 65%;
     transform: translate(-50%,-50%);
     width: 50%;
 }
@@ -438,17 +439,26 @@ h3, p{
     top: 0;
     left: 0;
 }
+.modal-backdrop.show {
+    opacity: 0.75;
+}
 .modal-dialog{
-    max-width: 60%;
+    max-width: 80%;
     width: 100%;
     margin: auto;
     overflow-y: auto;
 }
-.modal-dialog h5, .modal-dialog p{
+.modal-content h5, .modal-content p{
     font-size: 160%;
+    text-align: center;
+    padding: 2%;
+    margin: 0 auto;
 }
 .modal-footer button{
     font-size: 170%;
+}
+.modal-footer h1{
+    font-size: 54px;
 }
 .img-wrapper{
     display: block;

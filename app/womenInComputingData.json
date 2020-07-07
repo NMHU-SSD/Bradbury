@@ -1,4 +1,13 @@
 {
+    "timeData":{
+        "timeout":30000,
+        "quitout":10000,
+        "message":{
+            "header":"Are you still there?",
+            "body":"Please press the screen in "
+        }
+    },
+    
     "womenComputingData":
     {
             "header":"assets/TitleLogo/Title-WomeninLosAlamosComputing.svg",
@@ -142,22 +151,28 @@
             "videos":
             [
                 {
-                    "link":"video0"
+                    "link":"video0",
+                    "videoTitle":"video0"
                 },
                 {
-                    "link":"video1"
+                    "link":"video1",
+                    "videoTitle":"video1"
                 },
                 {
-                    "link":"video2"
+                    "link":"video2",
+                    "videoTitle":"video2"
                 },
                 {
-                    "link":"video3"
+                    "link":"video3",
+                    "videoTitle":"video3"
                 },
                 {
-                    "link":"video4"
+                    "link":"video4",
+                    "videoTitle":"video4"
                 },
                 {
-                    "link":"video5"
+                    "link":"video5",
+                    "videoTitle":"video5"
                 }
             ]
     },
@@ -168,7 +183,8 @@
         "url":"embedded url",
         "tubie":{
             "image":"Toobie/tubie_yellow-03.png",
-            "vid":"tubie tutorial"
+            "link":"tubie tutorial",
+            "videoTitle":"Tubie Tutorial"
         }
     }
 

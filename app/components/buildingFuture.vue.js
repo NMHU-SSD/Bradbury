@@ -4,35 +4,55 @@ var buildingFuture= {
     data:function(){
         return{
             slideImages: null,
-            videoData: null
+            videoData: null,
+            splash: true,
+            end: false,
+            count:0
         }
     },
-    mounted:function(){
-        this.checkitem();
-    },
     methods:{
+        reset:function(){
+            $('#'+this.id).carousel(0);
+            this.count==0;
+            this.splash=true;
+            this.end=false;
+        },
         seturl:function(url){
             this.$emit('seturl', url);
         },
-        checkitem:function(){
-            console.log("check items");
-            var $this=$('#' + this.id);
-            if($('.carousel-inner .item:first').hasClass('active')) {
-                $this.children('.left.carousel-control').hide();
-                $this.children('.right.carousel-control').show();
-            } else if($('.carousel-inner .item:last').hasClass('active')) {
-                $this.children('.left.carousel-control').show();
-                $this.children('.right.carousel-control').hide();
-            } else {
-                $this.children('.carousel-control').show();
-            }
-        },
-        changeSlide:function(){
-            console.log("init on carousel move");
-            $('#' + this.id).on('slid.bs.carousel', this.checkitem);
-        },
         selected:function(){
             this.$emit('selected', this.id);
+        },
+        nextSlide:function(){
+            this.count++;
+            this.splash=false;
+            if(this.count==this.slides.length-1){
+                this.end=true;
+            }else if(this.end=true){
+                this.end=false;
+            }
+        },
+        prevSlide:function(){
+            this.count--;
+            this.end=false;
+            if(this.count==0){
+                this.splash=true;
+            }else if(this.splash=true){
+                this.splash=false;
+            }
+        },
+        jumpSlide:function(index){
+            this.count=index;
+            if(this.count==0){
+                this.splash=true;
+                this.end=false;
+            }else if(this.count==this.slides.length-1){
+                this.end=true;
+                this.splash=false;
+            }else{
+                this.end=false;
+                this.splash=false;
+            }
         }
     },
     watch:{
@@ -60,7 +80,7 @@ var buildingFuture= {
 
                     <!--- Slides Layout Appearence --->
                     <div v-else class="row row-full">
-                        <div class="col-4 red">
+                        <div class="col-0 col-sm-4 red">
                             <div v-if="slide.media" class="img-main-large">
                                 <div class="circle-wrap img-shadow">
                                     <img :src="slide.media">
@@ -77,10 +97,9 @@ var buildingFuture= {
                                     <div class="col-6">
                                         <div class="row">
                                             <div v-for="video in videoData.videos" class="col-6 video-container">
-                                                <img src="https://picsum.photos/700/400" class="vid-thumb shadow" @click="seturl(video.link)">
+                                                <img src="https://picsum.photos/700/400" class="vid-thumb shadow" @click="seturl(video)">
                                             </div>
                                         </div>
-
                                     </div>
                                     <div class="col-6 pl-5">
                                         <img class="words-header" :src="videoData.header">
@@ -92,26 +111,28 @@ var buildingFuture= {
                     </div>
                     <!-- End of slides --->
 
+                    <div v-if="index!=0">
                         <div class="banner yellow"></div>
                         <div class="section-header">
-                            <img v-if="index!=0" class="" :src="header">
+                            <img :src="header">
                         </div>
-                        <div v-if="index!=0" class="tubie-container-right">
+                        <div class="tubie-container-right">
                               <tubie-overlay id="tubie" :display="slide.tubie"/>
                         </div>
+                    </div>          
                 </div>          
         </template>
     </div>
   
-    <ol class="carousel-indicators">
-        <li v-for="(slide, index) in slides" :data-target="['#' + id]" :data-slide-to="index" :class="(index==0 ? 'active' : '')"></li>
+    <ol v-show="!splash" class="carousel-indicators">
+        <li v-for="(slide, index) in slides" :data-target="['#' + id]" :data-slide-to="index" :class="(index==0 ? 'active' : '')" @click="jumpSlide(index)"></li>
     </ol>
 
-  <a class="carousel-control-prev" :href="['#' + id]" role="button" data-slide="prev">
+  <a v-if="!splash" class="carousel-control-prev" :href="['#' + id]" role="button" data-slide="prev" @click="prevSlide">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
     <span class="sr-only">Previous</span>
   </a>
-  <a class="carousel-control-next" :href="['#' + id]" role="button" data-slide="next">
+  <a v-if="!end" class="carousel-control-next" :href="['#' + id]" role="button" data-slide="next" @click="nextSlide">
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="sr-only">Next</span>
   </a>

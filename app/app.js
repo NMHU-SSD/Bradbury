@@ -15,6 +15,7 @@ var app = new Vue({
         buildingFutureData:"",
         inTheirWordsData:"",
         timelineData:"",
+        timeData:"",
         modalTimer:'modalTimer',
         modalVideo:'modalVideo',
         historyId:'carouselHistory',
@@ -27,7 +28,8 @@ var app = new Vue({
     },
     mounted: function(){
         this.GetData();
-        //this.resetTimer();
+        //this.init();
+        this.resetTimer();
         
     },
     
@@ -40,17 +42,20 @@ var app = new Vue({
                 this.buildingFutureData = data.buildingFutureData;
                 this.inTheirWordsData = data.inTheirWordsData;
                 this.timelineData = data.timelineData;
+                this.timeData = data.timeData;
             })
             .catch((error) => {
                 console.error('Error:', error);
             });
         },
+        init:function(){
+            this.timeout = this.timeData.timeout;
+            this.quitout = this.timeData.quitout;
+        },
         //Timer functions
         resetTimer:function(){
             clearTimeout(this.t);
             clearTimeout(this.afk);
-            $('#carouselHistory').carousel('cycle');
-            $('#carouselComputing').carousel('cycle');
             this.t = setTimeout(this.toAlert, this.timeout);
             document.onmousedown = this.resetTimer;
         },
@@ -61,9 +66,8 @@ var app = new Vue({
             this.afk = setTimeout(this.toDefault, this.quitout);
         },
         toDefault:function(){
-            console.log("defaulted");
-            $('#'+this.historyId).carousel(0);
-            $('#'+this.computeId).carousel(0);
+            this.$refs[this.computeId].reset();
+            this.$refs[this.historyId].reset();
         },
         //modal popup
         displayModal:function(){
@@ -74,7 +78,7 @@ var app = new Vue({
             document.onmousedown = this.resetTimer;
             
         },
-        displayVideo:function(url){
+        displayVideo:function(url, title){
             clearTimeout(this.t);
             clearTimeout(this.afk);
             $('#'+'modalVideo').modal();
@@ -84,9 +88,8 @@ var app = new Vue({
         itemselect:function(item){
             var target = item;
             if(item!=this.lastActive){
-                console.log(this.lastActive);
                 if(this.lastActive!=null){
-                    $('#'+this.lastActive).carousel(0);
+                    this.$refs[this.lastActive].reset();
                 }
                 this.lastActive = target;
             }

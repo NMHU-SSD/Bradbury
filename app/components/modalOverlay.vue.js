@@ -1,10 +1,10 @@
 var modalOverlay= {
     name:"modal-overlay",
-    props:['resettime','countdown', 'id', 'exitout'],
+    props:['countdown', 'id', 'exitout','message'],
     data:function(){
         return{
             count:null,
-            active: false
+            title: null
         }
     },
     methods:{
@@ -28,23 +28,23 @@ var modalOverlay= {
             this.count = Math.floor(this.countdown / 1000);
         },
         geturl:function(url){
-            console.log(url);
-            $("#modalVideo").attr('src', url);
+            $("#modalVideo").attr('src', url.link);
+            this.title=url.videoTitle;
         },
         stopVideo:function(){
             $("#modalVideo").attr('src', '');
         }
     },
     template:
-    `<div :id="id" class="modal" tabindex="-1" role="dialog" :data-backdrop="(exitout=='true' ? 'true' : 'static')" @:displayModal="timer">
-      <div class="modal-dialog modal-xl modal-dialog-centered" role="document">
+    `<div :id="id" class="modal fade" tabindex="-1" role="dialog" :data-backdrop="(exitout=='true' ? 'true' : 'static')" @:displayModal="timer">
+      <div v-if="message" class="modal-dialog modal-xl modal-dialog-centered" role="document">
 
         <div v-if="id=='modalTimer'" class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title">Are you still there?</h5>
+          <div class="modal-header d-block">
+            <h5 class="modal-title">{{ message.header }}</h5>
           </div>
           <div class="modal-body">
-            <p>Press screen before {{ count }}</p>
+            <p>{{ message.body }}{{ count }}</p>
           </div>
         </div>
 
@@ -55,8 +55,8 @@ var modalOverlay= {
             </div>
           </div>
           <div class="modal-footer">
-            <h2 class="mr-auto">Video Title Here</h2>
-            <button @click="stopVideo" type="button" class="btn btn-secondary btn-lg" data-dismiss="modal">Close</button>
+            <h1 class="mr-auto">{{ title }}</h1>
+            <button @click="stopVideo" type="button" class="btn btn-secondary btn-lg mr-1" data-dismiss="modal">Close</button>
           </div>
         </div>
 

@@ -3,7 +3,7 @@ var timeLine={
     props:['id','height','tubie','webpage'],
     methods:{
         seturl:function(){
-            this.$emit('seturl', this.tubie.vid);
+            this.$emit('seturl', this.tubie);
         },
         selected:function(){
             this.$emit('selected', this.id);

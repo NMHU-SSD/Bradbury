@@ -5,7 +5,8 @@ var slideshowComponent={
         return{
             index:0,
             currentImg: null,
-            seconds: 0
+            seconds: 0,
+            kenburn: 'kenburns '+this.seconds+'s infinite'
         }
     },
     mounted:function(){
@@ -43,9 +44,11 @@ var slideshowComponent={
                 <img :src="header">
             </div>
         </div>
-        <div :style="{height: this.height}" class="splash-img">
-            <!--img :id="id" :style="'animation: kenburns '+seconds+'s infinite'" :src="currentImg"--->
-            <img :id="id" class="greyscale" :src="currentImg">
+        <div class="splash-background">
+            <div class="splash-img">
+                <!--img :id="id" :style="{height: this.height}" :style="'animation: kenburns '+seconds+'s infinite'" :src="currentImg"--->
+                <img :id="id" :src="currentImg" :style="{height: this.height}">
+            </div>
         </div>
     </div>`
 }
