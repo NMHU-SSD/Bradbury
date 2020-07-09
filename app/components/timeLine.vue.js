@@ -19,7 +19,7 @@ var timeLine={
             <div class="timeline-header red row">
                 <div class="col-3"/>
                 <h2 class="col-6 title-font">Explore the timeline</h2>
-                <h4 class="col col-sm-0 col-md-0">Legacy of Women in \n Los Alamos Computing</h4>
+                <h4 class="col col-sm-0 col-md-0 body-font">Legacy of Women in \n Los Alamos Computing</h4>
             </div>
         </div>
 

@@ -24,11 +24,12 @@ var app = new Vue({
         quitout:10000,
         t: null,
         afk: null,
-        lastActive: null
+        lastActive: null,
+        active:false
     },
     mounted: function(){
         this.GetData();
-        //this.init();
+        //this.SetData();
         this.resetTimer();
         
     },
@@ -48,7 +49,7 @@ var app = new Vue({
                 console.error('Error:', error);
             });
         },
-        init:function(){
+        SetData:function(){
             this.timeout = this.timeData.timeout;
             this.quitout = this.timeData.quitout;
         },
@@ -56,7 +57,12 @@ var app = new Vue({
         resetTimer:function(){
             clearTimeout(this.t);
             clearTimeout(this.afk);
-            this.t = setTimeout(this.toAlert, this.timeout);
+            console.log(this.active);
+            if(this.active){
+                this.t = setTimeout(this.toAlert, this.timeout);
+            }else{
+                this.active=true;
+            }
             document.onmousedown = this.resetTimer;
         },
         toAlert:function(){
@@ -66,6 +72,7 @@ var app = new Vue({
             this.afk = setTimeout(this.toDefault, this.quitout);
         },
         toDefault:function(){
+            //this.active=false;
             this.$refs[this.computeId].reset();
             this.$refs[this.historyId].reset();
         },
@@ -78,20 +85,28 @@ var app = new Vue({
             document.onmousedown = this.resetTimer;
             
         },
-        displayVideo:function(url, title){
-            clearTimeout(this.t);
-            clearTimeout(this.afk);
-            $('#'+'modalVideo').modal();
-            this.$refs.vidModal.geturl(url);
+        displayVideo:function(url){
+            if(this.active){
+                clearTimeout(this.t);
+                clearTimeout(this.afk);
+                this.active=false;
+            }
+            $('#modalVideo').modal();
+            this.$refs[this.modalVideo].geturl(url);
         },
         //selection
         itemselect:function(item){
-            var target = item;
             if(item!=this.lastActive){
-                if(this.lastActive!=null){
+                try{
+                    //close last carousel
                     this.$refs[this.lastActive].reset();
+                    var target = $('#'+this.lastActive);
+                    $(target).css('animation', 'slidein 1s infinite');
+                    setTimeout(function(){$(target).css('animation', 'none');},1000);
+                }catch(e){
+                    //console.log(e.message);
                 }
-                this.lastActive = target;
+                this.lastActive = item;
             }
         }
     }

@@ -32,9 +32,15 @@ var slideshowComponent={
         },
         initShow:function(){
             this.seconds = Math.floor(this.speed / 1000);
-            this.currentImg = this.images[this.index].img;
-            this.index++;
-            setTimeout(this.slideshow, this.speed);
+        }
+    },
+    watch:{
+        images:function(){
+            if(this.images!=null){
+                this.currentImg = this.images[this.index].img;
+                this.index++;
+                setTimeout(this.slideshow, this.speed);
+            }
         }
     },
     template:
@@ -46,7 +52,6 @@ var slideshowComponent={
         </div>
         <div class="splash-background">
             <div class="splash-img">
-                <!--img :id="id" :style="{height: this.height}" :style="'animation: kenburns '+seconds+'s infinite'" :src="currentImg"--->
                 <img :id="id" :src="currentImg" :style="{height: this.height}">
             </div>
         </div>

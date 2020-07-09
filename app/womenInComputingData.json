@@ -180,7 +180,7 @@
     "timelineData":
     {
         "height": "1000px",
-        "url":"embedded url",
+        "url":"https://google.com",
         "tubie":{
             "image":"Toobie/tubie_yellow-03.png",
             "link":"tubie tutorial",

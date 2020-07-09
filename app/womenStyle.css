@@ -28,7 +28,6 @@ h3, p{
 .red{
     background-color: #8d2446;
 }
-@import url('https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@400;600&display=swap');
 @font-face{
     font-family: 'HelveMedCon';
     src: url(assets/MuseumFonts2012/HelveNeuMedCon.otf);
@@ -79,6 +78,9 @@ h3, p{
 .title-font{
     font-family: 'Anton', sans-serif;
 }
+.body-front{
+    font-family: 'Oswald', sans-serif;
+}
 .content-head{
     font-size: 40px;
     overflow: hidden;
@@ -93,9 +95,8 @@ h3, p{
 }
 
 /******Carousel*/
-#carouselHistory, #carouselComputing, #theirWords, #timeline{
+#carouselHistory, #carouselComputing, #timeline{
     margin-bottom: 20px;
-    transition: 1s;
 }
 .carousel-inner, .carousel-item, 
 .carousel-caption, .carousel-caption,
@@ -212,6 +213,18 @@ h3, p{
 /******** SlideShow**/
 .slideshow-container{
     width: 100%;
+    overflow: hidden;
+}
+.slide-animate{
+    animation: slidein 1s;
+}
+@keyframes slidein{
+    0%{
+        margin-left: 100%;
+    }
+    100%{
+        margin-left: 0%;
+    }
 }
 .splash-background{
     background-image: linear-gradient(
@@ -448,7 +461,10 @@ h3, p{
     margin: auto;
     overflow-y: auto;
 }
-.modal-content h5, .modal-content p{
+.modal-dialog h3{
+    margin-right: 60%;
+}
+.timer h5, .timer p{
     font-size: 160%;
     text-align: center;
     padding: 2%;

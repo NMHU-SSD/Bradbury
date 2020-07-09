@@ -37,13 +37,13 @@ var modalOverlay= {
     },
     template:
     `<div :id="id" class="modal fade" tabindex="-1" role="dialog" :data-backdrop="(exitout=='true' ? 'true' : 'static')" @:displayModal="timer">
-      <div v-if="message" class="modal-dialog modal-xl modal-dialog-centered" role="document">
+      <div class="modal-dialog modal-xl modal-dialog-centered" role="document">
 
-        <div v-if="id=='modalTimer'" class="modal-content">
-          <div class="modal-header d-block">
+        <div v-if="id=='modalTimer'" class="modal-content timer">
+          <div v-if="message" class="modal-header d-block">
             <h5 class="modal-title">{{ message.header }}</h5>
           </div>
-          <div class="modal-body">
+          <div v-if="message" class="modal-body">
             <p>{{ message.body }}{{ count }}</p>
           </div>
         </div>
@@ -55,8 +55,8 @@ var modalOverlay= {
             </div>
           </div>
           <div class="modal-footer">
-            <h1 class="mr-auto">{{ title }}</h1>
-            <button @click="stopVideo" type="button" class="btn btn-secondary btn-lg mr-1" data-dismiss="modal">Close</button>
+            <h3 class="mr-auto">{{ title }}</h3>
+            <button @click="stopVideo" type="button" class="btn btn-secondary btn-lg mr-3" data-dismiss="modal">Close</button>
           </div>
         </div>
 

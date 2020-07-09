@@ -10,16 +10,17 @@
    
         <!-- CSS --->
         <link rel="stylesheet" href="womenStyle.css">
+        <link href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@300&display=swap" rel="stylesheet">
 
     <title>Women in Computing</title>
   </head>
  
   <body>	
 	<div id="app">	
+        <modal-overlay :id="modalVideo" exitout="false" :countdown="quitout" :ref="modalVideo"></modal-overlay>
 		<main>
             <!-- Pop overs --->
-            <modal-overlay :id="modalTimer" exitout="true" :countdown="quitout" :message="timeData.message" ref="timeModal"></modal-overlay>
-            <modal-overlay :id="modalVideo" exitout="false" :countdown="quitout" ref="vidModal"></modal-overlay> 
+            <modal-overlay :id="modalTimer" exitout="true" :countdown="quitout" :message="timeData.message" ref="timeModal"></modal-overlay> 
             <!--- Main Layout components --->
             <title-bar height="200px"></title-bar>
             <woman-computing :id="computeId" :slides="womenComputingData.slides" :header="womenComputingData.header" :height="womenComputingData.height" :speed="womenComputingData.slidespeed" @selected="itemselect($event)" :ref="computeId"></woman-computing>
