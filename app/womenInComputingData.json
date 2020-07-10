@@ -4,7 +4,7 @@
         "quitout":10000,
         "message":{
             "header":"Are you still there?",
-            "body":"Please press the screen in "
+            "body":"Please touch the screen in "
         }
     },
     
@@ -151,28 +151,29 @@
             "videos":
             [
                 {
-                    "link":"video0",
-                    "videoTitle":"video0"
+                    "link":"videoTest",
+                    "img":"Women%20in%20Computing%20Images/WACs%20Los%20Alamos%202.jpg",
+                    "videoTitle":"videoTest"
                 },
                 {
-                    "link":"video1",
+                    "link":"https://www.youtube.com/watch?v=nVp8OH426-0",
+                    "img":"Women%20in%20Computing%20Images/WACs%20Los%20Alamos%202.jpg",
                     "videoTitle":"video1"
                 },
                 {
                     "link":"video2",
+                    "img":"Women%20in%20Computing%20Images/WACs%20Los%20Alamos%202.jpg",
                     "videoTitle":"video2"
                 },
                 {
                     "link":"video3",
+                    "img":"Women%20in%20Computing%20Images/WACs%20Los%20Alamos%202.jpg",
                     "videoTitle":"video3"
                 },
                 {
                     "link":"video4",
+                    "img":"Women%20in%20Computing%20Images/WACs%20Los%20Alamos%202.jpg",
                     "videoTitle":"video4"
-                },
-                {
-                    "link":"video5",
-                    "videoTitle":"video5"
                 }
             ]
     },

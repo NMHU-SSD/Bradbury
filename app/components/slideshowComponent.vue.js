@@ -45,8 +45,8 @@ var slideshowComponent={
     },
     template:
     `<div class="slideshow-container">
-        <div class="splash-title-holder" :style="(position!='left' ? 'float: right' : 'float: left')">
-            <div :class="['red',(position!='left' ? 'splash-title-right' : 'splash-title-left')]">
+        <div :class="['splash-title-holder', (position!='left' ? 'splash-right' : '')]">
+            <div :class="['splash-title red', (position!='left' ? 'title-right' : 'title-left')]">
                 <img :src="header">
             </div>
         </div>

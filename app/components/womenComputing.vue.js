@@ -14,8 +14,8 @@ var womanComputing = {
     methods:{
         reset:function(){
             this.splash=true;
-            $('#'+this.id).carousel(0);
             this.count==0;
+            this.first=true;
             this.end=false;
         },
         seturl:function(url){
@@ -63,11 +63,13 @@ var womanComputing = {
     },
     template:
     `<div :id="id" @click="selected">
-        <div v-show="splash" class="row row-full">
-            <div class="col">
-                <slideshow-component :id="'slide-'+id" :images="slideImages" :speed="speed" :height="height" :header="header" position="left"/>
+        <a :data-target="['#' + 'carousel-'+id]" data-slide-to="0" :href="['#' + 'carousel-'+id]">
+            <div v-show="splash" class="row row-full">
+                <div class="col">
+                    <slideshow-component :id="'slide-'+id" :images="slideImages" :speed="speed" :height="height" :header="header" position="left"/>
+                </div>
             </div>
-        </div>
+        </a>
 
         <div v-show="!splash" :id="'carousel-'+id" :style="{height: this.height}" class="carousel" data-ride="carousel" data-wrap=false data-interval=false>
             <div class="carousel-inner gradient-green">

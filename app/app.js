@@ -20,7 +20,6 @@ var app = new Vue({
         modalVideo:'modalVideo',
         historyId:'carouselHistory',
         computeId:'carouselComputing',
-        timeout:30000,
         quitout:10000,
         t: null,
         afk: null,
@@ -29,9 +28,7 @@ var app = new Vue({
     },
     mounted: function(){
         this.GetData();
-        //this.SetData();
-        this.resetTimer();
-        
+        //this.resetTimer();
     },
     
     methods:{
@@ -49,17 +46,13 @@ var app = new Vue({
                 console.error('Error:', error);
             });
         },
-        SetData:function(){
-            this.timeout = this.timeData.timeout;
-            this.quitout = this.timeData.quitout;
-        },
         //Timer functions
         resetTimer:function(){
             clearTimeout(this.t);
             clearTimeout(this.afk);
             console.log(this.active);
             if(this.active){
-                this.t = setTimeout(this.toAlert, this.timeout);
+                this.t = setTimeout(this.toAlert, this.timeData.timeout);
             }else{
                 this.active=true;
             }
@@ -69,7 +62,7 @@ var app = new Vue({
             document.onmousedown = this.resetTimer;
             this.$refs.timeModal.reset();
             this.displayModal();
-            this.afk = setTimeout(this.toDefault, this.quitout);
+            this.afk = setTimeout(this.toDefault, this.timeData.quitout);
         },
         toDefault:function(){
             //this.active=false;
@@ -81,7 +74,7 @@ var app = new Vue({
             $('#'+'modalTimer').modal();
             this.$refs.timeModal.timer();
             setTimeout(function(){
-                $('#'+'modalTimer').modal('hide')}, this.quitout);
+                $('#'+'modalTimer').modal('hide')}, this.timeData.quitout);
             document.onmousedown = this.resetTimer;
             
         },
@@ -98,7 +91,6 @@ var app = new Vue({
         itemselect:function(item){
             if(item!=this.lastActive){
                 try{
-                    //close last carousel
                     this.$refs[this.lastActive].reset();
                     var target = $('#'+this.lastActive);
                     $(target).css('animation', 'slidein 1s infinite');

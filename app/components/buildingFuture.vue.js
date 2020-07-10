@@ -15,7 +15,6 @@ var buildingFuture= {
     methods:{
         reset:function(){
             this.splash=true;
-            $('#'+this.id).carousel(0);
             this.count==0;
             this.first=true;
             this.end=false;
@@ -70,13 +69,15 @@ var buildingFuture= {
     },
     template:
     `<div :id="id" @click="selected">
-        <div v-show="splash" class="row row-full">
-            <div class="col">
-                <slideshow-component :id="'slide-'+id" :images="slideImages" :speed="speed" :height="height" :header="header"/>
+        <a :data-target="['#' + 'carousel-'+id]" data-slide-to="0" :href="['#' + 'carousel-'+id]">
+            <div v-show="splash" class="row row-full">
+                <div class="col">
+                    <slideshow-component :id="'slide-'+id" :images="slideImages" :speed="speed" :height="height" :header="header"/>
+                </div>
             </div>
-        </div>
+        </a>
 
-        <div v-show="!splash" :id="'carousel-'+id" :style="{height: this.height}" class="carousel" data-ride="carousel" data-wrap=false data-interval=false>
+        <div v-show="!splash" :id="'carousel-'+id" :style="{height: this.height}" class="carousel" data-wrap="false" data-interval="false">
             <div class="carousel-inner gradient-green">
                 <template v-for="(slide, index) in infoSlides">
                     <div :class="['carousel-item', (index==0 ? 'active' : '')]" >
@@ -93,13 +94,13 @@ var buildingFuture= {
                             <div :class="['col', (slide.media ? 'side-widget' : 'add-slide')]">
                                   <p v-if="slide.title" class="content-body">{{ slide.title }}</p>
                                   <p v-if="slide.body" class="content-body">{{ slide.body }}</p>
-
+                            <!--- In Their Words----->
                                 <div v-if="slide.videoSlide" class="container-fluid">
                                     <div class="row mt-5">
                                         <div class="col-6">
                                             <div class="row">
                                                 <div v-for="video in videoData.videos" class="col-6 video-container">
-                                                    <img src="https://picsum.photos/700/400" class="vid-thumb shadow" @click="seturl(video)">
+                                                    <img :src="video.img" class="vid-thumb shadow" @click="seturl(video)">
                                                 </div>
                                             </div>
                                         </div>
@@ -108,7 +109,7 @@ var buildingFuture= {
                                             <p class="content-body">{{ videoData.body }}</p>
                                         </div>
                                     </div>
-                                </div>
+                                </div><!--- In Their Words----->
                             </div>
                         </div>
                         <!-- End of slides --->

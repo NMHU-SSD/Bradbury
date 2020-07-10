@@ -20,7 +20,7 @@
         <modal-overlay :id="modalVideo" exitout="false" :countdown="quitout" :ref="modalVideo"></modal-overlay>
 		<main>
             <!-- Pop overs --->
-            <modal-overlay :id="modalTimer" exitout="true" :countdown="quitout" :message="timeData.message" ref="timeModal"></modal-overlay> 
+            <modal-overlay :id="modalTimer" exitout="true" :countdown="timeData.quitout" :message="timeData.message" ref="timeModal"></modal-overlay> 
             <!--- Main Layout components --->
             <title-bar height="200px"></title-bar>
             <woman-computing :id="computeId" :slides="womenComputingData.slides" :header="womenComputingData.header" :height="womenComputingData.height" :speed="womenComputingData.slidespeed" @selected="itemselect($event)" :ref="computeId"></woman-computing>
