@@ -71,24 +71,23 @@ var womanComputing = {
             </div>
         </a>
 
-        <div v-show="!splash" :id="'carousel-'+id" :style="{height: this.height}" class="carousel" data-ride="carousel" data-wrap=false data-interval=false>
+        <div v-show="!splash" :id="'carousel-'+id" :style="{height: this.height}" class="carousel" data-ride="carousel" data-wrap="false" data-interval="false">
             <div class="carousel-inner gradient-green">
                 <template v-for="(slide, index) in infoSlides">
                     <div :class="['carousel-item', (index==0 ? 'active' : '')]" >
                         <div class="row row-full">
                     <!--- Slides Layout Appearence --->
-                              <div class="col-md-0"/>
-                              <div class="col">
-                                  <img class="img-main" :src="slide.media">
+                              <div class="d-none d-sm-block col-sm-6 col-lg-8 img-main">
+                                  <img :src="slide.media">
                               </div>
-                              <div class="col-sm-6 col-md-4">
+                              <div class="col offset-2 offset-sm-0">
                                   <p v-if="slide.title" class="content-body">{{ slide.title }}</p>
                                   <p v-if="slide.body" class="content-body">{{ slide.body }}</p>
                               </div>
                     <!-- End of slides --->
                         </div>
                         <div class="section-header-computing">
-                            <div class="computing-header red">
+                            <div class="d-none d-sm-block computing-header red">
                                 <img :src="header">
                             </div>
                         </div>

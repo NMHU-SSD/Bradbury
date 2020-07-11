@@ -11,7 +11,7 @@
     "womenComputingData":
     {
             "header":"assets/TitleLogo/Title-WomeninLosAlamosComputing.svg",
-            "height":"900px",
+            "height":"600px",
             "slidespeed": 30000,
             "slides":
             [
@@ -63,7 +63,7 @@
     "buildingFutureData":
     {
             "header":"assets/TitleLogo/Title-AHistoryofBuildingtheFuture.svg",
-            "height": "900px",
+            "height": "800px",
             "slidespeed": 15000,
             "slides":
             [

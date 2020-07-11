@@ -13,18 +13,17 @@ var timeLine={
     `<div :id=id :style="{height: this.height}" @click="selected">
         
         <div class="timeline-banner">
-            <div  v-if="tubie!=null" class="tubie-container-left">
-                <tubie-overlay id="tubie-timeline" :display="tubie" @seturl="seturl" position="left"/>
-            </div>
             <div class="timeline-header red row">
-                <div class="col-3"/>
-                <h2 class="col-6 title-font">Explore the timeline</h2>
-                <h4 class="col col-sm-0 col-md-0 body-font">Legacy of Women in \n Los Alamos Computing</h4>
+                <div v-if="tubie!=null" class="col-4 col-md-3 tubie-container-left">
+                    <tubie-overlay id="tubie-timeline" :display="tubie" @seturl="seturl" position="left"/>
+                </div>
+                <h2 class="col-8 col-md-6 align-self-center title-font">Explore the timeline</h2>
+                <h4 class="col align-self-center mr-1 body-font">Legacy of Women in \n Los Alamos Computing</h4>
             </div>
         </div>
 
         <div class="timeline-holder">
-            <iframe width="100%" height="auto" :src="webpage"></iframe>
+            <!--iframe width="100%" height="auto" :src="webpage"></iframe-->
         </div>
     </div>`
 }

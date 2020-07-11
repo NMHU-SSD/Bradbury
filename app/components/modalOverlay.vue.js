@@ -36,7 +36,7 @@ var modalOverlay= {
         }
     },
     template:
-    `<div :id="id" class="modal fade" tabindex="-1" role="dialog" :data-backdrop="(exitout=='true' ? 'true' : 'static')" @:displayModal="timer">
+    `<div :id="id" class="modal" tabindex="-1" role="dialog" :data-backdrop="(exitout=='true' ? 'true' : 'static')" @:displayModal="timer">
       <div class="modal-dialog modal-xl modal-dialog-centered" role="document">
 
         <div v-if="id=='modalTimer'" class="modal-content timer">
