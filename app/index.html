@@ -10,6 +10,7 @@
    
         <!-- CSS --->
         <link rel="stylesheet" href="womenStyle.css">
+        <link rel="stylesheet" href="heightStyle.css">
         <link href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@300;500&display=swap" rel="stylesheet">
 
     <title>Women in Computing</title>
@@ -19,13 +20,13 @@
 	<div id="app">	
 		<main>
             <!-- Pop overs --->
-            <modal-overlay :id="modalVideo" exitout="false" :countdown="quitout" :ref="modalVideo"></modal-overlay>
+            <modal-overlay :id="modalVideo" exitout="false" :countdown="quitout" :ref="modalVideo" @stopvideo="videoModalClose()"></modal-overlay>
             <modal-overlay :id="modalTimer" exitout="true" :countdown="timeData.quitout" :message="timeData.message" ref="timeModal"></modal-overlay> 
             <!--- Main Layout components---->
-            <title-bar height="200px"></title-bar>
-            <woman-computing v-show=true :id="computeId" :slides="womenComputingData.slides" :header="womenComputingData.header" :height="womenComputingData.height" :speed="womenComputingData.slidespeed" @selected="itemselect($event)" :ref="computeId"></woman-computing>
-            <building-future v-show=true :id="historyId" :slides="buildingFutureData.slides" :header="buildingFutureData.header" :height="buildingFutureData.height" :speed="buildingFutureData.slidespeed" :videosdata="inTheirWordsData" @seturl="displayVideo($event)" @selected="itemselect($event)" :ref="historyId"></building-future>
-            <time-line v-show=true id="timeline" :height="timelineData.height" :tubie="timelineData.tubie" :webpage="timelineData.url" @seturl="displayVideo($event)" @selected="itemselect($event)"></time-line>
+            <title-bar v-show=true height="200px"></title-bar>
+            <woman-computing v-show=true :id="computeId" :slides="womenComputingData.slides" :header="womenComputingData.header" :speed="womenComputingData.slidespeed" @selected="itemselect($event)" :ref="computeId"></woman-computing>
+            <building-future v-show=true :id="historyId" :slides="buildingFutureData.slides" :header="buildingFutureData.header" :speed="buildingFutureData.slidespeed" :videosdata="inTheirWordsData" @seturl="displayVideo($event)" @selected="itemselect($event)" :ref="historyId"></building-future>
+            <time-line v-show=true id="timeline" :tubie="timelineData.tubie" :webpage="timelineData.url" @seturl="displayVideo($event)" @selected="itemselect($event)"></time-line>
         </main>
 	</div>
     

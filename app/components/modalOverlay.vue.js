@@ -33,6 +33,7 @@ var modalOverlay= {
         },
         stopVideo:function(){
             $("#modalVideo").attr('src', '');
+            this.$emit('stopvideo');
         }
     },
     template:

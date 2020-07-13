@@ -1,6 +1,6 @@
 var womanComputing = {
     name: "woman-computing",
-    props: ['id', 'slides', 'header', 'speed', 'header', 'height'],
+    props: ['id', 'slides', 'header', 'speed', 'header'],
     data:function(){
         return{
             slideImages: null,
@@ -64,20 +64,18 @@ var womanComputing = {
     template:
     `<div :id="id" @click="selected">
         <a :data-target="['#' + 'carousel-'+id]" data-slide-to="0" :href="['#' + 'carousel-'+id]">
-            <div v-show="splash" class="row row-full">
-                <div class="col">
-                    <slideshow-component :id="'slide-'+id" :images="slideImages" :speed="speed" :height="height" :header="header" position="left"/>
-                </div>
+            <div v-show="splash" class="row no-gutters row-full">
+                <slideshow-component :id="'slide-'+id" :images="slideImages" :speed="speed" :header="header" position="left"/>
             </div>
         </a>
 
-        <div v-show="!splash" :id="'carousel-'+id" :style="{height: this.height}" class="carousel" data-ride="carousel" data-wrap="false" data-interval="false">
+        <div v-show="!splash" :id="'carousel-'+id" class="carousel" data-ride="carousel" data-wrap="false" data-interval="false">
             <div class="carousel-inner gradient-green">
                 <template v-for="(slide, index) in infoSlides">
                     <div :class="['carousel-item', (index==0 ? 'active' : '')]" >
-                        <div class="row row-full">
+                        <div class="row row-full no-gutters">
                     <!--- Slides Layout Appearence --->
-                              <div class="d-none d-sm-block col-sm-6 col-lg-8 img-main">
+                              <div class="d-none d-sm-block col-sm-6 col-xl-8 img-main">
                                   <img :src="slide.media">
                               </div>
                               <div class="col offset-2 offset-sm-0">

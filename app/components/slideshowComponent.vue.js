@@ -44,16 +44,14 @@ var slideshowComponent={
         }
     },
     template:
-    `<div class="slideshow-container">
+    `<div class="col slideshow-container">
         <div :class="['splash-title-holder', (position!='left' ? 'splash-right' : '')]">
             <div :class="['splash-title red', (position!='left' ? 'title-right' : 'title-left')]">
                 <img :src="header">
             </div>
         </div>
         <div class="splash-background">
-            <div class="splash-img">
-                <img :id="id" :src="currentImg" :style="{height: this.height}">
-            </div>
+            <img :id="id" class="splash-img" :src="currentImg">
         </div>
     </div>`
 }

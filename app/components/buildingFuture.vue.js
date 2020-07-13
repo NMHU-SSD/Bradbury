@@ -1,6 +1,6 @@
 var buildingFuture= {
     name: "building-future",
-    props: ['id', 'slides', 'header', 'speed', 'header', 'height', 'videosdata'],
+    props: ['id', 'slides', 'header', 'speed', 'header', 'videosdata'],
     data:function(){
         return{
             slideImages: null,
@@ -70,14 +70,12 @@ var buildingFuture= {
     template:
     `<div :id="id" @click="selected">
         <a :data-target="['#' + 'carousel-'+id]" data-slide-to="0" :href="['#' + 'carousel-'+id]">
-            <div v-show="splash" class="row row-full">
-                <div class="col">
-                    <slideshow-component :id="'slide-'+id" :images="slideImages" :speed="speed" :height="height" :header="header"/>
-                </div>
+            <div v-show="splash" class="row no-gutters row-full">
+                <slideshow-component :id="'slide-'+id" :images="slideImages" :speed="speed" :header="header"/>
             </div>
         </a>
 
-        <div v-show="!splash" :id="'carousel-'+id" :style="{height: this.height}" class="carousel" data-wrap="false" data-interval="false">
+        <div v-show="!splash" :id="'carousel-'+id" class="carousel" data-wrap="false" data-interval="false">
             <div class="carousel-inner gradient-green">
                 <template v-for="(slide, index) in infoSlides">
                     <div :class="['carousel-item', (index==0 ? 'active' : '')]" >

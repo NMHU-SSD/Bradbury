@@ -11,7 +11,6 @@
     "womenComputingData":
     {
             "header":"assets/TitleLogo/Title-WomeninLosAlamosComputing.svg",
-            "height":"600px",
             "slidespeed": 30000,
             "slides":
             [
@@ -63,7 +62,6 @@
     "buildingFutureData":
     {
             "header":"assets/TitleLogo/Title-AHistoryofBuildingtheFuture.svg",
-            "height": "800px",
             "slidespeed": 15000,
             "slides":
             [
@@ -180,7 +178,6 @@
     
     "timelineData":
     {
-        "height": "1000px",
         "url":"https://google.com",
         "tubie":{
             "image":"Toobie/tubie_yellow-03.png",

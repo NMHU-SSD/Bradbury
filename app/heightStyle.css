@@ -1,0 +1,73 @@
+/******Women in Computing CSS*/
+#carouselComputing{
+    height: 35vw;
+}
+@media only screen and (max-width:576px){
+    #carousel-carouselComputing, #carouselComputing{
+        height: 100vh;
+    }
+}
+@media only screen and (min-width:576px) and (max-width: 1200px){
+    #carousel-carouselComputing, #carouselComputing{
+        height: 50vw;
+        min-height: 600px;
+        max-height: 800px;
+    }
+}
+@media only screen and (min-width:1200px){
+    #carousel-carouselComputing, #carouselComputing{
+        height: 45vw;
+        min-height: 400px;
+        max-height: 800px;
+    }
+}
+
+/******Building Future CSS*/
+#carouselHistory{
+    height: 35vw;
+}
+@media only screen and (max-width:576px){
+    #carousel-carouselHistory, #carouselHistory{
+        height: 100vh;
+    }
+}
+@media only screen and (min-width:576px) and (max-width: 1200px){
+    #carousel-carouselHistory, #carouselHistory{
+        height: 50vw;
+        min-height: 600px;
+        max-height: 100vh;
+    }
+}
+@media only screen and (min-width:1200px){
+    #carousel-carouselHistory, #carouselHistory{
+        height: 45vw;
+        min-height: 400px;
+        max-height: 800px;
+    }
+}
+
+/*****Timeline*/
+#timeline{
+    background-color: black;
+    margin: 0;
+    height: 35vw;
+}
+@media only screen and (max-width:576px){
+    #timeline{
+        height: 100vh;
+    }
+}
+@media only screen and (min-width:576px) and (max-width: 1200px){
+    #timeline{
+        height: 50vw;
+        min-height: 600px;
+        max-height: 800px;
+    }
+}
+@media only screen and (min-width:1200px){
+    #timeline{
+        height: 70vw;
+        min-height: 400px;
+        max-height: 1400px;
+    }
+}
