@@ -11,17 +11,17 @@
     
     "womenComputingData":
     {
-            "header":"/assets/TitleLogo/Title-WomeninLosAlamosComputing.svg",
+            "header":"assets/TitleLogo/Title-WomeninLosAlamosComputing.svg",
             "slidespeed": 30000,
             "slides":
             [
                 {
                     "media":[
                         {
-                            "img":"/data/images/Human%20Computers%20at%20NASA%20public%20domain.jpg"
+                            "img":"data/images/HumanComputersAtNASA-PublicDomain.jpg"
                         },
                         {
-                            "img":"/data/images/001%20MANIAC%20II%201958.jpg"
+                            "img":"data/images/001%20MANIAC%20II%201958.jpg"
                         },
                         {
                             "img":"images/feature15.jpg"
@@ -30,7 +30,7 @@
                 },
                 {
                     "title":"At Los Alamos and elsewhere, the first computers were humans who did calculations by hand, sometimes with the help of a desktop calculator.",
-                    "body":"Most of these human computers were women. Although not always recognized, their word propelled science and engineering forward for decades.", "media":"/data/images/Human%20Computers%20at%20NASA%20public%20domain.jpg",
+                    "body":"Most of these human computers were women. Although not always recognized, their word propelled science and engineering forward for decades.", "media":"data/images/Human%20Computers%20at%20NASA%20public%20domain.jpg",
                     "tubie":{
                         "header":"title data",
                         "body":"body contents"
@@ -39,7 +39,7 @@
                 {
                     "title":"when electronic computers were introduced, women were often the first programmers and computer operators.",
                     "body":"Their pioneering application of the new machines to scientific and national security challenges mad possible the rapid technical advances in the years that followed.",
-                    "media":"/data/images/001%20MANIAC%20II%201958.jpg",
+                    "media":"data/images/001%20MANIAC%20II%201958.jpg",
                     "tubie":{
                         "header":"title data",
                         "body":"body contents"
@@ -48,7 +48,7 @@
                 {
                     "title":"The legacy of women building the future through computing continues at Los Alamos today.",
                     "body":"Discover more about the legacy and ongoing contributions of women in computing at Los Alamos.",
-                    "media": "/data/images/feature15.jpg",
+                    "media": "data/images/feature15.jpg",
                     "tubie":{
                         "header":"title data",
                         "body":"body contents"
@@ -59,32 +59,32 @@
     
     "buildingFutureData":
     {
-            "header":"/assets/TitleLogo/Title-AHistoryofBuildingtheFuture.svg",
+            "header":"assets/TitleLogo/Title-AHistoryofBuildingtheFuture.svg",
             "slidespeed": 15000,
             "slides":
             [
                 {
                     "media": [
                         {
-                            "img":"/data/images/WACs%20Los%20Alamos%202.jpg"
+                            "img":"data/images/WACs%20Los%20Alamos%202.jpg"
                         },
                         {
-                            "img": "/data/images/Lois%20Cook%20Leurgans.jpg"
+                            "img": "data/images/Lois%20Cook%20Leurgans.jpg"
                         },
                         {
-                            "img": "/data/images/001%20Cray%201%201977.jpg"
+                            "img": "data/images/001%20Cray%201%201977.jpg"
                         },
                         {
-                              "img": "/data/images/Ann%20Hayes%20LA%2011216%20MS%20page%2024%20(3).jpg"
+                              "img": "data/images/Ann%20Hayes%20LA%2011216%20MS%20page%2024%20(3).jpg"
                         },
                         {
-                            "img": "/data/images/Cindy%20Martin%20and%20Joann%20Campbell.jpg"
+                            "img": "data/images/Cindy%20Martin%20and%20Joann%20Campbell.jpg"
                         }
                     ]
                 },
                 {
                     "title":"The first computers at Los Alamos were mostly women from the town's civilian community. Professional computers from the Woman's Army Corps (WACs) soon grew the ranks of human computers at the Lab to about twenty. Without their skilled and tireless computing work, Los Alamos' wartime mission would not have succeeded.",
-                    "media": "/data/images/WACs%20Los%20Alamos%202.jpg",
+                    "media": "data/images/WACs%20Los%20Alamos%202.jpg",
                     "tubie":{
                         "header":"title data",
                         "body":"Building the Future"
@@ -93,7 +93,7 @@
                 {
                     "title":"After World War II, women from the Lab's hand-computing group became the world's first programmers (then called \"coders\").",
                     "body": "Human computers had the skills needed to translate complex problems into the software \"code\" that an electronic computer could understand. Women with degrees in science and mathematics came to Los Alamos from all over the United States to meet the Lab's urgent Cold War need for computing expertise.",
-                    "media": "/data/images/Lois%20Cook%20Leurgans.jpg",
+                    "media": "data/images/Lois%20Cook%20Leurgans.jpg",
                     "tubie":{
                         "header":"title data",
                         "body":"body contents"
@@ -102,7 +102,7 @@
                 {
                     "title":"The 1970's brought many changes to Los Alamos. The Cray-1 revolutionized supercomputer performance and computer networking made the lab a smaller (and faster) place.",
                     "body": "Women stepped up to a growing number of roles in computing - from networking technicians to group leaders - to make sure Los Alamos continued to set the pace in supercomputer technology and scientific research.",
-                    "media": "/data/images/001%20Cray%201%201977.jpg",
+                    "media": "data/images/001%20Cray%201%201977.jpg",
                     "tubie":{
                         "header":"title data",
                         "body":"body contents"
@@ -110,7 +110,7 @@
                 },
                 {
                     "title":"Stockpile Stewardship gave new importance to supercomputer simulations at Los Alamos in the 1990s. Women played key roles in researching and evaluating new technologies (such as cluster computing) that would guide Los Alamos into the twenty-first century of supercomputing, and without the need for live weapons testing.",
-                    "media": "/data/images/Ann%20Hayes%20LA%2011216%20MS%20page%2024%20(3).jpg",
+                    "media": "data/images/Ann%20Hayes%20LA%2011216%20MS%20page%2024%20(3).jpg",
                     "tubie":{
                         "header":"title data",
                         "body":"body contents"
@@ -118,7 +118,7 @@
                 },
                 {
                     "body":"Today, women are security experts protecting Los Alamos computer networks; they are computer scientists designing programs to combat climate change; they are systems analysts who keep the lab's supercomputers working to serve the national interest; they experts who make Los Alamos make a difference.\n Much has changed at Los Alamos since human computers powered the Manhattan Project, but the legacy of women building the future through computing continues.",
-                    "media": "/data/images/Cindy%20Martin%20and%20Joann%20Campbell.jpg",
+                    "media": "data/images/Cindy%20Martin%20and%20Joann%20Campbell.jpg",
                     "tubie":{
                         "header":"title data",
                         "body":"body contents"
@@ -142,27 +142,27 @@
             [
                 {
                     "link":"videoTest",
-                    "img":"/data/images/WACs%20Los%20Alamos%202.jpg",
+                    "img":"data/images/WACs%20Los%20Alamos%202.jpg",
                     "videoTitle":"videoTest"
                 },
                 {
                     "link":"https://www.youtube.com/watch?v=nVp8OH426-0",
-                    "img":"/data/images/WACs%20Los%20Alamos%202.jpg",
+                    "img":"data/images/WACs%20Los%20Alamos%202.jpg",
                     "videoTitle":"video1"
                 },
                 {
                     "link":"video2",
-                    "img":"/data/images/WACs%20Los%20Alamos%202.jpg",
+                    "img":"data/images/WACs%20Los%20Alamos%202.jpg",
                     "videoTitle":"video2"
                 },
                 {
                     "link":"video3",
-                    "img":"/data/images/WACs%20Los%20Alamos%202.jpg",
+                    "img":"data/images/WACs%20Los%20Alamos%202.jpg",
                     "videoTitle":"video3"
                 },
                 {
                     "link":"video4",
-                    "img":"/data/images/WACs%20Los%20Alamos%202.jpg",
+                    "img":"data/images/WACs%20Los%20Alamos%202.jpg",
                     "videoTitle":"video4"
                 }
             ]
@@ -172,7 +172,7 @@
     {
         "url":"https://www.tiki-toki.com/timeline/embed/1072961/5133908922/",
         "tubie":{
-            "link":"/data/videos/mov_bbb.mp4",
+            "link":"data/videos/mov_bbb.mp4",
             "videoTitle":"Tubie Tutorial"
         }
     }
