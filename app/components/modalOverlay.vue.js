@@ -4,7 +4,8 @@ var modalOverlay= {
     data:function(){
         return{
             count:null,
-            title: null
+            title: null,
+            video:null
         }
     },
     methods:{
@@ -27,12 +28,12 @@ var modalOverlay= {
         reset:function(){
             this.count = Math.floor(this.countdown / 1000);
         },
-        geturl:function(url){
-            $("#modalVideo").attr('src', url.link);
-            this.title=url.videoTitle;
+        geturl:function(video){
+            $("#videoWindow").attr('src', video.link);
+            this.title=video.videoTitle;
         },
         stopVideo:function(){
-            $("#modalVideo").attr('src', '');
+            $("#videoWindow").attr('src', '');
             this.$emit('stopvideo');
         }
     },
@@ -50,14 +51,14 @@ var modalOverlay= {
         </div>
 
         <div v-if="id=='modalVideo'" class="modal-content">
-          <div class="modal-body">
-            <div class="web-wrapper">
-                <iframe id="modalVideo" src="" frameborder=0></iframe>
-            </div>
+          <div class="modal-header">
+            <h5 class="modal-title">{{ title }}</h5>
+            <button @click="stopVideo" type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
           </div>
-          <div class="modal-footer">
-            <h3 class="mr-auto">{{ title }}</h3>
-            <button @click="stopVideo" type="button" class="btn btn-secondary btn-lg mr-3" data-dismiss="modal">Close</button>
+          <div class="modal-body web-wrapper">
+            <video id="videoWindow" controls src=""></video>
           </div>
         </div>
 

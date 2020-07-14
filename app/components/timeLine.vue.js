@@ -15,7 +15,7 @@ var timeLine={
         <div class="timeline-banner">
             <div class="timeline-header red row no-gutters">
                 <div v-if="tubie!=null" class="col-4 col-md-3 tubie-container-left">
-                    <tubie-overlay id="tubie-timeline" :display="tubie" @seturl="seturl" position="left"/>
+                    <tubie-overlay id="tubie-timeline" :display="tubie" @seturl="seturl"/>
                 </div>
                 <h2 class="col-8 col-md-6 align-self-center title-font">Explore the timeline</h2>
                 <h4 class="col align-self-center ml-2 mr-3 body-font">Legacy of Women in \n Los Alamos Computing</h4>
@@ -23,7 +23,7 @@ var timeLine={
         </div>
 
         <div class="timeline-holder">
-            <!--iframe width="100%" height="auto" :src="webpage"></iframe-->
+            <iframe :src="webpage" width="800" height="600" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
         </div>
     </div>`
 }

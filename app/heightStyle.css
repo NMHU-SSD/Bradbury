@@ -1,6 +1,7 @@
 /******Women in Computing CSS*/
 #carouselComputing{
     height: 35vw;
+    margin-bottom: 5%;
 }
 @media only screen and (max-width:576px){
     #carousel-carouselComputing, #carouselComputing{
@@ -19,12 +20,14 @@
         height: 45vw;
         min-height: 400px;
         max-height: 800px;
+        margin-bottom: 5%;
     }
 }
 
 /******Building Future CSS*/
 #carouselHistory{
     height: 35vw;
+    margin-bottom: 5%;
 }
 @media only screen and (max-width:576px){
     #carousel-carouselHistory, #carouselHistory{

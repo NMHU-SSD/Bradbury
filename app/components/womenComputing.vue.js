@@ -85,14 +85,16 @@ var womanComputing = {
                     <!-- End of slides --->
                         </div>
                         <div class="section-header-computing">
-                            <div class="d-none d-sm-block computing-header red">
+                            <div class="d-none d-sm-block mb-md-2 computing-header red">
                                 <img :src="header">
                             </div>
                         </div>
-                        <div class="banner yellow"></div>
-                        <div class="tubie-container-right">
-                              <tubie-overlay id="tubie" :display="slide.tubie"/>
-                        </div>         
+                        <div class="row slide-span">
+                            <div class="col-4 col-md-3 col-lg-2 ml-auto tubie-container-right">
+                                  <tubie-overlay id="tubie" :display="slide.tubie"/>
+                            </div>         
+                        </div> 
+                        <div class="banner yellow"></div>         
                     </div>          
             </template>
         </div>

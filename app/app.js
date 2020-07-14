@@ -78,14 +78,14 @@ var app = new Vue({
             document.onmousedown = this.resetTimer;
             
         },
-        displayVideo:function(url){
+        displayVideo:function(info){
             if(this.active){
                 clearTimeout(this.t);
                 clearTimeout(this.afk);
                 this.active=false;
             }
+            this.$refs[this.modalVideo].geturl(info);
             $('#modalVideo').modal();
-            this.$refs[this.modalVideo].geturl(url);
         },
         videoModalClose:function(){
             this.active=true;

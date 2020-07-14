@@ -1,6 +1,6 @@
 var tubieOverlay = {
     name:"tubie-overlay",
-    props:['id','display','position'],
+    props:['id','display'],
     data:function(){
         return{
             setRight:true,
@@ -18,9 +18,9 @@ var tubieOverlay = {
         }
     },
     template:
-    `<div v-if="display!=null && display.image!=null" :class="(position!='left' ? 'tubie-wrapper' : 'tubie-wrapper-left')">
-        <img v-if="display.header" tabindex="0" data-toggle="popover" data-placement="top" data-trigger="focus" :title="display.header" :data-content="display.body"  :src="display.image">
+    `<div v-if="display!=null" class="tubie-wrapper">
+        <div v-if="display.header" class="tubie-img" tabindex="0" data-toggle="popover" data-placement="top" data-trigger="focus" :title="display.header" :data-content="display.body"/>
 
-        <img v-else @click="seturl" :src="display.image">
+        <div v-else class="tubie-img-left" @click="seturl"/>
     </div>`
 }

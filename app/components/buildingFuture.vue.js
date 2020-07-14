@@ -79,10 +79,11 @@ var buildingFuture= {
             <div class="carousel-inner gradient-green">
                 <template v-for="(slide, index) in infoSlides">
                     <div :class="['carousel-item', (index==0 ? 'active' : '')]" >
+
                         <!--- Slides Layout Appearence --->
                         <div class="row row-full">
-                            <div class="d-none d-sm-block col-sm-4 red">
-                                <div v-if="slide.media" class="img-main-large">
+                            <div v-if="slide.media" class="d-none d-sm-block col-sm-4 red">
+                                <div class="img-main-large">
                                     <div class="circle-wrap img-shadow">
                                         <img :src="slide.media">
                                     </div>
@@ -93,11 +94,11 @@ var buildingFuture= {
                                   <p v-if="slide.title" class="content-body">{{ slide.title }}</p>
                                   <p v-if="slide.body" class="content-body">{{ slide.body }}</p>
                         <!--- In Their Words----->
-                                <div v-if="slide.videoSlide" class="container-fluid">
+                                <div v-if="slide.videoSlide" class="container-fluid fix-width">
                                     <div class="row mt-5">
                                         <div class="col-12 col-sm-6">
                                             <div class="row">
-                                                <div v-for="video in videoData.videos" class="col-6 video-container">
+                                                <div v-for="video in videoData.videos" class="col-6">
                                                     <img :src="video.img" class="vid-thumb shadow" @click="seturl(video)">
                                                 </div>
                                             </div>
@@ -110,19 +111,16 @@ var buildingFuture= {
                                 </div><!--- In Their Words----->
                             </div>
                         </div>
-                        <!-- End of slides --->
-                        
-                        <div class="row slide-span">
-                            <!---div class="col-3 red section-header"--->
-                            <div class="col-4 col-lg-3 red">
+                <!-- End of slides --->
+                        <div class="section-header">
                                 <img :src="header">
                             </div>
-                            <!--div class="col-3 red tubie-container-right"-->
-                            <div class="col-4 col-lg-2 ml-auto red">
+                        <div class="row slide-span">
+                            <div class="col-4 col-md-3 col-lg-2 ml-auto tubie-container-right">
                                   <tubie-overlay id="tubie" :display="slide.tubie"/>
                             </div>         
                         </div> 
-                        <div v-show=false class="banner yellow"></div>
+                        <div class="banner yellow"></div>
                     </div>          
             </template>
         </div>
