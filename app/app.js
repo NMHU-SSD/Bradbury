@@ -33,7 +33,7 @@ var app = new Vue({
     
     methods:{
         GetData: function(){
-            fetch("womenInComputingData.json")
+            fetch("data/womenInComputingData.json")
             .then(response => response.json())
             .then(data =>{
                 this.womenComputingData = data.womenComputingData;
