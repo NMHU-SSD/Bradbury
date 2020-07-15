@@ -24,13 +24,13 @@
                             "img":"data/images/001%20MANIAC%20II%201958.jpg"
                         },
                         {
-                            "img":"images/feature15.jpg"
+                            "img":"data/images/feature15.jpg"
                         }
                     ]
                 },
                 {
                     "title":"At Los Alamos and elsewhere, the first computers were humans who did calculations by hand, sometimes with the help of a desktop calculator.",
-                    "body":"Most of these human computers were women. Although not always recognized, their word propelled science and engineering forward for decades.", "media":"data/images/Human%20Computers%20at%20NASA%20public%20domain.jpg",
+                    "body":"Most of these human computers were women. Although not always recognized, their word propelled science and engineering forward for decades.", "media":"data/images/HumanComputersAtNASA-PublicDomain.jpg",
                     "tubie":{
                         "header":"title data",
                         "body":"body contents"
