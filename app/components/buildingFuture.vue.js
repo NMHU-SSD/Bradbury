@@ -112,14 +112,12 @@ var buildingFuture= {
                             </div>
                         </div>
                 <!-- End of slides --->
-                        <div class="section-header">
+                        <div class="d-none d-sm-block section-header">
                                 <img :src="header">
                             </div>
-                        <div class="row slide-span">
-                            <div class="col-4 col-md-3 col-lg-2 ml-auto tubie-container-right">
+                            <div class="tubie-container-right">
                                   <tubie-overlay id="tubie" :display="slide.tubie"/>
-                            </div>         
-                        </div> 
+                            </div>
                         <div class="banner yellow"></div>
                     </div>          
             </template>

@@ -5,8 +5,7 @@ var slideshowComponent={
         return{
             index:0,
             currentImg: null,
-            seconds: 0,
-            kenburn: 'kenburns '+this.seconds+'s infinite'
+            seconds: 0
         }
     },
     mounted:function(){
@@ -23,7 +22,13 @@ var slideshowComponent={
             setTimeout(this.slideshow, this.speed);
         },
         changeImg:function(){
+            var slideId = $('#'+this.id);
             this.currentImg = this.images[this.index].img;
+            if(this.images[this.index].position){
+                $(slideId).css('object-position', this.images[this.index].position);
+            }else{
+                $(slideId).css('object-position', 'center');
+            }
             if(this.index < this.images.length-1){
                 this.index++;
             }else{
@@ -36,8 +41,12 @@ var slideshowComponent={
     },
     watch:{
         images:function(){
+            var slideId = $('#'+this.id);
             if(this.images!=null){
                 this.currentImg = this.images[this.index].img;
+                if(this.images[this.index].position){
+                    $(slideId).css('object-position', this.images[this.index].position);
+                }
                 this.index++;
                 setTimeout(this.slideshow, this.speed);
             }

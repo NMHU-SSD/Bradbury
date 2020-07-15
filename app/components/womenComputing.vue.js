@@ -89,10 +89,8 @@ var womanComputing = {
                                 <img :src="header">
                             </div>
                         </div>
-                        <div class="row slide-span">
-                            <div class="col-4 col-md-3 col-lg-2 ml-auto tubie-container-right">
-                                  <tubie-overlay id="tubie" :display="slide.tubie"/>
-                            </div>         
+                        <div class="tubie-container-right">
+                              <tubie-overlay id="tubie" :display="slide.tubie"/>
                         </div> 
                         <div class="banner yellow"></div>         
                     </div>          

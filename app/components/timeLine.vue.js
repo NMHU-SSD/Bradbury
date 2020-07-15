@@ -13,12 +13,12 @@ var timeLine={
     `<div :id=id @click="selected">
         
         <div class="timeline-banner">
+            <div v-if="tubie!=null" class="tubie-container-left">
+                <tubie-overlay id="tubie-timeline" :display="tubie" @seturl="seturl"/>
+            </div>
             <div class="timeline-header red row no-gutters">
-                <div v-if="tubie!=null" class="col-4 col-md-3 tubie-container-left">
-                    <tubie-overlay id="tubie-timeline" :display="tubie" @seturl="seturl"/>
-                </div>
-                <h2 class="col-8 col-md-6 align-self-center title-font">Explore the timeline</h2>
-                <h4 class="col align-self-center ml-2 mr-3 body-font">Legacy of Women in \n Los Alamos Computing</h4>
+                <h2 class="offset-4 offset-md-3 col-8 col-md-6 align-self-center title-font">Explore the timeline</h2>
+                <h4 class="d-none d-sm-block col align-self-center ml-2 mr-3 body-font">Legacy of Women in \n Los Alamos Computing</h4>
             </div>
         </div>
 

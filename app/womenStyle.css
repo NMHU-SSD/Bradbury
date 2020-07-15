@@ -82,7 +82,8 @@ $xl:1200px;
 /*carousel controllers*/
 .carousel-control-prev-icon,
 .carousel-control-next-icon{
-    height: 25%;
+    margin-top: 55%;
+    height: 20%;
     width: 50%;
 }
 .carousel-control-prev,
@@ -125,11 +126,27 @@ $xl:1200px;
 /********Tubie CSS********/
 .tubie-container-right{
     background: url(assets/CustomImages/Tubie-orangebkgd-right.svg) no-repeat;
-    background-position: bottom right;
-    height: 100%;
-    z-index: 7;
+    background-position:right bottom;
+    height: 10vw;
+    width: 22vw;
+    position: absolute;
+    bottom: 4.5em;
+    right: 0;
 }
-.tubie-wrapper{ 
+@media only screen and (max-width:576px){
+    .tubie-container-right{
+        height: 20vw;
+        width: 45vw;
+    }
+}
+@media only screen and (max-width:1200px){
+    .tubie-container-right{
+        height: 12vw;
+        width: 30vw;
+    }
+}
+.tubie-wrapper{
+    margin-top: 10%;
     width: 100%;
     height: 100%;
 }
@@ -143,8 +160,11 @@ $xl:1200px;
 .tubie-container-left{
     background: url(assets/CustomImages/Tubie-orangebkgd-left.svg) no-repeat;
     background-position: bottom left;
-    height: 100%;
-    position: relative;
+    height: 15vw;
+    width: 33vw;
+    position: absolute;
+    bottom: 0;
+    left: -7%;
     z-index: 7;
 }
 .tubie-img-left{
@@ -197,10 +217,12 @@ $xl:1200px;
     height: 100%;
     width: 100%;
     object-fit: cover;
+    object-position: center;
     transition: .5s;
 }
 .splash-title-holder{
     width: 40%;
+    max-width: 800px;
     position: absolute;
     z-index: 7;
 }
@@ -217,30 +239,29 @@ $xl:1200px;
     z-index: 7;
 }
 .splash-right{
-    bottom: 0%;
-    right: 0%;
+    right: 0;
 }
 .title-left{
     top: -20%;
     left: -30%;
 }
 .title-right{
-    bottom: -35%;
+    top: -20%;
     right: -30%;
 }
 .title-right img{
     object-fit: contain;
     width: 70%;
     position: relative;
-    top: 25%;
+    top: 30%;
     left: 5%;
 }
 .title-left img{
     object-fit: contain;
-    width: 50%;
+    width: 60%;
     position: absolute;
-    top: 16%;
-    right: 10%;
+    top: 30%;
+    right: 15%;
 }
 /******** Title Bar */
 .title-header{
@@ -252,7 +273,7 @@ $xl:1200px;
 .title-header h1{
     color: white;
     text-align: center;
-    font-size: calc(32px + 3vw);
+    font-size: calc(24px + 5vw);
 }
 
 /******Women in Computing CSS*/
@@ -339,7 +360,7 @@ $xl:1200px;
     position: absolute;
     width: 140%;
     height: 140%;
-    left: 15%;
+    left: 20%;
     bottom: -10%;
     background-color: black;
     overflow: hidden;
@@ -383,13 +404,13 @@ $xl:1200px;
     height: 30%;
     width: 100%;
     overflow: hidden;
-    margin: 0;
+    position: relative;
 }
 .timeline-header{
     height: 50%;
     position: relative;
     top: 50%;
-    font-size: calc(14px + 1vw);
+    font-size: calc(14px + 1.5vw);
 }
 .timeline-header h2{
     text-align: center;

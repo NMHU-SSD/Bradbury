@@ -21,7 +21,8 @@
                             "img":"data/images/HumanComputersAtNASA-PublicDomain.jpg"
                         },
                         {
-                            "img":"data/images/001%20MANIAC%20II%201958.jpg"
+                            "img":"data/images/001%20MANIAC%20II%201958.jpg",
+                            "position":"right"
                         },
                         {
                             "img":"data/images/feature15.jpg"
@@ -66,19 +67,23 @@
                 {
                     "media": [
                         {
-                            "img":"data/images/WACs%20Los%20Alamos%202.jpg"
+                            "img":"data/images/WACs%20Los%20Alamos%202.jpg",
+                            "position":"top"
                         },
                         {
-                            "img": "data/images/Lois%20Cook%20Leurgans.jpg"
+                            "img": "data/images/Lois%20Cook%20Leurgans.jpg",
+                            "position":"top"
                         },
                         {
-                            "img": "data/images/001%20Cray%201%201977.jpg"
+                            "img": "data/images/001%20Cray%201%201977.jpg",
+                            "position":"right"
                         },
                         {
                               "img": "data/images/Ann%20Hayes%20LA%2011216%20MS%20page%2024%20(3).jpg"
                         },
                         {
-                            "img": "data/images/Cindy%20Martin%20and%20Joann%20Campbell.jpg"
+                            "img": "data/images/Cindy%20Martin%20and%20Joann%20Campbell.jpg",
+                            "position":"right"
                         }
                     ]
                 },
