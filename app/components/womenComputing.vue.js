@@ -14,7 +14,7 @@ var womanComputing = {
     methods:{
         reset:function(){
             this.splash=true;
-            this.count==0;
+            this.count=0;
             this.first=true;
             this.end=false;
         },

@@ -15,9 +15,9 @@ var buildingFuture= {
     methods:{
         reset:function(){
             this.splash=true;
-            this.count==0;
             this.first=true;
             this.end=false;
+            this.count=0;
         },
         seturl:function(url){
             this.$emit('seturl', url);
@@ -94,18 +94,18 @@ var buildingFuture= {
                                   <p v-if="slide.title" class="content-body">{{ slide.title }}</p>
                                   <p v-if="slide.body" class="content-body">{{ slide.body }}</p>
                         <!--- In Their Words----->
-                                <div v-if="slide.videoSlide" class="container-fluid fix-width">
-                                    <div class="row mt-5">
+                                <div v-if="slide.videoSlide" class="container-fluid pt-5 pb-lg-5 mr-md-5 fix-width">
+                                    <div class="row">
                                         <div class="col-12 col-sm-6">
                                             <div class="row">
-                                                <div v-for="video in videoData.videos" class="col-6">
-                                                    <img :src="video.img" class="vid-thumb shadow" @click="seturl(video)">
+                                                <div v-for="video in videoData.videos" class="col-6 col-lg-6 col-xl-4 mb-4 vid-col">
+                                                    <img :src="video.img" class="vid-thumb" @click="seturl(video)">
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-12 col-sm-6 pl-5">
+                                        <div class="col-12 col-sm-6 pl-md-5 pr-md-5">
                                             <img class="d-none d-sm-block words-header" :src="videoData.header">
-                                            <p class="content-body">{{ videoData.body }}</p>
+                                            <p class="content-body pl-0 mr-0">{{ videoData.body }}</p>
                                         </div>
                                     </div>
                                 </div><!--- In Their Words----->

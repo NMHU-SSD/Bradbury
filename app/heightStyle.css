@@ -30,19 +30,19 @@
     margin-bottom: 5%;
 }
 @media only screen and (max-width:576px){
-    #carousel-carouselHistory, #carouselHistory{
+    #carousel-carouselHistory, #carouselHistory, .fix-width{
         height: 100vh;
     }
 }
 @media only screen and (min-width:576px) and (max-width: 1200px){
-    #carousel-carouselHistory, #carouselHistory{
+    #carousel-carouselHistory, #carouselHistory, .fix-width{
         height: 50vw;
         min-height: 600px;
         max-height: 100vh;
     }
 }
 @media only screen and (min-width:1200px){
-    #carousel-carouselHistory, #carouselHistory{
+    #carousel-carouselHistory, #carouselHistory, .fix-width{
         height: 45vw;
         min-height: 400px;
         max-height: 800px;
