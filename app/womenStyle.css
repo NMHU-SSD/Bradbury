@@ -389,17 +389,23 @@ $xl:1200px;
     margin: auto;
 }
 .fix-width{
+    padding-bottom: 4.5em;
+}
+.vid-container{
+    height: 70%;
+    padding: 2% 7%;
+    overflow: auto;
 }
 @media only screen and (min-width:576px){
     .fix-width{
         width: 80%;
     }
-}
-.fix-width .row{
-    height: 50%;
-}
-.vid-col{
-    height: auto;
+    .vid-container{
+        height: 55vw;
+        max-height: 600px;
+        padding: 2% 3%;
+        padding-right: 8%;
+    }
 }
 .vid-thumb{
     box-shadow: 10px 10px 20px 5px #2a2b2b;

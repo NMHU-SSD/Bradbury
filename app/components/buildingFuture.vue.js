@@ -96,14 +96,18 @@ var buildingFuture= {
                         <!--- In Their Words----->
                                 <div v-if="slide.videoSlide" class="container-fluid pt-5 pb-lg-5 mr-md-5 fix-width">
                                     <div class="row">
-                                        <div class="col-12 col-sm-6">
-                                            <div class="row">
-                                                <div v-for="video in videoData.videos" class="col-6 col-lg-4 mb-4 vid-col">
-                                                    <img :src="video.img" class="vid-thumb" @click="seturl(video)">
+                                        <div class="col-12 col-sm-6 order-2 order-sm-1">
+
+                                            <div class="vid-container">
+                                                <div class="row">
+                                                    <div v-for="video in videoData.videos" class="col-6 col-xl-4 mb-4 vid-col">
+                                                        <img :src="video.img" class="vid-thumb" @click="seturl(video)">
+                                                    </div>
                                                 </div>
                                             </div>
+
                                         </div>
-                                        <div class="col-12 col-sm-6 pl-md-5 pr-md-5">
+                                        <div class="col-12 col-sm-6 pl-md-5 pr-md-5 order-1 order-sm-2">
                                             <img class="d-none d-sm-block words-header" :src="videoData.header">
                                             <p class="content-body pl-0 mr-0">{{ videoData.body }}</p>
                                         </div>

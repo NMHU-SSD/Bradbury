@@ -72,7 +72,8 @@ var slideshowComponent={
         <div v-show=true class="splash-background">
             <img :id="id" class="splash-img" :src="currentImg">
         </div>
-        <!---div v-if="images" class="row">
+
+        <!--div v-if="images" class="row">
             <div v-for="(video, int) in 3" class="col-4 vid-col">
                 <img :id="[id+'int']" :src="images[index].img" class="vid-thumb">
             </div>
@@ -85,6 +86,6 @@ var slideshowComponent={
           <a v-show="true" class="carousel-control-next" role="button" @click="nextSlide">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="sr-only">Next</span>
-          </a--->
+          </a-->
     </div>`
 }
