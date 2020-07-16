@@ -10,6 +10,7 @@ var slideshowComponent={
     },
     mounted:function(){
         this.initShow();
+        //setTimeout(this.changeMult, this.speed);
     },
     methods:{
         slideshow:function(){
@@ -33,6 +34,15 @@ var slideshowComponent={
                 this.index++;
             }else{
                 this.index=0;
+            }
+        },
+        changeMult:function(adjust){
+            for(x=0; x<3; i++){
+                var colId = $('#'+this.id+x);
+                this.currentImg = this.images[x].img
+                if(x>this.images.length-1){
+                    x=0;
+                }
             }
         },
         initShow:function(){
@@ -59,8 +69,22 @@ var slideshowComponent={
                 <img :src="header">
             </div>
         </div>
-        <div class="splash-background">
+        <div v-show=true class="splash-background">
             <img :id="id" class="splash-img" :src="currentImg">
         </div>
+        <!---div v-if="images" class="row">
+            <div v-for="(video, int) in 3" class="col-4 vid-col">
+                <img :id="[id+'int']" :src="images[index].img" class="vid-thumb">
+            </div>
+        </div>
+
+          <a v-show="true" class="carousel-control-prev" role="button" @click="prevSlide">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a v-show="true" class="carousel-control-next" role="button" @click="nextSlide">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a--->
     </div>`
 }

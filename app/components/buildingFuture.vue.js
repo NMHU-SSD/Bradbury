@@ -98,7 +98,7 @@ var buildingFuture= {
                                     <div class="row">
                                         <div class="col-12 col-sm-6">
                                             <div class="row">
-                                                <div v-for="video in videoData.videos" class="col-6 col-lg-6 col-xl-4 mb-4 vid-col">
+                                                <div v-for="video in videoData.videos" class="col-6 col-lg-4 mb-4 vid-col">
                                                     <img :src="video.img" class="vid-thumb" @click="seturl(video)">
                                                 </div>
                                             </div>
