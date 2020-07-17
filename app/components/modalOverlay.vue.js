@@ -5,7 +5,25 @@ var modalOverlay= {
         return{
             count:null,
             title: null,
-            video:null
+            video:null,
+            player:null,
+            source:false,
+            setup:{
+                autoplay: true,
+				controls: true,
+                inactivityTimeout: 5000,
+                fluid:true
+            }
+        }
+    },
+    mounted(){
+        this.player= videojs(this.$refs.videoPlayer, this.setup, function onPlayerReady() {
+            console.log('onPlayerReady', this);
+        });
+    },
+    beforeDestroy(){
+        if(this.player){
+            this.player.dispose();
         }
     },
     methods:{
@@ -29,11 +47,13 @@ var modalOverlay= {
             this.count = Math.floor(this.countdown / 1000);
         },
         geturl:function(video){
-            $("#videoWindow").attr('src', video.link);
+            this.player.src(video.link);
+            this.source=true;
             this.title=video.videoTitle;
         },
         stopVideo:function(){
-            $("#videoWindow").attr('src', '');
+            this.player.src(null);
+            this.source=false;
             this.$emit('stopvideo');
         }
     },
@@ -57,8 +77,9 @@ var modalOverlay= {
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
-          <div class="modal-body web-wrapper">
-            <video id="videoWindow" controls src=""></video>
+          <div class="modal-body">
+            <video id="videoWindow" ref="videoPlayer" preload="none" class="video-js web-video">
+            </video>
           </div>
         </div>
 

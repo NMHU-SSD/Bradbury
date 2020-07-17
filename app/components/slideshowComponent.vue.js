@@ -47,6 +47,7 @@ var slideshowComponent={
         },
         initShow:function(){
             this.seconds = Math.floor(this.speed / 1000);
+            //:style="'animation: kenburns 20s infinite'"
         }
     },
     watch:{

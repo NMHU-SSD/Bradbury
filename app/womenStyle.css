@@ -208,6 +208,24 @@ $xl:1200px;
         margin-left: 0%;
     }
 }
+@keyframes kenburns{
+    0%{
+        transform: scale3d(1.1, 1.1, 1)
+            translate3d(30px, 40px, 0px);
+    }
+    40%{
+        transform: scale3d(1.2, 1.2, 1)
+            translate3d(-100px, 20px, 0px);
+    }
+    70%{
+        transform: scale3d(1.5, 1.5, 1)
+            translate3d(-60px, 70px, 0px);
+    }
+    100%{
+        transform: scale3d(1.1, 1.1, 1)
+            translate3d(30px, 40px, 0px);
+    }
+}
 .splash-background{
     background-image: linear-gradient(
         to left,
@@ -218,6 +236,7 @@ $xl:1200px;
     height: 100%;
     padding-top: 5%;
     padding-bottom: 5%;
+    overflow: hidden;
 }
 .splash-img{
     height: 100%;
@@ -352,7 +371,7 @@ $xl:1200px;
 }
 .side-widget{
     padding: 0;
-    margin-left: 17%;
+    margin-left: 20%;
     overflow-y: hidden;
 }
 .img-main-large{
@@ -390,10 +409,14 @@ $xl:1200px;
 }
 .fix-width{
     padding-bottom: 4.5em;
+    width: 80%;
 }
 .vid-container{
-    height: 70%;
-    padding: 2% 7%;
+    height: 90%;
+    max-height: 45vh;
+    padding: 2%;
+    padding-right: 7%;
+    padding-bottom: 5%;
     overflow: auto;
 }
 @media only screen and (min-width:576px){
@@ -402,13 +425,19 @@ $xl:1200px;
     }
     .vid-container{
         height: 55vw;
-        max-height: 600px;
+        max-height: 400px;
         padding: 2% 3%;
         padding-right: 8%;
     }
 }
+@media only screen and (min-width:1200px){
+    .vid-container{
+        height: 55vw;
+        max-height: 700px;
+    }
+}
 .vid-thumb{
-    box-shadow: 10px 10px 20px 5px #2a2b2b;
+    box-shadow: 8px 8px 13px 1px #2a2b2b;
     object-fit: cover;
     width: 100%;
     height: 100%;
@@ -447,7 +476,7 @@ $xl:1200px;
     overflow: hidden;
     position: relative;
     width: 100%;
-    height: 70%;
+    height: 80%;
     z-index: 10;
 }
 .timeline-holder iframe{
@@ -465,17 +494,27 @@ $xl:1200px;
     padding-bottom: 56.25%;
     overflow: hidden;
 }
-.web-wrapper iframe, .web-wrapper video{
+.web-video{
+    height: 400px;
+    width: 100%;
+}
+.web-wrapper iframe, {
     width: 100%;
     height: 100%;
     position: absolute;
     top: 0;
     left: 0;
 }
+.video-js {
+  margin: 0 auto !important;
+}
 .modal{
     max-width: 100%;
-    padding: 0;
+    padding-right: 0px !important;
     font-size: 24px;
+}
+.modal-open{
+    padding-right: 0px !important;
 }
 .modal-backdrop.show {
     opacity: 0.75;

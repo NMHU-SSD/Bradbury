@@ -108,7 +108,7 @@ var buildingFuture= {
 
                                         </div>
                                         <div class="col-12 col-sm-6 pl-md-5 pr-md-5 order-1 order-sm-2">
-                                            <img class="d-none d-sm-block words-header" :src="videoData.header">
+                                            <img class="words-header" :src="videoData.header">
                                             <p class="content-body pl-0 mr-0">{{ videoData.body }}</p>
                                         </div>
                                     </div>
