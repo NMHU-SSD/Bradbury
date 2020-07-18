@@ -24,7 +24,8 @@ var app = new Vue({
         t: null,
         afk: null,
         lastActive: null,
-        active:null
+        active:null,
+        stillActive:null
     },
     mounted: function(){
         this.GetData();
@@ -78,7 +79,6 @@ var app = new Vue({
             setTimeout(function(){
                 $('#'+'modalTimer').modal('hide')}, this.timeData.quitout);
             document.onmousedown = this.resetTimer;
-            
         },
         displayVideo:function(info){
             if(this.active){
@@ -86,12 +86,15 @@ var app = new Vue({
                 clearTimeout(this.afk);
                 this.active=false;
             }
-            this.$refs[this.modalVideo].geturl(info);
+            this.stillActive=info.active;
+            this.$refs[this.modalVideo].geturl(info.video);
             $('#modalVideo').modal();
         },
         videoModalClose:function(){
             this.active=true;
-            this.resetTimer();
+            if(this.stillActive){
+                this.resetTimer();
+            }
         },
         //selection
         itemselect:function(item){

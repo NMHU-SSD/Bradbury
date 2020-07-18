@@ -147,38 +147,45 @@
             [
                 {
                     "link":"videoTest",
+                    "type": "video/mp4",
                     "img":"data/images/WACs%20Los%20Alamos%202.jpg",
                     "videoTitle":"videoTest"
                 },
                 {
                     "link":"https://www.youtube.com/watch?v=nVp8OH426-0",
+                    "type": "video/mp4",
                     "img":"data/images/WACs%20Los%20Alamos%202.jpg",
                     "videoTitle":"video1"
                 },
                 {
                     "link":"video2",
+                    "type": "video/mp4",
                     "img":"data/images/WACs%20Los%20Alamos%202.jpg",
                     "videoTitle":"video2"
                 },
                 {
                     "link":"video3",
+                    "type": "video/mp4",
                     "img":"data/images/WACs%20Los%20Alamos%202.jpg",
                     "videoTitle":"video3"
                 },
                 {
                     "link":"video3",
+                    "type": "video/mp4",
                     "img":"data/images/WACs%20Los%20Alamos%202.jpg",
-                    "videoTitle":"video3"
+                    "videoTitle":"video4"
                 },
                 {
                     "link":"video3",
+                    "type": "video/mp4",
                     "img":"data/images/WACs%20Los%20Alamos%202.jpg",
-                    "videoTitle":"video3"
+                    "videoTitle":"video5"
                 },
                 {
                     "link":"video4",
+                    "type": "video/mp4",
                     "img":"data/images/WACs%20Los%20Alamos%202.jpg",
-                    "videoTitle":"video4"
+                    "videoTitle":"video6"
                 }
             ]
     },
@@ -188,6 +195,7 @@
         "url":"https://www.lanl.gov",
         "tubie":{
             "link":"data/videos/mov_bbb.mp4",
+            "type": "video/mp4",
             "videoTitle":"Tubie Tutorial"
         }
     }

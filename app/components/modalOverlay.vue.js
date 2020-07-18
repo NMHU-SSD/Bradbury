@@ -5,14 +5,24 @@ var modalOverlay= {
         return{
             count:null,
             title: null,
-            video:null,
             player:null,
             source:false,
+            format:null,
             setup:{
                 autoplay: true,
 				controls: true,
                 inactivityTimeout: 5000,
-                fluid:true
+                fluid:true,
+                controlBar: {
+                    captionsButton: false,
+                    chaptersButton: false,            
+                    subtitlesButton: false,
+                    progressControl: {
+                      seekBar: true
+                    },
+                    fullscreenToggle: false,
+                    playbackRateMenuButton: false,
+                  }
             }
         }
     },
@@ -47,14 +57,23 @@ var modalOverlay= {
             this.count = Math.floor(this.countdown / 1000);
         },
         geturl:function(video){
-            this.player.src(video.link);
+            this.player.src({type: video.type, src: video.link});
             this.source=true;
             this.title=video.videoTitle;
         },
         stopVideo:function(){
-            this.player.src(null);
+            this.player.pause();
+            this.player.src('');
             this.source=false;
             this.$emit('stopvideo');
+        },
+        inactive:function(){
+            console.log('timed out');
+        },
+        replayButton:function(){
+            console.log('video ended');
+            this.player.currentTime(0);
+            this.player.bigPlayButton.show();
         }
     },
     template:
@@ -78,7 +97,7 @@ var modalOverlay= {
             </button>
           </div>
           <div class="modal-body">
-            <video id="videoWindow" ref="videoPlayer" preload="none" class="video-js web-video">
+            <video id="videoWindow" ref="videoPlayer" disablePictureInPicture preload="none" class="video-js web-video" @ended="replayButton">
             </video>
           </div>
         </div>

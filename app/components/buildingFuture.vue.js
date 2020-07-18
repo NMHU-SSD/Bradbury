@@ -20,7 +20,7 @@ var buildingFuture= {
             this.count=0;
         },
         seturl:function(url){
-            this.$emit('seturl', url);
+            this.$emit('seturl', {'video':url, 'active':true});
         },
         selected:function(){
             this.splash=false;
