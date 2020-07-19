@@ -14,16 +14,19 @@ var modalOverlay= {
                 inactivityTimeout: 5000,
                 fluid:true,
                 controlBar: {
-                    captionsButton: false,
-                    chaptersButton: false,            
-                    subtitlesButton: false,
                     progressControl: {
                       seekBar: true
                     },
+                    pictureInPictureToggle: false,
+                    volumePanel: false,
                     fullscreenToggle: false,
                     playbackRateMenuButton: false,
+                    captionsButton: false,
+                    chaptersButton: false,            
+                    subtitlesButton: false,
                   }
-            }
+            },
+            videoTimeout: null
         }
     },
     mounted(){
@@ -56,6 +59,7 @@ var modalOverlay= {
         reset:function(){
             this.count = Math.floor(this.countdown / 1000);
         },
+        //Video Modal Functions
         geturl:function(video){
             this.player.src({type: video.type, src: video.link});
             this.source=true;
@@ -66,18 +70,32 @@ var modalOverlay= {
             this.player.src('');
             this.source=false;
             this.$emit('stopvideo');
+            //console.log("video closed");
         },
-        inactive:function(){
-            console.log('timed out');
-        },
-        replayButton:function(){
-            console.log('video ended');
+        endOfVideo:function(){
+            //console.log('video ended');
             this.player.currentTime(0);
-            this.player.bigPlayButton.show();
+            $('#videoWindow .vjs-big-play-button').css('display', 'block');
+            clearTimeout(this.videoTimeout);
+            //this.videoTimeout = setTimeout(this.inactiveUser, this.countdown);
+        },
+        pausedVideo:function(){
+            //console.log('video paused');
+            clearTimeout(this.videoTimeout);
+            this.videoTimeout = setTimeout(this.inactiveUser, this.countdown);
+        },
+        playingVideo:function(){
+            clearTimeout(this.videoTimeout);
+            $('#videoWindow .vjs-big-play-button').css('display', 'none');
+            //console.log("playing");
+        },
+        inactiveUser:function(){
+            this.stopVideo();
+            $('#modalVideo').modal('hide');
         }
     },
     template:
-    `<div :id="id" class="modal" tabindex="-1" role="dialog" :data-backdrop="(exitout=='true' ? 'true' : 'static')" @:displayModal="timer">
+    `<div :id="id" class="modal fade" tabindex="-1" role="dialog" :data-backdrop="(exitout=='true' ? 'true' : 'static')" @:displayModal="timer">
       <div class="modal-dialog modal-xl modal-dialog-centered" role="document">
 
         <div v-if="id=='modalTimer'" class="modal-content timer">
@@ -97,7 +115,7 @@ var modalOverlay= {
             </button>
           </div>
           <div class="modal-body">
-            <video id="videoWindow" ref="videoPlayer" disablePictureInPicture preload="none" class="video-js web-video" @ended="replayButton">
+            <video id="videoWindow" ref="videoPlayer" preload="none" class="video-js vjs-big-play-centered web-video" @ended="endOfVideo" @pause="pausedVideo" @play="playingVideo">
             </video>
           </div>
         </div>

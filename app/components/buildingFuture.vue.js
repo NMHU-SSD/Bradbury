@@ -106,6 +106,10 @@ var buildingFuture= {
                                                 </div>
                                             </div>
 
+                                            <!--div class="MagicScroll visible-fix" data-options="orientation: vertical; arrows: inside; items: 2; width: 640">
+                                                <img v-for="video in videoData.videos" :src="video.img" class="" @click="seturl(video)">
+                                            </div-->
+
                                         </div>
                                         <div class="col-12 col-sm-6 pl-md-5 pr-md-5 order-1 order-sm-2">
                                             <img class="words-header" :src="videoData.header">

@@ -4,7 +4,7 @@
     <!-- Required meta tags -->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        
+      
         <!-- Video JS --->
         <link href="https://vjs.zencdn.net/7.8.3/video-js.css" rel="stylesheet" />
         <!-- If you'd like to support IE8 (for Video.js versions prior to v7) -->
@@ -12,11 +12,15 @@
       
         <!--Bootstrap-->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-   
+        
+        <!--- Magic Scroll -->
+        <link type="text/css" rel="stylesheet" href="magicscroll-trial/magicscroll/magicscroll.css"/>
+        <script type="text/javascript" src="magicscroll-trial/magicscroll/magicscroll.js"></script>
         <!-- CSS --->
         <link rel="stylesheet" href="womenStyle.css">
         <link rel="stylesheet" href="heightStyle.css">
         <link href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@300;500&display=swap" rel="stylesheet">
+      
 
     <title>Women in Computing</title>
   </head>
@@ -25,7 +29,7 @@
 	<div id="app">	
 		<main>
             <!-- Pop overs --->
-            <modal-overlay :id="modalVideo" exitout="false" :countdown="quitout" :ref="modalVideo" @stopvideo="videoModalClose()"></modal-overlay>
+            <modal-overlay :id="modalVideo" exitout="false" :countdown="timeData.videotimer" :ref="modalVideo" @stopvideo="videoModalClose()"></modal-overlay>
             <modal-overlay :id="modalTimer" exitout="true" :countdown="timeData.quitout" :message="timeData.message" ref="timeModal"></modal-overlay> 
             <!--- Main Layout components---->
             <title-bar v-show=true height="200px"></title-bar>
