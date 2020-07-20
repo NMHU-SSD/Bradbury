@@ -98,17 +98,17 @@ var buildingFuture= {
                                     <div class="row">
                                         <div class="col-12 col-sm-6 order-2 order-sm-1">
 
-                                            <div class="vid-container">
+                                            <!---div class="vid-container">
                                                 <div class="row">
                                                     <div v-for="video in videoData.videos" class="col-6 col-xl-4 mb-4 vid-col">
                                                         <img :src="video.img" class="vid-thumb" @click="seturl(video)">
                                                     </div>
                                                 </div>
-                                            </div>
+                                            </div--->
 
-                                            <!--div class="MagicScroll visible-fix" data-options="orientation: vertical; arrows: inside; items: 2; width: 640">
+                                            <div class="MagicScroll visible-fix" data-options="arrows: outside; items: 2">
                                                 <img v-for="video in videoData.videos" :src="video.img" class="" @click="seturl(video)">
-                                            </div-->
+                                            </div>
 
                                         </div>
                                         <div class="col-12 col-sm-6 pl-md-5 pr-md-5 order-1 order-sm-2">

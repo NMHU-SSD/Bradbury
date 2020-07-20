@@ -34,8 +34,8 @@
                     "title":"At Los Alamos and elsewhere, the first computers were humans who did calculations by hand, sometimes with the help of a desktop calculator.",
                     "body":"Most of these human computers were women. Although not always recognized, their word propelled science and engineering forward for decades.", "media":"data/images/HumanComputersAtNASA-PublicDomain.jpg",
                     "tubie":{
-                        "header":"title data",
-                        "body":"body contents"
+                        "header":"Lorem ipsum dolor",
+                        "body":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore"
                     }
                 },
                 {
@@ -43,8 +43,8 @@
                     "body":"Their pioneering application of the new machines to scientific and national security challenges mad possible the rapid technical advances in the years that followed.",
                     "media":"data/images/001%20MANIAC%20II%201958.jpg",
                     "tubie":{
-                        "header":"title data",
-                        "body":"body contents"
+                        "header":"fugiat nulla",
+                        "body":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dolor morbi non arcu risus quis varius quam quisque."
                     }
                 },
                 {
@@ -52,8 +52,8 @@
                     "body":"Discover more about the legacy and ongoing contributions of women in computing at Los Alamos.",
                     "media": "data/images/feature15.jpg",
                     "tubie":{
-                        "header":"title data",
-                        "body":"body contents"
+                        "header":"culpa qui officia",
+                        "body":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dolor morbi non arcu risus quis varius quam quisque. Tellus in metus vulputate eu scelerisque felis imperdiet."
                     }
                 }
             ]
