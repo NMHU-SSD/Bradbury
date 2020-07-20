@@ -74,12 +74,14 @@ var slideshowComponent={
             <img :id="id" class="splash-img" :src="currentImg">
         </div>
 
+        <!--div v-if="images" class="MagicScroll visible-fix" data-options="arrows: outside; items: 2">
+            <img v-for="image in images" :src="image.img">
+        </div--->
         <!--div v-if="images" class="row">
             <div v-for="(video, int) in 3" class="col-4 vid-col">
                 <img :id="[id+'int']" :src="images[index].img" class="vid-thumb">
             </div>
         </div>
-
           <a v-show="true" class="carousel-control-prev" role="button" @click="prevSlide">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="sr-only">Previous</span>

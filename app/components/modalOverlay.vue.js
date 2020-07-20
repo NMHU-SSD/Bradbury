@@ -7,7 +7,6 @@ var modalOverlay= {
             title: null,
             player:null,
             source:false,
-            format:null,
             setup:{
                 autoplay: true,
 				controls: true,
@@ -17,9 +16,9 @@ var modalOverlay= {
                     progressControl: {
                       seekBar: true
                     },
-                    pictureInPictureToggle: false,
-                    volumePanel: false,
+                    volumePanel: true,
                     fullscreenToggle: false,
+                    pictureInPictureToggle: false,
                     playbackRateMenuButton: false,
                     captionsButton: false,
                     chaptersButton: false,            
@@ -33,6 +32,7 @@ var modalOverlay= {
         this.player= videojs(this.$refs.videoPlayer, this.setup, function onPlayerReady() {
             console.log('onPlayerReady', this);
         });
+        this.videoOverlay();
     },
     beforeDestroy(){
         if(this.player){
@@ -76,8 +76,11 @@ var modalOverlay= {
             //console.log('video ended');
             this.player.currentTime(0);
             $('#videoWindow .vjs-big-play-button').css('display', 'block');
+            this.player.getChild('bigPlayButton').on('click', function() {
+              this.player.play();
+            })
             clearTimeout(this.videoTimeout);
-            //this.videoTimeout = setTimeout(this.inactiveUser, this.countdown);
+            this.videoTimeout = setTimeout(this.inactiveUser, this.countdown);
         },
         pausedVideo:function(){
             //console.log('video paused');
@@ -92,6 +95,18 @@ var modalOverlay= {
         inactiveUser:function(){
             this.stopVideo();
             $('#modalVideo').modal('hide');
+        },
+        videoOverlay:function(){
+            this.player.overlay({
+                debug: false,
+                overlays: [{
+                  content: 'Replay',
+                  showBackground: false,
+                  start: 'ended',
+                  end: 'play',
+                  align: 'top-center'
+                }]
+              });
         }
     },
     template:

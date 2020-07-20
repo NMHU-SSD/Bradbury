@@ -189,7 +189,7 @@ $xl:1200px;
     font-size: calc(12px + 1vw);
 }
 .popover {
-    max-width: 30vw !important;
+    max-width: 40vw !important;
     min-width: 200px;
 }
 /******** SlideShow**/
@@ -550,6 +550,10 @@ $xl:1200px;
     text-align: center;
     padding: 2%;
     margin: 0 auto;
+}
+.video-js .vjs-big-play-button{
+    font-size: 4em;
+    padding: 1em;
 }
 @media only screen and (max-width:576px){
     .modal-dialog{

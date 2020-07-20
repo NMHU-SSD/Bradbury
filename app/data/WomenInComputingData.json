@@ -23,7 +23,7 @@
                         },
                         {
                             "img":"data/images/001%20MANIAC%20II%201958.jpg",
-                            "position":"right"
+                            "position":"50% 75%"
                         },
                         {
                             "img":"data/images/feature15.jpg"
@@ -73,18 +73,19 @@
                         },
                         {
                             "img": "data/images/Lois%20Cook%20Leurgans.jpg",
-                            "position":"top"
+                            "position":"50% 10%"
                         },
                         {
                             "img": "data/images/001%20Cray%201%201977.jpg",
-                            "position":"right"
+                            "position":"100% 30%"
                         },
                         {
-                              "img": "data/images/Ann%20Hayes%20LA%2011216%20MS%20page%2024%20(3).jpg"
+                            "img": "data/images/Ann%20Hayes%20LA%2011216%20MS%20page%2024%20(3).jpg",
+                            "position":"50% 30%"
                         },
                         {
                             "img": "data/images/Cindy%20Martin%20and%20Joann%20Campbell.jpg",
-                            "position":"right"
+                            "position":"100% 5%"
                         }
                     ]
                 },
