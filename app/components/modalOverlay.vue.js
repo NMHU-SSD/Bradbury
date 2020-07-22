@@ -6,18 +6,23 @@ var modalOverlay= {
             count:null,
             title: null,
             player:null,
-            source:false,
+            index:0,
+            currVid:null,
+            prevVid:null,
+            nextVid:null,
             setup:{
                 autoplay: true,
 				controls: true,
                 inactivityTimeout: 5000,
                 fluid:true,
+                muted:true,
                 controlBar: {
                     progressControl: {
                       seekBar: true
                     },
                     volumePanel: true,
                     fullscreenToggle: false,
+                    volume:0,
                     pictureInPictureToggle: false,
                     playbackRateMenuButton: false,
                     captionsButton: false,
@@ -25,7 +30,9 @@ var modalOverlay= {
                     subtitlesButton: false,
                   }
             },
-            videoTimeout: null
+            videoTimeout: null,
+            source:false,
+            isEnded:false
         }
     },
     mounted(){
@@ -40,6 +47,7 @@ var modalOverlay= {
         }
     },
     methods:{
+        //Timer Modal Functions
         setPurpose:function(){
             if(this.exitout){
                 return 'true';
@@ -64,8 +72,40 @@ var modalOverlay= {
             this.player.src({type: video.type, src: video.link});
             this.source=true;
             this.title=video.videoTitle;
+            this.currVid=video;
+            if(this.nextVid==null && this.prevVid==null){
+                $('#videoWindow .vjs-overlay-next').css('display', 'none');
+                $('#videoWindow .vjs-overlay-prev').css('display', 'none');
+            }
         },
+        setVideos:function(videos){
+            if(videos.prev){
+                this.prevVid=videos.prev;
+            }
+            if(videos.next){
+                this.nextVid=videos.next;
+            }
+            this.index=videos.index;
+            console.log("current index is: "+this.index);
+        },
+        nextClick:function(){
+            this.prevVid= this.currVid;
+            this.geturl(this.nextVid);
+            this.player.play();
+            console.log("sent index: "+this.index);
+            this.$emit('getnext', this.index);
+        },
+        prevClick:function(){
+            console.log("prev clicked");
+            this.nextVid= this.currVid;
+            this.geturl(this.prevVid);
+            this.player.play();
+            this.$emit('getprev', this.index);
+        },
+        //Video Modal on-events
         stopVideo:function(){
+            this.prevVid=null;
+            this.nextVid=null;
             this.player.pause();
             this.player.src('');
             this.source=false;
@@ -74,11 +114,18 @@ var modalOverlay= {
         },
         endOfVideo:function(){
             //console.log('video ended');
+            if(this.nextVid!=null){
+                this.isEnded=true;
+            }
             this.player.currentTime(0);
             $('#videoWindow .vjs-big-play-button').css('display', 'block');
             this.player.getChild('bigPlayButton').on('click', function() {
               this.player.play();
             })
+            if(this.nextVid!=null){
+                $('#videoWindow .vjs-overlay-next').css('display', 'block');
+                $('#videoWindow .vjs-overlay-prev').css('display', 'block');
+            }
             clearTimeout(this.videoTimeout);
             this.videoTimeout = setTimeout(this.inactiveUser, this.countdown);
         },
@@ -90,12 +137,16 @@ var modalOverlay= {
         playingVideo:function(){
             clearTimeout(this.videoTimeout);
             $('#videoWindow .vjs-big-play-button').css('display', 'none');
+            if(this.isEnded){
+                this.isEnded=false;
+            }
             //console.log("playing");
         },
         inactiveUser:function(){
             this.stopVideo();
             $('#modalVideo').modal('hide');
         },
+        //Video JS Overlay Plugin
         videoOverlay:function(){
             this.player.overlay({
                 debug: false,
@@ -105,6 +156,20 @@ var modalOverlay= {
                   start: 'ended',
                   end: 'play',
                   align: 'top-center'
+                },{
+                    content:'Next',
+                    showBackground: true,
+                    start: 'ended',
+                    end: 'play',
+                    align: 'right',
+                    class:'vjs-overlay-next'
+                },{
+                    content:'Prev',
+                    showBackground: true,
+                    start: 'ended',
+                    end: 'play',
+                    align: 'left',
+                    class:'vjs-overlay-prev'
                 }]
               });
         }
@@ -132,6 +197,8 @@ var modalOverlay= {
           <div class="modal-body">
             <video id="videoWindow" ref="videoPlayer" preload="none" class="video-js vjs-big-play-centered web-video" @ended="endOfVideo" @pause="pausedVideo" @play="playingVideo">
             </video>
+            <div v-show="isEnded" class="playlist-buttons next-button" @click="nextClick"></div>
+            <div v-show="isEnded" class="playlist-buttons prev-button" @click="prevClick"></div>
           </div>
         </div>
 

@@ -22,6 +22,46 @@ var buildingFuture= {
         seturl:function(url){
             this.$emit('seturl', {'video':url, 'active':true});
         },
+        setNext:function(currIndex){
+            let nextIndex=currIndex;
+            //console.log("video playing is at: "+nextIndex);
+            if(currIndex==this.videosdata.videos.length){
+                nextIndex=1;
+                console.log("changed: "+nextIndex);
+            }
+            if(currIndex==this.videosdata.videos.length-1){
+                nextIndex=0;
+                console.log("changed: "+nextIndex);
+            }
+            nextIndex+=1;
+            console.log("video sent from index: "+nextIndex);
+            this.$emit('othervids', {'next':this.videosdata.videos[nextIndex], 'index':nextIndex});
+        },
+        setPrev:function(currIndex){
+            let prevIndex=currIndex-1;
+            if(currIndex==0){
+                prevIndex=this.videosdata.videos.length;
+            }
+            console.log("setPrev: " + prevIndex);
+            this.$emit('othervids', {'prev':this.videosdata.videos[prevIndex], 'index':prevIndex});
+        },
+        otherVids:function(index){
+            prevVid=null;
+            nextVid=null;
+            if(index == 0){
+                const last=this.videosdata.videos.length-1;
+                prevVid=this.videosdata.videos[last];
+                nextVid=this.videosdata.videos[1];
+            }
+            else if(index == this.videosdata.videos.length-1){
+                prevVid=this.videosdata.videos[index-1];
+                nextVid=this.videosdata.videos[0];
+            }else{
+                prevVid=this.videosdata.videos[index-1];
+                nextVid=this.videosdata.videos[index+1];
+            }
+            this.$emit('othervids', {'prev':prevVid, 'next':nextVid, 'index':index});
+        },
         selected:function(){
             this.splash=false;
             this.$emit('selected', this.id);
@@ -99,9 +139,9 @@ var buildingFuture= {
                                         <div class="col-12 col-sm-6 order-2 order-sm-1">
 
                                             <div class="vid-container">
-                                                <div class="row">
-                                                    <div v-for="video in videoData.videos" class="col-6 col-xl-4 mb-4 vid-col">
-                                                        <img :src="video.img" class="vid-thumb" @click="seturl(video)">
+                                                <div class="row mb-5">
+                                                    <div v-for="(video,index) in videoData.videos" class="col-6 col-xl-4 mb-4 vid-col">
+                                                        <img :src="video.img" class="vid-thumb" @click="seturl(video); otherVids(index)">
                                                     </div>
                                                 </div>
                                             </div>

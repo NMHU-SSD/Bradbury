@@ -7,6 +7,7 @@ var timeLine={
         },
         selected:function(){
             this.$emit('selected', this.id);
+            this.$emit('othervids', {'prev':null, 'next':null, 'index':0});
         }
     },
     template:

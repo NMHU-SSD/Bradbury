@@ -48,7 +48,7 @@ var app = new Vue({
                 console.error('Error:', error);
             });
         },
-        //Timer functions
+        //Timer modal functions
         resetTimer:function(){
             clearTimeout(this.t);
             clearTimeout(this.afk);
@@ -72,13 +72,19 @@ var app = new Vue({
             this.$refs[this.computeId].reset();
             this.$refs[this.historyId].reset();
         },
-        //modal popup
+        //video modal popups
         displayModal:function(){
             $('#'+'modalTimer').modal();
             this.$refs.timeModal.timer();
             setTimeout(function(){
                 $('#'+'modalTimer').modal('hide')}, this.timeData.quitout);
             document.onmousedown = this.resetTimer;
+        },
+        videoModalClose:function(){
+            this.active=true;
+            if(this.stillActive){
+                this.resetTimer();
+            }
         },
         displayVideo:function(info){
             if(this.active){
@@ -90,11 +96,15 @@ var app = new Vue({
             this.$refs[this.modalVideo].geturl(info.video);
             $('#modalVideo').modal();
         },
-        videoModalClose:function(){
-            this.active=true;
-            if(this.stillActive){
-                this.resetTimer();
-            }
+        //getter and setter videos
+        passVids:function(videos){
+            this.$refs[this.modalVideo].setVideos(videos);
+        },
+        getNextVid:function(index){
+            this.$refs[this.historyId].setNext(index);
+        },
+        getPrevVid:function(index){
+            this.$refs[this.historyId].setPrev(index);
         },
         //selection
         itemselect:function(item){
