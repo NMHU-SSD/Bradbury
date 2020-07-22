@@ -22,7 +22,6 @@ var modalOverlay= {
                     },
                     volumePanel: true,
                     fullscreenToggle: false,
-                    volume:0,
                     pictureInPictureToggle: false,
                     playbackRateMenuButton: false,
                     captionsButton: false,
@@ -129,7 +128,7 @@ var modalOverlay= {
                 $('#videoWindow .vjs-overlay-prev').css('display', 'block');
             }
             clearTimeout(this.videoTimeout);
-            //this.videoTimeout = setTimeout(this.inactiveUser, this.countdown);
+            this.videoTimeout = setTimeout(this.inactiveUser, this.countdown);
         },
         pausedVideo:function(){
             //console.log('video paused');

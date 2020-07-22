@@ -159,7 +159,7 @@ var buildingFuture= {
                                 <img :src="header">
                             </div>
                             <div class="tubie-container-right">
-                                  <tubie-overlay id="tubie" :display="slide.tubie"/>
+                                  <tubie-overlay :id="'tubie-'+id" :display="slide.tubie"/>
                             </div>
                         <div class="banner yellow"></div>
                     </div>          
