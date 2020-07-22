@@ -15,7 +15,7 @@ var modalOverlay= {
 				controls: true,
                 inactivityTimeout: 5000,
                 fluid:true,
-                muted:true,
+                muted:false,
                 controlBar: {
                     progressControl: {
                       seekBar: true
@@ -89,18 +89,20 @@ var modalOverlay= {
             console.log("current index is: "+this.index);
         },
         nextClick:function(){
+            this.index+=1;
+            console.log("current index: "+this.index);
+            this.$emit('getnext', this.index);
             this.prevVid= this.currVid;
             this.geturl(this.nextVid);
             this.player.play();
-            console.log("sent index: "+this.index);
-            this.$emit('getnext', this.index);
         },
         prevClick:function(){
-            console.log("prev clicked");
+            this.index-=1;
+            console.log("current index: "+this.index);
+            this.$emit('getprev', this.index);
             this.nextVid= this.currVid;
             this.geturl(this.prevVid);
             this.player.play();
-            this.$emit('getprev', this.index);
         },
         //Video Modal on-events
         stopVideo:function(){
@@ -127,7 +129,7 @@ var modalOverlay= {
                 $('#videoWindow .vjs-overlay-prev').css('display', 'block');
             }
             clearTimeout(this.videoTimeout);
-            this.videoTimeout = setTimeout(this.inactiveUser, this.countdown);
+            //this.videoTimeout = setTimeout(this.inactiveUser, this.countdown);
         },
         pausedVideo:function(){
             //console.log('video paused');
@@ -151,7 +153,7 @@ var modalOverlay= {
             this.player.overlay({
                 debug: false,
                 overlays: [{
-                  content: 'Replay',
+                  content: '',
                   showBackground: false,
                   start: 'ended',
                   end: 'play',

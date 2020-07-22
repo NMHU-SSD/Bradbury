@@ -24,7 +24,7 @@ var timeLine={
         </div>
 
         <div class="timeline-holder">
-            <iframe :src="webpage" width="800" height="600" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            <!--iframe :src="webpage" width="800" height="600" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe-->
         </div>
     </div>`
 }

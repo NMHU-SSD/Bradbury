@@ -24,25 +24,20 @@ var buildingFuture= {
         },
         setNext:function(currIndex){
             let nextIndex=currIndex;
-            //console.log("video playing is at: "+nextIndex);
             if(currIndex==this.videosdata.videos.length){
-                nextIndex=1;
-                console.log("changed: "+nextIndex);
-            }
-            if(currIndex==this.videosdata.videos.length-1){
                 nextIndex=0;
-                console.log("changed: "+nextIndex);
+                //console.log("current video playing is from index: "+nextIndex);
             }
-            nextIndex+=1;
-            console.log("video sent from index: "+nextIndex);
+            //console.log("next video is from index: "+nextIndex);
             this.$emit('othervids', {'next':this.videosdata.videos[nextIndex], 'index':nextIndex});
         },
         setPrev:function(currIndex){
-            let prevIndex=currIndex-1;
-            if(currIndex==0){
-                prevIndex=this.videosdata.videos.length;
+            let prevIndex=currIndex;
+            if(currIndex<0){
+                prevIndex=this.videosdata.videos.length-1;
+                //console.log("changed to: "+prevIndex);
             }
-            console.log("setPrev: " + prevIndex);
+            //console.log("video sent from index: "+prevIndex);
             this.$emit('othervids', {'prev':this.videosdata.videos[prevIndex], 'index':prevIndex});
         },
         otherVids:function(index){
