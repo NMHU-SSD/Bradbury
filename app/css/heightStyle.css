@@ -19,6 +19,14 @@
         min-height: 400px;
         max-height: 1200px;
     }
+body{
+    max-height: 3840px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+@media only screen and (min-width:2100px){
+    height: 3840px;
 }
 */
 
@@ -30,6 +38,17 @@
 @media only screen and (max-width:576px){
     #titleBar{
         height: 200px;
+        height: calc(3840px * .025);
+}
+#titleBar > .title-font{
+    font-size: 4vw;
+}
+@media only screen and (max-width:576px){
+    #titleBar{
+        max-height: 200px;
+    }
+    #titleBar > .title-font{
+        font-size: 6vw;
     }
 }
 @media only screen and (min-width:2160px){
