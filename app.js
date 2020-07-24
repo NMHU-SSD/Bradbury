@@ -14,7 +14,7 @@ var app = new Vue({
     
     methods:{
         GetData: function(){
-            fetch("./Data.json")
+            fetch("./content/Data.json")
             .then(response => response.json())
             .then(data =>{
                 this.zones = data.zones;
