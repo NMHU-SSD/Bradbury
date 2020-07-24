@@ -9,11 +9,17 @@ body{
 }
 /***********Title Bar**********/
 #titleBar{
-    height: calc(3840px * .05);
+    height: calc(3840px * .025);
+}
+#titleBar > .title-font{
+    font-size: 4vw;
 }
 @media only screen and (max-width:576px){
     #titleBar{
         max-height: 200px;
+    }
+    #titleBar > .title-font{
+        font-size: 6vw;
     }
 }
 /******Women in Computing CSS*/

@@ -118,7 +118,7 @@ $xl:1200px;
 
 /********Tubie CSS********/
 .tubie-container-right{
-    background: url(assets/CustomImages/Tubie-orangebkgd-right.svg) no-repeat;
+    background: url(../assets/CustomImages/Tubie-orangebkgd-right.svg) no-repeat;
     background-position:right bottom;
     height: 26vw;
     width: 50vw;
@@ -143,7 +143,7 @@ $xl:1200px;
     height: 100%;
 }
 .tubie-img{
-    background: url(assets/Toobie/tubie_info.png) no-repeat;
+    background: url(../assets/Toobie/tubie_info.png) no-repeat;
     background-position: center bottom;
     background-size: contain;
     height: 100%;
@@ -151,7 +151,7 @@ $xl:1200px;
     outline: none;
 }
 .tubie-container-left{
-    background: url(assets/CustomImages/Tubie-orangebkgd-left.svg) no-repeat;
+    background: url(../assets/CustomImages/Tubie-orangebkgd-left.svg) no-repeat;
     background-position: bottom left;
     height: 20vw;
     width: 45vw;
@@ -168,7 +168,7 @@ $xl:1200px;
     }
 }
 .tubie-img-left{
-    background: url(assets/Toobie/tubie_help.png) no-repeat;
+    background: url(../assets/Toobie/tubie_help.png) no-repeat;
     background-position: center bottom;
     background-size: contain;
     height: 100%;
