@@ -12,7 +12,7 @@ var tubieOverlay = {
     },
     methods:{
         initTubie:function(){
-            $('[data-toggle="popover"]').popover(); //data-trigger="focus"
+            $('[data-toggle="popover"]').popover();
         },
         seturl:function(){
             this.$emit('seturl');
@@ -26,7 +26,7 @@ var tubieOverlay = {
     },
     template:
     `<div v-if="display!=null" :id="id" class="tubie-wrapper" @click="hopAnimation">
-        <div v-if="display.header" class="tubie-img" data-container="body" tabindex="0" data-toggle="popover" data-placement="top"  :title="display.header" :data-content="display.body"/>
+        <div v-if="display.header" class="tubie-img" data-container="body" tabindex="0" data-toggle="popover" data-placement="top" data-trigger="focus" :title="display.header" :data-content="display.body"/>
 
         <div v-else class="tubie-img-left" @click="seturl"/>
     </div>`
