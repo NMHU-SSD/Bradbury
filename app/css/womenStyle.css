@@ -96,10 +96,10 @@ $xl:1200px;
     height: 60%;
 }
 .carousel-control-prev-icon{
-    background: url(assets/CustomImages/Arrow-left.svg) no-repeat left;
+    background: url(../assets/CustomImages/Arrow-left.svg) no-repeat left;
 }
 .carousel-control-next-icon{
-    background: url(assets/CustomImages/Arrow-right.svg) no-repeat right;
+    background: url(../assets/CustomImages/Arrow-right.svg) no-repeat right;
 }
 /*carousel indicators*/
 .carousel{
