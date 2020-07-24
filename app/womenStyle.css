@@ -1,4 +1,16 @@
 /********General CSS*******/
+body{
+    max-height: 3840px;
+    height: auto;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+@media only screen and (min-width:2160px){
+    .body{
+        height: 3840px;
+    }
+}
 #app, main{
     background-color: black;
     height: 100%;
@@ -154,7 +166,8 @@ $xl:1200px;
     background: url(assets/CustomImages/Tubie-orangebkgd-left.svg) no-repeat;
     background-position: bottom left;
     height: 20vw;
-    width: 45vw;
+    width: 40%;
+    max-width: 700px;
     max-height: 100%;
     position: absolute;
     bottom: 0;

@@ -115,7 +115,15 @@ var app = new Vue({
                     $(target).css('animation', 'slidein 1s infinite');
                     setTimeout(function(){$(target).css('animation', 'none');},1000);
                 }catch(e){
-                    //console.log(e.message);
+                    //console.log(item);
+                }
+                if(item=='timeline'){
+                    this.active=false;
+                    clearTimeout(this.t);
+                    clearTimeout(this.afk);
+                    //console.log("timer cancelled");
+                }else{
+                    this.active=true;
                 }
                 this.lastActive = item;
             }
