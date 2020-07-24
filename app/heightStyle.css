@@ -1,7 +1,24 @@
+body{
+    max-width: 3840px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+@media only screen and (min-width:2100px){
+    height: 3840px;
+}
+/***********Title Bar**********/
+#titleBar{
+    height: calc(3840px * .075);
+}
+@media only screen and (max-width:576px){
+    #titleBar{
+    max-height: 200px;
+    }
+}
 /******Women in Computing CSS*/
 #carouselComputing{
     height: 35vw;
-    margin-bottom: 5%;
 }
 @media only screen and (max-width:576px){
     #carousel-carouselComputing, #carouselComputing{
@@ -17,16 +34,16 @@
 }
 @media only screen and (min-width:1200px){
     #carousel-carouselComputing, #carouselComputing{
-        height: 50vw;
+        height: calc(3840px / 4);
         min-height: 400px;
-        max-height: 900px;
+        max-height: 1200px;
     }
 }
 
 /******Building Future CSS*/
 #carouselHistory{
-    height: 35vw;
-    margin-bottom: 5%;
+    height: 100%;
+    margin-top: 2.5%;
 }
 @media only screen and (max-width:576px){
     #carousel-carouselHistory, #carouselHistory, .fix-width{
@@ -42,9 +59,10 @@
 }
 @media only screen and (min-width:1200px){
     #carousel-carouselHistory, #carouselHistory, .fix-width{
-        height: 60vw;
+        height: calc(3840px / 4);
         min-height: 400px;
-        max-height: 900px;
+        max-height: 1200px;
+        margin-top: calc(3840px * .025);
     }
 }
 
@@ -52,7 +70,7 @@
 #timeline{
     background-color: black;
     margin: 0;
-    height: 35vw;
+    height: 60vw;
 }
 @media only screen and (max-width:576px){
     #timeline{
@@ -68,8 +86,8 @@
 }
 @media only screen and (min-width:1200px){
     #timeline{
-        height: 70vw;
+        height: calc(3840px / 2.5);
         min-height: 400px;
-        max-height: 1400px;
+        max-height: 40%;
     }
 }

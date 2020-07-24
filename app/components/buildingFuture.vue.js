@@ -143,7 +143,7 @@ var buildingFuture= {
 
                                             <!--div class="MagicScroll visible-fix" data-options="arrows: outside; items: 2">
                                                 <img v-for="video in videoData.videos" :src="video.img" class="" @click="seturl(video)">
-                                            </div--->
+                                            </div-->
 
                                         </div>
                                         <div class="col-12 col-sm-6 pl-md-5 pr-md-5 order-1 order-sm-2">
@@ -159,7 +159,7 @@ var buildingFuture= {
                                 <img :src="header">
                             </div>
                             <div class="tubie-container-right">
-                                  <tubie-overlay :id="'tubie-'+id" :display="slide.tubie"/>
+                                  <tubie-overlay :id="'tubie-'+id+index" :display="slide.tubie"/>
                             </div>
                         <div class="banner yellow"></div>
                     </div>          

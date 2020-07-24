@@ -1,7 +1,6 @@
 {
     "timeData":
     {
-        "titleBar":"200px",
         "timeout":30000,
         "quitout":10000,
         "message":{

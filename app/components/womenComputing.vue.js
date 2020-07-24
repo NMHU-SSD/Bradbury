@@ -90,7 +90,7 @@ var womanComputing = {
                             </div>
                         </div>
                         <div class="tubie-container-right">
-                              <tubie-overlay :id="'tubie-'+id" :display="slide.tubie"/>
+                              <tubie-overlay :id="'tubie-'+id+index" :display="slide.tubie"/>
                         </div> 
                         <div class="banner yellow"></div>         
                     </div>          

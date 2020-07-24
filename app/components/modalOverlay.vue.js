@@ -21,7 +21,7 @@ var modalOverlay= {
                       seekBar: true
                     },
                     volumePanel: true,
-                    fullscreenToggle: false,
+                    fullscreenToggle: true,
                     pictureInPictureToggle: false,
                     playbackRateMenuButton: false,
                     captionsButton: false,
@@ -36,7 +36,7 @@ var modalOverlay= {
     },
     mounted(){
         this.player= videojs(this.$refs.videoPlayer, this.setup, function onPlayerReady() {
-            console.log('onPlayerReady', this);
+            //console.log('onPlayerReady', this);
         });
         this.videoOverlay();
     },
@@ -85,11 +85,11 @@ var modalOverlay= {
                 this.nextVid=videos.next;
             }
             this.index=videos.index;
-            console.log("current index is: "+this.index);
+            //console.log("current index is: "+this.index);
         },
         nextClick:function(){
             this.index+=1;
-            console.log("current index: "+this.index);
+            //console.log("current index: "+this.index);
             this.$emit('getnext', this.index);
             this.prevVid= this.currVid;
             this.geturl(this.nextVid);
@@ -97,7 +97,7 @@ var modalOverlay= {
         },
         prevClick:function(){
             this.index-=1;
-            console.log("current index: "+this.index);
+            //console.log("current index: "+this.index);
             this.$emit('getprev', this.index);
             this.nextVid= this.currVid;
             this.geturl(this.prevVid);

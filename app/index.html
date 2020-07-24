@@ -31,7 +31,7 @@
             <modal-overlay :id="modalVideo" exitout="false" :countdown="timeData.videotimer" :ref="modalVideo" @stopvideo="videoModalClose()" @getnext="getNextVid($event)" @getprev="getPrevVid($event)"></modal-overlay>
             <modal-overlay :id="modalTimer" exitout="true" :countdown="timeData.quitout" :message="timeData.message" ref="timeModal"></modal-overlay> 
             <!--- Main Layout components---->
-            <title-bar v-show=true :height="timeData.titleBar"></title-bar>
+            <title-bar v-show=true></title-bar>
             <woman-computing v-show=true :id="computeId" :slides="womenComputingData.slides" :header="womenComputingData.header" :speed="womenComputingData.slidespeed" @selected="itemselect($event)" :ref="computeId"></woman-computing>
             <building-future v-show=true :id="historyId" :slides="buildingFutureData.slides" :header="buildingFutureData.header" :speed="buildingFutureData.slidespeed" :videosdata="inTheirWordsData" @seturl="displayVideo($event)" @othervids="passVids($event)" @selected="itemselect($event)" :ref="historyId"></building-future>
             <time-line v-show=true id="timeline" :tubie="timelineData.tubie" :webpage="timelineData.url" @seturl="displayVideo($event)" @selected="itemselect($event)"></time-line>
