@@ -1,3 +1,4 @@
+
 /*
 * File to control the heights of each component (Title Bar, Carousels, and Timeline)
 *
@@ -28,18 +29,7 @@
 }
 @media only screen and (max-width:576px){
     #titleBar{
-        height: 200px;
-        height: calc(3840px * .025);
-}
-#titleBar > .title-font{
-    font-size: 4vw;
-}
-@media only screen and (max-width:576px){
-    #titleBar{
-        max-height: 200px;
-    }
-    #titleBar > .title-font{
-        font-size: 6vw;
+        padding: 2em;
     }
 }
 @media only screen and (min-width:2160px){
@@ -51,6 +41,7 @@
 /******Women in Computing CSS*/
 #carouselComputing{
     height: 40vw;
+    margin-bottom: 2.5%;
 }
 @media only screen and (max-width:576px){
     #carousel-carouselComputing, #carouselComputing{
@@ -66,7 +57,7 @@
 }
 @media only screen and (min-width:1200px) and (max-width:2160px){
     #carousel-carouselComputing, #carouselComputing{
-        height: 40vw;
+        height: 400px;
         min-height: 400px;
         max-height: 1200px;
     }
@@ -75,13 +66,13 @@
     #carousel-carouselComputing, #carouselComputing{
         height: 25vh;
         max-height: 1200px;
+        margin-bottom: 2.5vh;
     }
 }
 
 /******Building Future CSS*/
 #carouselHistory{
     height: 40vw;
-    margin-top: 2.5%;
 }
 @media only screen and (max-width:576px){
     #carousel-carouselHistory, #carouselHistory, .fix-width{
@@ -107,7 +98,6 @@
         height: 25vh;
         min-height: 400px;
         max-height: 1200px;
-        margin-top: 2.5vh;
     }
 }
 
