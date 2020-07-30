@@ -1,6 +1,7 @@
 {
     "timeData":
     {
+        "pageTitle": "Women in Los Alamos Computing",
         "timeout":30000,
         "quitout":10000,
         "message":{
@@ -32,7 +33,9 @@
                 },
                 {
                     "title":"At Los Alamos and elsewhere, the first computers were humans who did calculations by hand, sometimes with the help of a desktop calculator.",
-                    "body":"Most of these human computers were women. Although not always recognized, their word propelled science and engineering forward for decades.", "media":"data/images/HumanComputersAtNASA-PublicDomain.jpg",
+                    "body":"Most of these human computers were women. Although not always recognized, their word propelled science and engineering forward for decades.", 
+                    "media":"data/images/HumanComputersAtNASA-PublicDomain.jpg",
+                    "alt":"Women calculating at desks in NASA 1967",
                     "tubie":{
                         "header":"Lorem ipsum dolor",
                         "body":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore"
@@ -42,6 +45,7 @@
                     "title":"when electronic computers were introduced, women were often the first programmers and computer operators.",
                     "body":"Their pioneering application of the new machines to scientific and national security challenges mad possible the rapid technical advances in the years that followed.",
                     "media":"data/images/001%20MANIAC%20II%201958.jpg",
+                    "alt":"",
                     "tubie":{
                         "header":"fugiat nulla",
                         "body":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dolor morbi non arcu risus quis varius quam quisque."
@@ -51,6 +55,7 @@
                     "title":"The legacy of women building the future through computing continues at Los Alamos today.",
                     "body":"Discover more about the legacy and ongoing contributions of women in computing at Los Alamos.",
                     "media": "data/images/feature15.jpg",
+                    "alt":"",
                     "tubie":{
                         "header":"culpa qui officia",
                         "body":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dolor morbi non arcu risus quis varius quam quisque. Tellus in metus vulputate eu scelerisque felis imperdiet."
@@ -92,6 +97,7 @@
                 {
                     "title":"The first computers at Los Alamos were mostly women from the town's civilian community. Professional computers from the Woman's Army Corps (WACs) soon grew the ranks of human computers at the Lab to about twenty. Without their skilled and tireless computing work, Los Alamos' wartime mission would not have succeeded.",
                     "media": "data/images/WACs%20Los%20Alamos%202.jpg",
+                    "alt":"",
                     "tubie":{
                         "header":"title data",
                         "body":"Building the Future"
@@ -101,6 +107,7 @@
                     "title":"After World War II, women from the Lab's hand-computing group became the world's first programmers (then called \"coders\").",
                     "body": "Human computers had the skills needed to translate complex problems into the software \"code\" that an electronic computer could understand. Women with degrees in science and mathematics came to Los Alamos from all over the United States to meet the Lab's urgent Cold War need for computing expertise.",
                     "media": "data/images/Lois%20Cook%20Leurgans.jpg",
+                    "alt":"",
                     "tubie":{
                         "header":"title data",
                         "body":"body contents"
@@ -110,6 +117,7 @@
                     "title":"The 1970's brought many changes to Los Alamos. The Cray-1 revolutionized supercomputer performance and computer networking made the lab a smaller (and faster) place.",
                     "body": "Women stepped up to a growing number of roles in computing - from networking technicians to group leaders - to make sure Los Alamos continued to set the pace in supercomputer technology and scientific research.",
                     "media": "data/images/001%20Cray%201%201977.jpg",
+                    "alt":"",
                     "tubie":{
                         "header":"title data",
                         "body":"body contents"
@@ -118,6 +126,7 @@
                 {
                     "title":"Stockpile Stewardship gave new importance to supercomputer simulations at Los Alamos in the 1990s. Women played key roles in researching and evaluating new technologies (such as cluster computing) that would guide Los Alamos into the twenty-first century of supercomputing, and without the need for live weapons testing.",
                     "media": "data/images/Ann%20Hayes%20LA%2011216%20MS%20page%2024%20(3).jpg",
+                    "alt":"",
                     "tubie":{
                         "header":"title data",
                         "body":"body contents"
@@ -126,6 +135,7 @@
                 {
                     "body":"Today, women are security experts protecting Los Alamos computer networks; they are computer scientists designing programs to combat climate change; they are systems analysts who keep the lab's supercomputers working to serve the national interest; they experts who make Los Alamos make a difference.\n Much has changed at Los Alamos since human computers powered the Manhattan Project, but the legacy of women building the future through computing continues.",
                     "media": "data/images/Cindy%20Martin%20and%20Joann%20Campbell.jpg",
+                    "alt":"",
                     "tubie":{
                         "header":"title data",
                         "body":"body contents"
@@ -151,42 +161,49 @@
                     "link":"https://vjs.zencdn.net/v/oceans.mp4",
                     "type": "video/mp4",
                     "img":"data/images/WACs%20Los%20Alamos%202.jpg",
+                    "alt":"",
                     "videoTitle":"videoTest"
                 },
                 {
                     "link":"https://vjs.zencdn.net/v/oceans.mp4",
                     "type": "video/mp4",
                     "img":"data/images/001%20Cray%201%201977.jpg",
+                    "alt":"",
                     "videoTitle":"video1"
                 },
                 {
                     "link":"https://vjs.zencdn.net/v/oceans.mp4",
                     "type": "video/mp4",
                     "img":"data/images/Ann%20Hayes%20LA%2011216%20MS%20page%2024%20(3).jpg",
+                    "alt":"",
                     "videoTitle":"video2"
                 },
                 {
                     "link":"https://vjs.zencdn.net/v/oceans.mp4",
                     "type": "video/mp4",
                     "img":"data/images/Lois%20Cook%20Leurgans.jpg",
+                    "alt":"",
                     "videoTitle":"video3"
                 },
                 {
                     "link":"https://vjs.zencdn.net/v/oceans.mp4",
                     "type": "video/mp4",
                     "img":"data/images/Cindy%20Martin%20and%20Joann%20Campbell.jpg",
+                    "alt":"",
                     "videoTitle":"video4"
                 },
                 {
                     "link":"https://vjs.zencdn.net/v/oceans.mp4",
                     "type": "video/mp4",
                     "img":"data/images/WACs%20Los%20Alamos%202.jpg",
+                    "alt":"",
                     "videoTitle":"video5"
                 },
                 {
                     "link":"https://vjs.zencdn.net/v/oceans.mp4",
                     "type": "video/mp4",
                     "img":"data/images/WACs%20Los%20Alamos%202.jpg",
+                    "alt":"",
                     "videoTitle":"video6"
                 }
             ]
@@ -195,6 +212,8 @@
     "timelineData":
     {
         "url":"https://www.lanl.gov",
+        "title":"Explore the timeline",
+        "subtitle":"Legacy of Women in \n Los Alamos Computing",
         "tubie":{
             "link":"data/videos/mov_bbb.mp4",
             "type": "video/mp4",

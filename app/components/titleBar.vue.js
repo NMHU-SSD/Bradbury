@@ -1,8 +1,8 @@
 var titleBar={
     name:"title-bar",
-    props:[],
+    props:['title'],
     template:
     `<div id="titleBar" class="title-header row">
-        <h1 class="title-font align-self-center">Women in Los Alamos Computing</h1>
+        <h1 class="title-font align-self-center">{{ title }}</h1>
     </div>`
 }

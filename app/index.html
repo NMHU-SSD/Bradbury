@@ -31,10 +31,10 @@
             <modal-overlay :id="modalVideo" exitout="false" :countdown="timeData.videotimer" :ref="modalVideo" @stopvideo="videoModalClose()" @getnext="getNextVid($event)" @getprev="getPrevVid($event)"></modal-overlay>
             <modal-overlay :id="modalTimer" exitout="true" :countdown="timeData.quitout" :message="timeData.message" ref="timeModal"></modal-overlay> 
             <!--- Main Layout components---->
-            <title-bar v-show=true></title-bar>
+            <title-bar v-show=true :title="timeData.pageTitle"></title-bar>
             <woman-computing v-show=true :id="computeId" :slides="womenComputingData.slides" :header="womenComputingData.header" :speed="womenComputingData.slidespeed" @selected="itemselect($event)" :ref="computeId"></woman-computing>
             <building-future v-show=true :id="historyId" :slides="buildingFutureData.slides" :header="buildingFutureData.header" :speed="buildingFutureData.slidespeed" :videosdata="inTheirWordsData" @seturl="displayVideo($event)" @othervids="passVids($event)" @selected="itemselect($event)" :ref="historyId"></building-future>
-            <time-line v-show=true id="timeline" :tubie="timelineData.tubie" :webpage="timelineData.url" @seturl="displayVideo($event)" @selected="itemselect($event)"></time-line>
+            <time-line v-show=true id="timeline" :tubie="timelineData.tubie" :webpage="timelineData.url" :title="timelineData.title" :subtitle="timelineData.subtitle" @seturl="displayVideo($event)" @selected="itemselect($event)"></time-line>
         </main>
 	</div>
     
@@ -67,3 +67,5 @@
 	<script src="app.js"></script>
   </body>
 </html>
+<!---- Created by Ashley Kinsel 
+    New Mexico Highlands University 2020---->

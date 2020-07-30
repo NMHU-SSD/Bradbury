@@ -76,7 +76,7 @@ var womanComputing = {
                         <div class="row row-full no-gutters">
                     <!--- Slides Layout Appearence --->
                               <div class="d-none d-sm-block col-sm-6 col-xl-8 img-main">
-                                  <img :src="slide.media">
+                                  <img :src="slide.media" :alt="slide.alt">
                               </div>
                               <div class="col offset-2 offset-sm-0 ">
                                   <p v-if="slide.title" class="content-body">{{ slide.title }}</p>

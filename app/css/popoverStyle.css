@@ -1,20 +1,11 @@
 /*****Tubie Popover******/
-.popover {
-    max-width: 55vw !important;
-    min-width: 200px;
-    border-radius: 45%;
-    padding: 4em 5em;
-    font-size: calc(8px + .5vw);
-}
-@media only screen and (max-width:1200px){
-    .popover{
-        font-size:calc(6px + .7vw);
-        max-width: 90vw !important;
-    }
-    .bs-popover-bottom{
-        position: absolute;
-        top:calc(10em + 10vh) !important;
-    }
+.popover .popover-header {
+    font-size: 1.8em;
+    background-color: rgba(0,0,0,0) !important;
+    text-align: center;
+    border-bottom: .1em solid #ebebeb;
+    margin: .1em 1em;
+    margin-top: -1em;
 }
 .popover .popover-body{ 
     font-size: 1.7em;
@@ -22,16 +13,22 @@
     margin-top: -.3em;
     color: #212529;
 }
-.popover .popover-header {
-    font-size: 1.8em;
-    text-align: center;
-    background-color: rgba(0,0,0,0) !important;
-    border-bottom: .1em solid #ebebeb;
-    margin: .1em 1em;
-    margin-top: -1em;
+/****Popover Bubble****/
+.popover {
+    font-size: calc(8px + .5vw);
+    max-width: 55vw !important;
+    min-width: 200px;
+    border-radius: 45%;
+    padding: 4em 5em;
 }
-/*****arrow***********/
+@media only screen and (max-width:1200px){
+    .popover{
+        font-size:calc(6px + .7vw);
+        max-width: 90vw !important;
+    }
+}
 
+/*****Arrow Placements ***********/
 	.popover .arrow {
         width: 2.5rem;
         height: 1em;
@@ -65,30 +62,3 @@
       bottom: 1px;
 	  border-top-color: #fff;
 	}
-
-/****** BOTTOM ******/
-.bs-popover-bottom, .bs-popover-auto[x-placement^="bottom"] {
-		  margin-top: 1rem;
-		}
-
-		.bs-popover-bottom .arrow, .bs-popover-auto[x-placement^="bottom"] .arrow {
-		  top: calc((1em + 1px) * -1);
-		}
-
-		.bs-popover-bottom .arrow::before, .bs-popover-auto[x-placement^="bottom"] .arrow::before,
-		.bs-popover-bottom .arrow::after,
-		.bs-popover-auto[x-placement^="bottom"] .arrow::after {
-		  border-width: 0 1rem 3.3em .5rem;
-		}
-
-		.bs-popover-bottom .arrow::before, .bs-popover-auto[x-placement^="bottom"] .arrow::before {
-		  top: 0;
-		  border-bottom-color: rgba(0, 0, 0, 0.25);
-		}
-
-		.bs-popover-bottom .arrow::after,
-		.bs-popover-auto[x-placement^="bottom"] .arrow::after {
-		  top: 1px;
-		  border-bottom-color: #fff;
-		}
-*/

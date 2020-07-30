@@ -1,132 +1,95 @@
 
 /*
-* File to control the heights of each component (Title Bar, Carousels, and Timeline)
-*
 *   Break points for different screen sizes:
 *
 *        Mobile phones:  0px -> 576px
 *        Tablets:        576px -> 1200px
 *        Computers:      1200px -> 2160px
-*        4K:             2160px + ...
+*        4K:             2160px
 *
 *
-*example: 
-*This block of code controls the height for "Women in Computing" at 2160px (4K monitor).
-*Changing "height: 40vh" to "height: 50vh" will increase the height to 50% the screen
-*
-@media only screen and (min-width:2160px){
-    #carousel-carouselComputing, #carouselComputing{
-        height: 50vh;
-        min-height: 400px;
-        max-height: 1200px;
-    }
 */
 
-/***********Title Bar**********/
+/**********General Basics***********/
 #titleBar{
     height: auto;
     max-height: calc(3840px * .075);
 }
+#carouselComputing{
+    margin-bottom: 2.5%;
+}
+#carouselHistory{
+}
+#timeline{
+    background-color: black;
+    margin: 0;
+    height: 60vw;
+}
+
+/********* 4K Monitor **********/
+@media only screen and (min-width:2159px){
+    #titleBar{
+        height: 7.5vh;
+    }
+    #carousel-carouselComputing, #carouselComputing{
+        height: 20vh !important;
+        margin-bottom: 2.5vh;
+    }
+    #carousel-carouselHistory, #carouselHistory, .fix-width{
+        height: 20vh !important;
+    }
+    #timeline{
+        height: 50vh;
+    }
+}
+
+/********* Phone Devices **********/
 @media only screen and (max-width:576px){
     #titleBar{
         padding: 2em;
     }
-}
-@media only screen and (min-width:2160px){
-    #titleBar{
-        height: 7.5vh;
-    }
-}
-
-/******Women in Computing CSS*/
-#carouselComputing{
-    height: 40vw;
-    margin-bottom: 2.5%;
-}
-@media only screen and (max-width:576px){
     #carousel-carouselComputing, #carouselComputing{
         height: 100vh;
     }
+    #carousel-carouselHistory, #carouselHistory, .fix-width{
+        height: 100vh;
+    }
+    #timeline{
+        height: 100vh;
+    }
 }
+
+/********* Tablet Devices **********/
 @media only screen and (min-width:576px) and (max-width: 1200px){
     #carousel-carouselComputing, #carouselComputing{
         height: 50vw;
         min-height: 600px;
         max-height: 800px;
     }
-}
-@media only screen and (min-width:1200px) and (max-width:2160px){
-    #carousel-carouselComputing, #carouselComputing{
-        height: 400px;
-        min-height: 400px;
-        max-height: 1200px;
-    }
-}
-@media only screen and (min-width:2160px){
-    #carousel-carouselComputing, #carouselComputing{
-        height: 25vh;
-        max-height: 1200px;
-        margin-bottom: 2.5vh;
-    }
-}
-
-/******Building Future CSS*/
-#carouselHistory{
-    height: 40vw;
-}
-@media only screen and (max-width:576px){
-    #carousel-carouselHistory, #carouselHistory, .fix-width{
-        height: 100vh;
-    }
-}
-@media only screen and (min-width:576px) and (max-width: 1200px){
     #carousel-carouselHistory, #carouselHistory, .fix-width{
         height: 50vw;
         min-height: 600px;
         max-height: 100vh;
     }
-}
-@media only screen and (min-width:1200px) and (max-width:2160px){
-    #carousel-carouselHistory, #carouselHistory, .fix-width{
-        height: 40vw;
-        min-height: 400px;
-        max-height: 1200px;
-    }
-}
-@media only screen and (min-width:2160px){
-    #carousel-carouselHistory, #carouselHistory, .fix-width{
-        height: 25vh;
-        min-height: 400px;
-        max-height: 1200px;
-    }
-}
-
-/*****Timeline*/
-#timeline{
-    background-color: black;
-    margin: 0;
-    height: 60vw;
-}
-@media only screen and (max-width:576px){
-    #timeline{
-        height: 100vh;
-    }
-}
-@media only screen and (min-width:576px) and (max-width: 1200px){
     #timeline{
         min-height: 600px;
         max-height: 1200px;
     }
 }
+
+/********* PC Devices **********/
 @media only screen and (min-width:1200px) and (max-width:2160px){
-    #timeline{
+    #carousel-carouselComputing, #carouselComputing{
+        height: 40vw;
         min-height: 400px;
-        max-height: 40%;
+        max-height: 1200px;
     }
-}
-@media only screen and (min-width:2160px){
+    #carousel-carouselHistory, #carouselHistory, .fix-width{
+        height: 40vw;
+        min-height: 400px;
+        max-height: 1200px;
+    }
     #timeline{
-        height: 40vh;
         min-height: 400px;
         max-height: 40%;
     }

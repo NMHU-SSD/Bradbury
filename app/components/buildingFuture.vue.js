@@ -120,7 +120,7 @@ var buildingFuture= {
                             <div v-if="slide.media" class="d-none d-sm-block col-sm-4 red">
                                 <div class="img-main-large">
                                     <div class="circle-wrap img-shadow">
-                                        <img :src="slide.media">
+                                        <img :src="slide.media" :alt="slide.alt">
                                     </div>
                                 </div>
                             </div>
@@ -136,7 +136,7 @@ var buildingFuture= {
                                             <div class="vid-container">
                                                 <div class="row mb-5">
                                                     <div v-for="(video,index) in videoData.videos" class="col-6 col-xl-4 mb-4 vid-col">
-                                                        <img :src="video.img" class="vid-thumb" @click="seturl(video); otherVids(index)">
+                                                        <img :src="video.img" class="vid-thumb" :alt="video.alt" @click="seturl(video); otherVids(index)">
                                                     </div>
                                                 </div>
                                             </div>
