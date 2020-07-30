@@ -125,16 +125,16 @@ var buildingFuture= {
                                 </div>
                             </div>
 
-                            <div :class="['col', (slide.media ? 'side-widget' : '')]">
+                            <div :class="['col text-side', (slide.media ? 'side-widget mt-1 mb-3' : '')]">
                                   <p v-if="slide.title" class="content-body">{{ slide.title }}</p>
                                   <p v-if="slide.body" class="content-body">{{ slide.body }}</p>
                         <!--- In Their Words----->
                                 <div v-if="slide.videoSlide" class="container-fluid pt-5 pb-lg-5 mr-md-5 fix-width">
                                     <div class="row">
-                                        <div class="col-12 col-sm-6 order-2 order-sm-1">
+                                        <div class="fix-col col-12 col-sm-6 col-lg-6 order-2 order-sm-1">
 
                                             <div class="vid-container">
-                                                <div class="row mb-5">
+                                                <div class="inner-row row">
                                                     <div v-for="(video,index) in videoData.videos" class="col-6 col-xl-4 mb-4 vid-col">
                                                         <img :src="video.img" class="vid-thumb" :alt="video.alt" @click="seturl(video); otherVids(index)">
                                                     </div>
