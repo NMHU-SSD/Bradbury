@@ -1,32 +1,78 @@
-var SlideshowComponent = {
-    name: "slideshow-component",
-    props: ['images'],
-	data: function(){
-		return {
-			index: 0
-		}
-	},
-	mounted: function(){
-		this.slideshow()
-	},
-	methods: {
-		slideshow: function(){
-            var x = document.getElementsByClassName("slideshow")[0].children;
-            for (var i = 0; i < x.length; i++) {
-              x[i].style.display = "none";  
+var slideshowComponent={
+    name:"slideshow-component",
+    props:['images','speed','id','header','position'],
+    data:function(){
+        return{
+            index:0,
+            currentImg: null,
+            seconds: 0
+        }
+    },
+    mounted:function(){
+        this.initShow();
+    },
+    methods:{
+        slideshow:function(){
+            console.log("slideshow");
+            var fadeId = $('#'+this.id);
+            $(fadeId).css('filter', 'brightness(0)');
+            setTimeout(this.changeImg, 1000);
+            setTimeout(function(){
+                $(fadeId).css('filter', 'brightness(1)')}, 1000);
+            
+            setTimeout(this.slideshow, this.speed);
+        },
+        changeImg:function(){
+            console.log("change Image");
+            var slideId = $('#'+this.id);
+            this.currentImg = this.images[this.index].img;
+            if(this.images[this.index].position){
+                $(slideId).css('object-position', this.images[this.index].position);
+            }else{
+                $(slideId).css('object-position', 'center');
             }
-            this.index++;
-            if (this.index > x.length) {this.index = 1}    
-            x[this.index-1].style.display = "block";  
-            setTimeout(this.slideshow, 9000);    
-		}
-	},
+            if(this.index < this.images.length-1){
+                this.index++;
+            }else{
+                this.index=0;
+            }
+        },
+        initShow:function(){
+            this.seconds = Math.floor(this.speed / 1000);
+            
+            var slideId = $('#'+this.id);
+            this.currentImg = this.images[this.index].img;
+            console.log(this.speed);
+                if(this.images[this.index].position){
+                    $(slideId).css('object-position', this.images[this.index].position);
+                }
+                this.index++;
+                setTimeout(this.slideshow, this.speed);
+            //:style="'animation: kenburns 20s infinite'"
+        }
+    },
+    /*watch:{
+        images:function(){
+            console.log("Watch triggered");
+            var slideId = $('#'+this.id);
+            if(this.images!=null){
+                this.currentImg = this.images[this.index].img;
+                if(this.images[this.index].position){
+                    $(slideId).css('object-position', this.images[this.index].position);
+                }
+                this.index++;
+                setTimeout(this.slideshow, this.speed);
+            }
+        }
+    },*/
     template:
-    `<div class="slideshow">
-    		<img class="slide fade-animation d-block w-100" :src="image" v-for="image in images">
-			
-            <img class="slide fade-animation d-block w-100" src="https://picsum.photos/200">
-            <img class="slide fade-animation d-block w-100"  src="https://picsum.photos/200">
-            <img class="slide fade-animation d-block w-100"  src="https://picsum.photos/200">
-      </div>`
+    `<div class="col slideshow-container">
+        <!--div :class="['splash-title-holder', (position!='left' ? 'splash-right' : '')]">
+            <div :class="['splash-title red', (position!='left' ? 'title-right' : 'title-left')]">
+                <img :src="header">
+            </div>
+        </div-->
+        <img :id="id" class="splash-img" :src="currentImg">
+
+    </div>`
 }

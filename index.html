@@ -3,32 +3,24 @@
   <head>
     <!-- Required meta tags -->
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">      
         <!--Bootstrap-->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-   
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">  
         <!-- CSS --->
         <link rel="stylesheet" href="assets/stylesheet.css">
 
-    <title>Vue Test</title>
-  </head>
-    
-    
+    <title>Sustainability</title>
+  </head> 
   <body>	
 	<div id="app">	
 		<main>
-            <div v-for="(zone,index) in zones" :class="(index%2==0 ? 'bg-dark' : 'bg-secondary')">
-				<template v-if="zone.slides">
-					<carousel-component v-bind:slides="zone.slides" :id="index" :h="zone.height"></carousel-component>
-				</template>
-				<template v-else-if="zone.url" class="p-0 m-0" >
-					<iframe :src="zone.url" frameborder="0" class="container-fluid m-0 p-0" :height="zone.height" width="100%"></iframe>
-				</template>
-            </div>
-		</main>
-	</div>
-
+            <h1 class="content-title">TItlte</h1>
+            
+            <template>
+                <building-future :slides="drive.slides" :slide-images="title.slideshow" id="index"></building-future>
+            </template>
+        </main>
+      </div>
 
 
     <!-- Optional JavaScript -->
@@ -36,21 +28,17 @@
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-	
-	
-	<!-- Vue development version, includes helpful console warnings -->
-	<!-- <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> -->
 	<!-- Vue production version, optimized for size and speed -->
 	<script src="https://cdn.jsdelivr.net/npm/vue"></script>
-
-	
-	<!-- Vue Components -->
-	<script src="components/CarouselComponent.vue.js"></script>
-    <script src="components/SlideshowComponent.vue.js"></script>
-
-	
+    <!-- Vue Components -->
+      <script src="components/buildingFuture.vue.js"></script>
+      <script src="components/didYouKnow.vue.js"></script>
+      <script src="components/slideshowComponent.vue.js"></script>
+      <script src="components/tubieOverlay.vue.js"></script>
+      <script src="components/modalOverlay.vue.js"></script>
 	<!-- Vue App / Router -->
 	<script src="app.js"></script>
+	
 
   </body>
 </html>

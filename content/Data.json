@@ -1,68 +1,62 @@
 {
-	"zones": 
-		[	
-			{	
-				"height": "30%",
-				"slides": 
-					[
-						{
-								"title": "Sustainability",
-								"body": "volutpat diam ut venenatis tellus in metus vulputate eu scelerisque felis imperdiet proin fermentum leo vel orci porta non pulvinar neque laoreet suspendisse interdum consectetur libero id faucibus nisl tincidunt eget nullam non nisi est sit amet facilisis magna etiam tempor orci eufelis imperdiet proin fermentum leo vel orci porta non pulvinar neque laoreet suspendisse interdum consectetur libero id faucibus nisl tincidunt eget nullam non nisi est sit amet facilisis magna etiam tempor orci eufelis imperdiet proin fermentum leo vel orci porta non pulvinar neque laoreet suspendisse interdum consectetur libero id faucibus nisl tincidunt eget nullam non nisi est sit amet facilisis magna etiam tempor orci eu",
-								"featuredMedia": { 
-									"src": "https://picsum.photos/500",
-									"caption": "placeholder image"
-								},
-								"slideshow":[
-									"https://picsum.photos/500",
-									"https://picsum.photos/500",
-									"https://picsum.photos/500"
-								]
-		            	},
-		            	{
-								"title": "Title two",
-								"body": "volutpat diam ut venenatis tellus in metus vulputate eu scelerisque felis imperdiet proin fermentum leo vel orci porta non pulvinar neque laoreet suspendisse interdum consectetur libero id faucibus nisl tincidunt eget nullam non nisi est sit amet facilisis magna etiam tempor orci eu lobortis elementum nibh tellus molestie nunc non",
-		               		 	"featuredMedia": {
-		                   		 	"src": "https://picsum.photos/300",
-		                   		 	"caption": "placeholder image"
-		                		}
-		            	},
-		           		{
-		              			"title": "Title two again",
-		                		"body": "volutpat diam ut venenatis tellus in metus vulputate eu scelerisque felis imperdiet proin fermentum leo vel orci porta non pulvinar neque laoreet suspendisse interdum consectetur libero id faucibus nisl tincidunt eget nullam non nisi est sit amet facilisis magna etiam tempor orci eu lobortis elementum nibh tellus molestie nunc non",
-				                "video": "https://www.youtube.com/embed/s_4rIQmOw28"
+    "title":{
+        "slideshow":[
+                {
+                    "img":"assets/images/001%20MANIAC%20I%201952.jpg"
+                },
+                {
+                    "img":"assets/images/Ann%20Hayes%20LA%2011216%20MS%20page%2024%20(3).jpg"
+                }
+			]
+    },
+    
+	"drive": {	
+        "slides": 
+            [
+				{
+				"title": "Sustainability",
+				"body": "volutpat diam ut venenatis tellus in metus vulputate eu scelerisque felis imperdiet proin fermentum leo vel orci porta non pulvinar neque laoreet suspendisse interdum consectetur libero id faucibus nisl tincidunt eget nullam non nisi est sit amet facilisis magna etiam tempor orci eufelis imperdiet proin fermentum leo vel orci porta non pulvinar neque laoreet suspendisse interdum consectetur libero id faucibus nisl tincidunt eget nullam non nisi est sit amet facilisis magna etiam tempor orci eufelis imperdiet proin fermentum leo vel orci porta non pulvinar neque laoreet suspendisse interdum consectetur libero id faucibus nisl tincidunt eget nullam non nisi est sit amet facilisis magna etiam tempor orci eu",
+				"featuredMedia": { 
+					"src": "https://picsum.photos/500",
+					"caption": "placeholder image"
+				    }
+                },
+                {
+				"title": "Title two",
+				"body": "volutpat diam ut venenatis tellus in metus vulputate eu scelerisque felis imperdiet proin fermentum leo vel orci porta non pulvinar neque laoreet suspendisse interdum consectetur libero id faucibus nisl tincidunt eget nullam non nisi est sit amet facilisis magna etiam tempor orci eu lobortis elementum nibh tellus molestie nunc non",
+		        "featuredMedia": {
+		           	"src": "https://picsum.photos/300",
+		           	"caption": "placeholder image"
+                    }
+                },
+                {
+                "title": "Title two again",
+                "body": "volutpat diam ut venenatis tellus in metus vulputate eu scelerisque felis imperdiet proin fermentum leo vel orci porta non pulvinar neque laoreet suspendisse interdum consectetur libero id faucibus nisl tincidunt eget nullam non nisi est sit amet facilisis magna etiam tempor orci eu lobortis elementum nibh tellus molestie nunc non",
+				"video": "https://www.youtube.com/embed/s_4rIQmOw28",
+                "featuredMedia": {
+		           	"src": "https://picsum.photos/300",
+		           	"caption": "placeholder image"
+                    }
+		        }
+            ]
+    },
+    
+    "sustainable":{
+        "slides":[
+             {
+                 "title": "Title two",
+                 "body": "volutpat diam ut venenatis tellus in metus vulputate eu scelerisque felis imperdiet proin fermentum leo vel orci porta non pulvinar neque laoreet suspendisse interdum consectetur libero id faucibus nisl tincidunt eget nullam non nisi est sit amet facilisis magna etiam tempor orci eu lobortis elementum nibh tellus molestie nunc non",
+		          "featuredMedia": {
+		              "src": "https://picsum.photos/300",
+		              "caption": "placeholder image"
+		          }
+		      },
+		      {
+                  "title": "Title two again",
+                  "body": "volutpat diam ut venenatis tellus in metus vulputate eu scelerisque felis imperdiet proin fermentum leo vel orci porta non pulvinar neque laoreet suspendisse interdum consectetur libero id faucibus nisl tincidunt eget nullam non nisi est sit amet facilisis magna etiam tempor orci eu lobortis elementum nibh tellus molestie nunc non",
+				    "video": "https://www.youtube.com/embed/s_4rIQmOw28"
 		              	 	 	
-		           	 	}
-					]
-			},
-			
-			{
-				"height": "30%",
-				"slides": 
-					[
-			            {
-			                "title": "Sustainability 2",
-			                "body": "volutpat diam ut venenatis tellus in metus vulputate eu scelerisque felis imperdiet proin fermentum leo vel orci porta non pulvinar neque laoreet suspendisse interdum consectetur libero id faucibus nisl tincidunt eget nullam non nisi est sit amet facilisis magna etiam tempor orci eufelis imperdiet proin fermentum leo vel orci porta non pulvinar neque laoreet suspendisse interdum consectetur libero id faucibus nisl tincidunt eget nullam non nisi est sit amet facilisis magna etiam tempor orci eufelis imperdiet proin fermentum leo vel orci porta non pulvinar neque laoreet suspendisse interdum consectetur libero id faucibus nisl tincidunt eget nullam non nisi est sit amet facilisis magna etiam tempor orci eu",
-			                "video": "https://www.youtube.com/embed/s_4rIQmOw28"
-			           
-			            },
-			            {
-			                "title": "Title two 2",
-			                "body": "volutpat diam ut venenatis tellus in metus vulputate eu scelerisque felis imperdiet proin fermentum leo vel orci porta non pulvinar neque laoreet suspendisse interdum consectetur libero id faucibus nisl tincidunt eget nullam non nisi est sit amet facilisis magna etiam tempor orci eu lobortis elementum nibh tellus molestie nunc non",
-	              	 	 	"featuredMedia": {
-	                 			"src": "https://picsum.photos/300",
-	                 	  	  	"caption": "placeholder image"
-	               		 	}
-			                
-			            },
-			            {
-			                "title": "Video Slide 2",
-			                "body": "Consectetur libero id faucibus nisl tincidunt eget nullam non nisi est sit amet facilisis magna etiam tempor orci eu lobortis elementum nibh tellus molestie nunc non"
-			            }
-					]
-			},
-			{
-				"height": "600px",
-				"url": "https://www.tiki-toki.com/timeline/embed/1072961/5133908922/"
-			}
-	]	
+		      }
+        ]
+    }
 }
