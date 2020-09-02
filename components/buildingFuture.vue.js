@@ -89,11 +89,24 @@ var buildingFuture= {
             }
         }
     },
+    computed:{
+      scrollHeight(){
+          var whiteText = $('#header0').height();
+          if(whiteText != undefined){
+              console.log(whiteText);
+              //return whiteText ? whiteText.offsetHeight : 0;
+          }
+          else{
+              console.log("undefined");
+          }
+      }  
+    },
     watch:{
         slides:function(){
             if(this.slides!=null){
                 this.slideImages = this.slides[0].media;
                 this.infoSlides = this.slides.slice(1);
+                console.log(this.scrollHeight);
             }
         }
     },
@@ -109,20 +122,26 @@ var buildingFuture= {
             <div class="carousel-inner">
                 <template v-for="(slide, index) in slides">
                     <div :class="['carousel-item', (index==0 ? 'active' : '')]" >
-
-                        <!--- Slides Layout Appearence --->
                         <div class="row no-gutters">
+
+<!--- Base Layout Appearence --->
                             <div v-if="slide.featuredMedia" class="col-8 img-main">
                                 <img :src="slide.featuredMedia.src" class="fill-img" alt="slide.alt">
+                                <p class="top-left title-font">{{ slide.featuredMedia.title }}</p>
+                                <p class="bottom-right body-font">{{ slide.featuredMedia.caption }}</p>
                             </div>
 
-                            <div class="col yellow text-side pl-3">
-                                  <p v-if="slide.title" class="content-title">{{ slide.title }}</p>
-                                  <p v-if="slide.body" class="content-body">{{ slide.body }}</p>
+                            <div class="col yellow text-side">
+                                  <p v-if="slide.body" :id="'header'+index" class="content-header">{{ slide.header }}</p>
+                                  <div class="scrolling-text" >
+                                    <p v-if="slide.title" class="content-title title-font bluetext">{{ slide.title }}</p>
+                                    <p v-if="slide.body" class="content-body body-font bluetext">{{ slide.body }}</p>
+                                  </div>
                             </div>
-                        </div><!--- End layout ---->
+                        </div>
+<!--- End layout ---->
                         <div class="tubie-container-left">
-                            <tubie-overlay id="test-tubie"/>
+                            <tubie-overlay :id="'tubie-'+id+index" :display="slide.tubie"/>
                         </div>
                         <div class="banner red"></div>
                     </div>          
