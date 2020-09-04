@@ -1,4 +1,14 @@
 {
+    "timeData":{
+        "timeout":30000,
+        "quitout":10000,
+        "message":{
+            "header":"Are you still there?",
+            "body":"Please touch the screen in "
+        },
+        "videotimer":10000
+    },
+    
     "title":{
         "slideshow":[
                 {

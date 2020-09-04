@@ -14,8 +14,8 @@ body{
     background-color: #781214;
 }
 /*****carousel***********/
-.carousel-inner, .img-main{
-    height:60vw;
+.carousel-inner, .img-main,.slideshow-container{
+    height:55vw;
 }
 .carousel-caption{
     max-width: 100%;
@@ -33,7 +33,7 @@ body{
     font-size: 14px;
 }
 .carousel .carousel-indicators{
-    height: 1.7em;
+    height: 1.3em;
 }
 .carousel .carousel-indicators li{
     height: 2em;
@@ -49,11 +49,16 @@ body{
     border: 2px solid #4a6c6a;
 }
 /***** spaning banner*/
-.carousel .banner{
+.banner{
     position: relative;
-    height: 4.5em;
-    bottom: 4.5em;
+    height: 4em;
+    bottom: 4em;
     z-index: 9;
+    text-align: right;
+}
+.banner p{
+    font-size: 2em;
+    margin-right: 2em;
 }
 /*** carousel controller **/
 .carousel-control-prev,
@@ -158,7 +163,7 @@ body{
 }
 
 .text-side{
-    max-height: calc(60vw - 4.5em)
+    max-height: calc(55vw - 4.5em)
 }
 .scrolling-text{
     margin: 8% 15% 8% 5%;
@@ -187,57 +192,4 @@ body{
     bottom: 4.5em;
     right: 5%;
     text-align: right;
-}
-/***** Slideshow *****/
-.slideshow-container{
-    height: 100%;
-    width: 100%;
-    overflow: hidden;
-    position: relative;
-}
-.splash-background{
-    background-image: linear-gradient(
-        to left,
-        #4A6C6A 20%,
-        #bcd1bc
-    );
-    max-height: 100%;
-    height: 100%;
-    padding-top: 5%;
-    padding-bottom: 5%;
-    overflow: hidden;
-}
-.splash-img{
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    object-position: center;
-    transition: .5s;
-}
-/*****Tubie******/
-.tubie-container-left{
-    background: url(/assets/tubie/Tubie-orangebkgd-left.svg) no-repeat;
-    background-position: bottom right;
-    height: 11vw;
-    width: 25vw;
-    max-width: 700px;
-    max-height: 100%;
-    position: absolute;
-    bottom: calc(2 * 4.5em);
-    left: -6em;
-    z-index: 7;
-}
-.tubie-wrapper{
-    width: 50%;
-    height: 100%;
-    position: absolute;
-    right: 2em;
-}
-.tubie-img{
-    background: url(/assets/tubie/tubie_info.png) no-repeat;
-    background-position: right bottom;
-    background-size: contain;
-    height: 100%;
-    margin-top: 0%;
-    outline: none;
 }

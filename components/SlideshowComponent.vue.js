@@ -9,11 +9,12 @@ var slideshowComponent={
         }
     },
     mounted:function(){
-        this.initShow();
+        console.log(this.images);
+        //this.initShow();
     },
     methods:{
         slideshow:function(){
-            console.log("slideshow");
+            //console.log("slideshow");
             var fadeId = $('#'+this.id);
             $(fadeId).css('filter', 'brightness(0)');
             setTimeout(this.changeImg, 1000);
@@ -23,7 +24,8 @@ var slideshowComponent={
             setTimeout(this.slideshow, this.speed);
         },
         changeImg:function(){
-            console.log("change Image");
+            //console.log("change Image");
+            
             var slideId = $('#'+this.id);
             this.currentImg = this.images[this.index].img;
             if(this.images[this.index].position){
@@ -39,6 +41,7 @@ var slideshowComponent={
         },
         initShow:function(){
             this.seconds = Math.floor(this.speed / 1000);
+            console.log(this.images);
             
             var slideId = $('#'+this.id);
             this.currentImg = this.images[this.index].img;
@@ -51,7 +54,7 @@ var slideshowComponent={
             //:style="'animation: kenburns 20s infinite'"
         }
     },
-    /*watch:{
+    watch:{
         images:function(){
             console.log("Watch triggered");
             var slideId = $('#'+this.id);
@@ -64,15 +67,16 @@ var slideshowComponent={
                 setTimeout(this.slideshow, this.speed);
             }
         }
-    },*/
+    },
     template:
-    `<div class="col slideshow-container">
-        <!--div :class="['splash-title-holder', (position!='left' ? 'splash-right' : '')]">
-            <div :class="['splash-title red', (position!='left' ? 'title-right' : 'title-left')]">
-                <img :src="header">
-            </div>
-        </div-->
+    `<div class="slideshow-container">
+        <h1 class="top yellow title-font">Sustainable Supercomputing</h1>
         <img :id="id" class="splash-img" :src="currentImg">
-
+        <div class="tubie-container">
+            <!--tubie-overlay :id="'tubie-'+id+index" :display="slide.tubie"/-->
+        </div>
+        <div class="banner red">
+            <p class="title-font">See how supercomputers drive a sustainable future</p>
+        </div>
     </div>`
 }

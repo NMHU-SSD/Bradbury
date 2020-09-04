@@ -1,12 +1,11 @@
 var buildingFuture= {
     name: "building-future",
-    props: ['id', 'slides','slideImages'],
+    props: ['id', 'slides','slideImages','style'],
     data:function(){
         return{
             slideImages: null,
             infoSlides:null,
             videoData: null,
-            splash: true,
             first:true,
             end: false,
             count:0
@@ -14,57 +13,22 @@ var buildingFuture= {
     },
     methods:{
         reset:function(){
-            this.splash=true;
             this.first=true;
             this.end=false;
             this.count=0;
         },
         seturl:function(url){
-            this.$emit('seturl', {'video':url, 'active':true});
-        },
-        setNext:function(currIndex){
-            let nextIndex=currIndex;
-            if(currIndex==this.videosdata.videos.length){
-                nextIndex=0;
-                //console.log("current video playing is from index: "+nextIndex);
-            }
-            //console.log("next video is from index: "+nextIndex);
-            this.$emit('othervids', {'next':this.videosdata.videos[nextIndex], 'index':nextIndex});
-        },
-        setPrev:function(currIndex){
-            let prevIndex=currIndex;
-            if(currIndex<0){
-                prevIndex=this.videosdata.videos.length-1;
-                //console.log("changed to: "+prevIndex);
-            }
-            //console.log("video sent from index: "+prevIndex);
-            this.$emit('othervids', {'prev':this.videosdata.videos[prevIndex], 'index':prevIndex});
-        },
-        otherVids:function(index){
-            prevVid=null;
-            nextVid=null;
-            if(index == 0){
-                const last=this.videosdata.videos.length-1;
-                prevVid=this.videosdata.videos[last];
-                nextVid=this.videosdata.videos[1];
-            }
-            else if(index == this.videosdata.videos.length-1){
-                prevVid=this.videosdata.videos[index-1];
-                nextVid=this.videosdata.videos[0];
-            }else{
-                prevVid=this.videosdata.videos[index-1];
-                nextVid=this.videosdata.videos[index+1];
-            }
-            this.$emit('othervids', {'prev':prevVid, 'next':nextVid, 'index':index});
+            console.log("seturl");
+            this.$emit('seturl', "https://vjs.zencdn.net/v/oceans.mp4");
         },
         selected:function(){
-            this.splash=false;
-            this.$emit('selected', this.id);
+            console.log("selected");
+            //this.$emit('selected', this.id);
         },
         nextSlide:function(){
             this.count++;
             this.first=false;
-            if(this.count==this.infoSlides.length-1){
+            if(this.count==this.slides.length-1){
                 this.end=true;
             }
         },
@@ -80,7 +44,7 @@ var buildingFuture= {
             if(index==0){
                 this.first=true;
                 this.end=false;
-            }else if(index==this.infoSlides.length-1){
+            }else if(index==this.slides.length-1){
                 this.end=true;
                 this.first=false;
             }else{
@@ -152,11 +116,11 @@ var buildingFuture= {
             <li v-for="(slide, index) in slides" :data-target="['#' + 'carousel-'+id]" :data-slide-to="index" :class="(index==0 ? 'active' : '')" @click="jumpSlide(index)"></li>
         </ol>
 
-          <a class="carousel-control-prev" :href="['#' + 'carousel-'+id]" role="button" data-slide="prev" @click="prevSlide">
+          <a v-show="!first" class="carousel-control-prev" :href="['#' + 'carousel-'+id]" role="button" data-slide="prev" @click="prevSlide">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="sr-only">Previous</span>
           </a>
-          <a class="carousel-control-next" :href="['#' + 'carousel-'+id]" role="button" data-slide="next" @click="nextSlide">
+          <a v-show="!end" class="carousel-control-next" :href="['#' + 'carousel-'+id]" role="button" data-slide="next" @click="nextSlide">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="sr-only">Next</span>
           </a>
