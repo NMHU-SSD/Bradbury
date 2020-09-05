@@ -2,19 +2,31 @@
 .tubie-container-left{
     background: url(/assets/tubie/Tubie-orangebkgd-left.svg) no-repeat;
     background-position: bottom right;
-    height: 11vw;
-    width: 25vw;
+    height: 13vw;
+    width: 30vw;
     max-width: 700px;
     max-height: 100%;
     position: absolute;
-    bottom: calc(2 * 4em);
+    bottom: 0;
     left: -7em;
     z-index: 7;
 }
-.tubie-wrapper{
-    width: 50%;
-    height: 100%;
+.tubie-container{
+    background: url(/assets/tubie/Tubie-orangebkgd-left.svg) no-repeat;
+    background-position: bottom right;
+    height: 11vw;
+    width: 24vw;
+    max-width: 30vw;
+    max-height: 100%;
     position: absolute;
+    bottom: 4em;
+    z-index: 7;
+}
+.tubie-wrapper{
+    width: 35%;
+    height: 110%;
+    position: absolute;
+    bottom: -2em;
     right: 2em;
 }
 .tubie-img{
@@ -22,6 +34,7 @@
     background-position: right bottom;
     background-size: contain;
     height: 100%;
+    width: 100%;
     margin-top: 0%;
     outline: none;
 }
@@ -61,20 +74,10 @@
     overflow: hidden;
     position: relative;
 }
-.tubie-container{
-    background: url(/assets/tubie/Tubie-orangebkgd-left.svg) no-repeat;
-    background-position: bottom right;
-    height: 11vw;
-    width: 24vw;
-    max-width: 30vw;
-    max-height: 100%;
-    position: absolute;
-    bottom: 4em;
-    z-index: 7;
-}
 .top{
     position: absolute;
-    font-size: 4em;
+    padding: .3em;
+    font-size: 5em;
     text-align: center;
     width: 100%;
     top:0;

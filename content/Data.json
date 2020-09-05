@@ -10,6 +10,10 @@
     },
     
     "title":{
+        "tubie":{
+            "header":"This is title's title",
+            "body":"This is the title's body"
+        },
         "slideshow":[
                 {
                     "img":"assets/images/001%20MANIAC%20I%201952.jpg"
@@ -59,7 +63,6 @@
 				"video": "https://www.youtube.com/embed/s_4rIQmOw28",
                 "featuredMedia": {
 		           	"src": "https://picsum.photos/300",
-		           	"caption": "placeholder image",
                     "title":"Inventing sustainable supercomputing"
                     },
                 "tubie":{
@@ -67,10 +70,50 @@
                     "body":"This is the body"
                     }
 		        }
+            ],
+        "didYouKnow":
+            [
+                {
+                "title":"Green500 List",
+                "header":"...In 2007, Los Alamos computer scientist volutpat diam ut venenatis tellus in metus vulputate eu scelerisque felis imperdiet proin fermentum leo vel orci porta non pulvinar?",
+                "body":"volutpat diam ut venenatis tellus in metus vulputate eu scelerisque felis imperdiet proin fermentum leo vel orci porta non pulvinar neque laoreet suspendisse interdum consectetur libero id faucibus nisl tincidunt eget nullam non nisi est sit amet facilisis magna etiam tempor orci eu lobortis elementum nibh tellus molestie nunc non",
+                "featuredMedia":{
+                    "src": "https://picsum.photos/300"
+                    },
+                "tubie":{
+                    "header":"This is titles",
+                    "body":"This is the body"
+                    }
+                },
+                {
+                "title":"Green List",
+                "header":"...In 2007, Los Alamos computer scientist volutpat diam ut venenatis tellus in metus vulputate eu scelerisque felis imperdiet proin fermentum leo vel orci porta non pulvinar?",
+                "body":"volutpat diam ut venenatis tellus in metus vulputate eu scelerisque felis imperdiet proin fermentum leo vel orci porta non pulvinar neque laoreet suspendisse interdum consectetur libero id faucibus nisl tincidunt eget nullam non nisi est sit amet facilisis magna etiam tempor orci eu lobortis elementum nibh tellus molestie nunc non",
+                "featuredMedia":{
+                    "src": "https://picsum.photos/300"
+                    },
+                "tubie":{
+                    "header":"This is titles",
+                    "body":"This is the body"
+                    }
+                },
+                {
+                "title":"Green500 List",
+                "header":"...In 2007, Los Alamos computer scientist volutpat diam ut venenatis tellus in metus vulputate eu scelerisque felis imperdiet proin fermentum leo vel orci porta non pulvinar?",
+                "body":"volutpat diam ut venenatis tellus in metus vulputate eu scelerisque felis imperdiet proin fermentum leo vel orci porta non pulvinar neque laoreet suspendisse interdum consectetur libero id faucibus nisl tincidunt eget nullam non nisi est sit amet facilisis magna etiam tempor orci eu lobortis elementum nibh tellus molestie nunc non",
+                "featuredMedia":{
+                    "src": "https://picsum.photos/300"
+                    },
+                "tubie":{
+                    "header":"This is titles",
+                    "body":"This is the body"
+                    }
+                }
             ]
     },
     
     "sustainable":{
+        "header":"SUSTAINABLE SUPERCOMPUTING",
         "slides":[
              {
                  "title": "Title two",

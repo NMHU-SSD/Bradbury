@@ -1,6 +1,6 @@
 var slideshowComponent={
     name:"slideshow-component",
-    props:['images','speed','id','header','position'],
+    props:['images','speed','id','tubie'],
     data:function(){
         return{
             index:0,
@@ -73,7 +73,7 @@ var slideshowComponent={
         <h1 class="top yellow title-font">Sustainable Supercomputing</h1>
         <img :id="id" class="splash-img" :src="currentImg">
         <div class="tubie-container">
-            <!--tubie-overlay :id="'tubie-'+id+index" :display="slide.tubie"/-->
+            <tubie-overlay id="tubie-show" :display="tubie"/>
         </div>
         <div class="banner red">
             <p class="title-font">See how supercomputers drive a sustainable future</p>
