@@ -68,10 +68,12 @@ var modalOverlay= {
         },
         //Video Modal Functions
         geturl:function(video){
-            this.player.src({type: video.type, src: video.link});
+            //console.log(video);
+            this.player.src({type: 'video/mp4', src: video});
             this.source=true;
-            this.title=video.videoTitle;
-            this.currVid=video;
+            //this.title=video.videoTitle;
+            this.title='testvideo run';
+            //this.currVid=video;
             if(this.nextVid==null && this.prevVid==null){
                 $('#videoWindow .vjs-overlay-next').css('display', 'none');
                 $('#videoWindow .vjs-overlay-prev').css('display', 'none');
@@ -111,7 +113,7 @@ var modalOverlay= {
             this.player.src('');
             this.source=false;
             this.$emit('stopvideo');
-            //console.log("video closed");
+            console.log("video closed");
         },
         endOfVideo:function(){
             //console.log('video ended');

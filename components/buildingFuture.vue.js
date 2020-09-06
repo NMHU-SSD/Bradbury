@@ -1,6 +1,6 @@
 var buildingFuture= {
     name: "building-future",
-    props: ['id', 'slides','header','style2'],
+    props: ['id', 'slides','header','banner'],
     data:function(){
         return{
             slideImages: null,
@@ -17,8 +17,7 @@ var buildingFuture= {
             this.end=false;
             this.count=0;
         },
-        seturl:function(url){
-            console.log("seturl");
+        seturl:function(){
             this.$emit('seturl', "https://vjs.zencdn.net/v/oceans.mp4");
         },
         selected:function(){
@@ -43,6 +42,7 @@ var buildingFuture= {
         },
         jumpSlide:function(index){
             this.count=index;
+            $("#carousel-dyk").carousel(index);
             if(index==0){
                 this.first=true;
                 this.end=false;
@@ -72,7 +72,7 @@ var buildingFuture= {
             if(this.slides!=null){
                 this.slideImages = this.slides[0].media;
                 this.infoSlides = this.slides.slice(1);
-                console.log(this.scrollHeight);
+                //console.log(this.scrollHeight);
             }
         }
     },
@@ -92,14 +92,15 @@ var buildingFuture= {
 
 <!--- Base Layout Appearence --->
                             <div v-if="slide.featuredMedia" class="col-8 img-main green">
-                                <img :src="slide.featuredMedia.src" :class="[style2 ? 'cropped-img' : 'fill-img']" alt="slide.alt">
+                                <img :src="slide.featuredMedia.src" :class="[banner ? 'fill-img' : 'cropped-img']" alt="slide.alt">
+                                <div class="shadow-box"/>
                                 <h3 class="top-center">{{ header }}</h3>
-                                <h2 v-if=style2 class="top-left title-font shadow-text">Did You Know...</h2>
+                                <h2 v-if=!banner class="top-left title-font shadow-text">Did You Know...</h2>
                                 <h2 class="top-left title-font">{{ slide.featuredMedia.title }}</h2>
                                 <p v-if=slide.featuredMedia.caption class="bottom-right body-font">{{ slide.featuredMedia.caption }}</p>
                             </div>
 
-                            <div class="col yellow text-side">
+                            <div class="col yellow text-side" :style="banner ? 'height: calc(55vw - 3em);' : 'height: 55vw;'">
                                   <p v-if="slide.body" :id="'header'+index" class="content-header shadow-text">{{ slide.header }}</p>
                                   <div class="scrolling-text" >
                                   <p v-if="slide.title" class="content-title title-font bluetext">{{ slide.title }}</p>
@@ -108,17 +109,17 @@ var buildingFuture= {
                         </div>
                     </div>
 <!--- End layout ---->
-                        <div class="tubie-container-left">
+                        <div class="tubie-container-left" :style="banner ? 'bottom: 3em;' : 'bottom: 0;'" @click="seturl()">
                             <tubie-overlay :id="'tubie-'+id+index" :display="slide.tubie"/>
                         </div>
-                        <div v-show=!style2 class="banner red"></div>
+                        <div v-show=banner class="banner red"></div>
                     </div>          
             </template>
         </div>
 
-        <div v-show=!style2>
+        <div v-show=banner>
         <ol class="carousel-indicators">
-            <li v-for="(slide, index) in slides" :data-target="['#carousel-dyk', '#' + 'carousel-'+id]" :data-slide-to="index" :class="(index==0 ? 'active' : '')" @click="jumpSlide(index)"></li>
+            <li v-for="(slide, index) in slides" :data-target="['#' + 'carousel-'+id]" :data-slide-to="index" :class="(index==0 ? 'active' : '')" @click="jumpSlide(index)"></li>
         </ol>
 
           <a v-show="!first" class="carousel-control-prev" :href="['#' + 'carousel-'+id]" role="button" data-slide="prev" @click="prevSlide">

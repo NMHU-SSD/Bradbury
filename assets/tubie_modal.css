@@ -1,13 +1,21 @@
 /*****Tubie******/
+.banner,.tubie-container-left{
+    position: absolute;
+}
+.banner{
+    bottom: 0;
+    height: 3em;
+    width: 100%;
+    z-index: 9;
+    text-align: right;
+}
 .tubie-container-left{
     background: url(/assets/tubie/Tubie-orangebkgd-left.svg) no-repeat;
     background-position: bottom right;
-    height: 13vw;
+    height: 14vw;
     width: 30vw;
     max-width: 700px;
     max-height: 100%;
-    position: absolute;
-    bottom: 0;
     left: -7em;
     z-index: 7;
 }
@@ -19,7 +27,7 @@
     max-width: 30vw;
     max-height: 100%;
     position: absolute;
-    bottom: 4em;
+    bottom: 3em;
     z-index: 7;
 }
 .tubie-wrapper{
@@ -88,5 +96,6 @@
     width: 100%;
     object-fit: cover;
     object-position: center;
+    filter: brightness(50%);
     transition: .5s;
 }

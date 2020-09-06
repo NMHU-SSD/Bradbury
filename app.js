@@ -79,7 +79,8 @@ var app = new Vue({
                 this.active=false;
             }
             //this.stillActive=info.active;
-            this.$refs[this.modalVideo].geturl(info);
+            //console.log(info);
+            this.$refs.modalVideo.geturl(info);
             $('#modalVideo').modal();
         },
         //getter and setter videos
@@ -91,8 +92,13 @@ var app = new Vue({
         },
         getPrevVid:function(index){
             this.$refs[this.historyId].setPrev(index);
-        }
+        },
         //video modal popups
-        
+        videoModalClose:function(){
+            this.active=true;
+            /*if(this.stillActive){
+                this.resetTimer();
+            }*/
+        },
     }
 })

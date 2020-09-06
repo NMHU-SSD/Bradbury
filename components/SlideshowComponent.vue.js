@@ -19,13 +19,11 @@ var slideshowComponent={
             $(fadeId).css('filter', 'brightness(0)');
             setTimeout(this.changeImg, 1000);
             setTimeout(function(){
-                $(fadeId).css('filter', 'brightness(1)')}, 1000);
-            
+                $(fadeId).css('filter', 'brightness(50%)')}, 1000);
             setTimeout(this.slideshow, this.speed);
         },
         changeImg:function(){
             //console.log("change Image");
-            
             var slideId = $('#'+this.id);
             this.currentImg = this.images[this.index].img;
             if(this.images[this.index].position){
