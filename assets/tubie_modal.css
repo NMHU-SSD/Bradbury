@@ -91,6 +91,12 @@
     top:0;
     z-index: 1;
 }
+.center{
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    margin-right: 5em;
+}
 .slideshow-container img{
     max-height: 100%;
     width: 100%;

@@ -10,6 +10,7 @@
     },
     
     "title":{
+        "memo":"Supercomputers have large appetites for electricity and cooling, but smarter design and support strategies are making even the largest of these simulation powerhouses more sustainable.  Read more about how LANL and the supercomputing community are responding to the need for greater sustainability, while still pushing the performance envelope.",
         "tubie":{
             "header":"This is title's title",
             "body":"This is the title's body"
@@ -63,7 +64,7 @@
                 "title": "Title two again",
                 "header": "vulputate eu scelerisque felis imperdiet proin fermentum leo vel orci porta non pulvinar neque laoreet",
                 "body": "volutpat diam ut venenatis tellus in metus vulputate eu scelerisque felis imperdiet proin fermentum leo vel orci porta non pulvinar neque laoreet suspendisse interdum consectetur libero id faucibus nisl tincidunt eget nullam non nisi est sit amet facilisis magna etiam tempor orci eu lobortis elementum nibh tellus molestie nunc non",
-				"video": "https://www.youtube.com/embed/s_4rIQmOw28",
+				"video": "https://vjs.zencdn.net/v/oceans.mp4",
                 "featuredMedia": {
 		           	"src": "https://picsum.photos/300",
                     "title":"Inventing sustainable supercomputing"
@@ -104,6 +105,7 @@
                 "title":"Green500 List",
                 "header":"...In 2007, Los Alamos computer scientist volutpat diam ut venenatis tellus in metus vulputate eu scelerisque felis imperdiet proin fermentum leo vel orci porta non pulvinar?",
                 "body":"volutpat diam ut venenatis tellus in metus vulputate eu scelerisque felis imperdiet proin fermentum leo vel orci porta non pulvinar neque laoreet suspendisse interdum consectetur libero id faucibus nisl tincidunt eget nullam non nisi est sit amet facilisis magna etiam tempor orci eu lobortis elementum nibh tellus molestie nunc non",
+                "video": "https://vjs.zencdn.net/v/oceans.mp4",
                 "featuredMedia":{
                     "src": "https://picsum.photos/300"
                     },
@@ -126,12 +128,59 @@
 		              "caption": "placeholder image"
 		          }
 		      },
-		      {
+		     {
                   "title": "Title two again",
                   "body": "volutpat diam ut venenatis tellus in metus vulputate eu scelerisque felis imperdiet proin fermentum leo vel orci porta non pulvinar neque laoreet suspendisse interdum consectetur libero id faucibus nisl tincidunt eget nullam non nisi est sit amet facilisis magna etiam tempor orci eu lobortis elementum nibh tellus molestie nunc non",
 				    "video": "https://www.youtube.com/embed/s_4rIQmOw28"
 		              	 	 	
+		      },
+             {
+                 "title": "Title two",
+                 "body": "volutpat diam ut venenatis tellus in metus vulputate eu scelerisque felis imperdiet proin fermentum leo vel orci porta non pulvinar neque laoreet suspendisse interdum consectetur libero id faucibus nisl tincidunt eget nullam non nisi est sit amet facilisis magna etiam tempor orci eu lobortis elementum nibh tellus molestie nunc non",
+		          "featuredMedia": {
+		              "src": "https://picsum.photos/300",
+		              "caption": "placeholder image"
+		          }
 		      }
-        ]
+        ],
+        "didYouKnow":
+            [
+                {
+                "title":"Green500 List",
+                "header":"...In 2007, Los Alamos computer scientist volutpat diam ut venenatis tellus in metus vulputate eu scelerisque felis imperdiet proin fermentum leo vel orci porta non pulvinar?",
+                "body":"volutpat diam ut venenatis tellus in metus vulputate eu scelerisque felis imperdiet proin fermentum leo vel orci porta non pulvinar neque laoreet suspendisse interdum consectetur libero id faucibus nisl tincidunt eget nullam non nisi est sit amet facilisis magna etiam tempor orci eu lobortis elementum nibh tellus molestie nunc non",
+                "featuredMedia":{
+                    "src": "https://picsum.photos/300"
+                    },
+                "tubie":{
+                    "header":"This is titles",
+                    "body":"This is the body"
+                    }
+                },
+                {
+                "title":"Green List",
+                "header":"...In 2007, Los Alamos computer scientist volutpat diam ut venenatis tellus in metus vulputate eu scelerisque felis imperdiet proin fermentum leo vel orci porta non pulvinar?",
+                "body":"volutpat diam ut venenatis tellus in metus vulputate eu scelerisque felis imperdiet proin fermentum leo vel orci porta non pulvinar neque laoreet suspendisse interdum consectetur libero id faucibus nisl tincidunt eget nullam non nisi est sit amet facilisis magna etiam tempor orci eu lobortis elementum nibh tellus molestie nunc non",
+                "featuredMedia":{
+                    "src": "https://picsum.photos/300"
+                    },
+                "tubie":{
+                    "header":"This is titles",
+                    "body":"This is the body"
+                    }
+                },
+                {
+                "title":"Green500 List",
+                "header":"...In 2007, Los Alamos computer scientist volutpat diam ut venenatis tellus in metus vulputate eu scelerisque felis imperdiet proin fermentum leo vel orci porta non pulvinar?",
+                "body":"volutpat diam ut venenatis tellus in metus vulputate eu scelerisque felis imperdiet proin fermentum leo vel orci porta non pulvinar neque laoreet suspendisse interdum consectetur libero id faucibus nisl tincidunt eget nullam non nisi est sit amet facilisis magna etiam tempor orci eu lobortis elementum nibh tellus molestie nunc non",
+                "featuredMedia":{
+                    "src": "https://picsum.photos/300"
+                    },
+                "tubie":{
+                    "header":"This is titles",
+                    "body":"This is the body"
+                    }
+                }
+            ]
     }
 }

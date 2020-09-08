@@ -1,6 +1,5 @@
 //register components
 Vue.component('building-future', buildingFuture)
-Vue.component('did-you-know', didYouKnow)
 Vue.component('slideshow-component', slideshowComponent)
 Vue.component('tubie-overlay', tubieOverlay)
 Vue.component('modal-overlay', modalOverlay)

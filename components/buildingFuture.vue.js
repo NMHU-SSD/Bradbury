@@ -17,8 +17,8 @@ var buildingFuture= {
             this.end=false;
             this.count=0;
         },
-        seturl:function(){
-            this.$emit('seturl', "https://vjs.zencdn.net/v/oceans.mp4");
+        seturl:function(url){
+            this.$emit('seturl', url);
         },
         selected:function(){
             console.log("selected");
@@ -101,7 +101,12 @@ var buildingFuture= {
                             </div>
 
                             <div class="col yellow text-side" :style="banner ? 'height: calc(55vw - 3em);' : 'height: 55vw;'">
-                                  <p v-if="slide.body" :id="'header'+index" class="content-header shadow-text">{{ slide.header }}</p>
+                                  <p v-if="slide.header" :id="'header'+index" class="content-header shadow-text">{{ slide.header }}</p>
+                                  
+                                  <div v-if="slide.video" class="watch-video" @click="seturl(slide.video)">
+                                    <p class="title-font">WATCH VIDEO</p>
+                                  </div>
+
                                   <div class="scrolling-text" >
                                   <p v-if="slide.title" class="content-title title-font bluetext">{{ slide.title }}</p>
                                   <p v-if="slide.body" class="content-body body-font bluetext">{{ slide.body }}</p>
@@ -109,7 +114,7 @@ var buildingFuture= {
                         </div>
                     </div>
 <!--- End layout ---->
-                        <div class="tubie-container-left" :style="banner ? 'bottom: 3em;' : 'bottom: 0;'" @click="seturl()">
+                        <div class="tubie-container-left" :style="banner ? 'bottom: 3em;' : 'bottom: 0;'">
                             <tubie-overlay :id="'tubie-'+id+index" :display="slide.tubie"/>
                         </div>
                         <div v-show=banner class="banner red"></div>

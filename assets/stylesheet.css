@@ -53,7 +53,6 @@ body{
     border: 2px solid #4a6c6a;
 }
 /***** spaning banner*/
-
 .banner p{
     font-size: 2em;
     margin-right: 2em;
@@ -217,4 +216,9 @@ body{
     bottom: 4.5em;
     right: 5%;
     text-align: right;
+}
+/***** Watch Video Button *****/
+.watch-video{
+    background: url(/assets/tubie/Tubie-orangebkgd-left.svg) no-repeat;
+    background-position: bottom right;
 }
