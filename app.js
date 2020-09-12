@@ -101,6 +101,10 @@ var app = new Vue({
             }*/
         },
         switchData:function(){
+            if(this.firstData){
+                this.$refs.style1.reset();
+            }
+            else{this.$refs.style2.reset();}
             this.firstData = !this.firstData;
             console.log(this.firstData);
         }

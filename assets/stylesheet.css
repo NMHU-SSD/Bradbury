@@ -49,11 +49,6 @@ body{
     background-color: #BBC356;
     border: 4px solid #4a6c6a;
 }
-/***** spaning banner*/
-.banner p{
-    font-size: 2em;
-    margin-right: 2em;
-}
 /*** carousel controller **/
 .carousel-control-prev,
 .carousel-control-next{

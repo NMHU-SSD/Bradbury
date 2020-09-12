@@ -13,9 +13,12 @@ var buildingFuture= {
     },
     methods:{
         reset:function(){
+            console.log(this.id);
             this.first=true;
             this.end=false;
-            this.count=0;
+            //this.count=0;
+            $("#carousel-"+this.id).carousel(0);
+            this.jumpSlide(0);
         },
         seturl:function(url){
             this.$emit('seturl', url);

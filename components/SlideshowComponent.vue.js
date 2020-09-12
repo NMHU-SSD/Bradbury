@@ -5,7 +5,8 @@ var slideshowComponent={
         return{
             index:0,
             currentImg: null,
-            seconds: 0
+            seconds: 0,
+            head:true
         }
     },
     mounted:function(){
@@ -14,7 +15,8 @@ var slideshowComponent={
     },
     methods:{
         switchOut:function(){
-            console.log("switchout");
+            this.head= !this.head;
+            console.log(this.head);
             this.$emit('switchout');
         },
         slideshow:function(){
@@ -72,7 +74,8 @@ var slideshowComponent={
     },
     template:
     `<div class="slideshow-container">
-        <h1 class="top yellow title-font">Sustainable Supercomputing</h1>
+        <h1 v-show=head class="top yellow title-font">Sustainable Supercomputing</h1>
+        <h1 v-show=!head class="top green title-font">Supercomputers Drive Sustainablilty</h1>
         <img :id="id" class="splash-img" :src="currentImg">
         <div class="center body-font shadow-text">{{ memo }}</div>
         <div class="tubie-container">
@@ -80,7 +83,8 @@ var slideshowComponent={
         </div>
         <div class="banner red">
             <div class="next-section" @click="switchOut()"></div>
-            <p class="title-font">See how supercomputers drive a sustainable future</p>
+            <p v-show=head class="title-font">See how supercomputers drive a sustainable future</p>
+            <p v-show=!head class="title-font">Sustainable supercomputing</p>
         </div>
     </div>`
 }

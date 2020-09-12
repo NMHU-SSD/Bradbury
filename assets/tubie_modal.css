@@ -1,4 +1,4 @@
-/*****Tubie******/
+/***** spaning banner*/
 .banner,.tubie-container-left{
     position: absolute;
 }
@@ -9,6 +9,11 @@
     z-index: 9;
     text-align: right;
 }
+.banner p{
+    font-size: 2em;
+    margin-right: 2em;
+}
+/*****Tubie******/
 .tubie-container-left{
     background: url(/assets/tubie/Tubie-orangebkgd-left.svg) no-repeat;
     background-position: bottom right;
@@ -46,6 +51,50 @@
     margin-top: 0%;
     outline: none;
 }
+/**** Pop Over ****/
+.popover .popover-header {
+    font-size: 1.8em;
+    background-color: rgba(0,0,0,0) !important;
+    text-align: center;
+    border-bottom: .1em solid #ebebeb;
+    margin: .1em 1em;
+    margin-top: -1em;
+}
+.popover .popover-body{ 
+    font-size: 1.7em;
+    padding: 1em .5em;
+    margin-top: -.3em;
+    color: #212529;
+}
+/****Popover Bubble****/
+.popover {
+    font-size: calc(8px + .5vw);
+    max-width: 55vw !important;
+    min-width: 200px;
+    border-radius: 45%;
+    padding: 4em 5em;
+}
+/****** TOP ******/
+	.bs-popover-top, .bs-popover-auto[x-placement^="top"] {
+	  margin-bottom: 0.1rem;
+	}
+	.bs-popover-top .arrow, .bs-popover-auto[x-placement^="top"] .arrow {
+	  bottom: calc((2em + 1px) * -1);
+	}
+	.bs-popover-top .arrow::before, .bs-popover-auto[x-placement^="top"] .arrow::before,
+	.bs-popover-top .arrow::after,
+	.bs-popover-auto[x-placement^="top"] .arrow::after {
+	  border-width: 4.5em 0.5rem 0;
+	}
+	.bs-popover-top .arrow::before, .bs-popover-auto[x-placement^="top"] .arrow::before {
+	  bottom: 0px;
+	  border-top-color: rgba(0, 0, 0, 0.25);
+	}
+	.bs-popover-top .arrow::after,
+	.bs-popover-auto[x-placement^="top"] .arrow::after {
+      bottom: 1px;
+	  border-top-color: #fff;
+	}
 /************** Modals ****/
 /******* Basics *****/
 #modalTimer{
@@ -84,7 +133,7 @@
 .top{
     position: absolute;
     padding: .3em;
-    font-size: 5em;
+    font-size: 4em;
     text-align: center;
     width: 100%;
     top:0;
