@@ -78,7 +78,6 @@
 
 /***** Slideshow *****/
 .slideshow-container{
-    font-size: 14px;
     overflow: hidden;
     position: relative;
 }
@@ -96,6 +95,7 @@
     top: 30%;
     left: 50%;
     margin-right: 5em;
+    font-size: 1.2em;
 }
 .slideshow-container img{
     max-height: 100%;

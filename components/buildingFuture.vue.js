@@ -1,6 +1,6 @@
 var buildingFuture= {
     name: "building-future",
-    props: ['id', 'slides','header','banner'],
+    props: ['id', 'slides','header','buddy','banner','mono'],
     data:function(){
         return{
             slideImages: null,
@@ -30,7 +30,7 @@ var buildingFuture= {
             if(this.count==this.slides.length-1){
                 this.end=true;
             }
-            $("#carousel-dyk .carousel-control-next").trigger('click');
+            $("#carousel-"+this.buddy+" .carousel-control-next").trigger('click');
         },
         prevSlide:function(){
             this.count--;
@@ -38,11 +38,11 @@ var buildingFuture= {
             if(this.count==0){
                 this.first=true;
             }
-            $("#carousel-dyk .carousel-control-prev").trigger('click');
+            $("#carousel-"+this.buddy+" .carousel-control-prev").trigger('click');
         },
         jumpSlide:function(index){
             this.count=index;
-            $("#carousel-dyk").carousel(index);
+            $("#carousel-"+this.buddy).carousel(index);
             if(index==0){
                 this.first=true;
                 this.end=false;
@@ -52,6 +52,14 @@ var buildingFuture= {
             }else{
                 this.end=false;
                 this.first=false;
+            }
+        },
+        titleColor(index,banner){
+            if(index % 2 == 1 && !banner){
+                return 'color: #bcd1bc;';
+            }
+            else{
+                return 'color: #781214;text-shadow: #FFF 0px 0px 10px;';
             }
         }
     },
@@ -78,11 +86,6 @@ var buildingFuture= {
     },
     template:
     `<div :id="id">
-        <!--a :data-target="['#' + 'carousel-'+id]" data-slide-to="0" :href="['#' + 'carousel-'+id]">
-            <div v-show="splash" class="row no-gutters row-full">
-                <slideshow-component :id="'slide-'+id" :images="slideImages" speed=5000 position="left"/>
-            </div>
-        </a-->
 
         <div :id="'carousel-'+id" class="carousel" data-wrap="false" data-interval="false">
             <div class="carousel-inner">
@@ -93,20 +96,23 @@ var buildingFuture= {
 <!--- Base Layout Appearence --->
                             <div v-if="slide.featuredMedia" class="col-8 img-main green">
                                 <img :src="slide.featuredMedia.src" :class="[banner ? 'fill-img' : 'cropped-img']" alt="slide.alt">
-                                <div class="shadow-box"/>
-                                <h3 class="top-center">{{ header }}</h3>
+                                <!--div class="shadow-box"/-->
+                                <h3 class="top-center" :style="titleColor(index,banner)">{{ header }}</h3>
                                 <h2 v-if=!banner class="top-left title-font shadow-text">Did You Know...</h2>
+                                <div v-if="!banner && slide.video" class="watch-video" @click="seturl(slide.video)">
+                                    <div class="vid-button" style="margin-right: 5%;"/>
+                                    <p class="body-font" style="color: #bcd1bc;">WATCH VIDEO</p>
+                                </div>
                                 <h2 class="top-left title-font">{{ slide.featuredMedia.title }}</h2>
                                 <p v-if=slide.featuredMedia.caption class="bottom-right body-font">{{ slide.featuredMedia.caption }}</p>
                             </div>
 
-                            <div class="col yellow text-side" :style="banner ? 'height: calc(55vw - 3em);' : 'height: 55vw;'">
+                            <div :class="['col text-side',(mono ? 'lgt-green' : 'yellow')]" :style="banner ? 'height: calc(55vw - 3em);' : 'height: 55vw;'">
                                   <p v-if="slide.header" :id="'header'+index" class="content-header shadow-text">{{ slide.header }}</p>
-                                  
-                                  <div v-if="slide.video" class="watch-video" @click="seturl(slide.video)">
-                                    <p class="title-font">WATCH VIDEO</p>
+                                  <div v-if="banner && slide.video" class="watch-video" @click="seturl(slide.video)">
+                                    <div class="vid-button" style="margin-right: 15%;"/>
+                                    <p class="body-font" style="color: #781214;">WATCH VIDEO</p>
                                   </div>
-
                                   <div class="scrolling-text" >
                                   <p v-if="slide.title" class="content-title title-font bluetext">{{ slide.title }}</p>
                                   <p v-if="slide.body" class="content-body body-font bluetext">{{ slide.body }}</p>
@@ -117,14 +123,14 @@ var buildingFuture= {
                         <div class="tubie-container-left" :style="banner ? 'bottom: 3em;' : 'bottom: 0;'">
                             <tubie-overlay :id="'tubie-'+id+index" :display="slide.tubie"/>
                         </div>
-                        <div v-show=banner class="banner red"></div>
+                        <div v-show=banner :class="['banner', (mono ? 'green':'red')]"></div>
                     </div>          
             </template>
         </div>
 
         <div v-show=banner>
         <ol class="carousel-indicators">
-            <li v-for="(slide, index) in slides" :data-target="['#' + 'carousel-'+id]" :data-slide-to="index" :class="(index==0 ? 'active' : '')" @click="jumpSlide(index)"></li>
+            <li v-for="(slide, index) in slides" :data-target="['#' + 'carousel-'+id]" :data-slide-to="index" :class="(index==0 ? 'active' : '')" :style="mono?'background: #bcd1bc;':'background: #BBC356;'" @click="jumpSlide(index)"></li>
         </ol>
 
           <a v-show="!first" class="carousel-control-prev" :href="['#' + 'carousel-'+id]" role="button" data-slide="prev" @click="prevSlide">

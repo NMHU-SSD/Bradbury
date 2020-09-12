@@ -13,6 +13,10 @@ var slideshowComponent={
         //this.initShow();
     },
     methods:{
+        switchOut:function(){
+            console.log("switchout");
+            this.$emit('switchout');
+        },
         slideshow:function(){
             //console.log("slideshow");
             var fadeId = $('#'+this.id);
@@ -75,6 +79,7 @@ var slideshowComponent={
             <tubie-overlay id="tubie-show" :display="tubie"/>
         </div>
         <div class="banner red">
+            <div class="next-section" @click="switchOut()"></div>
             <p class="title-font">See how supercomputers drive a sustainable future</p>
         </div>
     </div>`

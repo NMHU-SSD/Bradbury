@@ -1,5 +1,6 @@
 body{
     background-color: black;
+    font-size: calc(14px + 1vw);
 }
 .green{
     background-color: #4a6c6a;
@@ -13,7 +14,7 @@ body{
 .red{
     background-color: #781214;
 }
-.slideshow-container,#index{
+.slideshow-container,#index,#index2{
     margin-bottom: 3em;
 }
 /*****carousel***********/
@@ -28,29 +29,25 @@ body{
 .carousel-caption h1{
     margin-bottom: 5px;
 }
-.carousel-caption p{
-    font-size: 16px;
-}
 /*****carousel indicators*/
 .carousel,.slideshow-container{
-    font-size: 14px;
+    font-size: 1em;
     background-color: #000;
 }
 .carousel .carousel-indicators{
-    height: .7em;
+    height: 2em;
 }
 .carousel .carousel-indicators li{
     height: 2em;
     width: 2em;
     border-radius: 50%;
-    background: #BBC356;
-    border: 2px solid #FFF;
+    border: 4px solid #FFF;
     margin-left: 2%;
     margin-right: 2%;
 }
 .carousel-indicators li.active{
     background-color: #BBC356;
-    border: 2px solid #4a6c6a;
+    border: 4px solid #4a6c6a;
 }
 /***** spaning banner*/
 .banner p{
@@ -63,20 +60,25 @@ body{
     height: 60%;
     width: 5%;
 }
-/********** Text Fonts ********/
-.content-header{
-    color: white;
-    margin: 8% 15% 8% 5%;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bolder;
-    font-size: calc(5px + 1vw);
+.carousel-control-prev-icon,
+.carousel-control-next-icon{
+    height: 100%;
+    width: 3em;
+    margin-top: 15em;
 }
+.carousel-control-prev-icon{
+    background: url(./customs/Arrow-left.svg)no-repeat;
+}
+.carousel-control-next-icon{
+    background: url(./customs/Arrow-right.svg)no-repeat;
+}
+/********** Text Fonts ********/
 .content-body{
     color: darkblue;
-    font-size: calc(4px + 1vw);
+    font-size: 1em;
 }
 .content-title{
-    font-size: calc(14px + 2vw);
+    font-size: 2em;
 }
 .title-font{
     color: white;
@@ -101,6 +103,7 @@ body{
     box-shadow: inset 20px 5px 50px #000000;
     width: 100%;
     height: 100%;
+    z-index: 1;
 }
 /***** Muesuem Fonts ****/
 @font-face{
@@ -169,11 +172,18 @@ body{
     100%{opacity:0}
 }
 
+.content-header{
+    color: white;
+    margin: 8% 15% 3% 5%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    font-size: 1em;
+}
 .text-side{
     max-height: 55vw;
 }
 .scrolling-text{
-    margin: 8% 15% 8% 5%;
+    margin: 3% 15% 8% 5%;
     overflow-y: auto;
 }
 .img-main{
@@ -191,6 +201,7 @@ body{
     width: 100%;
     height: 40%;
     margin-top: 25%;
+    margin-bottom: 5%;
     overflow: hidden;
 }
 .top-center{
@@ -201,7 +212,6 @@ body{
     text-align: center;
     font-family: 'Karla', sans-serif;
     color: #781214;
-    text-shadow: #FFF 0 0 5px;
 }
 .top-left{
     position: absolute;
@@ -219,6 +229,27 @@ body{
 }
 /***** Watch Video Button *****/
 .watch-video{
-    background: url(/assets/tubie/Tubie-orangebkgd-left.svg) no-repeat;
-    background-position: bottom right;
+    text-align: right;
+    font-size: 1.5em;
+    height: 2em;
+    z-index: 3;
+}
+.watch-video p{
+    margin: 0 0;
+}
+.vid-button{
+    background: url(/assets/tubie/tubie_info.png) no-repeat;
+    background-position: top left;
+    background-size: contain;
+    height: 2em;
+    width: 2em;
+    float: right;
+}
+/** slideshow **/
+.next-section{
+    background: url(./customs/Arrow-right.svg)no-repeat;
+    height: 2em;
+    width: 2em;
+    float: right;
+    margin-top: .5em;
 }

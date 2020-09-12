@@ -15,7 +15,8 @@ var app = new Vue({
         timeData:"",
         t: null,
         afk: null,
-        active:null
+        active:null,
+        firstData:true
     },
     mounted: function(){
         this.GetData();
@@ -99,5 +100,9 @@ var app = new Vue({
                 this.resetTimer();
             }*/
         },
+        switchData:function(){
+            this.firstData = !this.firstData;
+            console.log(this.firstData);
+        }
     }
 })

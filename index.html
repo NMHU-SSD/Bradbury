@@ -21,12 +21,19 @@
 		<main>
             <h1 v-show=false id="header" class="content-title">TItlte</h1>
             <!-- Pop overs--->
-            <modal-overlay id="modalVideo" exitout="false" :countdown="timeData.videotimer" ref="modalVideo" @stopvideo="videoModalClose()" @getnext="getNextVid($event)" @getprev="getPrevVid($event)"></modal-overlay>
+            <modal-overlay id="modalVideo" exitout="false" :countdown="timeData.videotimer" ref="modalVideo" @stopvideo="videoModalClose()"></modal-overlay>
             <modal-overlay id="modalTimer" exitout="true" :countdown="timeData.quitout" :message="timeData.message" ref="timeModal"></modal-overlay> 
+            
             <!--- Main Layout components---->
-            <slideshow-component id="slideshow" :images="title.slideshow" :memo="title.memo" :tubie="title.tubie" speed=5000></slideshow-component>
-            <building-future id="index" :slides="drive.slides" header="SUSTAINABLE SUPERCOMPUTING" banner=true @seturl="displayVideo($event)"></building-future>
-            <building-future id="dyk" :slides="drive.didYouKnow" header="SUSTAINABLE SUPERCOMPUTING" @seturl="displayVideo($event)"></building-future>
+            <slideshow-component id="slideshow" :images="title.slideshow" :memo="title.memo" :tubie="title.tubie" speed=5000 @switchout="switchData"></slideshow-component>
+            <building-future v-show=firstData id="index" :slides="drive.slides" :header="drive.header"
+                             banner=true buddy="dyk" @seturl="displayVideo($event)"></building-future>
+            <building-future v-show=firstData id="dyk" :slides="drive.didYouKnow" :header="drive.header" @seturl="displayVideo($event)"></building-future>
+            <!--- Second Data set---->
+            <!--slideshow-component v-show=false id="slideshow" :images="title.slideshow" :memo="title.memo" :tubie="title.tubie" speed=5000 @switchout="switchData"></slideshow-component---->
+            <building-future v-show=!firstData id="index2" :slides="sustainable.slides" :header="sustainable.header" 
+                             banner=true buddy="dyk2" mono=true @seturl="displayVideo($event)"></building-future>
+            <building-future v-show=!firstData id="dyk2" :slides="sustainable.didYouKnow" :header="sustainable.header" mono=true @seturl="displayVideo($event)"></building-future>
         </main>
       </div>
 
