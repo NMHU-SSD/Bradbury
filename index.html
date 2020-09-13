@@ -12,6 +12,7 @@
         <!-- CSS --->
         <link rel="stylesheet" href="assets/stylesheet.css">
         <link rel="stylesheet" href="assets/tubie_modal.css">
+        <!-- Google Fonts -->
         <link href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@300;500&family=Karla&display=swap" rel="stylesheet">
 
     <title>Sustainability</title>
@@ -25,13 +26,13 @@
             <modal-overlay id="modalTimer" exitout="true" :countdown="timeData.quitout" :message="timeData.message" ref="timeModal"></modal-overlay> 
             
             <!--- Main Layout components---->
-            <slideshow-component id="slideshow" :images="title.slideshow" :memo="title.memo" :tubie="title.tubie" speed=5000 @switchout="switchData"></slideshow-component>
+            <slideshow-component id="slideshow" :images="title.slideshow" :title1="drive.header" :title2="sustainable.header"
+                                 :memo="title.memo" :tubie="title.tubie" speed=5000 @switchout="switchData"></slideshow-component>
             <building-future v-show=firstData id="index" :slides="drive.slides" :header="drive.header"
                              banner=true buddy="dyk" @seturl="displayVideo($event)" ref="style1"></building-future>
             <building-future v-show=firstData id="dyk" :slides="drive.didYouKnow" :header="drive.header"
                              @seturl="displayVideo($event)"></building-future>
             <!--- Second Data set---->
-            <!--slideshow-component v-show=false id="slideshow" :images="title.slideshow" :memo="title.memo" :tubie="title.tubie" speed=5000 @switchout="switchData"></slideshow-component---->
             <building-future v-show=!firstData id="index2" :slides="sustainable.slides" :header="sustainable.header" 
                              banner=true buddy="dyk2" mono=true @seturl="displayVideo($event)" ref="style2"></building-future>
             <building-future v-show=!firstData id="dyk2" :slides="sustainable.didYouKnow" :header="sustainable.header" mono=true

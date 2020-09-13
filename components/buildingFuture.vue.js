@@ -8,8 +8,14 @@ var buildingFuture= {
             videoData: null,
             first:true,
             end: false,
-            count:0
+            count:0,
+            height:0
         }
+    },
+    mounted(){
+        this.$nextTick(()=>{
+            this.getHeight();
+        })
     },
     methods:{
         reset:function(){
@@ -58,25 +64,29 @@ var buildingFuture= {
             }
         },
         titleColor(index,banner){
+            var styling;
+            const upCase = 'text-transform: uppercase;';
             if(index % 2 == 1 && !banner){
-                return 'color: #bcd1bc;';
+                styling= 'color: #bcd1bc;';
             }
             else{
-                return 'color: #781214;text-shadow: #FFF 0px 0px 10px;';
+                styling= 'color: #781214;text-shadow: #FFF 0px 0px 10px;';
             }
-        }
-    },
-    computed:{
-      scrollHeight(){
-          var whiteText = $('#header0').height();
-          if(whiteText != undefined){
-              console.log(whiteText);
+            return styling+upCase;
+        },
+        getHeight(){
+          var whiteText = document.getElementById('header0');
+          if(whiteText == undefined){
+              console.log("undefined");
               //return whiteText ? whiteText.offsetHeight : 0;
           }
           else{
-              console.log("undefined");
+              console.log(whiteText.clientHeight);
           }
-      }  
+      } 
+    },
+    computed:{
+       
     },
     watch:{
         slides:function(){

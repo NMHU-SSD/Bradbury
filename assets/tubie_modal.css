@@ -68,7 +68,7 @@
 }
 /****Popover Bubble****/
 .popover {
-    font-size: calc(8px + .5vw);
+    font-size: .5em;
     max-width: 55vw !important;
     min-width: 200px;
     border-radius: 45%;
@@ -119,10 +119,10 @@
     overflow-y: auto;
 }
 .modal-title{
-    font-size: 1em;
+    font-size: 2em;
 }
 .close{
-    font-size: 2em;
+    font-size: 3em;
 }
 
 /***** Slideshow *****/
@@ -153,4 +153,9 @@
     object-position: center;
     filter: brightness(50%);
     transition: .5s;
+}
+/*************** video JS ***********/
+.video-js {
+    margin: 0 auto !important;
+    font-size: 1.3em;
 }

@@ -29,7 +29,7 @@
     },
     
 	"drive": {
-        "header":"SUSTAINABLE SUPERCOMPUTING",
+        "header":"Sustainable Supercomputing",
         "slides": 
             [
 				{
@@ -118,7 +118,7 @@
     },
     
     "sustainable":{
-        "header":"SUPERCOMPUTERS DRIVE SUSTAINABILITY",
+        "header":"Supercomputers Drive Sustainablilty",
         "slides":[
              {
                  "title": "Title two",

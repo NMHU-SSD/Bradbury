@@ -1,6 +1,6 @@
 var slideshowComponent={
     name:"slideshow-component",
-    props:['images','speed','id','tubie','memo'],
+    props:['images','speed','id','tubie','memo','title1','title2'],
     data:function(){
         return{
             index:0,
@@ -10,7 +10,7 @@ var slideshowComponent={
         }
     },
     mounted:function(){
-        console.log(this.images);
+        //console.log(this.images);
         //this.initShow();
     },
     methods:{
