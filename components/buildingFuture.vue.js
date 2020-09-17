@@ -12,11 +12,6 @@ var buildingFuture= {
             height:0
         }
     },
-    mounted(){
-        this.$nextTick(()=>{
-            this.getHeight();
-        })
-    },
     methods:{
         reset:function(){
             console.log(this.id);
@@ -74,19 +69,16 @@ var buildingFuture= {
             }
             return styling+upCase;
         },
-        getHeight(){
-          var whiteText = document.getElementById('header0');
+        getHeight(index){
+          var whiteText = document.getElementById('header'+this.id+index);
           if(whiteText == undefined){
-              console.log("undefined");
+              //console.log("undefined");
               //return whiteText ? whiteText.offsetHeight : 0;
           }
           else{
               console.log(whiteText.clientHeight);
           }
       } 
-    },
-    computed:{
-       
     },
     watch:{
         slides:function(){
@@ -109,7 +101,7 @@ var buildingFuture= {
 <!--- Base Layout Appearence --->
                             <div v-if="slide.featuredMedia" class="col-8 img-main green">
                                 <img :src="slide.featuredMedia.src" :class="[banner ? 'fill-img' : 'cropped-img']" alt="slide.alt">
-                                <!--div class="shadow-box"/-->
+                                <div class="shadow-box"/>
                                 <h3 class="top-center" :style="titleColor(index,banner)">{{ header }}</h3>
                                 <h2 v-if=!banner class="top-left title-font shadow-text">Did You Know...</h2>
                                 <div v-if="!banner && slide.video" class="watch-video" @click="seturl(slide.video)">
@@ -121,15 +113,23 @@ var buildingFuture= {
                             </div>
 
                             <div :class="['col text-side',(mono ? 'lgt-green' : 'yellow')]" :style="banner ? 'height: calc(55vw - 3em);' : 'height: 55vw;'">
-                                  <p v-if="slide.header" :id="'header'+index" class="content-header shadow-text">{{ slide.header }}</p>
-                                  <div v-if="banner && slide.video" class="watch-video" @click="seturl(slide.video)">
-                                    <div class="vid-button" style="margin-right: 15%;"/>
-                                    <p class="body-font" style="color: #781214;">WATCH VIDEO</p>
+                                  <div :class="['margins stay',(mono ? 'lgt-green' : 'yellow')]">
+                                    <p v-if="slide.header" :id="'header'+id+index" class="content-header shadow-text" @click="getHeight(index)">{{ slide.header }}</p>
+                                    <div v-if="banner && slide.video" class="watch-video" @click="seturl(slide.video)">
+                                        <div class="vid-button" style="margin-right: 15%;"/>
+                                        <p class="body-font" style="color: #781214;">WATCH VIDEO</p>
+                                    </div>
                                   </div>
-                                  <div class="scrolling-text" >
+
+                                  <div class="scrolling-text margins">
+                                    <p v-if="slide.header" class="content-header invis">{{ slide.header }}</p>
+                                    <div v-if="banner && slide.video" class="watch-video invis">
+                                        <div class="vid-button" style="margin-right: 15%;"/>
+                                        <p class="body-font" style="color: #781214;">WATCH VIDEO</p>
+                                    </div>
                                   <p v-if="slide.title" class="content-title title-font bluetext">{{ slide.title }}</p>
                                   <p v-if="slide.body" class="content-body body-font bluetext">{{ slide.body }}</p>
-                            </div>
+                                  </div>
                         </div>
                     </div>
 <!--- End layout ---->

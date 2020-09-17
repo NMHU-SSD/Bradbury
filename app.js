@@ -25,7 +25,7 @@ var app = new Vue({
     
     methods:{
         GetData: function(){
-            fetch("content/Data.json",{
+            fetch("data/Data.json",{
             	mode: 'cors'
             })
             .then(response => response.json())

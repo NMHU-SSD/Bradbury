@@ -10,8 +10,8 @@
         <link href="https://vjs.zencdn.net/7.8.3/video-js.css" rel="stylesheet">
         <link href="libraries/videojs-overlay/videojs-overlay.css" rel="stylesheet">
         <!-- CSS --->
-        <link rel="stylesheet" href="assets/stylesheet.css">
-        <link rel="stylesheet" href="assets/tubie_modal.css">
+        <link rel="stylesheet" href="css/stylesheet.css">
+        <link rel="stylesheet" href="css/tubie_modal.css">
         <!-- Google Fonts -->
         <link href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@300;500&family=Karla&display=swap" rel="stylesheet">
 
@@ -28,15 +28,11 @@
             <!--- Main Layout components---->
             <slideshow-component id="slideshow" :images="title.slideshow" :title1="drive.header" :title2="sustainable.header"
                                  :memo="title.memo" :tubie="title.tubie" speed=5000 @switchout="switchData"></slideshow-component>
-            <building-future v-show=firstData id="index" :slides="drive.slides" :header="drive.header"
-                             banner=true buddy="dyk" @seturl="displayVideo($event)" ref="style1"></building-future>
-            <building-future v-show=firstData id="dyk" :slides="drive.didYouKnow" :header="drive.header"
-                             @seturl="displayVideo($event)"></building-future>
+            <building-future v-show=firstData id="index" :slides="sustainable.slides" :header="sustainable.header" banner=true buddy="dyk" @seturl="displayVideo($event)" ref="style1"></building-future>
+            <building-future v-show=firstData id="dyk" :slides="sustainable.didYouKnow" :header="sustainable.header" @seturl="displayVideo($event)"></building-future>
             <!--- Second Data set---->
-            <building-future v-show=!firstData id="index2" :slides="sustainable.slides" :header="sustainable.header" 
-                             banner=true buddy="dyk2" mono=true @seturl="displayVideo($event)" ref="style2"></building-future>
-            <building-future v-show=!firstData id="dyk2" :slides="sustainable.didYouKnow" :header="sustainable.header" mono=true
-                             @seturl="displayVideo($event)"></building-future>j
+            <building-future v-show=!firstData id="index2" :slides="drive.slides" :header="drive.header"  banner=true buddy="dyk2" mono=true @seturl="displayVideo($event)" ref="style2"></building-future>
+            <building-future v-show=!firstData id="dyk2" :slides="drive.didYouKnow" :header="drive.header" mono=true @seturl="displayVideo($event)"></building-future>
         </main>
       </div>
 
