@@ -185,13 +185,15 @@ p{
     font-size: 1em;
 }
 .text-side{
-    max-height: 55vw;
+    max-height: 33vh;
+    padding: 0 0 2em 0;
 }
 .stay{
     position: absolute;
 }
 .scrolling-text{
     height: 100%;
+    margin-top: 1em;
     overflow-y: auto;
 }
 .img-main{

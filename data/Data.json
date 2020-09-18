@@ -42,50 +42,50 @@
                     "title":"Inventing sustainable supercomputing"
 				    },
                 "tubie":{
-                    "header":"This is titles",
-                    "body":"This is the body"
+                    "header":"Consider this...",
+                    "body":"How have the technologies important to you become more efficient over time?"
                     }
                 },
                 {
 				"title": "Roadrunner",
-                "header": "volutpat diam ut venenatis tellus in metus vulputate eu scelerisque felis imperdiet proin fermentum leo",
-				"body": "volutpat diam ut venenatis tellus in metus vulputate eu scelerisque felis imperdiet proin fermentum leo vel orci porta non pulvinar neque laoreet suspendisse interdum consectetur libero id faucibus nisl tincidunt eget nullam non nisi est sit amet facilisis magna etiam tempor orci eu lobortis elementum nibh tellus molestie nunc non",
+                "header": "In 2008, the Roadrunner supercomputer proved that performance did not have to mean sacrificing energy efficiency.",
+				"body": "Co-designed by LANL and IBM, Roadrunner was equipped with multiple kinds of processing chips, rather than the usual single type of microprocessor.  This made Roadrunner the first large \"hybrid\" supercomputer, an approach considered \"radical\" at the time.  \n\nWith careful programming, Roadrunner used the chip best suited for a task; either its conventional AMD microprocessors—like those in a desktop computer—or its energy-efficient \"Cell\" accelerator chips from IBM—similar to the Cell chip found in the Sony Playstation 3.  \n\nThis \"hybrid\" approach made Roadrunner the fastest in the world, and extremely efficient, using only 1/3 of the power of equivalent, non-hybrid supercomputers.  \n\nAfter Roadrunner pioneered the concept, hybrid supercomputers have since become the norm.",
 		        "featuredMedia": {
 		           	"src": "data/sustain/Cell-Chip-CC-by3.0.jpg",
-		           	"caption": "placeholder image",
-                    "title":"An efficient revolution"
+		           	"caption": "The Cell accelerator chip helped LANL's Roadrunner break speed and efficiency records.",
+                    "title":"An Efficient Revolution"
                     },
                 "tubie":{
-                    "header":"This is titles",
-                    "body":"This is the body"
+                    "header":"Consider this...",
+                    "body":"Can you think of other commonplace ways of doing things today that were once considered \"radical\"?"
                     }
                 },
                 {
                 "title": "Sanitary Effluent Reclamation Facility",
-                "header": "vulputate eu scelerisque felis imperdiet proin fermentum leo vel orci porta non pulvinar neque laoreet",
-                "body": "volutpat diam ut venenatis tellus in metus vulputate eu scelerisque felis imperdiet proin fermentum leo vel orci porta non pulvinar neque laoreet suspendisse interdum consectetur libero id faucibus nisl tincidunt eget nullam non nisi est sit amet facilisis magna etiam tempor orci eu lobortis elementum nibh tellus molestie nunc non",
+                "header": "Cooling towers for the supercomputers of the Strategic Computing Center account for a large proportion of the total water used at the lab.",
+                "body": "To conserve the limited water supply of arid Northern New Mexico, reclaimed water from across the Lab is cleaned and filtered through the Sanitary Effluent Reclamation Facility (SERF).  Water from SERF supplies almost 100% of Los Alamos National Labs’ cooling tower demand, and allows the same water to be reused up to four times.",
 				"video": "data/videos/oceans.mp4",
                 "featuredMedia": {
 		           	"src": "data/sustain/thumbnail_2.JPG",
                     "title":"Keeping cool while conserving water"
                     },
                 "tubie":{
-                    "header":"This is titles",
-                    "body":"This is the body"
+                    "header":"Consider this...",
+                    "body":"What other limited resources can be reused rather than discarded?"
                     }
 		        },
                 {
                 "title": "Advanced RISC Machine (ARM)",
-                "header": "vulputate eu scelerisque felis imperdiet proin fermentum leo vel orci porta non pulvinar neque laoreet",
-                "body": "volutpat diam ut venenatis tellus in metus vulputate eu scelerisque felis imperdiet proin fermentum leo vel orci porta non pulvinar neque laoreet suspendisse interdum consectetur libero id faucibus nisl tincidunt eget nullam non nisi est sit amet facilisis magna etiam tempor orci eu lobortis elementum nibh tellus molestie nunc non",
-				"video": "data/videos/oceans.mp4",
+                "header": "The popularity of smartphones and portable electronics means that chip makers have invested vast sums into making processing chips that are powerful and energy efficient.",
+                "body": "One type of chip in particular, the Advanced RISC Machine or \"ARM\" chip, was already found in a variety of mobile devices, from Android phones to inexpensive Raspberry Pi computers.  \n\nNow, the ARM chips that make the smallest computers so capable are making the largest computers more energy efficient.  In November 2019, Cray and Fujitsu partnered to produce the first-ever commercial supercomputer powered by an ARM-based processor, pushing the envelope of supercomputer performance, while reducing the environmental impact.  \n\nThe first customers, including Los Alamos and Oak Ridge National Laboratory, quickly signed up to take advantage of this alliance between highly efficient computing and high-performance computing.",
                 "featuredMedia": {
 		           	"src": "data/sustain/ARM-chip.JPG",
-                    "title":"Efficient and high-performance computing"
+                    "title":"Efficient and high-performance computing",
+                    "caption":"The Fujitsu A64FX ARM processor powered the first commercially available ARM-based supercomputer."
                     },
                 "tubie":{
-                    "header":"This is titles",
-                    "body":"This is the body"
+                    "header":"Consider this...",
+                    "body":"What are some other instances where improvements in one technology has benefited another?"
                     }
 		        }
             ],
@@ -93,52 +93,52 @@
             [
                 {
                 "title":"Green500 List",
-                "header":"...In 2007, Los Alamos computer scientist volutpat diam ut venenatis tellus in metus vulputate eu scelerisque felis imperdiet proin fermentum leo vel orci porta non pulvinar?",
-                "body":"volutpat diam ut venenatis tellus in metus vulputate eu scelerisque felis imperdiet proin fermentum leo vel orci porta non pulvinar neque laoreet suspendisse interdum consectetur libero id faucibus nisl tincidunt eget nullam non nisi est sit amet facilisis magna etiam tempor orci eu lobortis elementum nibh tellus molestie nunc non",
+                "header":"...In 2007, Los Alamos computer scientist Wu-chun Feng and his colleague Kirk. W. Cameron at Virginia Tech created the Green500 List?",
+                "body":"The Green500 List ranked supercomputers around the world based on their energy efficiency, bringing a shared set of sustainability assessment tools and criteria to the high-performance computing community.  \n\nThe List made it easier for supercomputer users and manufacturers alike to consider a machine's performance versus its energy-consumption when purchasing or designing new supercomputer systems.",
                 "featuredMedia":{
                     "src": "data/sustain/Green-500.JPG"
                     },
                 "tubie":{
-                    "header":"This is titles",
-                    "body":"This is the body"
+                    "header":"Consider this...",
+                    "body":"How do individuals and communities sharing knowledge about the efficiency of products help everyone make more informed decisions about sustainability?"
                     }
                 },
                 {
                 "title":"Cosmic rays and supercomputers",
-                "header":"...In 2007, Los Alamos computer scientist volutpat diam ut venenatis tellus in metus vulputate eu scelerisque felis imperdiet proin fermentum leo vel orci porta non pulvinar?",
-                "body":"volutpat diam ut venenatis tellus in metus vulputate eu scelerisque felis imperdiet proin fermentum leo vel orci porta non pulvinar neque laoreet suspendisse interdum consectetur libero id faucibus nisl tincidunt eget nullam non nisi est sit amet facilisis magna etiam tempor orci eu lobortis elementum nibh tellus molestie nunc non",
+                "header":"Los Alamos used the high-energy beam from LANSCE (the Los Alamos Neutron Science Center) to shoot running processor boards taken from Roadrunner?",
+                "body":"The results helped Lab computer experts better identify and mitigate the effects of cosmic rays on full-scale supercomputers, preventing wasteful computer downtime and errors.",
+                "video": "data/videos/oceans.mp4",
                 "featuredMedia":{
                     "src": "data/sustain/thumbnail_1.JPG"
                     },
                 "tubie":{
-                    "header":"This is titles",
-                    "body":"This is the body"
+                    "header":"Consider this...",
+                    "body":"What are some other instances where being better informed has meant reducing waste?"
                     }
                 },
                 {
                 "title":"BitScope Raspberry Pi cluster",
-                "header":"...In 2007, Los Alamos computer scientist volutpat diam ut venenatis tellus in metus vulputate eu scelerisque felis imperdiet proin fermentum leo vel orci porta non pulvinar?",
-                "body":"volutpat diam ut venenatis tellus in metus vulputate eu scelerisque felis imperdiet proin fermentum leo vel orci porta non pulvinar neque laoreet suspendisse interdum consectetur libero id faucibus nisl tincidunt eget nullam non nisi est sit amet facilisis magna etiam tempor orci eu lobortis elementum nibh tellus molestie nunc non",
+                "header":"Gary Grider, leader of the Lab's High-Performance Computing Division, came up with the idea of creating a cluster of 750 Raspberry Pi computers as a “pilot cluster” to develop scalable systems software for the Trinity supercomputer?",
+                "body":"This test-bed cluster let the Lab’s supercomputing experts replicate the extreme scale of Trinity, while only using 4,000 watts of electricity!  Grider said, “The Raspberry Pi modules let developers figure out how to write this software and get it to work reliably without having a dedicated testbed of the same size, which would cost a quarter billion dollars and use 25 megawatts of electricity.",
                 "video": "data/videos/oceans.mp4",
                 "featuredMedia":{
                     "src": "data/sustain/BitScope-Cluster-Module-Image-BitScope.jpg"
                     },
                 "tubie":{
-                    "header":"This is titles",
-                    "body":"This is the body"
+                    "header":"Consider this...",
+                    "body":"What are some other creative solutions that have made it possible to do the same work, while using fewer resources?"
                     }
                 },
                 {
                 "title":"Roadrunner",
-                "header":"...In 2007, Los Alamos computer scientist volutpat diam ut venenatis tellus in metus vulputate eu scelerisque felis imperdiet proin fermentum leo vel orci porta non pulvinar?",
-                "body":"volutpat diam ut venenatis tellus in metus vulputate eu scelerisque felis imperdiet proin fermentum leo vel orci porta non pulvinar neque laoreet suspendisse interdum consectetur libero id faucibus nisl tincidunt eget nullam non nisi est sit amet facilisis magna etiam tempor orci eu lobortis elementum nibh tellus molestie nunc non",
-                "video": "data/videos/oceans.mp4",
+                "header":"...LANL's powerful and efficient Roadrunner was the fastest supercomputer in the world on the Top500 List benchmarking site while, at the same time, it was the most power-efficient large computer on the Green500 List?",
+                "body":"Roadrunner only lost the top spot on the Green500 List to a much-smaller computer that likewise ran on the same \"hybrid\" architecture as Roadrunner.",
                 "featuredMedia":{
                     "src": "data/sustain/Roadrunner-Logo.jpg"
                     },
                 "tubie":{
-                    "header":"This is titles",
-                    "body":"This is the body"
+                    "header":"Consider this...",
+                    "body":"How does simultaneously seeking greater usefulness and efficiency from a technology help to spark innovation?"
                     }
                 }
             ]
