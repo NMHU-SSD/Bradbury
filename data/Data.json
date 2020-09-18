@@ -37,7 +37,7 @@
 				"header": "In 2003, sustainable computing was still a novel concept, but LANL computer scientists Wu-chun Feng, Eric Weigle, and Michael Warren were ahead of the curve.",
                 "body": "They created an experimental, sustainable cluster computer called \"Green Destiny\" using energy-efficient processors and a fault-tolerant design that eliminated the need for the costly cooling systems found on other supercomputers.\n\nDespite being as powerful as a high-end supercomputer of just a few years before, Green Destiny used only as much electricity as two hairdryers.\n\nGreen Destiny was a successful proof-of-concept for energy-saving features that found their way into mainstream supercomputers, winning the coveted R&D 100 Award for innovation in science and technology in the process.",
 				"featuredMedia": { 
-					"src": "https://picsum.photos/500",
+					"src": "data/sustain/Green-Destiny.png",
 					"caption": "Los Alamos National Laboratory's Green Destiny sustainable cluster computer.",
                     "title":"Inventing sustainable supercomputing"
 				    },
@@ -64,9 +64,9 @@
                 "title": "Sanitary Effluent Reclamation Facility",
                 "header": "vulputate eu scelerisque felis imperdiet proin fermentum leo vel orci porta non pulvinar neque laoreet",
                 "body": "volutpat diam ut venenatis tellus in metus vulputate eu scelerisque felis imperdiet proin fermentum leo vel orci porta non pulvinar neque laoreet suspendisse interdum consectetur libero id faucibus nisl tincidunt eget nullam non nisi est sit amet facilisis magna etiam tempor orci eu lobortis elementum nibh tellus molestie nunc non",
-				"video": "https://vjs.zencdn.net/v/oceans.mp4",
+				"video": "data/videos/oceans.mp4",
                 "featuredMedia": {
-		           	"src": "https://picsum.photos/300",
+		           	"src": "data/sustain/thumbnail_2.JPG",
                     "title":"Keeping cool while conserving water"
                     },
                 "tubie":{
@@ -78,9 +78,9 @@
                 "title": "Advanced RISC Machine (ARM)",
                 "header": "vulputate eu scelerisque felis imperdiet proin fermentum leo vel orci porta non pulvinar neque laoreet",
                 "body": "volutpat diam ut venenatis tellus in metus vulputate eu scelerisque felis imperdiet proin fermentum leo vel orci porta non pulvinar neque laoreet suspendisse interdum consectetur libero id faucibus nisl tincidunt eget nullam non nisi est sit amet facilisis magna etiam tempor orci eu lobortis elementum nibh tellus molestie nunc non",
-				"video": "https://vjs.zencdn.net/v/oceans.mp4",
+				"video": "data/videos/oceans.mp4",
                 "featuredMedia": {
-		           	"src": "https://picsum.photos/300",
+		           	"src": "data/sustain/ARM-chip.JPG",
                     "title":"Efficient and high-performance computing"
                     },
                 "tubie":{
@@ -96,7 +96,7 @@
                 "header":"...In 2007, Los Alamos computer scientist volutpat diam ut venenatis tellus in metus vulputate eu scelerisque felis imperdiet proin fermentum leo vel orci porta non pulvinar?",
                 "body":"volutpat diam ut venenatis tellus in metus vulputate eu scelerisque felis imperdiet proin fermentum leo vel orci porta non pulvinar neque laoreet suspendisse interdum consectetur libero id faucibus nisl tincidunt eget nullam non nisi est sit amet facilisis magna etiam tempor orci eu lobortis elementum nibh tellus molestie nunc non",
                 "featuredMedia":{
-                    "src": "https://picsum.photos/300"
+                    "src": "data/sustain/Green-500.JPG"
                     },
                 "tubie":{
                     "header":"This is titles",
@@ -108,7 +108,7 @@
                 "header":"...In 2007, Los Alamos computer scientist volutpat diam ut venenatis tellus in metus vulputate eu scelerisque felis imperdiet proin fermentum leo vel orci porta non pulvinar?",
                 "body":"volutpat diam ut venenatis tellus in metus vulputate eu scelerisque felis imperdiet proin fermentum leo vel orci porta non pulvinar neque laoreet suspendisse interdum consectetur libero id faucibus nisl tincidunt eget nullam non nisi est sit amet facilisis magna etiam tempor orci eu lobortis elementum nibh tellus molestie nunc non",
                 "featuredMedia":{
-                    "src": "https://picsum.photos/300"
+                    "src": "data/sustain/thumbnail_1.JPG"
                     },
                 "tubie":{
                     "header":"This is titles",
@@ -119,7 +119,7 @@
                 "title":"BitScope Raspberry Pi cluster",
                 "header":"...In 2007, Los Alamos computer scientist volutpat diam ut venenatis tellus in metus vulputate eu scelerisque felis imperdiet proin fermentum leo vel orci porta non pulvinar?",
                 "body":"volutpat diam ut venenatis tellus in metus vulputate eu scelerisque felis imperdiet proin fermentum leo vel orci porta non pulvinar neque laoreet suspendisse interdum consectetur libero id faucibus nisl tincidunt eget nullam non nisi est sit amet facilisis magna etiam tempor orci eu lobortis elementum nibh tellus molestie nunc non",
-                "video": "https://vjs.zencdn.net/v/oceans.mp4",
+                "video": "data/videos/oceans.mp4",
                 "featuredMedia":{
                     "src": "data/sustain/BitScope-Cluster-Module-Image-BitScope.jpg"
                     },
@@ -132,9 +132,9 @@
                 "title":"Roadrunner",
                 "header":"...In 2007, Los Alamos computer scientist volutpat diam ut venenatis tellus in metus vulputate eu scelerisque felis imperdiet proin fermentum leo vel orci porta non pulvinar?",
                 "body":"volutpat diam ut venenatis tellus in metus vulputate eu scelerisque felis imperdiet proin fermentum leo vel orci porta non pulvinar neque laoreet suspendisse interdum consectetur libero id faucibus nisl tincidunt eget nullam non nisi est sit amet facilisis magna etiam tempor orci eu lobortis elementum nibh tellus molestie nunc non",
-                "video": "https://vjs.zencdn.net/v/oceans.mp4",
+                "video": "data/videos/oceans.mp4",
                 "featuredMedia":{
-                    "src": "data/sustain/BitScope-Cluster-Module-Image-BitScope.jpg"
+                    "src": "data/sustain/Roadrunner-Logo.jpg"
                     },
                 "tubie":{
                     "header":"This is titles",
@@ -151,7 +151,7 @@
                  "title": "FEARCE software",
                  "body": "volutpat diam ut venenatis tellus in metus vulputate eu scelerisque felis imperdiet proin fermentum leo vel orci porta non pulvinar neque laoreet suspendisse interdum consectetur libero id faucibus nisl tincidunt eget nullam non nisi est sit amet facilisis magna etiam tempor orci eu lobortis elementum nibh tellus molestie nunc non",
 		          "featuredMedia": {
-		              "src": "https://picsum.photos/300",
+		              "src": "data/drive/thumbnail-1.JPG",
 		              "caption": "placeholder image",
                       "title":"Better Engines Through Better Software?"
 		          },
@@ -164,11 +164,10 @@
                   "title": "Carbon capture SimCCS software",
                   "body": "volutpat diam ut venenatis tellus in metus vulputate eu scelerisque felis imperdiet proin fermentum leo vel orci porta non pulvinar neque laoreet suspendisse interdum consectetur libero id faucibus nisl tincidunt eget nullam non nisi est sit amet facilisis magna etiam tempor orci eu lobortis elementum nibh tellus molestie nunc non",
 				  "featuredMedia": {
-		              "src": "https://picsum.photos/300",
+		              "src": "data/drive/thumbnail-2.JPG",
 		              "caption": "placeholder image",
                       "title":"Making Cargon Capture Practical and Profitable"
 		          },
-                 "video": "https://www.youtube.com/embed/s_4rIQmOw28",
                  "tubie":{
                     "header":"This is titles",
                     "body":"This is the body"
@@ -179,7 +178,7 @@
                  "title": "Los Alamos sea ice model",
                  "body": "volutpat diam ut venenatis tellus in metus vulputate eu scelerisque felis imperdiet proin fermentum leo vel orci porta non pulvinar neque laoreet suspendisse interdum consectetur libero id faucibus nisl tincidunt eget nullam non nisi est sit amet facilisis magna etiam tempor orci eu lobortis elementum nibh tellus molestie nunc non",
 		          "featuredMedia": {
-		              "src": "data/sustain/Elizabeth-Hunke-with-CICE-simulation.jpg",
+		              "src": "data/drive/Elizabeth-Hunke-with-CICE-simulation.jpg",
 		              "caption": "placeholder image",
                       "title":"Modeling sea ice"
 		          },
@@ -192,7 +191,7 @@
                  "title": "Coastal erosion",
                  "body": "volutpat diam ut venenatis tellus in metus vulputate eu scelerisque felis imperdiet proin fermentum leo vel orci porta non pulvinar neque laoreet suspendisse interdum consectetur libero id faucibus nisl tincidunt eget nullam non nisi est sit amet facilisis magna etiam tempor orci eu lobortis elementum nibh tellus molestie nunc non",
 		          "featuredMedia": {
-		              "src": "data/sustain/Elizabeth-Hunke-with-CICE-simulation.jpg",
+		              "src": "data/drive/thumbnail-3.JPG",
 		              "caption": "placeholder image",
                       "title":"Modeling Eroding Coastlines to Prepare for Hurricanes"
 		          },
@@ -209,7 +208,7 @@
                 "header":"...In 2007, Los Alamos computer scientist volutpat diam ut venenatis tellus in metus vulputate eu scelerisque felis imperdiet proin fermentum leo vel orci porta non pulvinar?",
                 "body":"volutpat diam ut venenatis tellus in metus vulputate eu scelerisque felis imperdiet proin fermentum leo vel orci porta non pulvinar neque laoreet suspendisse interdum consectetur libero id faucibus nisl tincidunt eget nullam non nisi est sit amet facilisis magna etiam tempor orci eu lobortis elementum nibh tellus molestie nunc non",
                 "featuredMedia":{
-                    "src": "https://picsum.photos/300"
+                    "src": "data/drive/thumbnail-4.JPG"
                     },
                 "tubie":{
                     "header":"This is titles",
@@ -221,7 +220,7 @@
                 "header":"...In 2007, Los Alamos computer scientist volutpat diam ut venenatis tellus in metus vulputate eu scelerisque felis imperdiet proin fermentum leo vel orci porta non pulvinar?",
                 "body":"volutpat diam ut venenatis tellus in metus vulputate eu scelerisque felis imperdiet proin fermentum leo vel orci porta non pulvinar neque laoreet suspendisse interdum consectetur libero id faucibus nisl tincidunt eget nullam non nisi est sit amet facilisis magna etiam tempor orci eu lobortis elementum nibh tellus molestie nunc non",
                 "featuredMedia":{
-                    "src": "https://picsum.photos/300"
+                    "src": "data/drive/cray-2.JPG"
                     },
                 "tubie":{
                     "header":"This is titles",
@@ -233,7 +232,7 @@
                 "header":"...In 2007, Los Alamos computer scientist volutpat diam ut venenatis tellus in metus vulputate eu scelerisque felis imperdiet proin fermentum leo vel orci porta non pulvinar?",
                 "body":"volutpat diam ut venenatis tellus in metus vulputate eu scelerisque felis imperdiet proin fermentum leo vel orci porta non pulvinar neque laoreet suspendisse interdum consectetur libero id faucibus nisl tincidunt eget nullam non nisi est sit amet facilisis magna etiam tempor orci eu lobortis elementum nibh tellus molestie nunc non",
                 "featuredMedia":{
-                    "src": "data/sustain/ACES-team-members-sample-snow-pits.jpg"
+                    "src": "data/drive/ACES-team-members-sample-snow-pits.jpg"
                     },
                 "tubie":{
                     "header":"This is titles",
@@ -245,7 +244,7 @@
                 "header":"...In 2007, Los Alamos computer scientist volutpat diam ut venenatis tellus in metus vulputate eu scelerisque felis imperdiet proin fermentum leo vel orci porta non pulvinar?",
                 "body":"volutpat diam ut venenatis tellus in metus vulputate eu scelerisque felis imperdiet proin fermentum leo vel orci porta non pulvinar neque laoreet suspendisse interdum consectetur libero id faucibus nisl tincidunt eget nullam non nisi est sit amet facilisis magna etiam tempor orci eu lobortis elementum nibh tellus molestie nunc non",
                 "featuredMedia":{
-                    "src": "data/sustain/ACES-team-members-sample-snow-pits.jpg"
+                    "src": "data/drive/Better-Climate-Models.jpg"
                     },
                 "tubie":{
                     "header":"This is titles",

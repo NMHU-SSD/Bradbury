@@ -21,11 +21,13 @@ p{
     visibility: hidden;
 }
 .slideshow-container,#index,#index2{
-    margin-bottom: 3em;
+    margin-bottom: 2em;
+}
+.carousel{
 }
 /*****carousel***********/
 .carousel-inner, .img-main,.slideshow-container{
-    height:55vw;
+    height:calc(33vh - 1em);
 }
 .carousel-caption{
     max-width: 100%;
@@ -187,7 +189,6 @@ p{
 }
 .stay{
     position: absolute;
-    z-index: 2;
 }
 .scrolling-text{
     height: 100%;
@@ -230,6 +231,7 @@ p{
 }
 .bottom-right{
     position: absolute;
+    max-width: 40%;
     bottom: 4.5em;
     right: 5%;
     text-align: right;
