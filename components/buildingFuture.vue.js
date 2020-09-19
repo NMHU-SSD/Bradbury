@@ -58,14 +58,19 @@ var buildingFuture= {
                 this.first=false;
             }
         },
-        textsideColor(index,banner){
+        textsideColor(){
             var styling;
-            const upCase = 'text-transform: uppercase;';
-            if(banner){
-                styling= 'background-color: #bcd1bc;';
+            const classes = 'col text-side ';
+            if(this.mono){
+                if(this.banner){
+                    styling= 'background-color: #bcd1bc;';
+                }
+                else{
+                    styling= 'background-color: #bcd1bc;';
+                }
             }
             else{
-                styling= 'color: #781214;text-shadow: #FFF 0px 0px 10px;';
+                styling= 'yellow';
             }
             return styling+upCase;
         }
@@ -102,7 +107,7 @@ var buildingFuture= {
                                 <i v-if=slide.featuredMedia.caption class="bottom-right body-font shadow-text">{{ slide.featuredMedia.caption }}</i>
                             </div>
 
-                            <div :class="['col text-side',(mono ? 'lgt-green' : 'yellow')]" :style="banner ? 'height: calc(33vh - 3em);' : 'max-height: 33vh;'">
+                            <div :class="['col text-side',(mono ? 'lgt-green' : 'yellow')]" :style="banner ? 'height: calc(33vh - 3em);' : 'height: 33vh;'">
                                   <div :class="['margins stay',(mono ? 'lgt-green' : 'yellow')]">
                                     <p v-if="slide.header" :id="'header'+id+index" class="content-header shadow-text" @click="getHeight(index)">{{ slide.header }}</p>
                                     <div v-if="banner && slide.video" class="watch-video" @click="seturl(slide.video)">

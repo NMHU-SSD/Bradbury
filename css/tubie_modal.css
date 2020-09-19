@@ -69,6 +69,7 @@
 /****Popover Bubble****/
 .popover {
     font-size: .5em;
+    font-family: 'Roboto-Cond', sans-serif;
     max-width: 55vw !important;
     min-width: 200px;
     border-radius: 45%;
