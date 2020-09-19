@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">      
+        <!--Bootstrap---> 
+        <link href="libraries/bootstrap-4.5.2-dist/css/bootstrap.min.css" rel="stylesheet">
+        <!---videoJS--->
+        <link href="libraries/videojs/video-js.css" rel="stylesheet">
+        <link href="libraries/videojs-overlay/videojs-overlay.css" rel="stylesheet">
+        <!-- CSS --->
+
+    <title>Transformative Computing</title>
+  </head> 
+  <body>	
+	<div id="app">	
+		<main>
+            <!-- Pop overs>
+            <modal-overlay id="modalVideo" exitout="false" :countdown="timeData.videotimer" ref="modalVideo" @stopvideo="videoModalClose()"></modal-overlay>
+            <modal-overlay id="modalTimer" exitout="true" :countdown="timeData.quitout" :message="timeData.message" ref="timeModal"></modal-overlay---> 
+            
+            <!--- Main Layout components---->
+            
+        </main>
+      </div>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS--->
+    <script src="libraries/jquery/jquery-3.5.1.slim.min.js"></script>
+    <script src="libraries/popper/popper.min.js"></script>
+    <script src="libraries/bootstrap-4.5.2-dist/js/bootstrap.min.js"></script>
+	<!-- Vue production version, optimized for size and speed--->
+    <script src="libraries/vuejs/vue.js"></script>
+    <!--- Video JS--->
+    <script src="libraries/videojs/video.js"></script>
+    <!--- VideoJS Overlay---->
+    <script src="libraries/videojs-overlay/videojs-overlay.js"></script>
+    <!-- Vue Components -->
+      <script src="components/tubieOverlay.vue.js"></script>
+      <script src="components/modalOverlay.vue.js"></script>
+	<!-- Vue App / Router -->
+	<script src="app.js"></script>
+	
+
+  </body>
+</html>
