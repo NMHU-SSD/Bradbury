@@ -1,5 +1,6 @@
 {
     "timeData":{
+        "slideshow":5000,
         "timeout":30000,
         "quitout":10000,
         "message":{

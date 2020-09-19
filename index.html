@@ -10,10 +10,9 @@
         <link href="libraries/videojs/video-js.css" rel="stylesheet">
         <link href="libraries/videojs-overlay/videojs-overlay.css" rel="stylesheet">
         <!-- CSS --->
+        <link rel="stylesheet" href="css/general_styles.css">
         <link rel="stylesheet" href="css/stylesheet.css">
         <link rel="stylesheet" href="css/tubie_modal.css">
-        <!-- Google Fonts>
-        <link href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@300;500&family=Karla&display=swap" rel="stylesheet"-->
 
     <title>Sustainability</title>
   </head> 
@@ -25,7 +24,7 @@
             <modal-overlay id="modalTimer" exitout="true" :countdown="timeData.quitout" :message="timeData.message" ref="timeModal"></modal-overlay> 
             
             <!--- Main Layout components---->
-            <slideshow-component id="slideshow" :images="title.slideshow" :title1="drive.header" :title2="sustainable.header" :memo1="title.memo1" :memo2="title.memo2" :tubie="title.tubie" speed=5000 @switchout="switchData"></slideshow-component>
+            <slideshow-component id="slideshow" :images="title.slideshow" :title1="drive.header" :title2="sustainable.header" :memo1="title.memo1" :memo2="title.memo2" :tubie="title.tubie" :speed=timeData.slideshow @switchout="switchData"></slideshow-component>
             <building-future v-show=firstData id="index" :slides="sustainable.slides" :header="sustainable.header" banner=true buddy="dyk" @seturl="displayVideo($event)" ref="style1"></building-future>
             <building-future v-show=firstData id="dyk" :slides="sustainable.didYouKnow" :header="sustainable.header" @seturl="displayVideo($event)"></building-future>
             <!--- Second Data set---->

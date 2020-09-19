@@ -112,18 +112,18 @@ var buildingFuture= {
                                     <p v-if="slide.header" :id="'header'+id+index" class="content-header shadow-text" @click="getHeight(index)">{{ slide.header }}</p>
                                     <div v-if="banner && slide.video" class="watch-video" @click="seturl(slide.video)">
                                         <div class="vid-button"/>
-                                        <p class="body-font" style="color: #781214;">WATCH VIDEO</p>
+                                        <p class="body-font redtext" style="color: #6a0123;">WATCH VIDEO</p>
                                     </div>
                                   </div>
 
                                   <div class="scrolling-text margins">
                                     <p v-if="slide.header" class="content-header invis">{{ slide.header }}</p>
                                     <div v-if="banner && slide.video" class="watch-video invis">
-                                        <div class="vid-button" style="margin-right: 15%;"/>
-                                        <p class="body-font" style="color: #781214;">WATCH VIDEO</p>
+                                        <div class="vid-button"/>
+                                        <p class="body-font">WATCH VIDEO</p>
                                     </div>
-                                  <p v-if="slide.title" class="content-title title-font bluetext">{{ slide.title }}</p>
-                                  <p v-if="slide.body" class="content-body body-font bluetext">{{ slide.body }}</p>
+                                    <p v-if="slide.title" class="bluetext content-title title-font" style="color: #0c4b79;">{{ slide.title }}</p>
+                                    <p v-if="slide.body" class="bluetext content-body body-font" style="color: #0c4b79;">{{ slide.body }}</p>
                                   </div>
                         </div>
                     </div>

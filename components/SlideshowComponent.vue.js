@@ -74,9 +74,9 @@ var slideshowComponent={
     },
     template:
     `<div class="slideshow-container">
-        <h1 v-show=head class="top yellow title-font">Sustainable Supercomputing</h1>
+        <h1 v-show=head class="top yellow title-font shadow-text-big">Sustainable Supercomputing</h1>
         <h1 v-show=!head class="top green title-font">Supercomputers Drive Sustainablilty</h1>
-        <img :id="id" class="splash-img" :src="currentImg">
+        <img :id="id" :src="currentImg">
         <div v-show=head class="center body-font shadow-text">{{ memo1 }}</div>
         <div v-show=!head class="center body-font shadow-text">{{ memo2 }}</div>
         <div class="tubie-container">

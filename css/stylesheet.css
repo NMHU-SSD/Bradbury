@@ -1,25 +1,3 @@
-body{
-    background-color: black;
-    font-size: calc(8px + 1.2vw);
-}
-p{
-    white-space: pre-line;
-}
-.green{
-    background-color: #4a6c6a;
-}
-.lgt-green{
-    background-color: #bcd1bc;
-}
-.yellow{
-    background-color: #BBC356;
-}
-.red{
-    background-color: #781214;
-}
-.invis{
-    visibility: hidden;
-}
 .slideshow-container,#index,#index2{
     margin-bottom: 2em;
 }
@@ -76,75 +54,6 @@ p{
     background: url(../assets/customs/Arrow-right.svg)no-repeat;
 }
 
-/***** Muesuem Fonts ****/
-@font-face{
-    font-family: 'HelveMedCon';
-    src: url(../../assets/MuseumFonts2012/HelveNeuMedCon.otf);
-}
-@font-face{
-    font-family: 'SerifBlack';
-    src: url(../assets/MuseumFonts2012/SerifBla.otf);
-}
-/********** Google Font Faces *******/
-@font-face{
-    font-family: Anton;
-    src: url(../assets/fonts/Anton/Anton-Regular.ttf);
-}
-@font-face{
-    font-family:Open-Sans;
-    src: url(../assets/fonts/Open_Sans/OpenSans-Light.ttf);
-}
-@font-face{
-    font-family:Open-Sans-Bold;
-    src: url(../assets/fonts/Open_Sans/OpenSans-Bold.ttf);
-}
-@font-face{
-    font-family:Oswald;
-    src: url(../assets/fonts/Oswald/static/Oswald-Light.ttf);
-}
-@font-face{
-    font-family:Roboto-Cond;
-    src: url(../assets/fonts/Roboto_Condensed/RobotoCondensed-Regular.ttf);
-}
-/********** Text Fonts ********/
-
-.content-body{
-    color: darkblue;
-    font-size: 1em;
-}
-.content-title{
-    font-size: 1.7em;
-}
-.title-font{
-    color: white;
-    font-family: 'Anton', sans-serif;
-    margin-bottom: 0;
-}
-.body-font{
-    color: white;
-    font-weight: bolder;
-    font-family: 'Roboto-Cond', sans-serif;
-}
-.bluetext{
-    color: darkblue;
-}
-.shadow-text-big{
-    text-shadow: 2px 2px 20px #000;
-}
-.shadow-text{
-    text-shadow: 1px 2px 15px #000010;
-}
-.shadow-box{
-    position: absolute;
-    top: 0;
-    left: 0;
-    box-shadow: inset 20px 5px 50px #000000;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-    pointer-events: none;
-}
-
 /**** Carousel Layouts ****/
 .vid-wrapper{
     position: relative;
@@ -168,53 +77,14 @@ p{
     width: 100%;
     animation: kenburns 20s infinite;
 }
-@keyframes kenburns{
-    0%{
-        transform: scale3d(1.2, 1.2, 1)
-            translate3d(10px, 10px, 0px);
-        opacity: 0;
-    }
-    5%{
-        opacity: 1;
-    }
-    90%{
-        transform: scale3d(1.5, 1.5, 1)
-            translate3d(-20px, -10px, 0px);
-        animation-timing-function: ease-in;
-        opacity: 1;
-    }
-    100%{
-        transform: scale3d(1.7, 1.7, 1)
-            translate3d(10px, 10px, 0px);
-        opacity: 0;
-    }
-}
-
 .slideshow{
     background: #000;
-}
-.fade-animation{
-    animation:fading 10s infinite
-}
-@keyframes fading{
-    0%{opacity:0}
-    50%{opacity:1}
-    100%{opacity:0}
-}
-.margins{
-    padding: 8% 15% 3% 5%;
-}
-.content-header{
-    color: white;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bolder;
-    font-size: 1em;
 }
 .text-side{
     max-height: 33vh;
 }
-.stay{
-    position: absolute;
+.margins{
+    padding: 8% 15% 3% 5%;
 }
 .scrolling-text{
     height: 100%;
