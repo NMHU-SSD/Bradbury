@@ -1,6 +1,6 @@
 var slideshowComponent={
     name:"slideshow-component",
-    props:['images','speed','id','tubie','memo','title1','title2'],
+    props:['images','speed','id','tubie','memo1','memo2','title1','title2'],
     data:function(){
         return{
             index:0,
@@ -77,7 +77,8 @@ var slideshowComponent={
         <h1 v-show=head class="top yellow title-font">Sustainable Supercomputing</h1>
         <h1 v-show=!head class="top green title-font">Supercomputers Drive Sustainablilty</h1>
         <img :id="id" class="splash-img" :src="currentImg">
-        <div class="center body-font shadow-text">{{ memo }}</div>
+        <div v-show=head class="center body-font shadow-text">{{ memo1 }}</div>
+        <div v-show=!head class="center body-font shadow-text">{{ memo2 }}</div>
         <div class="tubie-container">
             <tubie-overlay id="tubie-show" :display="tubie"/>
         </div>

@@ -58,27 +58,17 @@ var buildingFuture= {
                 this.first=false;
             }
         },
-        titleColor(index,banner){
+        textsideColor(index,banner){
             var styling;
             const upCase = 'text-transform: uppercase;';
-            if(index % 2 == 1 && !banner){
-                styling= 'color: #bcd1bc;';
+            if(banner){
+                styling= 'background-color: #bcd1bc;';
             }
             else{
                 styling= 'color: #781214;text-shadow: #FFF 0px 0px 10px;';
             }
             return styling+upCase;
-        },
-        getHeight(index){
-          var whiteText = document.getElementById('header'+this.id+index);
-          if(whiteText == undefined){
-              //console.log("undefined");
-              //return whiteText ? whiteText.offsetHeight : 0;
-          }
-          else{
-              console.log(whiteText.clientHeight);
-          }
-      } 
+        }
     },
     watch:{
         slides:function(){
@@ -102,14 +92,14 @@ var buildingFuture= {
                             <div v-if="slide.featuredMedia" class="col-8 img-main green">
                                 <img :src="slide.featuredMedia.src" :class="[banner ? 'fill-img' : 'cropped-img']" alt="slide.alt">
                                 <div class="shadow-box"/>
-                                <h3 class="top-center" :style="titleColor(index,banner)">{{ header }}</h3>
-                                <h2 v-if=!banner class="top-left title-font shadow-text">Did You Know...</h2>
+                                <h3 class="top-center shadow-text">{{ header }}</h3>
+                                <h2 v-if=!banner class="top-left title-font shadow-text-big">Did You Know...</h2>
                                 <div v-if="!banner && slide.video" class="watch-video" @click="seturl(slide.video)">
                                     <div class="vid-button" style="margin-right: 5%;"/>
                                     <p class="body-font" style="color: #bcd1bc;">WATCH VIDEO</p>
                                 </div>
-                                <h2 class="top-left title-font">{{ slide.featuredMedia.title }}</h2>
-                                <p v-if=slide.featuredMedia.caption class="bottom-right body-font">{{ slide.featuredMedia.caption }}</p>
+                                <h2 class="top-left title-font shadow-text-big">{{ slide.featuredMedia.title }}</h2>
+                                <i v-if=slide.featuredMedia.caption class="bottom-right body-font shadow-text">{{ slide.featuredMedia.caption }}</i>
                             </div>
 
                             <div :class="['col text-side',(mono ? 'lgt-green' : 'yellow')]" :style="banner ? 'height: calc(33vh - 3em);' : 'max-height: 33vh;'">

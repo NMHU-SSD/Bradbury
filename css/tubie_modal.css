@@ -73,6 +73,7 @@
     min-width: 200px;
     border-radius: 45%;
     padding: 4em 5em;
+    white-space: pre-line;
 }
 /****** TOP ******/
 	.bs-popover-top, .bs-popover-auto[x-placement^="top"] {
@@ -133,7 +134,7 @@
 .top{
     position: absolute;
     padding: .3em;
-    font-size: 4em;
+    font-size: 3.8em;
     text-align: center;
     width: 100%;
     top:0;

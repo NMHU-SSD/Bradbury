@@ -96,8 +96,11 @@ p{
 .bluetext{
     color: darkblue;
 }
+.shadow-text-big{
+    text-shadow: 2px 2px 20px #000;
+}
 .shadow-text{
-    text-shadow: 1px 2px 10px #000010;
+    text-shadow: 1px 2px 15px #000010;
 }
 .shadow-box{
     position: absolute;
@@ -186,7 +189,6 @@ p{
 }
 .text-side{
     max-height: 33vh;
-    padding: 0 0 2em 0;
 }
 .stay{
     position: absolute;
@@ -194,6 +196,7 @@ p{
 .scrolling-text{
     height: 100%;
     margin-top: 1em;
+    padding-bottom: 2em;
     overflow-y: auto;
 }
 .img-main{
@@ -218,10 +221,10 @@ p{
     position: absolute;
     top: 3%;
     width: 100%;
-    font-size: 2em;
+    font-size: 1.7em;
     text-align: center;
     font-family: 'Karla', sans-serif;
-    color: #781214;
+    color: #FFF;
 }
 .top-left{
     position: absolute;
@@ -234,7 +237,7 @@ p{
 .bottom-right{
     position: absolute;
     max-width: 40%;
-    bottom: 4.5em;
+    bottom: 3em;
     right: 5%;
     text-align: right;
 }

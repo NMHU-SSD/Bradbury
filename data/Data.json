@@ -10,9 +10,10 @@
     },
     
     "title":{
-        "memo":"Supercomputers have large appetites for electricity and cooling, but smarter design and support strategies are making even the largest of these simulation powerhouses more sustainable.  Read more about how LANL and the supercomputing community are responding to the need for greater sustainability, while still pushing the performance envelope.",
+        "memo1":"Supercomputers have large appetites for electricity and cooling, but smarter design and support strategies are making even the largest of these simulation powerhouses more sustainable.  Read more about how LANL and the supercomputing community are responding to the need for greater sustainability, while still pushing the performance envelope.",
+        "memo2":"Supercomputers play an invaluable role in driving sustainability through research and simulations that provide us with solutions to build a sustainable future.  Learn more about how supercomputers are finding solutions to the world's most pressing challenges.",
         "tubie":{
-            "header":"How is it connected to supercomputers and the simulation capabilities they provide? ",
+            "header":"How is it connected to \nsupercomputers and the simulation capabilities they provide? ",
             "body":"\"Sustainability\" is about finding ways to meet our needs in the present without compromising the ability of future generations to meet their own needs.  It's a single term that encompasses a range of technical and social challenges—and also the opportunities we create—to improve the quality of our lives and those who will follow after us.  Explore this panel to discover more about how supercomputers play an important part in creating a sustainable future."
         },
         "slideshow":[
@@ -149,55 +150,61 @@
         "slides":[
              {
                  "title": "FEARCE software",
-                 "body": "volutpat diam ut venenatis tellus in metus vulputate eu scelerisque felis imperdiet proin fermentum leo vel orci porta non pulvinar neque laoreet suspendisse interdum consectetur libero id faucibus nisl tincidunt eget nullam non nisi est sit amet facilisis magna etiam tempor orci eu lobortis elementum nibh tellus molestie nunc non",
+                 "header":"There are over 250 million internal-combustion-engine vehicles in the United States alone.",
+                 "body": "The Fast, Easy, Accurate, and Robust Continuum Engineering (FEARCE) software developed at Los Alamos is a cost-effective near- to mid-term sustainability solution that helps automotive engineers improve and optimize engine designs through computer modeling.  \n\nBecause the FEARCE software allows engineers to simulate how possible design changes impact the efficiency of an engine (without having to build the engine in the real world), new, more efficient engines can be developed in much less time, and for lower cost.",
+                 "video": "data/videos/oceans.mp4",
 		          "featuredMedia": {
 		              "src": "data/drive/thumbnail-1.JPG",
-		              "caption": "placeholder image",
+		              "caption": "Computer simulations allow automotive engineers to develop more efficient engines by modeling what will happen inside an engine that does not yet exist.",
                       "title":"Better Engines Through Better Software?"
 		          },
                   "tubie":{
-                    "header":"This is titles",
-                    "body":"This is the body"
+                    "header":"Consider this...",
+                    "body":"What are some other, older technologies that have been given new life through a better understanding of how they work?"
                     }
 		      },
 		     {
                   "title": "Carbon capture SimCCS software",
-                  "body": "volutpat diam ut venenatis tellus in metus vulputate eu scelerisque felis imperdiet proin fermentum leo vel orci porta non pulvinar neque laoreet suspendisse interdum consectetur libero id faucibus nisl tincidunt eget nullam non nisi est sit amet facilisis magna etiam tempor orci eu lobortis elementum nibh tellus molestie nunc non",
+                  "header":"Converting carbon-dioxide emissions into a liquid and burying it deep underground has, for a long time, been an alternative to releasing greenhouse gases into the atmosphere.",
+                  "body": "Carbon capture has struggled to become economically viable.  Linking up carbon producers, like power plants and other industries, with places geologically suitable for storing the carbon underground was the biggest hurdle, until now.  \n\nThe SimCCS software, developed and distributed for free by Los Alamos, uses computer models to identify and link together the carbon sources, pipelines, and storage sinks that need to find one another.  \n\nBy being able to turn a profit from selling the carbon dioxide they produce, commercial and government agencies are incentivized to capture and dispose of greenhouse gases safely.",
+                  "video": "data/videos/oceans.mp4",
 				  "featuredMedia": {
 		              "src": "data/drive/thumbnail-2.JPG",
-		              "caption": "placeholder image",
+		              "caption": "LANL's SimCCS software identifies cost-effective links between carbon sources (red dots) with storage sinks (blue dots) using pipelines (green lines).",
                       "title":"Making Cargon Capture Practical and Profitable"
 		          },
                  "tubie":{
-                    "header":"This is titles",
-                    "body":"This is the body"
+                    "header":"Consider this...",
+                    "body":"What other seemingly small hurdles to better sustainability have been overcome with improved collaboration?"
                     }
 		              	 	 	
 		      },
              {
+                 "header":"The CICE (pronounced \"sise\") computer model simulates the growth, melt, and movement of sea ice.",
                  "title": "Los Alamos sea ice model",
-                 "body": "volutpat diam ut venenatis tellus in metus vulputate eu scelerisque felis imperdiet proin fermentum leo vel orci porta non pulvinar neque laoreet suspendisse interdum consectetur libero id faucibus nisl tincidunt eget nullam non nisi est sit amet facilisis magna etiam tempor orci eu lobortis elementum nibh tellus molestie nunc non",
+                 "body": "Elizabeth Hunke, lead developer of CICE, began development of the model at Los Alamos in 1994, with the first version being released in 1998.  Now on version 6.0 of CICE, Hunke states that \"our model is essential to helping agencies predict the polar sea conditions for developing infrastructure, shipping, and transportation plans.\"  \n\nCICE is now maintained and developed by the CICE Consortium, an international group of institutions in North America and Europe.  \n\nA key part of the Arctic predictive capability for the U.S. Navy, the National Oceanic and Atmospheric Association, and the National Ice Center, CICE is also widely used for earth-system research in academic and government institutions worldwide.",
 		          "featuredMedia": {
 		              "src": "data/drive/Elizabeth-Hunke-with-CICE-simulation.jpg",
-		              "caption": "placeholder image",
+		              "caption": "Elizabeth Hunke with a simulation of Arctic sea ice thickness produced by the Los Alamos sea ice model, CICE. Hunke’s work promotes a better understanding of how sea ice responds to and helps modulate the global climate.",
                       "title":"Modeling sea ice"
 		          },
                   "tubie":{
-                    "header":"This is titles",
-                    "body":"This is the body"
+                    "header":"Consider this...",
+                    "body":"Many physical systems shape the world around us, even if they are not always apparent. What are some other physical systems, like sea ice, that shape the world you experience?"
                     }
 		      },
              {
                  "title": "Coastal erosion",
-                 "body": "volutpat diam ut venenatis tellus in metus vulputate eu scelerisque felis imperdiet proin fermentum leo vel orci porta non pulvinar neque laoreet suspendisse interdum consectetur libero id faucibus nisl tincidunt eget nullam non nisi est sit amet facilisis magna etiam tempor orci eu lobortis elementum nibh tellus molestie nunc non",
+                 "header":"As sea levels rise, the rapid erosion of US coastlines impacts national security, threatening power stations, water-treatment facilities, and military bases.",
+                 "body": "Most extreme weather models do not take the threat into account.  The Los Alamos-developed NESMA (New Science for Multisector Adaptation) computer model uses complex algorithms (instructions that tell a computer how to solve a problem) and machine learning (the ability of a computer program to improve through experience, without needing to be programmed) to simulate the impact of coastline erosion on the infrastructure we depend upon.  \n\nHaving access to this information allows policy makers to prevent and reduce the severity of property damage, power outages, and other consequences of erosion.  According to Donatella Pasqualini, leader of the NeSMA team, the model forecasts \"every imaginable situation, which helps you understand the things you could do to best prepare.\"",
+                 "video": "data/videos/oceans.mp4",
 		          "featuredMedia": {
 		              "src": "data/drive/thumbnail-3.JPG",
-		              "caption": "placeholder image",
                       "title":"Modeling Eroding Coastlines to Prepare for Hurricanes"
 		          },
                   "tubie":{
-                    "header":"This is titles",
-                    "body":"This is the body"
+                    "header":"Consider this...",
+                    "body":"How has being forewarned of a potential problem helped you prevent it, or at least keep it from becoming worse than it could have been?"
                     }
 		      }
         ],
@@ -205,50 +212,53 @@
             [
                 {
                 "title":"Deflecting an asteroid",
-                "header":"...In 2007, Los Alamos computer scientist volutpat diam ut venenatis tellus in metus vulputate eu scelerisque felis imperdiet proin fermentum leo vel orci porta non pulvinar?",
-                "body":"volutpat diam ut venenatis tellus in metus vulputate eu scelerisque felis imperdiet proin fermentum leo vel orci porta non pulvinar neque laoreet suspendisse interdum consectetur libero id faucibus nisl tincidunt eget nullam non nisi est sit amet facilisis magna etiam tempor orci eu lobortis elementum nibh tellus molestie nunc non",
+                "header":"...That asteroids and other Near-Earth Objects vary wildly in composition, density, and behavior?",
+                "body":"Knowing how to deflect a potential killer requires fast and accurate computer modeling for every object.",
+                "video": "data/videos/oceans.mp4",
                 "featuredMedia":{
                     "src": "data/drive/thumbnail-4.JPG"
                     },
                 "tubie":{
-                    "header":"This is titles",
-                    "body":"This is the body"
+                    "header":"Consider this...",
+                    "body":"What are some other technical challenges where a one-size-fits-all solution is not the best solution?"
                     }
                 },
                 {
                 "title":"Cray-2",
-                "header":"...In 2007, Los Alamos computer scientist volutpat diam ut venenatis tellus in metus vulputate eu scelerisque felis imperdiet proin fermentum leo vel orci porta non pulvinar?",
-                "body":"volutpat diam ut venenatis tellus in metus vulputate eu scelerisque felis imperdiet proin fermentum leo vel orci porta non pulvinar neque laoreet suspendisse interdum consectetur libero id faucibus nisl tincidunt eget nullam non nisi est sit amet facilisis magna etiam tempor orci eu lobortis elementum nibh tellus molestie nunc non",
+                "header":"...That fluid-flow simulations on a Cray-2 supercomputer of the 1980s allowed Dow Chemical to design a disposable diaper that was superabsorbent, yet used less material (and sent less to the landfill) than previous diapers?",
+                "body":"Supercomputers, like this iconic Cray-2 from the 1980s, have made many parts of our lives more sustainable without us realizing, including disposable diapers!",
                 "featuredMedia":{
                     "src": "data/drive/cray-2.JPG"
                     },
                 "tubie":{
-                    "header":"This is titles",
-                    "body":"This is the body"
+                    "header":"Consider this...",
+                    "body":"What are some other ways that computers have had a positive impact on sustainability in your life?"
                     }
                 },
                 {
                 "title":"Real data for better models",
-                "header":"...In 2007, Los Alamos computer scientist volutpat diam ut venenatis tellus in metus vulputate eu scelerisque felis imperdiet proin fermentum leo vel orci porta non pulvinar?",
-                "body":"volutpat diam ut venenatis tellus in metus vulputate eu scelerisque felis imperdiet proin fermentum leo vel orci porta non pulvinar neque laoreet suspendisse interdum consectetur libero id faucibus nisl tincidunt eget nullam non nisi est sit amet facilisis magna etiam tempor orci eu lobortis elementum nibh tellus molestie nunc non",
+                "header":"...LANL’s Atmosphere, Climate, and Ecosystem Science Team (ACES) engages in experimental and observational research, from wildfire emissions to permafrost melting?",
+                "body":"The collected data on real-world environmental processes is used to build and calibrate better computer models of the impacts of climate change, ensuring that LANL's climate models are accurate and reliable.",
                 "featuredMedia":{
-                    "src": "data/drive/ACES-team-members-sample-snow-pits.jpg"
+                    "src": "data/drive/ACES-team-members-sample-snow-pits.jpg",
+                    "caption":"ACES team members sample snow pits to understand the interconnection of permafrost melting with changes in climate and the ecosystem."
                     },
                 "tubie":{
-                    "header":"This is titles",
-                    "body":"This is the body"
+                    "header":"Consider this...",
+                    "body":"What are some other areas where science and computing support each other?"
                     }
                 },
                 {
                 "title":"Better climate models?\nJust add ice",
-                "header":"...In 2007, Los Alamos computer scientist volutpat diam ut venenatis tellus in metus vulputate eu scelerisque felis imperdiet proin fermentum leo vel orci porta non pulvinar?",
-                "body":"volutpat diam ut venenatis tellus in metus vulputate eu scelerisque felis imperdiet proin fermentum leo vel orci porta non pulvinar neque laoreet suspendisse interdum consectetur libero id faucibus nisl tincidunt eget nullam non nisi est sit amet facilisis magna etiam tempor orci eu lobortis elementum nibh tellus molestie nunc non",
+                "header":"...Supercomputers provide the number-crunching muscle to model the Earth’s complex global climate?",
+                "body":"LANL scientists used the Lab’s supercomputers to couple multiple models of Antarctic ice-sheet movement to sharpen the predictive capabilities of global-climate models.  Predictive models improve our understanding of climate change, and help us mitigate its impact.",
                 "featuredMedia":{
-                    "src": "data/drive/Better-Climate-Models.jpg"
+                    "src": "data/drive/Better-Climate-Models.jpg",
+                    "caption":"Coupling ice-sheet models with climate models improves the predictive abilities of both."
                     },
                 "tubie":{
-                    "header":"This is titles",
-                    "body":"This is the body"
+                    "header":"Consider this...",
+                    "body":"Understanding climate change is only the first step.  How can the predictive abilities of supercomputer models help us find solutions?"
                     }
                 }
             ]
