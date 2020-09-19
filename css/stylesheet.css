@@ -95,8 +95,12 @@ p{
     src: url(../assets/fonts/Open_Sans/OpenSans-Light.ttf);
 }
 @font-face{
+    font-family:Open-Sans-Bold;
+    src: url(../assets/fonts/Open_Sans/OpenSans-Bold.ttf);
+}
+@font-face{
     font-family:Oswald;
-    src: url(../assets/fonts/Oswald/Oswald-Bold.ttf);
+    src: url(../assets/fonts/Oswald/static/Oswald-Light.ttf);
 }
 @font-face{
     font-family:Roboto-Cond;
@@ -109,7 +113,7 @@ p{
     font-size: 1em;
 }
 .content-title{
-    font-size: 2em;
+    font-size: 1.7em;
 }
 .title-font{
     color: white;
@@ -270,6 +274,7 @@ p{
 }
 .watch-video p{
     margin: 0 0;
+    font-family: Open-Sans-Bold;
 }
 .vid-button{
     background: url(/assets/tubie/tubie_info.png) no-repeat;

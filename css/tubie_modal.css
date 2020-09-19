@@ -134,8 +134,10 @@
 }
 .top{
     position: absolute;
+    font-weight: bold;
+    font-family: 'Oswald', sans-serif;
     padding: .3em;
-    font-size: 3.8em;
+    font-size: 4.7em;
     text-align: center;
     width: 100%;
     top:0;
@@ -146,6 +148,8 @@
     top: 30%;
     left: 50%;
     margin-right: 5em;
+    padding: 1em;
+    background-color: rgba(0,0,0,0.5);
     font-size: 1.2em;
 }
 .slideshow-container img{

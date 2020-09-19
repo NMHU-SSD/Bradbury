@@ -111,7 +111,7 @@ var buildingFuture= {
                                   <div :class="['margins stay',(mono ? 'lgt-green' : 'yellow')]">
                                     <p v-if="slide.header" :id="'header'+id+index" class="content-header shadow-text" @click="getHeight(index)">{{ slide.header }}</p>
                                     <div v-if="banner && slide.video" class="watch-video" @click="seturl(slide.video)">
-                                        <div class="vid-button" style="margin-right: 15%;"/>
+                                        <div class="vid-button"/>
                                         <p class="body-font" style="color: #781214;">WATCH VIDEO</p>
                                     </div>
                                   </div>
