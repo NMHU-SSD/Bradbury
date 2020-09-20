@@ -10,7 +10,7 @@
         <link href="libraries/videojs/video-js.css" rel="stylesheet">
         <link href="libraries/videojs-overlay/videojs-overlay.css" rel="stylesheet">
         <!-- CSS --->
-
+        <link href="css/general.css" rel="stylesheet">
     <title>Transformative Computing</title>
   </head> 
   <body>	
@@ -21,6 +21,9 @@
             <modal-overlay id="modalTimer" exitout="true" :countdown="timeData.quitout" :message="timeData.message" ref="timeModal"></modal-overlay---> 
             
             <!--- Main Layout components---->
+            <carousel-comp id="top" :slides="sample.slideshow"></carousel-comp>
+            
+            
             
         </main>
       </div>
@@ -40,6 +43,8 @@
     <!-- Vue Components -->
       <script src="components/tubieOverlay.vue.js"></script>
       <script src="components/modalOverlay.vue.js"></script>
+      <script src="components/carouselComp.vue.js"></script>
+      <script src="components/rdComp.vue.js"></script>
 	<!-- Vue App / Router -->
 	<script src="app.js"></script>
 	

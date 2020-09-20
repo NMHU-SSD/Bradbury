@@ -1,22 +1,19 @@
 //register components
-Vue.component('building-future', buildingFuture)
-Vue.component('slideshow-component', slideshowComponent)
 Vue.component('tubie-overlay', tubieOverlay)
 Vue.component('modal-overlay', modalOverlay)
+Vue.component('carousel-comp', carouselComp)
+Vue.component('rd-comp', rdComp)
 
 
 //Vue
 var app = new Vue({
     el: '#app',
     data:{
-        title:"",
-        drive:"",
-        sustainable:"",
         timeData:"",
+        sample:"",
         t: null,
         afk: null,
-        active:null,
-        firstData:true
+        active:null
     },
     mounted: function(){
         this.GetData();
@@ -30,10 +27,8 @@ var app = new Vue({
             })
             .then(response => response.json())
             .then(data =>{
+                this.sample = data.sample;
                 this.timeData = data.timeData;
-                this.title = data.title;
-                this.drive = data.drive;
-                this.sustainable = data.sustainable;
             })
             .catch((error) => {
                 console.error('Error:', error);

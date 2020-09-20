@@ -1,0 +1,26 @@
+{
+    "timeData":{
+        "slideshow":5000,
+        "timeout":30000,
+        "quitout":10000,
+        "message":{
+            "header":"Are you still there?",
+            "body":"Please touch the screen in "
+        },
+        "videotimer":10000
+    },
+    "sample":{
+        "slideshow":
+        [
+            {
+                "img":"data/slideshowImages/CoolingTrinity.jpg"
+            },
+            {
+                "img":"data/slideshowImages/InstallingRoadrunner.jpg"
+            },
+            {
+                "img":"data/slideshowImages/WiringTrinityCluster.jpg"
+            }
+        ]
+    }
+}
