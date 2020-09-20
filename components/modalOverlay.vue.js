@@ -111,9 +111,10 @@ var modalOverlay= {
             this.nextVid=null;
             this.player.pause();
             this.player.src('');
+            this.player.muted(false);
             this.source=false;
             this.$emit('stopvideo');
-            console.log("video closed");
+            //console.log("video closed");
         },
         endOfVideo:function(){
             //console.log('video ended');

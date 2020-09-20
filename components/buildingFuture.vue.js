@@ -14,10 +14,9 @@ var buildingFuture= {
     },
     methods:{
         reset:function(){
-            console.log(this.id);
+            //console.log(this.id);
             this.first=true;
             this.end=false;
-            //this.count=0;
             $("#carousel-"+this.id).carousel(0);
             this.jumpSlide(0);
         },
@@ -93,7 +92,7 @@ var buildingFuture= {
                     <div :class="['carousel-item', (index==0 ? 'active' : '')]" >
                         <div class="row no-gutters">
 
-<!--- Base Layout Appearence --->
+                    <!--- Base Layout Appearence --->
                             <div v-if="slide.featuredMedia" class="col-8 img-main green">
                                 <img :src="slide.featuredMedia.src" :class="[banner ? 'fill-img' : 'cropped-img']" alt="slide.alt">
                                 <div class="shadow-box"/>
@@ -127,7 +126,7 @@ var buildingFuture= {
                                   </div>
                         </div>
                     </div>
-<!--- End layout ---->
+                    <!--- End layout ---->
                         <div class="tubie-container-left" :style="banner ? 'bottom: 3em;' : 'bottom: 0;'">
                             <tubie-overlay :id="'tubie-'+id+index" :display="slide.tubie"/>
                         </div>

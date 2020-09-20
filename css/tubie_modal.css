@@ -123,6 +123,9 @@
 .modal-title{
     font-size: 2em;
 }
+.modal-body{
+    font-size: 2em;
+}
 .close{
     font-size: 3em;
 }
@@ -163,5 +166,5 @@
 /*************** video JS ***********/
 .video-js {
     margin: 0 auto !important;
-    font-size: 1.3em;
+    font-size: 1em;
 }

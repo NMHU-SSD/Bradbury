@@ -25,11 +25,11 @@
             
             <!--- Main Layout components---->
             <slideshow-component id="slideshow" :images="title.slideshow" :title1="drive.header" :title2="sustainable.header" :memo1="title.memo1" :memo2="title.memo2" :tubie="title.tubie" :speed=timeData.slideshow @switchout="switchData"></slideshow-component>
-            <building-future v-show=firstData id="index" :slides="sustainable.slides" :header="sustainable.header" banner=true buddy="dyk" @seturl="displayVideo($event)" ref="style1"></building-future>
-            <building-future v-show=firstData id="dyk" :slides="sustainable.didYouKnow" :header="sustainable.header" @seturl="displayVideo($event)"></building-future>
+            <building-future v-show=showData id="index" :slides="sustainable.slides" :header="sustainable.header" banner=true buddy="dyk" @seturl="displayVideo($event)" ref="style1"></building-future>
+            <building-future v-show=showData id="dyk" :slides="sustainable.didYouKnow" :header="sustainable.header" @seturl="displayVideo($event)"></building-future>
             <!--- Second Data set---->
-            <building-future v-show=!firstData id="index2" :slides="drive.slides" :header="drive.header"  banner=true buddy="dyk2" mono=true @seturl="displayVideo($event)" ref="style2"></building-future>
-            <building-future v-show=!firstData id="dyk2" :slides="drive.didYouKnow" :header="drive.header" mono=true @seturl="displayVideo($event)"></building-future>
+            <building-future v-show=!showData id="index2" :slides="drive.slides" :header="drive.header"  banner=true buddy="dyk2" mono=true @seturl="displayVideo($event)" ref="style2"></building-future>
+            <building-future v-show=!showData id="dyk2" :slides="drive.didYouKnow" :header="drive.header" mono=true @seturl="displayVideo($event)"></building-future>
         </main>
       </div>
 

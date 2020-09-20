@@ -16,11 +16,11 @@ var app = new Vue({
         t: null,
         afk: null,
         active:null,
-        firstData:true
+        showData:true
     },
     mounted: function(){
         this.GetData();
-        //this.resetTimer();
+        this.resetTimer();
     },
     
     methods:{
@@ -60,10 +60,10 @@ var app = new Vue({
             this.afk = setTimeout(this.toDefault, this.timeData.quitout);
         },
         toDefault:function(){
-            //this.active=false;
+            this.showData = true;
+            this.$refs.style1.reset();
+            this.$refs.style2.reset();
             console.log("toDefault");
-            //this.$refs[this.computeId].reset();
-            //this.$refs[this.historyId].reset();
         },
         displayModal:function(){
             $('#'+'modalTimer').modal();
@@ -96,17 +96,18 @@ var app = new Vue({
         //video modal popups
         videoModalClose:function(){
             this.active=true;
+            this.resetTimer();
             /*if(this.stillActive){
                 this.resetTimer();
             }*/
         },
         switchData:function(){
-            if(this.firstData){
+            if(this.showData){
                 this.$refs.style1.reset();
             }
             else{this.$refs.style2.reset();}
-            this.firstData = !this.firstData;
-            console.log(this.firstData);
+            this.showData = !this.showData;
+            console.log(this.showData);
         }
     }
 })
