@@ -158,49 +158,49 @@
             "videos":
             [
                 {
-                    "link":"https://vjs.zencdn.net/v/oceans.mp4",
+                    "link":"data/videos/mov_bbb.mp4",
                     "type": "video/mp4",
                     "img":"data/images/WACs%20Los%20Alamos%202.jpg",
                     "alt":"",
                     "videoTitle":"videoTest"
                 },
                 {
-                    "link":"https://vjs.zencdn.net/v/oceans.mp4",
+                    "link":"data/videos/mov_bbb.mp4",
                     "type": "video/mp4",
                     "img":"data/images/001%20Cray%201%201977.jpg",
                     "alt":"",
                     "videoTitle":"video1"
                 },
                 {
-                    "link":"https://vjs.zencdn.net/v/oceans.mp4",
+                    "link":"data/videos/mov_bbb.mp4",
                     "type": "video/mp4",
                     "img":"data/images/Ann%20Hayes%20LA%2011216%20MS%20page%2024%20(3).jpg",
                     "alt":"",
                     "videoTitle":"video2"
                 },
                 {
-                    "link":"https://vjs.zencdn.net/v/oceans.mp4",
+                    "link":"data/videos/mov_bbb.mp4",
                     "type": "video/mp4",
                     "img":"data/images/Lois%20Cook%20Leurgans.jpg",
                     "alt":"",
                     "videoTitle":"video3"
                 },
                 {
-                    "link":"https://vjs.zencdn.net/v/oceans.mp4",
+                    "link":"data/videos/mov_bbb.mp4",
                     "type": "video/mp4",
                     "img":"data/images/Cindy%20Martin%20and%20Joann%20Campbell.jpg",
                     "alt":"",
                     "videoTitle":"video4"
                 },
                 {
-                    "link":"https://vjs.zencdn.net/v/oceans.mp4",
+                    "link":"data/videos/mov_bbb.mp4",
                     "type": "video/mp4",
                     "img":"data/images/WACs%20Los%20Alamos%202.jpg",
                     "alt":"",
                     "videoTitle":"video5"
                 },
                 {
-                    "link":"https://vjs.zencdn.net/v/oceans.mp4",
+                    "link":"data/videos/mov_bbb.mp4",
                     "type": "video/mp4",
                     "img":"data/images/WACs%20Los%20Alamos%202.jpg",
                     "alt":"",
