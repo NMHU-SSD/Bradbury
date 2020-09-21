@@ -12,6 +12,11 @@
     background-color: yellow;
     border-radius: 50%;
 }
+.circle h3{
+    white-space: pre-line;
+    line-height: 1em;
+    font-size: 1.3em;
+}
 .left-circle{
     left: 5%;
     bottom: 15%;
@@ -20,11 +25,24 @@
     left: 40%;
     top: 10%;
 }
+.left-circle h3{
+    margin-top: 50%;
+}
+.right-circle h3{
+    margin-top: 60%;
+    margin-left: 15%;
+}
+.arrows{
+    height: 60%;
+    width: 30%;
+    float: left;
+    margin-top: 10%;
+}
 .left-arrow{
     background: url(../assets/customs/Arrow-left.svg)no-repeat;
-    height: 60%;
+    margin-left: 10%;
 }
 .right-arrow{
     background: url(../assets/customs/Arrow-right.svg)no-repeat;
-    height: 60%;
+    margin-left: 25%;
 }

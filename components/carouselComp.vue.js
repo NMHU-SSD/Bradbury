@@ -94,12 +94,12 @@ var carouselComp= {
                                 <div class="title"></div>
                                 <p class="text-box"></p>
                                 <div class="left-circle circle">
-                                    <h3>where\n we've been</h3>
-                                    <div class="left-arrow"></div>
+                                    <div class="arrows left-arrow"></div>
+                                    <h3>where\nwe've been</h3>
                                 </div>
                                 <div class="right-circle circle">
+                                    <div class="arrows right-arrow"></div>
                                     <h3>where\nwe're headed</h3>
-                                    <div class="right-arrow"></div>
                                 </div>
                             </div>
                     <!--- End layout ---->
