@@ -45,13 +45,33 @@ body{
     font-family: 'SerifBlack';
     src: url(assets/MuseumFonts2012/SerifBla.otf);
 }
-
+/********** Google Fonts ********/
+@font-face{
+    font-family: Anton;
+    src: url(../assets/fonts/Anton/Anton-Regular.ttf);
+}
+@font-face{
+    font-family:Open-Sans;
+    src: url(../assets/fonts/Open_Sans/OpenSans-Light.ttf);
+}
+@font-face{
+    font-family:Open-Sans-Bold;
+    src: url(../assets/fonts/Open_Sans/OpenSans-Bold.ttf);
+}
+@font-face{
+    font-family:Oswald;
+    src: url(../assets/fonts/Oswald/static/Oswald-Light.ttf);
+}
+@font-face{
+    font-family:Roboto-Cond;
+    src: url(../assets/fonts/Roboto_Condensed/RobotoCondensed-Regular.ttf);
+}
 /********** Text Fonts ********/
 .title-font{
-    font-family: 'Anton', sans-serif;
+    font-family: Anton;
 }
 .body-font{
-    font-family: 'Oswald', sans-serif;
+    font-family: Oswald;
 }
 .content-body{
     font-size: calc(14px + 1vw);
@@ -60,7 +80,7 @@ body{
     margin-top: 20px;
     overflow: hidden;
     color: white;
-    font-family: 'Oswald', sans-serif;
+    font-family: Oswald;
     font-weight: 300;
     white-space: pre-line;
 }

@@ -6,7 +6,7 @@
  */
 .video-js .vjs-overlay{
     color:#fff;position:absolute;text-align:center;
-    font-size: calc(14px + 1.5vw);z-index: 0;
+    font-size: calc(14px + 2vw);z-index: 0;
 }
 .video-js .vjs-overlay-no-background{margin:.5em; max-width:10em}
 .video-js .vjs-overlay-background{background-color:#535966;background-color:rgba(61,66,77,0.4);border-radius:.3em;padding:.5em; max-width: 10em; border: 0.07em solid #fff}
