@@ -1,0 +1,122 @@
+.sum-row{
+    height: 50%;
+    padding-top: 2%;
+}
+.rd-logo{
+    width:25vw;
+    height:25vw;
+    padding:0 0 0 5%;
+}
+.rd-text-box{
+    height: 70%;
+    margin: auto 0;
+}
+.cover-holder{
+    height: 40%;
+    width: 100%;
+    margin: 0 auto;
+}
+.cover{
+    height: 100%;
+    width: 100%;
+}
+.cover img{
+    object-fit: contain;
+    border: solid .2em #c6bf18;
+    max-height: 100%;
+    margin-left: 10%;
+}
+.cover-arrow{
+    height: 90%;
+    width: 100%;
+    background: url(../assets/customs/Arrow-right.svg)no-repeat;
+}
+
+/***** Modal ****/
+.modal{
+    max-width: 100%;
+    padding-right: 0px !important;
+    font-size: 24px;
+}
+.modal-open{
+    padding-right: 0px !important;
+}
+.modal-backdrop.show {
+    opacity: 0.75;
+}
+.modal-dialog{
+    max-width: 100vw;
+    width: 26em;
+    margin: auto;
+    overflow-y: auto;
+}
+.modal-body{
+    font-size: 2em;
+    height: 20em;
+    padding: 0;
+}
+/****** Modal carousel *****/
+.main-page{
+}
+.page-cover{
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: contain;
+}
+.ribbon{
+    position: relative;
+    height: 10%;
+}
+.ribbon img{
+    width: 35%;
+    height: 100%;
+}
+.banner{
+    height: 5%;
+}
+/*****carousel indicators*/
+.carousel, .carousel-inner,.carousel-item,.main-page{
+    background-color: #000;
+    height: 100%;
+}
+.carousel .carousel-indicators{
+    height: .5em;
+}
+.carousel .carousel-indicators li{
+    height: .5em;
+    width: .5em;
+    border-radius: 50%;
+    background-color: #e0da58;
+    border: 0.1em solid #fff;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+.carousel-indicators li.active{
+    background-color: #BBC356;
+    border: 0.1em solid #4a6c6a;
+}
+/****** Tubie ******/
+.tubie-container{
+    background: url(/assets/tubie/Tubie-orangebkgd-left.svg) no-repeat;
+    background-position: bottom right;
+    height: 3em;
+    width: 6em;
+    position: absolute;
+    bottom: 0;
+    right: -3em;
+    z-index: 7;
+}
+.tubie-wrapper{
+    width: 90%;
+    height: 100%;
+    margin: 0 auto;
+}
+.tubie-img{
+    background: url(/assets/tubie/tubie_info.png) no-repeat;
+    background-position: bottom left;
+    background-size: contain;
+    height: 80%;
+    width: 40%;
+    margin-top: 10%;
+    outline: none;
+}

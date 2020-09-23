@@ -22,5 +22,19 @@
                 "img":"data/slideshowImages/WiringTrinityCluster.jpg"
             }
         ]
+    },
+    "rd100":{
+        "covers":
+        [
+            {
+                "img":"data/rd100/R&D100icon-hardware.jpg"
+            },
+            {
+                "img":"data/rd100/R&D100icon-networking.jpg"
+            },
+            {
+                "img":"data/rd100/R&D100icon-software.jpg"
+            }
+        ]
     }
 }

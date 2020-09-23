@@ -3,7 +3,7 @@ Vue.component('tubie-overlay', tubieOverlay)
 Vue.component('modal-overlay', modalOverlay)
 Vue.component('carousel-comp', carouselComp)
 Vue.component('rd-comp', rdComp)
-
+Vue.component('info-overlay', infoOverlay)
 
 //Vue
 var app = new Vue({
@@ -11,6 +11,7 @@ var app = new Vue({
     data:{
         timeData:"",
         sample:"",
+        rd100:"",
         t: null,
         afk: null,
         active:null
@@ -29,6 +30,7 @@ var app = new Vue({
             .then(data =>{
                 this.sample = data.sample;
                 this.timeData = data.timeData;
+                this.rd100=data.rd100;
             })
             .catch((error) => {
                 console.error('Error:', error);
@@ -77,6 +79,10 @@ var app = new Vue({
             //console.log(info);
             this.$refs.modalVideo.geturl(info);
             $('#modalVideo').modal();
+        },
+        displayCover:function(index){
+            this.$refs.modalInfo.getCover(index);
+            $('#modalInfo').modal();
         },
         //getter and setter videos
         passVids:function(videos){

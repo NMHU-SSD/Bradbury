@@ -8,8 +8,7 @@ var carouselComp= {
             videoData: null,
             first:true,
             end: false,
-            count:0,
-            height:0
+            count:0
         }
     },
     methods:{
@@ -89,17 +88,17 @@ var carouselComp= {
                 <template v-for="(slide, index) in slides">
                     <div :class="['carousel-item', (index==0 ? 'active' : '')]" >
                     <!--- Base Layout Appearence --->
-                            <div class="background">
+                            <div class="background green size">
                                 <img>
                                 <div class="title"></div>
-                                <p class="text-box"></p>
+                                <p class="title-text-box half-shadow"></p>
                                 <div class="left-circle circle">
                                     <div class="arrows left-arrow"></div>
-                                    <h3>where\nwe've been</h3>
+                                    <h3 class="title-font">where\nwe've been</h3>
                                 </div>
                                 <div class="right-circle circle">
                                     <div class="arrows right-arrow"></div>
-                                    <h3>where\nwe're headed</h3>
+                                    <h3 class="title-font">where\nwe're headed</h3>
                                 </div>
                             </div>
                     <!--- End layout ---->

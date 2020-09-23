@@ -1,15 +1,10 @@
 var rdComp= {
     name: "rd-comp",
-    props: ['id', 'slides'],
+    props: ['id', 'covers'],
     data:function(){
         return{
             slideImages: null,
-            infoSlides:null,
-            videoData: null,
-            first:true,
-            end: false,
-            count:0,
-            height:0
+            infoSlides:null
         }
     },
     methods:{
@@ -22,6 +17,9 @@ var rdComp= {
         },
         seturl:function(url){
             this.$emit('seturl', url);
+        },
+        setcover:function(index){
+            this.$emit('setcover', index);
         },
         selected:function(){
             console.log("selected");
@@ -74,7 +72,7 @@ var rdComp= {
             return styling+upCase;
         }
     },
-    watch:{
+    /*watch:{
         slides:function(){
             if(this.slides!=null){
                 this.slideImages = this.slides[0].media;
@@ -82,29 +80,19 @@ var rdComp= {
                 //console.log(this.scrollHeight);
             }
         }
-    },
+    },*/
     template:
-    `<div :id="'carousel-'+id" class="carousel" data-wrap="false" data-interval="false">
-            <div class="carousel-inner">
-                <template v-for="(slide, index) in slides">
-                    <div :class="['carousel-item', (index==0 ? 'active' : '')]" >
-                    <!--- Base Layout Appearence --->
-                            <div class="background">
-                                <img scr="../data/">
-                                <div class="title"></div>
-                                <p class="text-box"></p>
-                                <div class="left-cirle">
-                                    <h3>where\n we've been</h3>
-                                    <div class="left-arrow"></div>
-                                </div>
-                                <div class="right-circle">
-                                    <h3>where\nwe're headed</h3>
-                                    <div class="right-arrow"></div>
-                                </div>
-                            </div>
-                    <!--- End layout ---->
-                    </div>          
-                </template>
-            </div>
-        </div>`
+    `<div :id="id" class="background size red">
+        <div class="row sum-row">
+            <img src="" class="col-4 rd-logo">
+            <p class="col rd-text-box half-shadow"></p>
+        </div>
+        <div class="cover-holder row no-gutters">
+            <template v-for="(cover, index) in covers">
+                <div class="col-4 cover">
+                    <img :src="cover.img" @click="setcover(index)">
+                </div>
+            </template>
+        </div>
+    </div>`
 }
