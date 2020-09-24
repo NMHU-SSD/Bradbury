@@ -2,6 +2,13 @@ body{
     background-color: black;
     font-size: calc(8px + 1.2vw);
 }
+/*
+body, main, #app{
+    max-height: 3840px;
+    max-width:2160px;
+    height: 177.7vw;
+    width: 100vw;
+}*/
 p{
     white-space: pre-line;
 }
