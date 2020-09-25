@@ -12,7 +12,7 @@
 
 /**********General Basics***********/
 #titleBar{
-    height: auto;
+    height:13.35vw;
     max-height: calc(3840px * .075);
 }
 #carouselComputing{
@@ -29,7 +29,8 @@
 /********* 4K Monitor **********/
 @media only screen and (min-width:2159px){
     #titleBar{
-        height: 7.5vh;
+        /*height: 7.5vh;*/
+        
     }
     #carousel-carouselComputing, #carouselComputing{
         height: 20vh !important;
@@ -88,9 +89,11 @@
         height: 40vw;
         min-height: 400px;
         max-height: 1200px;
+        height: 35.6vw;
     }
     #timeline{
         min-height: 400px;
         max-height: 40%;
+        height: 90vw;
     }
 }
