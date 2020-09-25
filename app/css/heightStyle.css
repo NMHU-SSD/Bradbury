@@ -89,11 +89,9 @@
         height: 40vw;
         min-height: 400px;
         max-height: 1200px;
-        height: 35.6vw;
     }
     #timeline{
         min-height: 400px;
         max-height: 40%;
-        height: 90vw;
     }
 }
