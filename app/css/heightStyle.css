@@ -29,7 +29,7 @@
 /********* 4K Monitor **********/
 @media only screen and (min-width:2159px){
     #titleBar{
-        /*height: 7.5vh;*/
+        height: 7.5vh;
         
     }
     #carousel-carouselComputing, #carouselComputing{
