@@ -90,6 +90,10 @@ p{
     font-size: 1em;
 }
 /******** Shadows ********/
+.shadow-scroll{
+    box-shadow: inset 0em -4em 2em -1em #284b49;
+    transition: .3s;
+}
 .shadow-text-big{
     text-shadow: 2px 2px 20px #000;
 }
@@ -105,6 +109,9 @@ p{
     height: 100%;
     z-index: 1;
     pointer-events: none;
+}
+.removed{
+    transition: 0.5s;
 }
 /********** Animation ***********/
 .fade-animation{

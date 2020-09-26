@@ -16,13 +16,13 @@ var slideshowComponent={
     methods:{
         switchOut:function(){
             this.head= !this.head;
-            console.log(this.head);
+            //console.log(this.head);
             this.$emit('switchout');
         },
         slideshow:function(){
             //console.log("slideshow");
             var fadeId = $('#'+this.id);
-            $(fadeId).css('filter', 'brightness(0)');
+            //$(fadeId).css('filter', 'brightness(0)');
             setTimeout(this.changeImg, 1000);
             setTimeout(function(){
                 $(fadeId).css('filter', 'brightness(50%)')}, 1000);
@@ -34,8 +34,6 @@ var slideshowComponent={
             this.currentImg = this.images[this.index].img;
             if(this.images[this.index].position){
                 $(slideId).css('object-position', this.images[this.index].position);
-            }else{
-                $(slideId).css('object-position', 'center');
             }
             if(this.index < this.images.length-1){
                 this.index++;
@@ -49,12 +47,12 @@ var slideshowComponent={
             
             var slideId = $('#'+this.id);
             this.currentImg = this.images[this.index].img;
-            console.log(this.speed);
-                if(this.images[this.index].position){
-                    $(slideId).css('object-position', this.images[this.index].position);
-                }
-                this.index++;
-                setTimeout(this.slideshow, this.speed);
+            //console.log(this.speed);
+            if(this.images[this.index].position){
+                $(slideId).css('object-position', this.images[this.index].position);
+            }
+            this.index++;
+            //setTimeout(this.slideshow, this.speed);
             //:style="'animation: kenburns 20s infinite'"
         }
     },
@@ -80,7 +78,7 @@ var slideshowComponent={
         <div v-show=head class="center body-font shadow-text">{{ memo1 }}</div>
         <div v-show=!head class="center body-font shadow-text">{{ memo2 }}</div>
         <div class="tubie-container">
-            <tubie-overlay id="tubie-show" :display="tubie"/>
+            <tubie-overlay id="tubie-show" :display="tubie" spec="def"/>
         </div>
         <div class="banner red">
             <div class="next-section" @click="switchOut()"></div>

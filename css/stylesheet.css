@@ -132,7 +132,6 @@
 .bottom-right{
     position: absolute;
     max-width: 40%;
-    bottom: 3em;
     right: 5%;
     text-align: right;
 }

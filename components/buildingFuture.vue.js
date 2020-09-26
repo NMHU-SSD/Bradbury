@@ -8,9 +8,14 @@ var buildingFuture= {
             videoData: null,
             first:true,
             end: false,
+            scrollEnd: false,
+            canScroll:true,
             count:0,
             height:0
         }
+    },
+    updated:function(){
+        this.getScroll();
     },
     methods:{
         reset:function(){
@@ -55,6 +60,26 @@ var buildingFuture= {
             }else{
                 this.end=false;
                 this.first=false;
+            }
+        },
+        handleScroll: function(el) {
+            if((el.srcElement.offsetHeight + el.srcElement.scrollTop) >= el.srcElement.scrollHeight) {
+                this.scrollEnd = true;
+            }else{
+                this.scrollEnd = false;
+            }
+            //console.log(el.srcElement, el.srcElement.offsetHeight, el.srcElement.scrollHeight);
+        },
+        getScroll:function(){
+            for(index in this.slides){
+                var ele = 'text'+this.id+index;
+                let c_height =document.getElementById(ele).clientHeight;
+                let s_height =document.getElementById(ele).scrollHeight;
+                console.log(ele, "heights: ", s_height, c_height);
+                if(s_height <= c_height){
+                    this.canScroll= false;
+                }
+                console.log(this.canScroll);
             }
         },
         textsideColor(){
@@ -103,7 +128,7 @@ var buildingFuture= {
                                     <p class="body-font" style="color: #bcd1bc;">WATCH VIDEO</p>
                                 </div>
                                 <h2 class="top-left title-font shadow-text-big">{{ slide.featuredMedia.title }}</h2>
-                                <i v-if=slide.featuredMedia.caption class="bottom-right body-font shadow-text">{{ slide.featuredMedia.caption }}</i>
+                                <i v-if=slide.featuredMedia.caption class="bottom-right body-font shadow-text" :style="banner ? 'bottom: 5em;' : 'bottom: 2em;'">{{ slide.featuredMedia.caption }}</i>
                             </div>
 
                             <div :class="['col text-side',(mono ? 'lgt-green' : 'yellow')]" :style="banner ? 'height: calc(33vh - 3em);' : 'height: 33vh;'">
@@ -115,7 +140,7 @@ var buildingFuture= {
                                     </div>
                                   </div>
 
-                                  <div class="scrolling-text margins">
+                                  <div :id="'text'+id+index" :class="['scrolling-text margins',(canScroll && !scrollEnd ? 'shadow-scroll': 'removed')]" @scroll="handleScroll">
                                     <p v-if="slide.header" class="content-header invis">{{ slide.header }}</p>
                                     <div v-if="banner && slide.video" class="watch-video invis">
                                         <div class="vid-button"/>
@@ -127,8 +152,9 @@ var buildingFuture= {
                         </div>
                     </div>
                     <!--- End layout ---->
-                        <div class="tubie-container-left" :style="banner ? 'bottom: 3em;' : 'bottom: 0;'">
-                            <tubie-overlay :id="'tubie-'+id+index" :display="slide.tubie"/>
+                        <div class="tubie-container-left" :style="banner ? 'bottom: 3em;' : 'bottom: 1em;'">
+                            <tubie-overlay v-if="banner" :id="'tubie-'+id+index" :display="slide.tubie" spec="consider"/>
+                            <tubie-overlay v-else :id="'tubie-'+id+index" :display="slide.tubie" spec="dyk"/>
                         </div>
                         <div v-show=banner :class="['banner', (mono ? 'green':'red')]"></div>
                     </div>          

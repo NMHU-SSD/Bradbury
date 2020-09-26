@@ -27,12 +27,13 @@
 .tubie-container{
     background: url(/assets/tubie/Tubie-orangebkgd-left.svg) no-repeat;
     background-position: bottom right;
-    height: 11vw;
-    width: 24vw;
+    height: 14vw;
+    width: 30vw;
     max-width: 30vw;
-    max-height: 100%;
+    max-height: 30%;
     position: absolute;
     bottom: 3em;
+    left: -7em;
     z-index: 7;
 }
 .tubie-wrapper{
@@ -44,6 +45,33 @@
 }
 .tubie-img{
     background: url(/assets/tubie/tubie_info.png) no-repeat;
+    background-position: right bottom;
+    background-size: contain;
+    height: 100%;
+    width: 100%;
+    margin-top: 0%;
+    outline: none;
+}
+.tubie-def{
+    background: url(/assets/tubie/def_tubie.png) no-repeat;
+    background-position: left bottom;
+    background-size: contain;
+    height: 100%;
+    width: 110%;
+    margin-top: 0%;
+    outline: none;
+}
+.tubie-consider{
+    background: url(/assets/tubie/consider_tubie.png) no-repeat;
+    background-position: right bottom;
+    background-size: contain;
+    height: 100%;
+    width: 100%;
+    margin-top: 0%;
+    outline: none;
+}
+.tubie-dyk{
+    background: url(/assets/tubie/dyk_tubie.png) no-repeat;
     background-position: right bottom;
     background-size: contain;
     height: 100%;
@@ -161,7 +189,6 @@
     object-fit: cover;
     object-position: center;
     filter: brightness(50%);
-    transition: .5s;
 }
 /*************** video JS ***********/
 .video-js {
