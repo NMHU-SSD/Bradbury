@@ -1,6 +1,6 @@
 var carouselComp= {
     name: "carousel-comp",
-    props: ['id', 'slides'],
+    props: ['id', 'header','slides'],
     data:function(){
         return{
             slideImages: null,
@@ -88,19 +88,7 @@ var carouselComp= {
                 <template v-for="(slide, index) in slides">
                     <div :class="['carousel-item', (index==0 ? 'active' : '')]" >
                     <!--- Base Layout Appearence --->
-                            <div class="background green size">
-                                <img>
-                                <div class="title"></div>
-                                <p class="title-text-box half-shadow"></p>
-                                <div class="left-circle circle">
-                                    <div class="arrows left-arrow"></div>
-                                    <h3 class="title-font">where\nwe've been</h3>
-                                </div>
-                                <div class="right-circle circle">
-                                    <div class="arrows right-arrow"></div>
-                                    <h3 class="title-font">where\nwe're headed</h3>
-                                </div>
-                            </div>
+                        
                     <!--- End layout ---->
                     </div>          
                 </template>

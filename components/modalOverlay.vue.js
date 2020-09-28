@@ -146,10 +146,6 @@ var modalOverlay= {
             }
             //console.log("playing");
         },
-        inactiveUser:function(){
-            this.stopVideo();
-            $('#modalVideo').modal('hide');
-        },
         //Video JS Overlay Plugin
         videoOverlay:function(){
             this.player.overlay({

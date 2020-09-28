@@ -9,7 +9,8 @@
         },
         "videotimer":10000
     },
-    "sample":{
+    "comp":{
+        "header":"assets/customs/Title-HPCtech.svg",
         "slideshow":
         [
             {
@@ -27,13 +28,16 @@
         "covers":
         [
             {
-                "img":"data/rd100/R&D100icon-hardware.jpg"
+                "img":"data/rd100/R&D100icon-hardware.jpg",
+                "logo":"assets/customs/Title-HPChardware.svg"
             },
             {
-                "img":"data/rd100/R&D100icon-networking.jpg"
+                "img":"data/rd100/R&D100icon-networking.jpg",
+                "logo":"assets/customs/Title-HPCnetworking.svg"
             },
             {
-                "img":"data/rd100/R&D100icon-software.jpg"
+                "img":"data/rd100/R&D100icon-software.jpg",
+                "logo":"assets/customs/Title-HPCsoftware.svg"
             }
         ]
     }

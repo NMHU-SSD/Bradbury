@@ -12,6 +12,7 @@
         <!-- CSS --->
         <link href="css/general.css" rel="stylesheet">
         <link href="css/rd_styles.css" rel="stylesheet">
+        <link href="css/tubie.css" rel="stylesheet">
     <title>Transformative Computing</title>
   </head> 
   <body>	
@@ -25,9 +26,10 @@
             <!--- Main Layout components---->
             <div class="background title">
                 <h3 class="skinny-font">Exascale and beyond...</h3>
-                <h3 class="title-font">High-Performance Transformative Computing</h3>
+                <h1 class="title-font">High-Performance
+                    Computing Technologies</h1>
             </div>
-            <carousel-comp id="top" :slides="sample.slideshow"></carousel-comp>
+            <trans-comp id="top" :header="comp.header" :slides="comp.slideshow" @setcover="displayTech($event)"></trans-comp>
             <rd-comp id="rd" :covers="rd100.covers" @setcover="displayCover($event)"></rd-comp>
                     
         </main>
@@ -48,8 +50,8 @@
     <!-- Vue Components -->
       <script src="components/tubieOverlay.vue.js"></script>
       <script src="components/modalOverlay.vue.js"></script>
-      <script src="components/carouselComp.vue.js"></script>
       <script src="components/rdComp.vue.js"></script>
+      <script src="components/transComp.vue.js"></script>
       <script src="components/infoOverlay.vue.js"></script>
 	<!-- Vue App / Router -->
 	<script src="app.js"></script>

@@ -1,8 +1,8 @@
 //register components
 Vue.component('tubie-overlay', tubieOverlay)
 Vue.component('modal-overlay', modalOverlay)
-Vue.component('carousel-comp', carouselComp)
 Vue.component('rd-comp', rdComp)
+Vue.component('trans-comp',transComp)
 Vue.component('info-overlay', infoOverlay)
 
 //Vue
@@ -10,7 +10,7 @@ var app = new Vue({
     el: '#app',
     data:{
         timeData:"",
-        sample:"",
+        comp:"",
         rd100:"",
         t: null,
         afk: null,
@@ -28,7 +28,7 @@ var app = new Vue({
             })
             .then(response => response.json())
             .then(data =>{
-                this.sample = data.sample;
+                this.comp = data.comp;
                 this.timeData = data.timeData;
                 this.rd100=data.rd100;
             })
@@ -82,6 +82,10 @@ var app = new Vue({
         },
         displayCover:function(index){
             this.$refs.modalInfo.getCover(index);
+            $('#modalInfo').modal();
+        },
+        displayTech:function(index){
+            this.$refs.modalInfo.getVideo(index);
             $('#modalInfo').modal();
         },
         //getter and setter videos

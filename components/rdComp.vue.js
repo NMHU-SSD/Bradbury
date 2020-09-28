@@ -90,7 +90,8 @@ var rdComp= {
         <div class="cover-holder row no-gutters">
             <template v-for="(cover, index) in covers">
                 <div class="col-4 cover">
-                    <img :src="cover.img" @click="setcover(index)">
+                    <img :src="cover.img" class="cover-img" @click="setcover(index)">
+                    <img :src="cover.logo" class="cover-logo">
                 </div>
             </template>
         </div>
