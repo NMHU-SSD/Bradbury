@@ -11,19 +11,29 @@
     },
     "comp":{
         "header":"assets/customs/Title-HPCtech.svg",
-        "slideshow":
+        "been":
         [
             {
-                "img":"data/slideshowImages/CoolingTrinity.jpg"
+                "video":"data/videos/oceans.mp4"
             },
             {
-                "img":"data/slideshowImages/InstallingRoadrunner.jpg"
+                "video":"data/videos/oceans.mp4"
             },
             {
-                "img":"data/slideshowImages/WiringTrinityCluster.jpg"
+                "video":"data/videos/oceans.mp4"
+            }
+        ],
+        "headed":
+        [
+            {
+                "video":"data/videos/oceans.mp4"
+            },
+            {
+                "video":"data/videos/oceans.mp4"
             }
         ]
     },
+    
     "rd100":{
         "covers":
         [

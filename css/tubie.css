@@ -1,7 +1,18 @@
 /****** Tubie ******/
+.tubie-container-left{
+    background: url(/assets/tubie/Tubie-orangebkgd-left.svg) no-repeat;
+    background-position: bottom right;
+    height: 9em;
+    width: 19em;
+    position: absolute;
+    bottom: 0;
+    left: -7em;
+    z-index: 3;
+    overflow: hidden;
+}
 .tubie-container{
     background: url(/assets/tubie/Tubie-orangebkgd-right.svg) no-repeat;
-    background-position: bottom right;
+    background-position: bottom left;
     height: 9em;
     width: 19em;
     position: absolute;
@@ -11,19 +22,22 @@
     overflow: hidden;
 }
 .tubie-wrapper{
-    width: 100%;
+    width: 40%;
     height: 100%;
     position: relative;
 }
+.tubie-left{
+    margin-left: 10%;
+}
+.tubie-right{
+    margin-left: 50%;
+}
 .tubie-img{
     background: url(/assets/tubie/tubie_info.png) no-repeat;
-    background-position: bottom left;
+    background-position: bottom center;
     background-size: contain;
-    position: absolute;
-    left: 10%;
-    bottom: 0;
-    height: 85%;
-    width: 40%;
+    height: 100%;
+    width: 100%;
     outline: none;
 }
 /**** Pop Over ****/

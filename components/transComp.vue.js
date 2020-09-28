@@ -14,11 +14,9 @@ var transComp= {
             $("#carousel-"+this.id).carousel(0);
             this.jumpSlide(0);
         },
-        seturl:function(url){
+        seturl:function(index){
+            url = this.slides[index].video;
             this.$emit('seturl', url);
-        },
-        setcover:function(index){
-            this.$emit('setcover', index);
         },
         selected:function(){
             console.log("selected");
@@ -29,9 +27,9 @@ var transComp= {
     `<div class="background green size">
         <img :src=header class="comp-header">
         <p class="title-text-box half-shadow"></p>
-        <div class="left-circle circle" @click="setcover(0)">
+        <div class="left-circle circle" @click="seturl(0)">
         </div>
-        <div class="right-circle circle" @click="setcover(0)">
+        <div class="right-circle circle" @click="seturl(0)">
         </div>
     </div>`
 }

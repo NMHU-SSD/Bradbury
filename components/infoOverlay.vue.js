@@ -1,12 +1,12 @@
 var infoOverlay= {
     name:"info-overlay",
-    props:['id','slides','tubie'],
+    props:['id','slides','tubie','spec','countdown'],
     data:function(){
         return{
             slideImages: null,
             infoSlides:null,
             videoData: null,
-            spec:'',
+            player:null,
             first:true,
             end: false,
             count:0,
@@ -15,7 +15,7 @@ var infoOverlay= {
 				controls: true,
                 inactivityTimeout: 5000,
                 fluid:true,
-                muted:false,
+                muted:true,
                 controlBar: {
                     progressControl: {
                       seekBar: true
@@ -35,10 +35,12 @@ var infoOverlay= {
         }
     },
     mounted(){
-        this.player= videojs(this.$refs.videoPlayer, this.setup, function onPlayerReady() {
-            //console.log('onPlayerReady', this);
-        });
-        this.videoOverlay();
+        if(this.spec=="vid"){
+            this.player= videojs(this.$refs.videoPlayer, this.setup, function onPlayerReady() {
+                console.log('onPlayerReady', this);
+            });
+            this.videoOverlay();  
+        }
     },
     beforeDestroy(){
         if(this.player){
@@ -52,13 +54,11 @@ var infoOverlay= {
         },
         getCover:function(index){
             //console.log(index);
-            this.spec= 'info';
             $('#carousel-'+this.id).carousel(index);
             this.jumpSlide(index);
         },
         getVideo:function(index){
             //console.log(index);
-            this.spec= 'vid';
             $('#carousel-'+this.id).carousel(index);
             this.jumpSlide(index);
         },
@@ -90,6 +90,17 @@ var infoOverlay= {
                 this.first=false;
             }
         },
+        //Video Modal Functions
+        geturl:function(video){
+            console.log(video);
+            this.player.src({type: 'video/mp4', src: video});
+            this.source=true;
+            //this.currVid=video;
+            if(this.nextVid==null && this.prevVid==null){
+                $('#videoWindow .vjs-overlay-next').css('display', 'none');
+                $('#videoWindow .vjs-overlay-prev').css('display', 'none');
+            }
+        },
         //Video Modal on-events
         stopVideo:function(){
             this.prevVid=null;
@@ -98,8 +109,12 @@ var infoOverlay= {
             this.player.src('');
             this.player.muted(false);
             this.source=false;
-            this.$emit('stopvideo');
+            //this.$emit('stopvideo');
             //console.log("video closed");
+        },
+        inactiveUser:function(){
+            this.stopVideo();
+            //$('#'+this.id).modal('hide');
         },
         endOfVideo:function(){
             //console.log('video ended');
@@ -162,28 +177,36 @@ var infoOverlay= {
     template:
     `<div :id="id" class="modal fade" tabindex="-1" role="dialog" data-backdrop=true>
 <div :class="['modal-dialog modal-xl modal-dialog-centered', spec]" role="document">
-<div id="modalInfo" class="modal-content">
- <div :class="['modal-body',spec+'-body']">
+<div class="modal-content">
+ <div class="modal-body">
+    <video v-if="spec=='vid'" id="videoWindow" ref="videoPlayer" preload="none" 
+                        class="video-js vjs-big-play-centered web-video"
+                        @ended="endOfVideo" @pause="pausedVideo" @play="playingVideo"/>
     <div :id="'carousel-'+id" class="carousel" data-wrap="false" data-interval="false">
         <div class="carousel-inner">
             <template v-for="(slide, index) in slides">
                 <div :class="['carousel-item', (index==0 ? 'active' : '')]" >
-                <!--- Base Layout Appearence --->
-                    <div :class="'main-'+spec">
+            <!--- Base Layout Appearence --->
+                    <div v-if="spec=='info'" :class="'main-'+spec">
                         <img :src="slide.img" class="page-cover">
-                        <video id="videoWindow" ref="videoPlayer" preload="none" class="video-js vjs-big-play-centered web-video"
-                        @ended="endOfVideo" @pause="pausedVideo" @play="playingVideo"/>
                     </div>
                     <div class="main-footer">
-                        <div class="ribbon red">
+                        <div v-if="spec=='info'" class="ribbon red">
                             <img :src="slide.logo">
                             <div class="tubie-container">
                                 <tubie-overlay :id="'tubie-'+id+index" :display="slide.tubie" @seturl="seturl"/>
                             </div>
                         </div>
+                        <div v-if="spec=='vid'" class="ribbon red row">
+                            <div class="col tubie-container-left">
+                                <tubie-overlay :id="'tubie-'+id+index" :display="slide.tubie" @seturl="seturl"/>
+                            </div>
+                            <h3 class="col-3 offset-2">where we've been</h3>
+                            <h2 class="col-3 ml-auto">A Long History of Supercomputing</h2>
+                        </div>
                         <div class="banner green"></div>
                     </div>
-                <!--- End layout ---->
+            <!--- End layout ---->
                 </div>          
             </template>
         </div>

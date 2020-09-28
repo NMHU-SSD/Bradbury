@@ -67,21 +67,16 @@
     margin: auto;
     overflow-y: auto;
 }
-.info-body{
-    height: 91vw;
-}
-.vid-body{
-    height: 60vw;
-}
 .modal-body{
     padding: 0;
+    height: auto;
 }
 /****** Modal carousel *****/
 .main-info{
     height: 85%;
 }
 .main-vid{
-    height: 78%;
+    height: 0;
 }
 .page-cover{
     max-height: 100%;
@@ -104,10 +99,15 @@
 .banner{
     height: 30%;
 }
+.video-js {
+    margin: 0 auto !important;
+    font-size: 1em;
+}
 /*****carousel indicators*/
 .carousel, .carousel-inner,.carousel-item{
     background-color: #000;
-    height: 100%;
+    overflow: visible;
+    /*height: 100%;*/
 }
 .carousel .carousel-indicators{
     height: 2em;

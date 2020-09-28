@@ -84,9 +84,9 @@ var app = new Vue({
             this.$refs.modalInfo.getCover(index);
             $('#modalInfo').modal();
         },
-        displayTech:function(index){
-            this.$refs.modalInfo.getVideo(index);
-            $('#modalInfo').modal();
+        displayTech:function(url){
+            this.$refs.modalVideo.geturl(url);
+            $('#modalVideo').modal();
         },
         //getter and setter videos
         passVids:function(videos){
