@@ -118,7 +118,7 @@ var buildingFuture= {
                         <div class="row no-gutters">
 
                     <!--- Base Layout Appearence --->
-                            <div v-if="slide.featuredMedia" class="col-8 img-main green">
+                            <div v-if="slide.featuredMedia" class="col-8 img-main green whitetext">
                                 <img :src="slide.featuredMedia.src" :class="[banner ? 'fill-img' : 'cropped-img']" alt="slide.alt">
                                 <div class="shadow-box"/>
                                 <h3 class="top-center shadow-text">{{ header }}</h3>
@@ -133,10 +133,10 @@ var buildingFuture= {
 
                             <div :class="['col text-side',(mono ? 'lgt-green' : 'yellow')]" :style="banner ? 'height: calc(33vh - 3em);' : 'height: 33vh;'">
                                   <div :class="['margins stay',(mono ? 'lgt-green' : 'yellow')]">
-                                    <p v-if="slide.header" :id="'header'+id+index" class="content-header shadow-text" @click="getHeight(index)">{{ slide.header }}</p>
+                                    <p v-if="slide.header" :id="'header'+id+index" class="content-header redtext" @click="getHeight(index)">{{ slide.header }}</p>
                                     <div v-if="banner && slide.video" class="watch-video" @click="seturl(slide.video)">
                                         <div class="vid-button"/>
-                                        <p class="body-font redtext" style="color: #6a0123;">WATCH VIDEO</p>
+                                        <p class="body-font redtext">WATCH VIDEO</p>
                                     </div>
                                   </div>
 
@@ -146,13 +146,13 @@ var buildingFuture= {
                                         <div class="vid-button"/>
                                         <p class="body-font">WATCH VIDEO</p>
                                     </div>
-                                    <p v-if="slide.title" class="bluetext content-title title-font" style="color: #0c4b79;">{{ slide.title }}</p>
-                                    <p v-if="slide.body" class="bluetext content-body body-font" style="color: #0c4b79;">{{ slide.body }}</p>
+                                    <p v-if="slide.title" class="bluetext content-title title-font">{{ slide.title }}</p>
+                                    <p v-if="slide.body" class="bluetext content-body body-font">{{ slide.body }}</p>
                                   </div>
                         </div>
                     </div>
                     <!--- End layout ---->
-                        <div class="tubie-container-left" :style="banner ? 'bottom: 3em;' : 'bottom: 1em;'">
+                        <div class="tubie-container-left" :style="banner ? 'bottom: 3em;' : 'bottom: 0em;'">
                             <tubie-overlay v-if="banner" :id="'tubie-'+id+index" :display="slide.tubie" spec="consider"/>
                             <tubie-overlay v-else :id="'tubie-'+id+index" :display="slide.tubie" spec="dyk"/>
                         </div>

@@ -16,19 +16,22 @@ p{
     background-color: #4a6c6a;
 }
 .lgt-green{
-    background-color: #d0e7df;
+    background-color: #bcd1bc;
 }
 .yellow{
-    background-color: #deed7b;
+    background-color: #bbc356;
 }
 .red{
     background-color: #6a0123;
 }
 .redtext{
-    color: #6a0123;
+    color: #590820;
 }
 .bluetext{
-    color: #0c4b79;
+    color: #012b4b;
+}
+.whitetext{
+    color: white;
 }
 .invis{
     visibility: hidden;
@@ -74,17 +77,14 @@ p{
     font-size: 1.7em;
 }
 .title-font{
-    color: white;
     font-family: 'Anton', sans-serif;
     margin-bottom: 0;
 }
 .body-font{
-    color: white;
     font-weight: bolder;
     font-family: 'Roboto-Cond', sans-serif;
 }
 .content-header{
-    color: white;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bolder;
     font-size: 1em;

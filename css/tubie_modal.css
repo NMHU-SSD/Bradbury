@@ -40,7 +40,7 @@
     width: 35%;
     height: 110%;
     position: absolute;
-    bottom: -2em;
+    bottom: -20%;
     right: 2em;
 }
 .tubie-img{
@@ -178,7 +178,7 @@
     position: absolute;
     top: 30%;
     left: 50%;
-    margin-right: 5em;
+    margin-right: 3em;
     padding: 1em;
     background-color: rgba(0,0,0,0.5);
     font-size: 1.2em;
