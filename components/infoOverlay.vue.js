@@ -3,9 +3,6 @@ var infoOverlay= {
     props:['id','slides','tubie','spec','countdown'],
     data:function(){
         return{
-            slideImages: null,
-            infoSlides:null,
-            videoData: null,
             player:null,
             first:true,
             end: false,
@@ -31,7 +28,8 @@ var infoOverlay= {
             },
             videoTimeout: null,
             source:false,
-            isEnded:false
+            isEnded:false,
+            videoData:null
         }
     },
     mounted(){
@@ -57,10 +55,9 @@ var infoOverlay= {
             $('#carousel-'+this.id).carousel(index);
             this.jumpSlide(index);
         },
-        getVideo:function(index){
+        getVideos:function(videoList){
             //console.log(index);
-            $('#carousel-'+this.id).carousel(index);
-            this.jumpSlide(index);
+            this.slides=videoList;
         },
         //carousel
         nextSlide:function(){
@@ -93,13 +90,9 @@ var infoOverlay= {
         //Video Modal Functions
         geturl:function(video){
             console.log(video);
-            this.player.src({type: 'video/mp4', src: video});
+            $('#carousel-'+this.id).carousel(video.index);
+            this.player.src({type: 'video/mp4', src: video.url});
             this.source=true;
-            //this.currVid=video;
-            if(this.nextVid==null && this.prevVid==null){
-                $('#videoWindow .vjs-overlay-next').css('display', 'none');
-                $('#videoWindow .vjs-overlay-prev').css('display', 'none');
-            }
         },
         //Video Modal on-events
         stopVideo:function(){
@@ -109,11 +102,11 @@ var infoOverlay= {
             this.player.src('');
             this.player.muted(false);
             this.source=false;
-            //this.$emit('stopvideo');
+            this.$emit('stopvideo');
             //console.log("video closed");
         },
         inactiveUser:function(){
-            this.stopVideo();
+            //this.stopVideo();
             //$('#'+this.id).modal('hide');
         },
         endOfVideo:function(){
@@ -126,10 +119,6 @@ var infoOverlay= {
             this.player.getChild('bigPlayButton').on('click', function() {
               this.player.play();
             })
-            if(this.nextVid!=null){
-                $('#videoWindow .vjs-overlay-next').css('display', 'block');
-                $('#videoWindow .vjs-overlay-prev').css('display', 'block');
-            }
             clearTimeout(this.videoTimeout);
             this.videoTimeout = setTimeout(this.inactiveUser, this.countdown);
         },
@@ -193,16 +182,16 @@ var infoOverlay= {
                     <div class="main-footer">
                         <div v-if="spec=='info'" class="ribbon red">
                             <img :src="slide.logo">
-                            <div class="tubie-container">
-                                <tubie-overlay :id="'tubie-'+id+index" :display="slide.tubie" @seturl="seturl"/>
+                            <div class="tubie-container-right">
+                                <tubie-overlay :id="'tubie-'+id+index" :display="slide.tubie" position="left" @seturl="seturl"/>
                             </div>
                         </div>
-                        <div v-if="spec=='vid'" class="ribbon red row">
+                        <div v-if="spec=='vid'" class="ribbon red row whitetext title-font">
                             <div class="col tubie-container-left">
-                                <tubie-overlay :id="'tubie-'+id+index" :display="slide.tubie" @seturl="seturl"/>
+                                <tubie-overlay :id="'tubie-'+id+index" :display="slide.tubie" position="right" @seturl="seturl"/>
                             </div>
-                            <h3 class="col-3 offset-2">where we've been</h3>
-                            <h2 class="col-3 ml-auto">A Long History of Supercomputing</h2>
+                            <h3 class="col-2 offset-2">where we've been</h3>
+                            <h2 class="col ml-auto">A Long History of Supercomputing</h2>
                         </div>
                         <div class="banner green"></div>
                     </div>
@@ -211,13 +200,13 @@ var infoOverlay= {
             </template>
         </div>
         <ol class="carousel-indicators">
-            <li v-for="(slide, index) in slides" :data-target="['#' + 'carousel-'+id]" :data-slide-to="index" :class="" @click="jumpSlide(index)"></li>
+            <li v-for="(slide, index) in slides" :data-target="['#' + 'carousel-'+id]" :data-slide-to="index" :class="(index==0 ? 'active' : '')" @click="jumpSlide(index)"></li>
         </ol>
-        <a v-show="!first" class="carousel-control-prev" :href="['#' + 'carousel-'+id]" role="button" data-slide="prev" @click="prevSlide">
+        <a v-show="!first" :class="'carousel-control-prev control-'+spec" :href="['#' + 'carousel-'+id]" role="button" data-slide="prev" @click="prevSlide">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="sr-only">Previous</span>
         </a>
-        <a v-show="!end" class="carousel-control-next" :href="['#' + 'carousel-'+id]" role="button" data-slide="next" @click="nextSlide">
+        <a v-show="!end" :class="'carousel-control-next control-'+spec" :href="['#' + 'carousel-'+id]" role="button" data-slide="next" @click="nextSlide">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="sr-only">Next</span>
         </a>

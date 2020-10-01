@@ -16,7 +16,7 @@ var transComp= {
         },
         seturl:function(index){
             url = this.slides[index].video;
-            this.$emit('seturl', url);
+            this.$emit('seturl', {index,url});
         },
         selected:function(){
             console.log("selected");

@@ -2,22 +2,21 @@
 .tubie-container-left{
     background: url(/assets/tubie/Tubie-orangebkgd-left.svg) no-repeat;
     background-position: bottom right;
-    height: 9em;
-    width: 19em;
+    height: 100%;
+    width: 8em;
     position: absolute;
     bottom: 0;
-    left: -7em;
-    z-index: 3;
+    left: -3em;
     overflow: hidden;
 }
-.tubie-container{
+.tubie-container-right{
     background: url(/assets/tubie/Tubie-orangebkgd-right.svg) no-repeat;
     background-position: bottom left;
-    height: 9em;
-    width: 19em;
+    height: 5em;
+    width: 11em;
     position: absolute;
     bottom: 0;
-    right: -7em;
+    right: -5em;
     z-index: 3;
     overflow: hidden;
 }
@@ -27,7 +26,9 @@
     position: relative;
 }
 .tubie-left{
-    margin-left: 10%;
+    height: 90%;
+    margin-left: 2%;
+    margin-top: 5%;
 }
 .tubie-right{
     margin-left: 50%;
@@ -57,14 +58,15 @@
 }
 /****Popover Bubble****/
 .popover {
-    font-size: 1em;
+    font-size: 0.7em;
     font-family: 'Roboto-Cond', sans-serif;
     max-width: 55vw !important;
     min-width: 200px;
     border-radius: 10%;
     padding: 4em 5em;
     white-space: pre-line;
-    margin-right: 5em;
+    margin-right: 2%;
+    margin-left: 2%;
 }
 /****** TOP ******/
 	.bs-popover-top, .bs-popover-auto[x-placement^="top"] {

@@ -1,0 +1,65 @@
+.circle{
+    position: absolute;
+    width: 38vw;
+    height: 38vw;
+    background-color: yellow;
+    border-radius: 50%;
+}
+.comp-header{
+    max-width: 75%;
+    position: absolute;
+    z-index: 3;
+    left: 5%;
+    top: 3%;
+    pointer-events: none;
+}
+.left-circle{
+    left: 2%;
+    top: 20%;
+}
+.right-circle{
+    left: 45%;
+    top: 3%;
+}
+.arrows{
+    height: 60%;
+    width: 30%;
+    float: left;
+    margin-top: 10%;
+}
+.left-arrow{
+    background: url(../assets/customs/Arrow-left.svg)no-repeat;
+    margin-left: 10%;
+}
+.right-arrow{
+    background: url(../assets/customs/Arrow-right.svg)no-repeat;
+    margin-left: 25%;
+}
+.title-text-box{
+    height: 30%;
+    width: 60%;
+    margin: 0;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.title{
+    height: 30vw;
+    font-size: 1.2vw;
+    pointer-events: none;
+    padding-left: 4em;
+    padding-top: 1em;
+}
+.title h3{
+    font-size: 5.5em;
+    white-space: pre-line;
+    margin-bottom: 0;
+}
+.title h1{
+    font-size: 7em;
+    white-space: pre-line;
+}
+.bold-title{
+    font-size: 5em;
+}

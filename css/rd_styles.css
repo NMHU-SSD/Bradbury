@@ -2,15 +2,15 @@
     height: 55%;
 }
 .rd-logo{
-    width:37em;
-    height:37em;
-    padding:2% 0 0 7%;
+    width:35vw;
+    height:95%;
+    padding:2% 0 0 5%;
     margin-right: 0;
 }
 .rd-text-box{
     height: 60%;
-    margin: auto 0;
-    width: 90%;
+    margin-top: 5vw;
+    margin-left: 10%;
 }
 .cover-holder{
     height: 37%;
@@ -47,7 +47,8 @@
 /***** Modal ****/
 .modal{
     max-width: 100%;
-    padding-right: 0px !important;
+    padding-right: 0 !important;
+    margin: 0 !important;
     font-size: 2em;
 }
 .modal-open{
@@ -85,7 +86,7 @@
     object-position: bottom;
 }
 .main-footer{
-    height: 9em;
+    height: 5em;
 }
 .ribbon{
     position: relative;
@@ -101,23 +102,22 @@
 }
 .video-js {
     margin: 0 auto !important;
-    font-size: 1em;
+    font-size: 0.5em;
 }
 /*****carousel indicators*/
 .carousel, .carousel-inner,.carousel-item{
     background-color: #000;
     overflow: visible;
-    /*height: 100%;*/
 }
 .carousel .carousel-indicators{
-    height: 2em;
+    height: 1em;
 }
 .carousel .carousel-indicators li{
-    height: 2em;
-    width: 2em;
+    height: 1em;
+    width: 1em;
     border-radius: 50%;
     background-color: #e0da58;
-    border: 0.2em solid #fff;
+    border: 0.1em solid #fff;
     margin-left: 2%;
     margin-right: 2%;
 }
@@ -128,18 +128,35 @@
 /*** carousel controller **/
 .carousel-control-prev,
 .carousel-control-next{
-    height: 10%;
-    width: 10%;
+    height: 100%;
+    width: 15%;
+}
+.control-info{
+    margin-top: 55%;
+}
+.control-vid{
+    margin-top: -8em;
 }
 .carousel-control-prev-icon,
 .carousel-control-next-icon{
     height: 100%;
-    width: 2em;
-    margin-top: 50em;
+    width: 0.7em;
 }
 .carousel-control-prev-icon{
     background: url(../assets/customs/Arrow-left.svg)no-repeat;
 }
 .carousel-control-next-icon{
     background: url(../assets/customs/Arrow-right.svg)no-repeat;
+}
+
+.ribbon h3{
+    font-size: 1em;
+    margin-left: 5em;
+    margin-top: 0.5em;
+}
+.ribbon h2{
+    font-size: 1.1em;
+    text-align: right;
+    margin-top: 1%;
+    margin-right: 2%;
 }
