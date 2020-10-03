@@ -106,7 +106,7 @@
 }
 /*****carousel indicators*/
 .carousel, .carousel-inner,.carousel-item{
-    background-color: #000;
+    /*background-color: #000;*/
     overflow: visible;
 }
 .carousel .carousel-indicators{

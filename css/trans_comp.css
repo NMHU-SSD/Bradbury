@@ -2,8 +2,20 @@
     position: absolute;
     width: 38vw;
     height: 38vw;
-    background-color: yellow;
     border-radius: 50%;
+}
+.carousel .left-circle .carousel-indicators{
+    height: 2em;
+    bottom: 2.5em;
+}
+.carousel .right-circle .carousel-indicators{
+    height: 2em;
+    bottom: 1em;
+}
+.carousel .circle .carousel-indicators li{
+    height: 2em;
+    width: 2em;
+    opacity: .7;
 }
 .comp-header{
     max-width: 75%;

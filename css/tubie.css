@@ -43,7 +43,7 @@
 }
 /**** Pop Over ****/
 .popover .popover-header {
-    font-size: 2em;
+    font-size: 2.1em;
     background-color: rgba(0,0,0,0) !important;
     text-align: center;
     border-bottom: .1em solid #ebebeb;
@@ -51,7 +51,7 @@
     margin-top: -1em;
 }
 .popover .popover-body{ 
-    font-size: 1.8em;
+    font-size: 1.9em;
     padding: 1em .5em;
     margin-top: -.3em;
     color: #212529;

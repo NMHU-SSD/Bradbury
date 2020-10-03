@@ -14,22 +14,27 @@
         "been":
         [
             {
-                "video":"data/videos/oceans.mp4"
+                "video":"data/videos/oceans.mp4",
+                "title":"A Long History of Supercomputing"
             },
             {
-                "video":"data/videos/oceans.mp4"
+                "video":"data/videos/oceans.mp4",
+                "title":"Supercomputing2"
             },
             {
-                "video":"data/videos/oceans.mp4"
+                "video":"data/videos/oceans.mp4",
+                "title":"A Long History3"
             }
         ],
         "headed":
         [
             {
-                "video":"data/videos/oceans.mp4"
+                "video":"data/videos/oceans.mp4",
+                "title":"Future of Supercomputing"
             },
             {
-                "video":"data/videos/oceans.mp4"
+                "video":"data/videos/oceans.mp4",
+                "title":"A Supercomputing2"
             }
         ]
     },

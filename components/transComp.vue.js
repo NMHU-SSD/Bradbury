@@ -1,6 +1,6 @@
 var transComp= {
     name: "trans-comp",
-    props: ['id', 'header','slides'],
+    props: ['id', 'header','slides1','slides2'],
     data:function(){
         return{
             
@@ -14,9 +14,9 @@ var transComp= {
             $("#carousel-"+this.id).carousel(0);
             this.jumpSlide(0);
         },
-        seturl:function(index){
-            url = this.slides[index].video;
-            this.$emit('seturl', {index,url});
+        seturl:function(index,modal){
+            this.$emit('seturl', {ob:modal, index:index});
+            //console.log("Comp", index, modal);
         },
         selected:function(){
             console.log("selected");
@@ -24,12 +24,18 @@ var transComp= {
         }
     },
     template:
-    `<div class="background green size">
+    `<div class="carousel background green size">
         <img :src=header class="comp-header">
         <p class="title-text-box half-shadow"></p>
-        <div class="left-circle circle" @click="seturl(0)">
+        <div class="left-circle circle dark-yellow">
+            <ol class="carousel-indicators">
+                <li v-for="(slide, index) in slides1" class="yellow" @click="seturl(index,1)"></li>
+            </ol>
         </div>
-        <div class="right-circle circle" @click="seturl(0)">
+        <div class="right-circle circle yellow">
+            <ol class="carousel-indicators">
+                <li v-for="(slide, index) in slides2" class="dark-yellow" @click="seturl(index,2)"></li>
+            </ol>
         </div>
     </div>`
 }

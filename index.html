@@ -19,11 +19,15 @@
   <body>	
 	<div id="app">	
 		<main>
-            <!-- Pop overs>
-            <modal-overlay id="modalVideo" exitout="false" :countdown="timeData.videotimer" ref="modalVideo" @stopvideo="videoModalClose()"></modal-overlay>
-            <modal-overlay id="modalTimer" exitout="true" :countdown="timeData.quitout" :message="timeData.message" ref="timeModal"></modal-overlay-->
-            <info-overlay id="modalInfo" ref="modalInfo" :slides="rd100.covers" spec="info" @seturl="displayVideo($event)"></info-overlay>
-            <info-overlay id="modalVideo" ref="modalVideo" :slides="comp.been" spec="vid" :countdown="timeData.videotimer" @stopvideo="videoModalClose"></info-overlay>
+            <!--Pop overs-->
+            <modal-overlay id="modalVid" ref="modalVid" exitout="false" :countdown="timeData.videotimer" @stopvideo="videoModalClose()"></modal-overlay>
+            <modal-overlay id="modalTimer" exitout="true" :countdown="timeData.quitout" :message="timeData.message" ref="timeModal"></modal-overlay>
+            <info-overlay id="modalInfo" ref="modalInfo" spec="info" :slides="rd100.covers"
+                          :countdown="timeData.timeout" @stopvideo="videoModalClose" @seturl="displayVideo($event)"></info-overlay>
+            <info-overlay id="modalVideo1" ref="modalVideo1" spec="vid" :slides="comp.been"
+                          :countdown="timeData.videotimer" @stopvideo="videoModalClose"></info-overlay>
+            <info-overlay id="modalVideo2" ref="modalVideo2" spec="vid" :slides="comp.headed"
+                          :countdown="timeData.videotimer" @stopvideo="videoModalClose"></info-overlay>
 
             <!--- Main Layout components---->
             <div class="background title">
@@ -31,7 +35,7 @@
                 <h1 class="title-font">High-Performance
                     Computing Technologies</h1>
             </div>
-            <trans-comp id="top" :header="comp.header" :slides="comp.been" @seturl="displayTech($event)"></trans-comp>
+            <trans-comp id="top" :header="comp.header" :slides1="comp.been" :slides2="comp.headed" @seturl="displayTech($event)"></trans-comp>
             <rd-comp id="rd" :covers="rd100.covers" @setcover="displayCover($event)"></rd-comp>
                     
         </main>

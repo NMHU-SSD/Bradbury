@@ -68,6 +68,15 @@ var app = new Vue({
             setTimeout(function(){
                 $('#'+'modalTimer').modal('hide')}, this.timeData.quitout);
             document.onmousedown = this.resetTimer;
+            /*
+            $(document).on('show.bs.modal', '.modal', function (event) {
+            var zIndex = 1040 + (10 * $('.modal:visible').length);
+            $(this).css('z-index', zIndex);
+            setTimeout(function() {
+                $('.modal-backdrop').not('.modal-stack').css('z-index', zIndex - 1).addClass('modal-stack');
+            }, 0);
+        });
+        */
         },
         displayVideo:function(info){
             if(this.active){
@@ -77,16 +86,32 @@ var app = new Vue({
             }
             //this.stillActive=info.active;
             //console.log(info);
-            this.$refs.modalVideo.geturl(info);
-            $('#modalVideo').modal();
+            this.$refs.modalVid.geturl(info);
+            $('#modalVid').modal();
         },
         displayCover:function(index){
+            if(this.active){
+                clearTimeout(this.t);
+                clearTimeout(this.afk);
+                this.active=false;
+            }
             this.$refs.modalInfo.getCover(index);
             $('#modalInfo').modal();
         },
-        displayTech:function(url){
-            this.$refs.modalVideo.geturl(url);
-            $('#modalVideo').modal();
+        displayTech:function(data){
+            if(this.active){
+                clearTimeout(this.t);
+                clearTimeout(this.afk);
+                this.active=false;
+            }
+            if(data.ob ==1){
+                this.$refs.modalVideo1.geturl(data.index);
+                $('#modalVideo1').modal();
+            }else if(data.ob ==2){
+                this.$refs.modalVideo2.geturl(data.index);
+                $('#modalVideo2').modal();
+            }
+            //console.log("app ", data);
         },
         //getter and setter videos
         passVids:function(videos){

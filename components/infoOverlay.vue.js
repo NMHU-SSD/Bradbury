@@ -1,6 +1,6 @@
 var infoOverlay= {
     name:"info-overlay",
-    props:['id','slides','tubie','spec','countdown'],
+    props:['id','tubie','spec','countdown','slides'],
     data:function(){
         return{
             player:null,
@@ -26,7 +26,7 @@ var infoOverlay= {
                     subtitlesButton: false,
                   }
             },
-            videoTimeout: null,
+            timeout: null,
             source:false,
             isEnded:false,
             videoData:null
@@ -35,7 +35,7 @@ var infoOverlay= {
     mounted(){
         if(this.spec=="vid"){
             this.player= videojs(this.$refs.videoPlayer, this.setup, function onPlayerReady() {
-                console.log('onPlayerReady', this);
+                //console.log('onPlayerReady', this);
             });
             this.videoOverlay();  
         }
@@ -50,14 +50,16 @@ var infoOverlay= {
             $('#'+this.id).modal('hide');
             this.$emit('seturl');
         },
+        startTimer:function(){
+            clearTimeout(this.timeout);
+            this.timeout = setTimeout(this.inactiveUser, this.countdown);
+            document.onmousedown = this.resetTimer;
+        },
         getCover:function(index){
-            //console.log(index);
+            //this.slides = this.covers;
             $('#carousel-'+this.id).carousel(index);
             this.jumpSlide(index);
-        },
-        getVideos:function(videoList){
-            //console.log(index);
-            this.slides=videoList;
+            this.startTimer();
         },
         //carousel
         nextSlide:function(){
@@ -88,26 +90,28 @@ var infoOverlay= {
             }
         },
         //Video Modal Functions
-        geturl:function(video){
-            console.log(video);
-            $('#carousel-'+this.id).carousel(video.index);
-            this.player.src({type: 'video/mp4', src: video.url});
+        geturl:function(index){
+            //console.log(this.slides);
+            $('#carousel-'+this.id).carousel(index);
+            this.jumpSlide(index);
+            ind = this.slides[index];
+            this.player.src({type: 'video/mp4', src: ind.video});
             this.source=true;
         },
         //Video Modal on-events
         stopVideo:function(){
-            this.prevVid=null;
-            this.nextVid=null;
-            this.player.pause();
-            this.player.src('');
-            this.player.muted(false);
+            if(this.player!=null){
+                this.player.pause();
+                this.player.src('');
+                this.player.muted(false);
+            }
             this.source=false;
             this.$emit('stopvideo');
             //console.log("video closed");
         },
         inactiveUser:function(){
-            //this.stopVideo();
-            //$('#'+this.id).modal('hide');
+            this.stopVideo();
+            $('#'+this.id).modal('hide');
         },
         endOfVideo:function(){
             //console.log('video ended');
@@ -119,16 +123,16 @@ var infoOverlay= {
             this.player.getChild('bigPlayButton').on('click', function() {
               this.player.play();
             })
-            clearTimeout(this.videoTimeout);
-            this.videoTimeout = setTimeout(this.inactiveUser, this.countdown);
+            clearTimeout(this.timeout);
+            this.timeout = setTimeout(this.inactiveUser, this.countdown);
         },
         pausedVideo:function(){
             //console.log('video paused');
-            clearTimeout(this.videoTimeout);
-            this.videoTimeout = setTimeout(this.inactiveUser, this.countdown);
+            clearTimeout(this.timeout);
+            this.timeout = setTimeout(this.inactiveUser, this.countdown);
         },
         playingVideo:function(){
-            clearTimeout(this.videoTimeout);
+            clearTimeout(this.timeout);
             $('#videoWindow .vjs-big-play-button').css('display', 'none');
             if(this.isEnded){
                 this.isEnded=false;
@@ -191,7 +195,7 @@ var infoOverlay= {
                                 <tubie-overlay :id="'tubie-'+id+index" :display="slide.tubie" position="right" @seturl="seturl"/>
                             </div>
                             <h3 class="col-2 offset-2">where we've been</h3>
-                            <h2 class="col ml-auto">A Long History of Supercomputing</h2>
+                            <h2 class="col ml-auto">{{ slide.title }}</h2>
                         </div>
                         <div class="banner green"></div>
                     </div>

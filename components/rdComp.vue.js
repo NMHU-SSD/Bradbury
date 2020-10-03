@@ -19,6 +19,7 @@ var rdComp= {
             this.$emit('seturl', url);
         },
         setcover:function(index){
+            console.log(index);
             this.$emit('setcover', index);
         },
         selected:function(){
