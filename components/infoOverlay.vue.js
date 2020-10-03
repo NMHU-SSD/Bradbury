@@ -28,7 +28,6 @@ var infoOverlay= {
             },
             timeout: null,
             source:false,
-            isEnded:false,
             videoData:null
         }
     },
@@ -59,7 +58,7 @@ var infoOverlay= {
             //this.slides = this.covers;
             $('#carousel-'+this.id).carousel(index);
             this.jumpSlide(index);
-            this.startTimer();
+            //this.startTimer();
         },
         //carousel
         nextSlide:function(){
@@ -68,12 +67,18 @@ var infoOverlay= {
             if(this.count==this.slides.length-1){
                 this.end=true;
             }
+            if(this.player != null){//video
+                this.changeVid();
+            }
         },
         prevSlide:function(){
             this.count--;
             this.end=false;
             if(this.count==0){
                 this.first=true;
+            }
+            if(this.player != null){//video
+                this.changeVid();
             }
         },
         jumpSlide:function(index){
@@ -88,8 +93,15 @@ var infoOverlay= {
                 this.end=false;
                 this.first=false;
             }
+            if(this.player != null){//video
+                this.changeVid();
+            }
         },
         //Video Modal Functions
+        changeVid:function(){
+            vid=this.slides[this.count];
+            this.player.src({type: 'video/mp4', src: vid.video});
+        },
         geturl:function(index){
             //console.log(this.slides);
             $('#carousel-'+this.id).carousel(index);
@@ -107,7 +119,7 @@ var infoOverlay= {
             }
             this.source=false;
             this.$emit('stopvideo');
-            //console.log("video closed");
+            console.log("video closed");
         },
         inactiveUser:function(){
             this.stopVideo();
@@ -115,9 +127,6 @@ var infoOverlay= {
         },
         endOfVideo:function(){
             //console.log('video ended');
-            if(this.nextVid!=null){
-                this.isEnded=true;
-            }
             this.player.currentTime(0);
             $('#videoWindow .vjs-big-play-button').css('display', 'block');
             this.player.getChild('bigPlayButton').on('click', function() {
@@ -134,9 +143,6 @@ var infoOverlay= {
         playingVideo:function(){
             clearTimeout(this.timeout);
             $('#videoWindow .vjs-big-play-button').css('display', 'none');
-            if(this.isEnded){
-                this.isEnded=false;
-            }
             //console.log("playing");
         },
         //Video JS Overlay Plugin
@@ -149,26 +155,12 @@ var infoOverlay= {
                   start: 'ended',
                   end: 'play',
                   align: 'top-center'
-                },{
-                    content:'Next',
-                    showBackground: true,
-                    start: 'ended',
-                    end: 'play',
-                    align: 'right',
-                    class:'vjs-overlay-next'
-                },{
-                    content:'Prev',
-                    showBackground: true,
-                    start: 'ended',
-                    end: 'play',
-                    align: 'left',
-                    class:'vjs-overlay-prev'
                 }]
               });
         }
     },
     template:
-    `<div :id="id" class="modal fade" tabindex="-1" role="dialog" data-backdrop=true>
+    `<div :id="id" class="modal fade" tabindex="-1" role="dialog" data-backdrop=true @click.self="stopVideo">
 <div :class="['modal-dialog modal-xl modal-dialog-centered', spec]" role="document">
 <div class="modal-content">
  <div class="modal-body">
