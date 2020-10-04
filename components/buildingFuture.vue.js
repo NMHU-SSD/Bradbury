@@ -119,7 +119,8 @@ var buildingFuture= {
 
                     <!--- Base Layout Appearence --->
                             <div v-if="slide.featuredMedia" class="col-8 img-main green whitetext">
-                                <img :src="slide.featuredMedia.src" :class="[banner ? 'fill-img' : 'cropped-img']" alt="slide.alt">
+                                <img :src="slide.featuredMedia.src" :class="[banner ? 'fill-img' : 'cropped-img']" 
+                                    :style="slide.featuredMedia.position" alt="slide.alt">
                                 <div class="shadow-box"/>
                                 <h3 class="top-center shadow-text">{{ header }}</h3>
                                 <h2 v-if=!banner class="top-left title-font shadow-text-big">Did You Know...</h2>
