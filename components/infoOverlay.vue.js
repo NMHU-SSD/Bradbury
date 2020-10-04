@@ -1,6 +1,6 @@
 var infoOverlay= {
     name:"info-overlay",
-    props:['id','tubie','spec','countdown','slides'],
+    props:['id','spec','countdown','slides'],
     data:function(){
         return{
             player:null,
@@ -50,15 +50,15 @@ var infoOverlay= {
             this.$emit('seturl');
         },
         startTimer:function(){
+            console.log("covers timer");
             clearTimeout(this.timeout);
             this.timeout = setTimeout(this.inactiveUser, this.countdown);
-            document.onmousedown = this.resetTimer;
+            //document.onmousedown = this.startTimer;
         },
         getCover:function(index){
-            //this.slides = this.covers;
             $('#carousel-'+this.id).carousel(index);
             this.jumpSlide(index);
-            //this.startTimer();
+            this.startTimer();
         },
         //carousel
         nextSlide:function(){
@@ -123,7 +123,7 @@ var infoOverlay= {
         },
         inactiveUser:function(){
             this.stopVideo();
-            $('#'+this.id).modal('hide');
+            //$('#'+this.id).modal('hide');
         },
         endOfVideo:function(){
             //console.log('video ended');
@@ -164,8 +164,8 @@ var infoOverlay= {
 <div :class="['modal-dialog modal-xl modal-dialog-centered', spec]" role="document">
 <div class="modal-content">
  <div class="modal-body">
-    <video v-if="spec=='vid'" id="videoWindow" ref="videoPlayer" preload="none" 
-                        class="video-js vjs-big-play-centered web-video"
+    <video v-if="spec=='vid'" id="videoWindow" ref="videoPlayer" preload="none"
+                        class="video-js vjs-fluid vjs-big-play-centered web-video"
                         @ended="endOfVideo" @pause="pausedVideo" @play="playingVideo"/>
     <div :id="'carousel-'+id" class="carousel" data-wrap="false" data-interval="false">
         <div class="carousel-inner">
@@ -186,7 +186,7 @@ var infoOverlay= {
                             <div class="col tubie-container-left">
                                 <tubie-overlay :id="'tubie-'+id+index" :display="slide.tubie" position="right" @seturl="seturl"/>
                             </div>
-                            <h3 class="col-2 offset-2">where we've been</h3>
+                            <h3 class="col-2 offset-2 align-self-center">where we've been</h3>
                             <h2 class="col ml-auto">{{ slide.title }}</h2>
                         </div>
                         <div class="banner green"></div>

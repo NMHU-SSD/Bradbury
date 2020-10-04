@@ -72,6 +72,10 @@
     padding: 0;
     height: auto;
 }
+.modal-title{
+    font-size: 1em;
+    text-align: center;
+}
 /****** Modal carousel *****/
 .main-info{
     height: 85%;
@@ -107,7 +111,7 @@
 /*****carousel indicators*/
 .carousel, .carousel-inner,.carousel-item{
     /*background-color: #000;*/
-    overflow: visible;
+    overflow: hidden;
 }
 .carousel .carousel-indicators{
     height: 1em;
@@ -150,9 +154,7 @@
 }
 
 .ribbon h3{
-    font-size: 1em;
-    margin-left: 5em;
-    margin-top: 0.5em;
+    font-size: .9em;
 }
 .ribbon h2{
     font-size: 1.1em;

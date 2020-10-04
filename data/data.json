@@ -15,26 +15,46 @@
         [
             {
                 "video":"data/videos/oceans.mp4",
-                "title":"A Long History of Supercomputing"
+                "title":"A Long History of Supercomputing",
+                "tubie":{
+                    "header":"Consider this...",
+                    "body":"Can you think once considered?"
+                }
             },
             {
                 "video":"data/videos/oceans.mp4",
-                "title":"Supercomputing2"
+                "title":"Supercomputing2",
+                "tubie":{
+                    "header":"Consider this...",
+                    "body":"Can you think once considered?"
+                }
             },
             {
                 "video":"data/videos/oceans.mp4",
-                "title":"A Long History3"
+                "title":"A Long History3",
+                "tubie":{
+                    "header":"Consider this...",
+                    "body":"Can you think once considered?"
+                }
             }
         ],
         "headed":
         [
             {
                 "video":"data/videos/oceans.mp4",
-                "title":"Future of Supercomputing"
+                "title":"Future of Supercomputing",
+                "tubie":{
+                    "header":"Consider this...",
+                    "body":"Can you think once considered?"
+                }
             },
             {
                 "video":"data/videos/oceans.mp4",
-                "title":"A Supercomputing2"
+                "title":"A Supercomputing2",
+                "tubie":{
+                    "header":"Consider this...",
+                    "body":"Can you think once considered?"
+                }
             }
         ]
     },
@@ -44,15 +64,27 @@
         [
             {
                 "img":"data/rd100/R&D100icon-hardware.jpg",
-                "logo":"assets/customs/Title-HPChardware.svg"
+                "logo":"assets/customs/Title-HPChardware.svg",
+                "tubie":{
+                    "header":"Consider this...",
+                    "body":"Can you think once considered?"
+                }
             },
             {
                 "img":"data/rd100/R&D100icon-networking.jpg",
-                "logo":"assets/customs/Title-HPCnetworking.svg"
+                "logo":"assets/customs/Title-HPCnetworking.svg",
+                "tubie":{
+                    "header":"Consider this...",
+                    "body":"Can you think once considered?"
+                }
             },
             {
                 "img":"data/rd100/R&D100icon-software.jpg",
-                "logo":"assets/customs/Title-HPCsoftware.svg"
+                "logo":"assets/customs/Title-HPCsoftware.svg",
+                "tubie":{
+                    "header":"Consider this...",
+                    "body":"What other limited resources can be reused rather than discarded?"
+                }
             }
         ]
     }

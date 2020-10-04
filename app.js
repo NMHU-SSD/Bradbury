@@ -18,7 +18,7 @@ var app = new Vue({
     },
     mounted: function(){
         this.GetData();
-        //this.resetTimer();
+        this.resetTimer();
     },
     
     methods:{
@@ -48,6 +48,7 @@ var app = new Vue({
                 this.active=true;
             }
             document.onmousedown = this.resetTimer;
+            console.log(this.active);
         },
         toAlert:function(){
             console.log("toAlert");
@@ -113,30 +114,10 @@ var app = new Vue({
             }
             //console.log("app ", data);
         },
-        //getter and setter videos
-        passVids:function(videos){
-            this.$refs[this.modalVideo].setVideos(videos);
-        },
-        getNextVid:function(index){
-            this.$refs[this.historyId].setNext(index);
-        },
-        getPrevVid:function(index){
-            this.$refs[this.historyId].setPrev(index);
-        },
         //video modal popups
         videoModalClose:function(){
             this.active=true;
-            /*if(this.stillActive){
-                this.resetTimer();
-            }*/
-        },
-        switchData:function(){
-            if(this.firstData){
-                this.$refs.style1.reset();
-            }
-            else{this.$refs.style2.reset();}
-            this.firstData = !this.firstData;
-            console.log(this.firstData);
+            console.log(this.active);
         }
     }
 })

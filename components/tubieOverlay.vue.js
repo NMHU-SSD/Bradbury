@@ -26,7 +26,8 @@ var tubieOverlay = {
     },
     template:
     `<div :id="id" :class="['tubie-wrapper tubie-'+position]" @click="hopAnimation">
-        <div class="tubie-img" data-container="body" tabindex="0" data-toggle="popover" data-placement="top" data-trigger="focus" title="display.header" data-content="display.body"/>
+        <div class="tubie-img" data-container="body" tabindex="0" data-toggle="popover" 
+            data-placement="top" data-trigger="focus" :title="display.header" :data-content="display.body"/>
         <!--div v-else class="tubie-img-left" @click="seturl"/-->
     </div>`
 }
