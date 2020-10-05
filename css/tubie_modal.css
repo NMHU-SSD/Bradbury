@@ -14,16 +14,6 @@
     margin-right: 2em;
 }
 /*****Tubie******/
-.tubie-container-left{
-    background: url(/assets/tubie/Tubie-orangebkgd-left.svg) no-repeat;
-    background-position: bottom right;
-    height: 14vw;
-    width: 30vw;
-    max-width: 700px;
-    max-height: 100%;
-    left: -7em;
-    z-index: 7;
-}
 .tubie-container{
     background: url(/assets/tubie/Tubie-orangebkgd-left.svg) no-repeat;
     background-position: bottom right;
@@ -36,12 +26,22 @@
     left: -7em;
     z-index: 7;
 }
+.tubie-container-left{
+    background: url(/assets/tubie/Tubie-orangebkgd-left.svg) no-repeat;
+    background-position: bottom right;
+    height: 14vw;
+    width: 30vw;
+    max-width: 700px;
+    max-height: 100%;
+    left: -7em;
+    z-index: 7;
+}
 .tubie-wrapper{
-    width: 35%;
-    height: 110%;
-    position: absolute;
-    bottom: -20%;
-    right: 2em;
+    width: 30%;
+    height: 100%;
+    margin-left: 15vw;
+    position: relative;
+    bottom: -11%;
 }
 .tubie-img{
     background: url(/assets/tubie/tubie_info.png) no-repeat;
@@ -49,16 +49,14 @@
     background-size: contain;
     height: 100%;
     width: 100%;
-    margin-top: 0%;
     outline: none;
 }
 .tubie-def{
     background: url(/assets/tubie/def_tubie.png) no-repeat;
-    background-position: left bottom;
+    background-position: right bottom;
     background-size: contain;
     height: 100%;
-    width: 110%;
-    margin-top: 0%;
+    width: 120%;
     outline: none;
 }
 .tubie-consider{
@@ -66,8 +64,7 @@
     background-position: right bottom;
     background-size: contain;
     height: 100%;
-    width: 100%;
-    margin-top: 0%;
+    width: 110%;
     outline: none;
 }
 .tubie-dyk{
@@ -76,7 +73,6 @@
     background-size: contain;
     height: 100%;
     width: 100%;
-    margin-top: 0%;
     outline: none;
 }
 /**** Pop Over ****/
