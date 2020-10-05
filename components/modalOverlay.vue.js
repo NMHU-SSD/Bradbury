@@ -1,10 +1,9 @@
 var modalOverlay= {
     name:"modal-overlay",
-    props:['countdown', 'id', 'exitout','message'],
+    props:['countdown', 'id', 'exitout','message','video'],
     data:function(){
         return{
             count:null,
-            title: null,
             player:null,
             index:0,
             currVid:null,
@@ -67,43 +66,14 @@ var modalOverlay= {
             this.count = Math.floor(this.countdown / 1000);
         },
         //Video Modal Functions
-        geturl:function(video){
-            //console.log(video);
-            this.player.src({type: 'video/mp4', src: video});
+        geturl:function(){
+            console.log(this.video);
+            this.player.src({type: 'video/mp4', src: this.video});
             this.source=true;
-            //this.title=video.videoTitle;
-            this.title='testvideo run';
-            //this.currVid=video;
             if(this.nextVid==null && this.prevVid==null){
                 $('#videoWindow .vjs-overlay-next').css('display', 'none');
                 $('#videoWindow .vjs-overlay-prev').css('display', 'none');
             }
-        },
-        setVideos:function(videos){
-            if(videos.prev){
-                this.prevVid=videos.prev;
-            }
-            if(videos.next){
-                this.nextVid=videos.next;
-            }
-            this.index=videos.index;
-            //console.log("current index is: "+this.index);
-        },
-        nextClick:function(){
-            this.index+=1;
-            //console.log("current index: "+this.index);
-            this.$emit('getnext', this.index);
-            this.prevVid= this.currVid;
-            this.geturl(this.nextVid);
-            this.player.play();
-        },
-        prevClick:function(){
-            this.index-=1;
-            //console.log("current index: "+this.index);
-            this.$emit('getprev', this.index);
-            this.nextVid= this.currVid;
-            this.geturl(this.prevVid);
-            this.player.play();
         },
         //Video Modal on-events
         stopVideo:function(){
@@ -113,8 +83,8 @@ var modalOverlay= {
             this.player.src('');
             this.player.muted(false);
             this.source=false;
-            this.$emit('stopvideo');
-            console.log("video closed");
+            this.$emit('stopvideo',this.id);
+            //console.log("video closed");
         },
         endOfVideo:function(){
             //console.log('video ended');
@@ -131,12 +101,12 @@ var modalOverlay= {
                 $('#videoWindow .vjs-overlay-prev').css('display', 'block');
             }
             clearTimeout(this.videoTimeout);
-            this.videoTimeout = setTimeout(this.inactiveUser, this.countdown);
+            this.videoTimeout = setTimeout(this.stopVideo, this.countdown);
         },
         pausedVideo:function(){
             //console.log('video paused');
             clearTimeout(this.videoTimeout);
-            this.videoTimeout = setTimeout(this.inactiveUser, this.countdown);
+            this.videoTimeout = setTimeout(this.stopVideo, this.countdown);
         },
         playingVideo:function(){
             clearTimeout(this.videoTimeout);
@@ -187,9 +157,8 @@ var modalOverlay= {
           </div>
         </div>
 
-        <div v-if="id=='modalVideo'" class="modal-content">
+        <div v-if="id=='modalVid'" class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title">{{ title }}</h5>
             <button @click="stopVideo" type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>

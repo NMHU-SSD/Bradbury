@@ -15,8 +15,8 @@ var transComp= {
             this.jumpSlide(0);
         },
         seturl:function(index,modal){
-            this.$emit('seturl', {ob:modal, index:index});
-            //console.log("Comp", index, modal);
+            //this.$emit('seturl', index);
+            this.$emit('seturl', {index:index, ob:modal});
         },
         selected:function(){
             console.log("selected");
@@ -29,7 +29,7 @@ var transComp= {
         <p class="title-text-box half-shadow"></p>
         <div class="left-circle circle dark-yellow">
             <ol class="carousel-indicators">
-                <li v-for="(slide, index) in slides1" class="yellow" @click="seturl(index,1)"></li>
+                <li v-for="(slide, index) in slides1" class="yellow" @click="seturl(index,0)"></li>
             </ol>
         </div>
         <div class="right-circle circle yellow">

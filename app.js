@@ -55,13 +55,14 @@ var app = new Vue({
             document.onmousedown = this.resetTimer;
             this.$refs.timeModal.reset();
             this.displayModal();
-            this.afk = setTimeout(this.toDefault, this.timeData.quitout);
+            //this.afk = setTimeout(this.toDefault, this.timeData.quitout);
         },
         toDefault:function(){
             //this.active=false;
             console.log("toDefault");
-            //this.$refs[this.computeId].reset();
-            //this.$refs[this.historyId].reset();
+            $('#modalVideo1').modal('hide');
+            $('#modalVideo2').modal('hide');
+            $('#modalVid').modal('hide');
         },
         displayModal:function(){
             $('#'+'modalTimer').modal();
@@ -85,7 +86,6 @@ var app = new Vue({
                 clearTimeout(this.afk);
                 this.active=false;
             }
-            //this.stillActive=info.active;
             //console.log(info);
             this.$refs.modalVid.geturl(info);
             $('#modalVid').modal();
@@ -111,12 +111,17 @@ var app = new Vue({
             }else if(data.ob ==2){
                 this.$refs.modalVideo2.geturl(data.index);
                 $('#modalVideo2').modal();
+            }else if(data.ob==0){
+                console.log("modalVid");
+                this.$refs.modalVid.geturl();
+                $('#modalVid').modal();
             }
             //console.log("app ", data);
         },
         //video modal popups
-        videoModalClose:function(){
+        videoModalClose:function(id){
             this.active=true;
+            //$('#'+id).modal('hide');
             console.log(this.active);
         }
     }

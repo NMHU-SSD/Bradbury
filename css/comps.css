@@ -1,3 +1,4 @@
+/******** Transformative Comp********/
 .circle{
     position: absolute;
     width: 38vw;
@@ -55,7 +56,6 @@
     right: 0;
     bottom: 0;
 }
-
 .title{
     height: 30vw;
     font-size: 1.2vw;
@@ -74,4 +74,50 @@
 }
 .bold-title{
     font-size: 5em;
+}
+/***************** RD 100 *********/
+.sum-row{
+    height: 55%;
+}
+.rd-logo{
+    width:35vw;
+    height:95%;
+    padding:2% 0 0 5%;
+    margin-right: 0;
+}
+.rd-text-box{
+    height: 60%;
+    margin-top: 5vw;
+    margin-left: 10%;
+}
+.cover-holder{
+    height: 37%;
+    width: 90%;
+    margin: 0 auto;
+}
+.cover{
+    height: 100%;
+    width: 100%;
+    position:relative;
+}
+.cover-logo{
+    position: absolute;
+    z-index: 1;
+    pointer-events: none;
+    height: 70%;
+    width: 75%;
+    right: 18%;
+    top: 15%;
+}
+.cover-img{
+    object-fit: contain;
+    border: solid .2em #c6bf18;
+    max-height: 100%;
+    position: absolute;
+    left: 25%;
+}
+.cover-arrow{
+    height: 90%;
+    width: 100%;
+    background: url(../assets/customs/Arrow-right.svg)no-repeat;
 }

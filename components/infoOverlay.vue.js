@@ -52,7 +52,7 @@ var infoOverlay= {
         startTimer:function(){
             console.log("covers timer");
             clearTimeout(this.timeout);
-            this.timeout = setTimeout(this.inactiveUser, this.countdown);
+            this.timeout = setTimeout(this.stopVideo, this.countdown);
             //document.onmousedown = this.startTimer;
         },
         getCover:function(index){
@@ -118,12 +118,9 @@ var infoOverlay= {
                 this.player.muted(false);
             }
             this.source=false;
-            this.$emit('stopvideo');
-            console.log("video closed");
-        },
-        inactiveUser:function(){
-            this.stopVideo();
+            this.$emit('stopvideo',this.id);
             //$('#'+this.id).modal('hide');
+            console.log("video closed");
         },
         endOfVideo:function(){
             //console.log('video ended');
@@ -133,12 +130,12 @@ var infoOverlay= {
               this.player.play();
             })
             clearTimeout(this.timeout);
-            this.timeout = setTimeout(this.inactiveUser, this.countdown);
+            this.timeout = setTimeout(this.stopVideo, this.countdown);
         },
         pausedVideo:function(){
             //console.log('video paused');
             clearTimeout(this.timeout);
-            this.timeout = setTimeout(this.inactiveUser, this.countdown);
+            this.timeout = setTimeout(this.stopVideo, this.countdown);
         },
         playingVideo:function(){
             clearTimeout(this.timeout);
