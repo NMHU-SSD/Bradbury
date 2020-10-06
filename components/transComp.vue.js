@@ -24,12 +24,12 @@ var transComp= {
         }
     },
     template:
-    `<div class="carousel background green size">
+    `<div class="carousel background tfc size">
         <img :src=header class="comp-header">
         <p class="title-text-box half-shadow"></p>
         <div class="left-circle circle dark-yellow">
             <ol class="carousel-indicators">
-                <li v-for="(slide, index) in slides1" class="yellow" @click="seturl(index,0)"></li>
+                <li v-for="(slide, index) in slides1" class="yellow" @click="seturl(index,1)"></li>
             </ol>
         </div>
         <div class="right-circle circle yellow">

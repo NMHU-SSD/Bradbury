@@ -1,6 +1,6 @@
 var modalOverlay= {
     name:"modal-overlay",
-    props:['countdown', 'id', 'exitout','message','video'],
+    props:['countdown', 'id','message'],
     data:function(){
         return{
             count:null,
@@ -66,9 +66,9 @@ var modalOverlay= {
             this.count = Math.floor(this.countdown / 1000);
         },
         //Video Modal Functions
-        geturl:function(){
-            console.log(this.video);
-            this.player.src({type: 'video/mp4', src: this.video});
+        geturl:function(url){
+            console.log(url);
+            this.player.src({type: 'video/mp4', src: url});
             this.source=true;
             if(this.nextVid==null && this.prevVid==null){
                 $('#videoWindow .vjs-overlay-next').css('display', 'none');
@@ -145,10 +145,10 @@ var modalOverlay= {
         }
     },
     template:
-    `<div :id="id" class="modal fade" tabindex="-1" role="dialog" :data-backdrop="(exitout=='true' ? 'true' : 'static')" @:displayModal="timer">
-      <div class="modal-dialog modal-xl modal-dialog-centered" role="document">
+    `<div :id="id" class="modal fade" tabindex="-1" role="dialog" data-backdrop="true" @:displayModal="timer">
+      <div class="modal-dialog modal-xl modal-dialog-centered vid" role="document">
 
-        <div v-if="id=='modalTimer'" class="modal-content timer">
+        <div v-if="id=='modalTimer'" class="modal-content">
           <div v-if="message" class="modal-header d-block">
             <h5 class="modal-title">{{ message.header }}</h5>
           </div>
@@ -158,16 +158,9 @@ var modalOverlay= {
         </div>
 
         <div v-if="id=='modalVid'" class="modal-content">
-          <div class="modal-header">
-            <button @click="stopVideo" type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
           <div class="modal-body">
             <video id="videoWindow" ref="videoPlayer" preload="none" class="video-js vjs-big-play-centered web-video" @ended="endOfVideo" @pause="pausedVideo" @play="playingVideo">
             </video>
-            <div v-show="isEnded" class="playlist-buttons next-button" @click="nextClick"></div>
-            <div v-show="isEnded" class="playlist-buttons prev-button" @click="prevClick"></div>
           </div>
         </div>
 

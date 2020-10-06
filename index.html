@@ -20,14 +20,14 @@
 	<div id="app">	
 		<main>
             <!--Pop overs-->
-            <modal-overlay id="modalVid" ref="modalVid" exitout="false" :video="comp.been[0].video" :countdown="timeData.videotimer" @stopvideo="videoModalClose($event)"></modal-overlay>
-            <modal-overlay id="modalTimer" exitout="true" :countdown="timeData.quitout" :message="timeData.message" ref="timeModal"></modal-overlay>
             <info-overlay id="modalInfo" ref="modalInfo" spec="info" :slides="rd100.covers"
                           :countdown="timeData.timeout" @stopvideo="videoModalClose($event)" @seturl="displayVideo($event)"></info-overlay>
             <info-overlay id="modalVideo1" ref="modalVideo1" spec="vid" :slides="comp.been"
                           :countdown="timeData.videotimer" @stopvideo="videoModalClose($event)"></info-overlay>
             <info-overlay id="modalVideo2" ref="modalVideo2" spec="vid" :slides="comp.headed"
                           :countdown="timeData.videotimer" @stopvideo="videoModalClose($event)"></info-overlay>
+            <modal-overlay id="modalVid" ref="modalVid" :countdown="timeData.videotimer" @stopvideo="videoModalClose($event)"></modal-overlay>
+            <modal-overlay id="modalTimer" :countdown="timeData.quitout" :message="timeData.message" ref="timeModal"></modal-overlay>
 
             <!--- Main Layout components---->
             <div class="background title">

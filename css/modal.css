@@ -1,4 +1,7 @@
 /***** Modal ****/
+.modal.fade {
+    background: rgba(0,0,0,0.4);
+}
 .modal{
     max-width: 100%;
     padding-right: 0 !important;
@@ -8,8 +11,8 @@
 .modal-open{
     padding-right: 0px !important;
 }
-.modal-backdrop.show {
-    opacity: 0.75;
+#modalTimer .modal-dialog{
+    text-align: center;
 }
 .info{
     width: 60vw;
@@ -106,7 +109,6 @@
 .carousel-control-next-icon{
     background: url(../assets/customs/Arrow-right.svg)no-repeat;
 }
-
 .ribbon h3{
     font-size: .9em;
 }

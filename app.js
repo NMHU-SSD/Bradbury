@@ -14,11 +14,10 @@ var app = new Vue({
         rd100:"",
         t: null,
         afk: null,
-        active:null
+        active:false
     },
     mounted: function(){
         this.GetData();
-        this.resetTimer();
     },
     
     methods:{
@@ -44,9 +43,6 @@ var app = new Vue({
                 this.t = setTimeout(this.toAlert, this.timeData.timeout);
                 console.log("timer set");
             }
-            else if(this.active==null){
-                this.active=true;
-            }
             document.onmousedown = this.resetTimer;
             console.log(this.active);
         },
@@ -55,30 +51,19 @@ var app = new Vue({
             document.onmousedown = this.resetTimer;
             this.$refs.timeModal.reset();
             this.displayModal();
-            //this.afk = setTimeout(this.toDefault, this.timeData.quitout);
+            this.afk = setTimeout(this.toDefault, this.timeData.quitout);
         },
         toDefault:function(){
-            //this.active=false;
+            this.active=false;
             console.log("toDefault");
-            $('#modalVideo1').modal('hide');
-            $('#modalVideo2').modal('hide');
-            $('#modalVid').modal('hide');
+            $('#modalInfo').modal('hide');
         },
         displayModal:function(){
-            $('#'+'modalTimer').modal();
+            $('#modalTimer').modal();
             this.$refs.timeModal.timer();
             setTimeout(function(){
-                $('#'+'modalTimer').modal('hide')}, this.timeData.quitout);
+                $('#modalTimer').modal('hide')}, this.timeData.quitout);
             document.onmousedown = this.resetTimer;
-            /*
-            $(document).on('show.bs.modal', '.modal', function (event) {
-            var zIndex = 1040 + (10 * $('.modal:visible').length);
-            $(this).css('z-index', zIndex);
-            setTimeout(function() {
-                $('.modal-backdrop').not('.modal-stack').css('z-index', zIndex - 1).addClass('modal-stack');
-            }, 0);
-        });
-        */
         },
         displayVideo:function(info){
             if(this.active){
@@ -91,13 +76,11 @@ var app = new Vue({
             $('#modalVid').modal();
         },
         displayCover:function(index){
-            if(this.active){
-                clearTimeout(this.t);
-                clearTimeout(this.afk);
-                this.active=false;
-            }
+            this.active=true;
             this.$refs.modalInfo.getCover(index);
             $('#modalInfo').modal();
+            this.resetTimer();
+            console.log(this.active);
         },
         displayTech:function(data){
             if(this.active){
@@ -113,15 +96,14 @@ var app = new Vue({
                 $('#modalVideo2').modal();
             }else if(data.ob==0){
                 console.log("modalVid");
-                this.$refs.modalVid.geturl();
+                this.$refs.modalVid.geturl(data.index);
                 $('#modalVid').modal();
             }
-            //console.log("app ", data);
         },
         //video modal popups
         videoModalClose:function(id){
-            this.active=true;
-            //$('#'+id).modal('hide');
+            this.active=false;
+            $('#'+id).modal('hide');
             console.log(this.active);
         }
     }

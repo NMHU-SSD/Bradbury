@@ -28,7 +28,8 @@ var infoOverlay= {
             },
             timeout: null,
             source:false,
-            videoData:null
+            videoData:null,
+            timer:false
         }
     },
     mounted(){
@@ -43,6 +44,9 @@ var infoOverlay= {
         if(this.player){
             this.player.dispose();
         }
+        if(this.timer){
+            //document.onmousedown = this.startTimer;
+        }
     },
     methods:{
         seturl:function(){
@@ -51,6 +55,7 @@ var infoOverlay= {
         },
         startTimer:function(){
             console.log("covers timer");
+            this.timer=true;
             clearTimeout(this.timeout);
             this.timeout = setTimeout(this.stopVideo, this.countdown);
             //document.onmousedown = this.startTimer;
@@ -58,7 +63,7 @@ var infoOverlay= {
         getCover:function(index){
             $('#carousel-'+this.id).carousel(index);
             this.jumpSlide(index);
-            this.startTimer();
+            //this.startTimer();
         },
         //carousel
         nextSlide:function(){
@@ -119,7 +124,6 @@ var infoOverlay= {
             }
             this.source=false;
             this.$emit('stopvideo',this.id);
-            //$('#'+this.id).modal('hide');
             console.log("video closed");
         },
         endOfVideo:function(){
