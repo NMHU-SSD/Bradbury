@@ -1,6 +1,6 @@
 /******** Transformative Comp********/
 .tfc{
-    background: url(../data/rd100/ASCI-bkgd.jpg)no-repeat;
+    background: url(../data/tfComp/ASCI-bkgd.jpg)no-repeat;
     background-size: cover;
 }
 .circle{
@@ -53,8 +53,10 @@
     margin-left: 25%;
 }
 .title-text-box{
-    height: 30%;
+    font-size: 1.1em;
+    height: auto;
     width: 60%;
+    padding: 0.2em 1em;
     margin: 0;
     position: absolute;
     right: 0;
@@ -90,9 +92,10 @@
     margin-right: 0;
 }
 .rd-text-box{
-    height: 60%;
-    margin-top: 5vw;
     margin-left: 10%;
+    padding: .5em;
+    padding-right: 10%;
+    font-size: 1.1em;
 }
 .cover-holder{
     height: 37%;
@@ -119,9 +122,4 @@
     max-height: 100%;
     position: absolute;
     left: 25%;
-}
-.cover-arrow{
-    height: 90%;
-    width: 100%;
-    background: url(../assets/customs/Arrow-right.svg)no-repeat;
 }

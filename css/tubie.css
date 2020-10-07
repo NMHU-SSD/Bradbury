@@ -51,8 +51,10 @@
     margin-top: -1em;
 }
 .popover .popover-body{ 
-    font-size: 1.9em;
-    padding: 1em .5em;
+    font-size: 1.7em;
+    overflow-y: auto;
+    max-height: 33em;
+    padding: .5em .5em;
     margin-top: -.3em;
     color: #212529;
 }
@@ -60,11 +62,12 @@
 .popover {
     font-size: 0.7em;
     font-family: 'Roboto-Cond', sans-serif;
+    white-space: pre-line;
+    width: 40em;
     max-width: 55vw !important;
     min-width: 200px;
     border-radius: 10%;
-    padding: 4em 5em;
-    white-space: pre-line;
+    padding: 1em 1em;
     margin-right: 2%;
     margin-left: 2%;
 }

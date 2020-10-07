@@ -1,6 +1,6 @@
 var transComp= {
     name: "trans-comp",
-    props: ['id', 'header','slides1','slides2'],
+    props: ['id', 'data'],
     data:function(){
         return{
             
@@ -15,7 +15,6 @@ var transComp= {
             this.jumpSlide(0);
         },
         seturl:function(index,modal){
-            //this.$emit('seturl', index);
             this.$emit('seturl', {index:index, ob:modal});
         },
         selected:function(){
@@ -25,16 +24,16 @@ var transComp= {
     },
     template:
     `<div class="carousel background tfc size">
-        <img :src=header class="comp-header">
-        <p class="title-text-box half-shadow"></p>
+        <img :src=data.header class="comp-header">
+        <p class="title-text-box half-shadow">{{ data.body }}</p>
         <div class="left-circle circle dark-yellow">
             <ol class="carousel-indicators">
-                <li v-for="(slide, index) in slides1" class="yellow" @click="seturl(index,1)"></li>
+                <li v-for="(slide, index) in data.been" class="yellow" @click="seturl(index,1)"></li>
             </ol>
         </div>
         <div class="right-circle circle yellow">
             <ol class="carousel-indicators">
-                <li v-for="(slide, index) in slides2" class="dark-yellow" @click="seturl(index,2)"></li>
+                <li v-for="(slide, index) in data.headed" class="dark-yellow" @click="seturl(index,2)"></li>
             </ol>
         </div>
     </div>`

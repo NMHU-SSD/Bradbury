@@ -1,6 +1,6 @@
 var rdComp= {
     name: "rd-comp",
-    props: ['id', 'covers'],
+    props: ['id', 'covers', 'body'],
     data:function(){
         return{
             slideImages: null,
@@ -72,20 +72,11 @@ var rdComp= {
             return styling+upCase;
         }
     },
-    /*watch:{
-        slides:function(){
-            if(this.slides!=null){
-                this.slideImages = this.slides[0].media;
-                this.infoSlides = this.slides.slice(1);
-                //console.log(this.scrollHeight);
-            }
-        }
-    },*/
     template:
     `<div :id="id" class="background size red">
         <div class="row sum-row">
             <img src="" class="col-4 rd-logo">
-            <p class="col rd-text-box half-shadow"></p>
+            <p class="col rd-text-box align-self-center half-shadow">{{ body }}</p>
         </div>
         <div class="cover-holder row no-gutters">
             <template v-for="(cover, index) in covers">
