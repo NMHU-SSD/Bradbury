@@ -1,3 +1,46 @@
+/********Tubie CSS********/
+.tubie-container-right{
+    background: url(../assets/CustomImages/Tubie-orangebkgd-right.svg) no-repeat;
+    background-position:right bottom;
+    height: 11vw;
+    width: 25vw;
+    position: absolute;
+    bottom: 4em;
+    right: -5em;
+}
+.tubie-container-left{
+    background: url(../assets/CustomImages/Tubie-orangebkgd-left.svg) no-repeat;
+    background-position: bottom left;
+    height: 15vw;
+    width: 34vw;
+    max-width: 700px;
+    max-height: 100%;
+    position: absolute;
+    bottom: 0;
+    left: -5%;
+    z-index: 7;
+}
+.tubie-wrapper{
+    width: 50%;
+    height: 100%;
+}
+.tubie-img{
+    background: url(../assets/Toobie/tubie_info.png) no-repeat;
+    background-position: center bottom;
+    background-size: contain;
+    margin-top: 7%;
+    height: 100%;
+    outline: none;
+}
+.tubie-img-left{
+    background: url(../assets/Toobie/tubie_help.png) no-repeat;
+    background-position: right bottom;
+    background-size: contain;
+    height: 100%;
+    outline: none;
+    margin-right: -50%;
+}
+
 /*****Tubie Popover******/
 .popover .popover-header {
     font-size: 1.8em;

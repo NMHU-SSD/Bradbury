@@ -1,0 +1,84 @@
+/***** Muesuem Fonts ****/
+@font-face{
+    font-family: 'HelveMedCon';
+    src: url(assets/MuseumFonts2012/HelveNeuMedCon.otf);
+}
+@font-face{
+    font-family: 'SerifBlack';
+    src: url(assets/MuseumFonts2012/SerifBla.otf);
+}
+/********** Google Fonts ********/
+@font-face{
+    font-family: Anton;
+    src: url(../assets/fonts/Anton/Anton-Regular.ttf);
+}
+@font-face{
+    font-family:Open-Sans;
+    src: url(../assets/fonts/Open_Sans/OpenSans-Light.ttf);
+}
+@font-face{
+    font-family:Open-Sans-Bold;
+    src: url(../assets/fonts/Open_Sans/OpenSans-Bold.ttf);
+}
+@font-face{
+    font-family:Oswald;
+    src: url(../assets/fonts/Oswald/static/Oswald-Light.ttf);
+}
+@font-face{
+    font-family:Roboto-Cond;
+    src: url(../assets/fonts/Roboto_Condensed/RobotoCondensed-Regular.ttf);
+}
+/********** Text Fonts ********/
+.title-font{
+    font-family: Anton;
+}
+.body-font{
+    font-family: Oswald;
+}
+.content-body{
+    font-size: calc(14px + 1vw);
+    padding-left: 5%;
+    margin-right: 20%;
+    margin-top: 20px;
+    overflow: hidden;
+    color: white;
+    font-family: Oswald;
+    font-weight: 300;
+    white-space: pre-line;
+}
+.scrolling{
+    overflow-y: auto;
+}
+/********General CSS*******/
+body{
+    height: 100vh;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+#app, main{
+    background-color: black;
+    height: 100%;
+    width: 100%;
+}
+.text-side{
+    height: 65%;
+    overflow-y: auto;
+}
+.gradient-green{
+    background-image: linear-gradient(
+        to bottom,
+        #4A6C6A 20%,
+        #bcd1bc
+    );
+}
+.yellow{
+    background-color: #BBC356;
+}
+.red{
+    background-color: #781214;
+}
+.img-shadow{
+    border-radius: 50%;
+    box-shadow: 0px 0px 50px 20px #2a2b2b;
+}

@@ -1,6 +1,6 @@
 var buildingFuture= {
     name: "building-future",
-    props: ['id', 'slides', 'header', 'speed', 'header', 'videosdata'],
+    props: ['id', 'slides', 'header', 'speed', 'videosdata'],
     data:function(){
         return{
             slideImages: null,
@@ -125,12 +125,12 @@ var buildingFuture= {
                                 </div>
                             </div>
 
-                            <div :class="['col text-side', (slide.media ? 'side-widget mt-1 mb-3' : '')]">
+                            <div :class="['col', (slide.media ? 'side-widget scrolling mb-3' : 'words-holder')]">
                                   <p v-if="slide.title" class="content-body">{{ slide.title }}</p>
                                   <p v-if="slide.body" class="content-body">{{ slide.body }}</p>
                         <!--- In Their Words----->
-                                <div v-if="slide.videoSlide" class="container-fluid pt-5 pb-lg-5 mr-md-5 fix-width">
-                                    <div class="row">
+                                <div v-if="slide.videoSlide" class="words-holder container-fluid pt-5 mr-md-5 fix-width">
+                                    <div class="row words-holder">
                                         <div class="fix-col col-12 col-sm-6 col-lg-6 order-2 order-sm-1">
 
                                             <div class="vid-container">

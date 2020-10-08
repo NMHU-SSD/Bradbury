@@ -15,10 +15,8 @@
     {
             "header":"assets/TitleLogo/Title-WomeninLosAlamosComputing.svg",
             "slidespeed": 30000,
-            "slides":
+            "slideShow":
             [
-                {
-                    "media":[
                         {
                             "img":"data/images/HumanComputersAtNASA-PublicDomain.jpg"
                         },
@@ -29,8 +27,9 @@
                         {
                             "img":"data/images/feature15.jpg"
                         }
-                    ]
-                },
+                    ],
+            "slides":
+            [
                 {
                     "title":"At Los Alamos and elsewhere, the first computers were humans who did calculations by hand, sometimes with the help of a desktop calculator.",
                     "body":"Most of these human computers were women. Although not always recognized, their word propelled science and engineering forward for decades.", 

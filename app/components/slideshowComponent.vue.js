@@ -71,7 +71,7 @@ var slideshowComponent={
             </div>
         </div>
         <div v-show=true class="splash-background">
-            <img :id="id" class="splash-img" :src="currentImg">
+            <img v-if=true :id="id" class="splash-img" :src="currentImg">
         </div>
 
         <!--div v-if="images" class="row">

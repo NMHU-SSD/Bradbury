@@ -10,9 +10,11 @@
         <link href="libraries/videojs/video-js.css" rel="stylesheet">
         <link href="libraries/videojs-overlay/videojs-overlay.css" rel="stylesheet">
         <!-- CSS --->
+      <link rel="stylesheet" href="css/heightStyle.css">
+        <link rel="stylesheet" href="css/general.css">
         <link rel="stylesheet" href="css/womenStyle.css">
-        <link rel="stylesheet" href="css/heightStyle.css">
-        <link rel="stylesheet" href="css/popoverStyle.css">
+        <link rel="stylesheet" href="css/tubieStyle.css">
+        <link rel="stylesheet" href="css/modalStyle.css">
 
     <title>Women in Computing</title>
   </head>
@@ -24,10 +26,10 @@
             <modal-overlay :id="modalVideo" exitout="false" :countdown="timeData.videotimer" :ref="modalVideo" @stopvideo="videoModalClose()" @getnext="getNextVid($event)" @getprev="getPrevVid($event)"></modal-overlay>
             <modal-overlay :id="modalTimer" exitout="true" :countdown="timeData.quitout" :message="timeData.message" ref="timeModal"></modal-overlay> 
             <!--- Main Layout components---->
-            <title-bar v-show=true :title="timeData.pageTitle"></title-bar>
-            <woman-computing v-show=true :id="computeId" :slides="womenComputingData.slides" :header="womenComputingData.header" :speed="womenComputingData.slidespeed" @selected="itemselect($event)" :ref="computeId"></woman-computing>
-            <building-future v-show=true :id="historyId" :slides="buildingFutureData.slides" :header="buildingFutureData.header" :speed="buildingFutureData.slidespeed" :videosdata="inTheirWordsData" @seturl="displayVideo($event)" @othervids="passVids($event)" @selected="itemselect($event)" :ref="historyId"></building-future>
-            <time-line v-show=true id="timeline" :tubie="timelineData.tubie" :webpage="timelineData.url" :title="timelineData.title" :subtitle="timelineData.subtitle" @seturl="displayVideo($event)" @selected="itemselect($event)"></time-line>
+            <title-bar :title="timeData.pageTitle"></title-bar>
+            <woman-computing :id="computeId" :ref="computeId" :slides="womenComputingData" :header="womenComputingData.header" :speed="womenComputingData.slidespeed" @selected="itemselect($event)"></woman-computing>
+            <building-future :id="historyId" :ref="historyId" :slides="buildingFutureData.slides" :header="buildingFutureData.header" :speed="buildingFutureData.slidespeed" :videosdata="inTheirWordsData" @seturl="displayVideo($event)" @othervids="passVids($event)" @selected="itemselect($event)"></building-future>
+            <time-line v-if=true id="timeline" :tubie="timelineData.tubie" :webpage="timelineData.url" :title="timelineData.title" :subtitle="timelineData.subtitle" @seturl="displayVideo($event)" @selected="itemselect($event)"></time-line>
         </main>
 	</div>
     

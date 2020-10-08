@@ -1,6 +1,6 @@
 var womanComputing = {
     name: "woman-computing",
-    props: ['id', 'slides', 'header', 'speed', 'header'],
+    props: ['id', 'slides', 'header', 'speed'],
     data:function(){
         return{
             slideImages: null,
@@ -56,8 +56,8 @@ var womanComputing = {
     watch:{
         slides:function(){
             if(this.slides!=null){
-                this.slideImages = this.slides[0].media;
-                this.infoSlides = this.slides.slice(1);
+                this.slideImages = this.slides.slideShow;
+                this.infoSlides = this.slides.slides;
             }
         }
     },
@@ -75,10 +75,10 @@ var womanComputing = {
                     <div :class="['carousel-item', (index==0 ? 'active' : '')]" >
                         <div class="row row-full no-gutters">
                     <!--- Slides Layout Appearence --->
-                              <div class="d-none d-sm-block col-sm-6 col-xl-8 img-main">
+                              <div class="d-none d-sm-block col-sm-6 col-xl-9 img-main">
                                   <img :src="slide.media" :alt="slide.alt">
                               </div>
-                              <div class="text-side col mt-1 offset-2 offset-sm-0 ">
+                              <div class="col mt-1 offset-2 offset-sm-0 ">
                                   <p v-if="slide.title" class="content-body">{{ slide.title }}</p>
                                   <p v-if="slide.body" class="content-body ">{{ slide.body }}</p>
                               </div>
