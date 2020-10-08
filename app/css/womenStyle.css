@@ -36,6 +36,7 @@
 /*****carousel indicators*/
 .carousel{
     font-size: 14px;
+    overflow: hidden;
 }
 .carousel .carousel-indicators{
     height: 3em;
@@ -176,10 +177,15 @@
 .title-header h1{
     color: white;
     text-align: center;
-    font-size: 7vw;
+    font-size: 1em;
+    margin-bottom: 0;
 }
     
 /************ Women in Computing Layout ********/
+.text-side{
+    height: 60%;
+    overflow-y: auto;
+}
 /******* Title Circle *****/
 .section-header-computing{
     width: 30vw;
@@ -219,7 +225,7 @@
     width: 30%;
     max-width: 35em;
     position: absolute;
-    bottom: 5em;
+    bottom: 15%;
     left: 2%;
     pointer-events: none;
 }
@@ -235,7 +241,7 @@
     padding: 0;
     margin-left: 26%;
     margin-top: 2%;
-    height: 65%;
+    height: 55%;
 }
 /******* Image Side *****/
 .img-main-large{
@@ -307,6 +313,7 @@
 .timeline-banner{
     height: 20%;
     width: 100%;
+    background-color: black;
     overflow: hidden;
     position: relative;
 }

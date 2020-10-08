@@ -18,7 +18,7 @@
     overflow-y: auto;
 }
 .modal-title{
-    font-size: 1em;
+    font-size: 2em;
 }
 .close{
     font-size: 2em;
@@ -30,18 +30,19 @@
 }
 /******* Timer Font *****/
 .timer h5, .timer p{
-    font-size: 1em;
+    font-size: 2em;
     text-align: center;
     padding: 2%;
     margin: 0 auto;
 }
 /*************** video JS ***********/
 .video-js {
-  margin: 0 auto !important;
+    margin: 0 auto !important;
+    font-size: 3em;
 }
 /******* Re/Play Button *****/
 .video-js .vjs-big-play-button{
-    font-size: 4em;
+    font-size: 1em;
     padding: 1em;
 }
 .video-js .vjs-big-play-button::before{
