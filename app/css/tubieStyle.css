@@ -54,15 +54,18 @@
     font-size: 1.7em;
     padding: 1em .5em;
     margin-top: -.3em;
+    overflow-y: auto;
     color: #212529;
 }
 /****Popover Bubble****/
 .popover {
     font-size: calc(8px + .5vw);
-    max-width: 55vw !important;
+    max-height: 80%;
+    max-width: 40vw !important;
     min-width: 200px;
     border-radius: 45%;
     padding: 4em 5em;
+    margin: 0 5%;
 }
 @media only screen and (max-width:1200px){
     .popover{

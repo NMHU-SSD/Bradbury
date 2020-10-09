@@ -9,7 +9,7 @@
 *
 */
 
-/**********General Basics
+/**********General Basics***********/
 #titleBar{
     height:7.5vh;
     max-height: calc(3840px * .075);
@@ -26,18 +26,22 @@
     margin: 0;
     height: 50vh;
 }
-***********/
+
 /********* 4K Monitor **********/
 @media only screen and (min-width:2159px){
     body{
         height: 100vh;
         width: 100vw;
     }
+    .vid-thumb{
+        height: 15em;
+    }
 }
     
 @media only screen and (min-width:2159px){
     #titleBar{
         height: 7.5vh;
+        font-size: 9em;
     }
     #carousel-carouselComputing, #carouselComputing{
         height: 20vh;

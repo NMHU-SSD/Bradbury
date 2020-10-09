@@ -67,10 +67,8 @@
     {
             "header":"assets/TitleLogo/Title-AHistoryofBuildingtheFuture.svg",
             "slidespeed": 15000,
-            "slides":
+            "slideShow":
             [
-                {
-                    "media": [
                         {
                             "img":"data/images/WACs%20Los%20Alamos%202.jpg",
                             "position":"top"
@@ -91,8 +89,9 @@
                             "img": "data/images/Cindy%20Martin%20and%20Joann%20Campbell.jpg",
                             "position":"100% 5%"
                         }
-                    ]
-                },
+                    ],
+            "slides":
+            [
                 {
                     "title":"The first computers at Los Alamos were mostly women from the town's civilian community. Professional computers from the Woman's Army Corps (WACs) soon grew the ranks of human computers at the Lab to about twenty. Without their skilled and tireless computing work, Los Alamos' wartime mission would not have succeeded.",
                     "media": "data/images/WACs%20Los%20Alamos%202.jpg",

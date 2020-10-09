@@ -23,12 +23,12 @@
 	<div id="app">	
 		<main>
             <!-- Pop overs --->
-            <modal-overlay :id="modalVideo" exitout="false" :countdown="timeData.videotimer" :ref="modalVideo" @stopvideo="videoModalClose()" @getnext="getNextVid($event)" @getprev="getPrevVid($event)"></modal-overlay>
-            <modal-overlay :id="modalTimer" exitout="true" :countdown="timeData.quitout" :message="timeData.message" ref="timeModal"></modal-overlay> 
+            <modal-overlay :id="modalVideo" :countdown="timeData.videotimer" :ref="modalVideo" @stopvideo="videoModalClose()" @getnext="getNextVid($event)" @getprev="getPrevVid($event)"></modal-overlay>
+            <modal-overlay :id="modalTimer" :countdown="timeData.quitout" :message="timeData.message" ref="timeModal"></modal-overlay> 
             <!--- Main Layout components---->
             <title-bar :title="timeData.pageTitle"></title-bar>
             <woman-computing :id="computeId" :ref="computeId" :slides="womenComputingData" :header="womenComputingData.header" :speed="womenComputingData.slidespeed" @selected="itemselect($event)"></woman-computing>
-            <building-future :id="historyId" :ref="historyId" :slides="buildingFutureData.slides" :header="buildingFutureData.header" :speed="buildingFutureData.slidespeed" :videosdata="inTheirWordsData" @seturl="displayVideo($event)" @othervids="passVids($event)" @selected="itemselect($event)"></building-future>
+            <building-future :id="historyId" :ref="historyId" :slides="buildingFutureData" :header="buildingFutureData.header" :speed="buildingFutureData.slidespeed" :videosdata="inTheirWordsData" @seturl="displayVideo($event)" @othervids="passVids($event)" @selected="itemselect($event)"></building-future>
             <time-line v-if=true id="timeline" :tubie="timelineData.tubie" :webpage="timelineData.url" :title="timelineData.title" :subtitle="timelineData.subtitle" @seturl="displayVideo($event)" @selected="itemselect($event)"></time-line>
         </main>
 	</div>

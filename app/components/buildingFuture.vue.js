@@ -92,8 +92,8 @@ var buildingFuture= {
     watch:{
         slides:function(){
             if(this.slides!=null){
-                this.slideImages = this.slides[0].media;
-                this.infoSlides = this.slides.slice(1);
+                this.slideImages = this.slides.slideShow;
+                this.infoSlides = this.slides.slides;
             }
         },
         videosdata:function(){
@@ -131,8 +131,7 @@ var buildingFuture= {
                         <!--- In Their Words----->
                                 <div v-if="slide.videoSlide" class="words-holder container-fluid pt-5 mr-md-5 fix-width">
                                     <div class="row words-holder">
-                                        <div class="fix-col col-12 col-sm-6 col-lg-6 order-2 order-sm-1">
-
+                                        <div class="words-holder col-12 col-sm-6 col-lg-6 order-2 order-sm-1">
                                             <div class="vid-container">
                                                 <div class="inner-row row">
                                                     <div v-for="(video,index) in videoData.videos" class="col-6 col-xl-4 mb-4 vid-col">
@@ -140,13 +139,9 @@ var buildingFuture= {
                                                     </div>
                                                 </div>
                                             </div>
-
-                                            <!--div class="MagicScroll visible-fix" data-options="arrows: outside; items: 2">
-                                                <img v-for="video in videoData.videos" :src="video.img" class="" @click="seturl(video)">
-                                            </div-->
-
                                         </div>
-                                        <div class="col-12 col-sm-6 pl-md-5 pr-md-5 order-1 order-sm-2">
+
+                                        <div class="col-12 col-sm-4 pl-md-5 pr-md-5 order-1 order-sm-2">
                                             <img class="words-header" :src="videoData.header">
                                             <p class="content-body pl-0 mr-0">{{ videoData.body }}</p>
                                         </div>
