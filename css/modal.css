@@ -60,6 +60,8 @@
 }
 .banner{
     height: 30%;
+    position: relative;
+    z-index: 5;
 }
 .video-js {
     margin: 0 auto !important;

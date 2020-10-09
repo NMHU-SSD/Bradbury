@@ -18,8 +18,11 @@ var rdComp= {
         seturl:function(url){
             this.$emit('seturl', url);
         },
-        setcover:function(index){
-            this.$emit('setcover', index);
+        setcover:function(cover){
+            let name = 'modal'+cover.name;
+            let logo = cover.logo;
+            this.$emit('setcover', {name, logo});
+            //console.log(name);
         },
         selected:function(){
             console.log("selected");
@@ -76,12 +79,12 @@ var rdComp= {
     `<div :id="id" class="background size red">
         <div class="row sum-row">
             <img src="" class="col-4 rd-logo">
-            <p class="col rd-text-box align-self-center half-shadow">{{ body }}</p>
+            <p class="col rd-text-box body-font align-self-center half-shadow">{{ body }}</p>
         </div>
         <div class="cover-holder row no-gutters">
             <template v-for="(cover, index) in covers">
                 <div class="col-4 cover">
-                    <img :src="cover.img" class="cover-img" @click="setcover(index)">
+                    <img :src="cover.img" class="cover-img" @click="setcover(cover)">
                     <img :src="cover.logo" class="cover-logo">
                 </div>
             </template>

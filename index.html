@@ -20,8 +20,13 @@
 	<div id="app">	
 		<main>
             <!--Pop overs-->
-            <info-overlay id="modalInfo" ref="modalInfo" spec="info" :slides="rd100.covers"
+            <info-overlay id="modalHard" ref="modalHard" spec="info" :slides="rd100.hardware"
                           :countdown="timeData.timeout" @stopvideo="videoModalClose($event)" @seturl="displayVideo($event)"></info-overlay>
+            <info-overlay id="modalNet" ref="modalNet" spec="info" :slides="rd100.networking"
+                          :countdown="timeData.timeout" @stopvideo="videoModalClose($event)" @seturl="displayVideo($event)"></info-overlay>
+            <info-overlay id="modalSoft" ref="modalSoft" spec="info" :slides="rd100.software"
+                          :countdown="timeData.timeout" @stopvideo="videoModalClose($event)" @seturl="displayVideo($event)"></info-overlay>
+            
             <info-overlay id="modalVideo1" ref="modalVideo1" spec="vid" :slides="comp.been"
                           :countdown="timeData.videotimer" @stopvideo="videoModalClose($event)"></info-overlay>
             <info-overlay id="modalVideo2" ref="modalVideo2" spec="vid" :slides="comp.headed"
@@ -31,7 +36,6 @@
 
             <!--- Main Layout components---->
             <div class="background title">
-                <h3 class="skinny-font">Exascale and beyond...</h3>
                 <h1 class="title-font">High-Performance
                     Computing Technologies</h1>
             </div>

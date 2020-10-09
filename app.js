@@ -77,12 +77,12 @@ var app = new Vue({
             this.$refs.modalVid.geturl(info);
             $('#modalVid').modal();
         },
-        displayCover:function(index){
+        displayCover:function(info){
             this.active=true;
-            this.$refs.modalInfo.getCover(index);
-            $('#modalInfo').modal();
+            this.$refs[info.name].getCover(info.logo);
+            $('#'+info.name).modal();
             this.resetTimer();
-            console.log(this.active);
+            //console.log(name);
         },
         displayTech:function(data){
             if(this.active){

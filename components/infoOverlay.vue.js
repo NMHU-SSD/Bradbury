@@ -5,7 +5,7 @@ var infoOverlay= {
         return{
             player:null,
             first:true,
-            end: false,
+            end: true,
             count:0,
             setup:{
                 autoplay: true,
@@ -29,7 +29,8 @@ var infoOverlay= {
             timeout: null,
             source:false,
             videoData:null,
-            timer:false
+            timer:false,
+            logo:null
         }
     },
     mounted(){
@@ -60,10 +61,10 @@ var infoOverlay= {
             this.timeout = setTimeout(this.stopVideo, this.countdown);
             //document.onmousedown = this.startTimer;
         },
-        getCover:function(index){
-            $('#carousel-'+this.id).carousel(index);
-            this.jumpSlide(index);
-            //this.startTimer();
+        getCover:function(logo){
+            $('#carousel-'+this.id).carousel(0);
+            this.logo = logo;
+            this.jumpSlide(0);
         },
         //carousel
         nextSlide:function(){
@@ -160,6 +161,14 @@ var infoOverlay= {
               });
         }
     },
+    watch:{
+        slides:function(){
+            if(this.slides.length > 1){
+                this.end=false;
+            }
+            console.log(this.slides.length);
+        }
+    },
     template:
     `<div :id="id" class="modal fade" tabindex="-1" role="dialog" data-backdrop=true @click.self="stopVideo">
 <div :class="['modal-dialog modal-xl modal-dialog-centered', spec]" role="document">
@@ -168,6 +177,7 @@ var infoOverlay= {
     <video v-if="spec=='vid'" id="videoWindow" ref="videoPlayer" preload="none"
                         class="video-js vjs-fluid vjs-big-play-centered web-video"
                         @ended="endOfVideo" @pause="pausedVideo" @play="playingVideo"/>
+
     <div :id="'carousel-'+id" class="carousel" data-wrap="false" data-interval="false">
         <div class="carousel-inner">
             <template v-for="(slide, index) in slides">
@@ -178,7 +188,7 @@ var infoOverlay= {
                     </div>
                     <div class="main-footer">
                         <div v-if="spec=='info'" class="ribbon red">
-                            <img :src="slide.logo">
+                            <img :src="logo">
                             <div class="tubie-container-right">
                                 <tubie-overlay :id="'tubie-'+id+index" :display="slide.tubie" position="left" @seturl="seturl"/>
                             </div>

@@ -1,7 +1,25 @@
+/********* Title *************/
+.title{
+    height: 25vw;
+    font-size: 1.2vw;
+    padding-left: 4em;
+    pointer-events: none;
+    display: flex;
+    align-items: center;
+}
+.title h1{
+    font-size: 7em;
+    white-space: pre-line;
+}
+.bold-title{
+    font-size: 5em;
+}
+
 /******** Transformative Comp********/
 .tfc{
     background: url(../data/tfComp/ASCI-bkgd.jpg)no-repeat;
     background-size: cover;
+    margin-bottom: 7%;
 }
 .circle{
     position: absolute;
@@ -56,30 +74,11 @@
     font-size: 1.1em;
     height: auto;
     width: 60%;
-    padding: 0.2em 1em;
+    padding: .5em 1.1em;
     margin: 0;
     position: absolute;
     right: 0;
     bottom: 0;
-}
-.title{
-    height: 30vw;
-    font-size: 1.2vw;
-    pointer-events: none;
-    padding-left: 4em;
-    padding-top: 1em;
-}
-.title h3{
-    font-size: 5.5em;
-    white-space: pre-line;
-    margin-bottom: 0;
-}
-.title h1{
-    font-size: 7em;
-    white-space: pre-line;
-}
-.bold-title{
-    font-size: 5em;
 }
 /***************** RD 100 *********/
 .sum-row{
@@ -93,7 +92,7 @@
 }
 .rd-text-box{
     margin-left: 10%;
-    padding: .5em;
+    padding: .8em;
     padding-right: 10%;
     font-size: 1.1em;
 }

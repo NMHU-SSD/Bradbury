@@ -23,9 +23,9 @@ var transComp= {
         }
     },
     template:
-    `<div class="carousel background tfc size">
+    `<div :id="id" class="carousel background tfc size">
         <img :src=data.header class="comp-header">
-        <p class="title-text-box half-shadow">{{ data.body }}</p>
+        <p class="title-text-box body-font half-shadow">{{ data.body }}</p>
         <div class="left-circle circle dark-yellow">
             <ol class="carousel-indicators">
                 <li v-for="(slide, index) in data.been" class="yellow" @click="seturl(index,1)"></li>

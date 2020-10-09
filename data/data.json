@@ -91,22 +91,40 @@
             {
                 "img":"data/rd100/R&D100icon-hardware.jpg",
                 "logo":"assets/customs/Title-HPChardware.svg",
-                "tubie":{
-                    "header":"Consider this...",
-                    "body":"Can you think once considered?"
-                }
+                "name":"Hard"
             },
             {
                 "img":"data/rd100/R&D100icon-networking.jpg",
                 "logo":"assets/customs/Title-HPCnetworking.svg",
-                "tubie":{
-                    "header":"Consider this...",
-                    "body":"Can you think once considered?"
-                }
+                "name":"Net"
             },
             {
                 "img":"data/rd100/R&D100icon-software.jpg",
                 "logo":"assets/customs/Title-HPCsoftware.svg",
+                "name":"Soft"
+            }
+        ],
+        "hardware":[
+            {
+                "img":"data/rd100/R&D100icon-hardware.jpg",
+                "tubie":{
+                    "header":"Consider this...",
+                    "body":"Can you think once considered?"
+                }
+            }
+        ],
+        "networking":[
+            {
+                "img":"data/rd100/R&D100icon-networking.jpg",
+                "tubie":{
+                    "header":"Consider this...",
+                    "body":"Can you think once considered?"
+                }
+            }
+        ],
+        "software":[
+            {
+                "img":"data/rd100/R&D100icon-software.jpg",
                 "tubie":{
                     "header":"Consider this...",
                     "body":"What other limited resources can be reused rather than discarded?"
