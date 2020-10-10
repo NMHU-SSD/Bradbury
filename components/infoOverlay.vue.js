@@ -188,16 +188,18 @@ var infoOverlay= {
                     </div>
                     <div class="main-footer">
                         <div v-if="spec=='info'" class="ribbon red">
-                            <img :src="logo">
+                            <img src="assets/customs/R&D100logo-gold.svg" class="rd-ribbon">
+                            <img :src="logo" class="rd-topic">
                             <div class="tubie-container-right">
                                 <tubie-overlay :id="'tubie-'+id+index" :display="slide.tubie" position="left" @seturl="seturl"/>
                             </div>
                         </div>
                         <div v-if="spec=='vid'" class="ribbon red row whitetext title-font">
-                            <div class="col tubie-container-left">
+                            <div class="col-4 tubie-container-left">
                                 <tubie-overlay :id="'tubie-'+id+index" :display="slide.tubie" position="right" @seturl="seturl"/>
                             </div>
-                            <h3 class="col-2 offset-2 align-self-center">where we've been</h3>
+                            <img v-if="id=='modalVideo1'" src="assets/customs/where_weve_been.svg" class="vid-head col-3 offset-2 align-self-center">
+                            <img v-if="id=='modalVideo2'" src="assets/customs/where_were_headed.svg" class="vid-head col-3 offset-2 align-self-center">
                             <h2 class="col ml-auto">{{ slide.title }}</h2>
                         </div>
                         <div class="banner green"></div>

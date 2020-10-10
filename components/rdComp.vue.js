@@ -77,8 +77,9 @@ var rdComp= {
     },
     template:
     `<div :id="id" class="background size red">
+        <div class="rd-dark"/>
         <div class="row sum-row">
-            <img src="" class="col-4 rd-logo">
+            <img src="assets/customs/R&D100logo-gold.svg" class="col-4 offset-1">
             <p class="col rd-text-box body-font align-self-center half-shadow">{{ body }}</p>
         </div>
         <div class="cover-holder row no-gutters">

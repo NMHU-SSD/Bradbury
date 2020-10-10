@@ -53,10 +53,17 @@
     position: relative;
     height: 70%;
 }
-.ribbon img{
+.rd-topic{
     width: 30%;
     height: 100%;
-    margin-left: 5%;
+    position: absolute;
+    left: 10%;
+}
+.rd-ribbon{
+    height: 70%;
+    margin-top: 1%;
+    margin-left: 2%;
+    filter: brightness(0.9)
 }
 .banner{
     height: 30%;
@@ -110,8 +117,8 @@
 .carousel-control-next-icon{
     background: url(../assets/customs/Arrow-right.svg)no-repeat;
 }
-.ribbon h3{
-    font-size: .9em;
+.vid-head{
+    margin-left: 4em;
 }
 .ribbon h2{
     font-size: 1.1em;
