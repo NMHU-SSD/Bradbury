@@ -79,7 +79,6 @@ var womanComputing = {
                                   <img :src="slide.media" :alt="slide.alt">
                               </div>
                               <div class="col text-side offset-2 offset-sm-0 ">
-                                  <p v-if="slide.title" class="content-body">{{ slide.title }}</p>
                                   <p v-if="slide.body" class="content-body ">{{ slide.body }}</p>
                               </div>
                     <!-- End of slides --->

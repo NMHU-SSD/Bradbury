@@ -61,7 +61,7 @@ body{
     width: 100%;
 }
 .text-side{
-    height: 65%;
+    height: 60%;
     overflow-y: auto;
 }
 .gradient-green{
@@ -76,6 +76,9 @@ body{
 }
 .red{
     background-color: #781214;
+}
+.dark{
+    background-color: rgb(0,0,0,.6);
 }
 .img-shadow{
     border-radius: 50%;

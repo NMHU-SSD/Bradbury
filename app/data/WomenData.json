@@ -31,8 +31,7 @@
             "slides":
             [
                 {
-                    "title":"At Los Alamos and elsewhere, the first computers were humans who did calculations by hand, sometimes with the help of a desktop calculator.",
-                    "body":"Most of these human computers were women. Although not always recognized, their word propelled science and engineering forward for decades.", 
+                    "body":"At Los Alamos and elsewhere, the first computers were humans who did calculations by hand, sometimes with the help of a desktop calculator.\n\nMost of these human computers were women. Although not always recognized, their word propelled science and engineering forward for decades.", 
                     "media":"data/images/HumanComputersAtNASA-PublicDomain.jpg",
                     "alt":"Women calculating at desks in NASA 1967",
                     "tubie":{
@@ -41,8 +40,7 @@
                     }
                 },
                 {
-                    "title":"when electronic computers were introduced, women were often the first programmers and computer operators.",
-                    "body":"Their pioneering application of the new machines to scientific and national security challenges mad possible the rapid technical advances in the years that followed.",
+                    "body":"when electronic computers were introduced, women were often the first programmers and computer operators.\n\nTheir pioneering application of the new machines to scientific and national security challenges mad possible the rapid technical advances in the years that followed.",
                     "media":"data/images/001%20MANIAC%20II%201958.jpg",
                     "alt":"",
                     "tubie":{
@@ -51,8 +49,7 @@
                     }
                 },
                 {
-                    "title":"The legacy of women building the future through computing continues at Los Alamos today.",
-                    "body":"Discover more about the legacy and ongoing contributions of women in computing at Los Alamos.",
+                    "body":"The legacy of women building the future through computing continues at Los Alamos today.\n\nDiscover more about the legacy and ongoing contributions of women in computing at Los Alamos.",
                     "media": "data/images/feature15.jpg",
                     "alt":"",
                     "tubie":{
@@ -93,7 +90,7 @@
             "slides":
             [
                 {
-                    "title":"The first computers at Los Alamos were mostly women from the town's civilian community. Professional computers from the Woman's Army Corps (WACs) soon grew the ranks of human computers at the Lab to about twenty. Without their skilled and tireless computing work, Los Alamos' wartime mission would not have succeeded.",
+                    "body":"The first computers at Los Alamos were mostly women from the town's civilian community. Professional computers from the Woman's Army Corps (WACs) soon grew the ranks of human computers at the Lab to about twenty. Without their skilled and tireless computing work, Los Alamos' wartime mission would not have succeeded.",
                     "media": "data/images/WACs%20Los%20Alamos%202.jpg",
                     "alt":"",
                     "tubie":{
@@ -102,8 +99,7 @@
                     }
                 },
                 {
-                    "title":"After World War II, women from the Lab's hand-computing group became the world's first programmers (then called \"coders\").",
-                    "body": "Human computers had the skills needed to translate complex problems into the software \"code\" that an electronic computer could understand. Women with degrees in science and mathematics came to Los Alamos from all over the United States to meet the Lab's urgent Cold War need for computing expertise.",
+                    "body":"After World War II, women from the Lab's hand-computing group became the world's first programmers (then called \"coders\").\n\nHuman computers had the skills needed to translate complex problems into the software \"code\" that an electronic computer could understand. Women with degrees in science and mathematics came to Los Alamos from all over the United States to meet the Lab's urgent Cold War need for computing expertise.",
                     "media": "data/images/Lois%20Cook%20Leurgans.jpg",
                     "alt":"",
                     "tubie":{
@@ -112,8 +108,7 @@
                     }
                 },
                 {
-                    "title":"The 1970's brought many changes to Los Alamos. The Cray-1 revolutionized supercomputer performance and computer networking made the lab a smaller (and faster) place.",
-                    "body": "Women stepped up to a growing number of roles in computing - from networking technicians to group leaders - to make sure Los Alamos continued to set the pace in supercomputer technology and scientific research.",
+                    "body":"The 1970's brought many changes to Los Alamos. The Cray-1 revolutionized supercomputer performance and computer networking made the lab a smaller (and faster) place.\n\nWomen stepped up to a growing number of roles in computing - from networking technicians to group leaders - to make sure Los Alamos continued to set the pace in supercomputer technology and scientific research.",
                     "media": "data/images/001%20Cray%201%201977.jpg",
                     "alt":"",
                     "tubie":{
@@ -122,7 +117,7 @@
                     }
                 },
                 {
-                    "title":"Stockpile Stewardship gave new importance to supercomputer simulations at Los Alamos in the 1990s. Women played key roles in researching and evaluating new technologies (such as cluster computing) that would guide Los Alamos into the twenty-first century of supercomputing, and without the need for live weapons testing.",
+                    "body":"Stockpile Stewardship gave new importance to supercomputer simulations at Los Alamos in the 1990s. Women played key roles in researching and evaluating new technologies (such as cluster computing) that would guide Los Alamos into the twenty-first century of supercomputing, and without the need for live weapons testing.",
                     "media": "data/images/Ann%20Hayes%20LA%2011216%20MS%20page%2024%20(3).jpg",
                     "alt":"",
                     "tubie":{

@@ -221,8 +221,10 @@
     width: 30%;
     max-width: 35em;
     position: absolute;
-    bottom: 15%;
-    left: 2%;
+    bottom: 6em;
+    left: 1%;
+    padding: 1em;
+    border-radius: 60%;
     pointer-events: none;
 }
 .section-header img{
@@ -237,6 +239,7 @@
     padding: 0;
     margin-top: 2%;
     height: 55%;
+    white-space: pre-line;
 }
 /******* Image Side *****/
 .img-main-large{
