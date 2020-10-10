@@ -16,8 +16,10 @@ var slideshowComponent={
     methods:{
         switchOut:function(){
             this.head= !this.head;
-            //console.log(this.head);
             this.$emit('switchout');
+        },
+        reset:function(){
+            this.head= true;
         },
         slideshow:function(){
             //console.log("slideshow");

@@ -9,13 +9,13 @@ var buildingFuture= {
             first:true,
             end: false,
             scrollEnd: false,
-            canScroll:true,
+            canScroll:false,
             count:0,
             height:0
         }
     },
     updated:function(){
-        this.getScroll();
+        //this.getScroll();
     },
     methods:{
         reset:function(){
@@ -64,23 +64,11 @@ var buildingFuture= {
         },
         handleScroll: function(el) {
             if((el.srcElement.offsetHeight + el.srcElement.scrollTop) >= el.srcElement.scrollHeight) {
-                this.scrollEnd = true;
+                $('#'+el.srcElement.id).removeClass("shadow-scroll");
             }else{
-                this.scrollEnd = false;
+                $('#'+el.srcElement.id).addClass("shadow-scroll");
             }
-            //console.log(el.srcElement, el.srcElement.offsetHeight, el.srcElement.scrollHeight);
-        },
-        getScroll:function(){
-            for(index in this.slides){
-                var ele = 'text'+this.id+index;
-                let c_height =document.getElementById(ele).clientHeight;
-                let s_height =document.getElementById(ele).scrollHeight;
-                console.log(ele, "heights: ", s_height, c_height);
-                if(s_height <= c_height){
-                    this.canScroll= false;
-                }
-                console.log(this.canScroll);
-            }
+            console.log(el.srcElement.id);
         },
         textsideColor(){
             var styling;
@@ -97,15 +85,6 @@ var buildingFuture= {
                 styling= 'yellow';
             }
             return styling+upCase;
-        }
-    },
-    watch:{
-        slides:function(){
-            if(this.slides!=null){
-                this.slideImages = this.slides[0].media;
-                this.infoSlides = this.slides.slice(1);
-                //console.log(this.scrollHeight);
-            }
         }
     },
     template:
@@ -134,14 +113,14 @@ var buildingFuture= {
 
                             <div :class="['col text-side',(mono ? 'lgt-green' : 'yellow')]" :style="banner ? 'height: calc(33vh - 3em);' : 'height: 33vh;'">
                                   <div :class="['margins stay',(mono ? 'lgt-green' : 'yellow')]">
-                                    <p v-if="slide.header" :id="'header'+id+index" class="content-header redtext" @click="getHeight(index)">{{ slide.header }}</p>
+                                    <p v-if="slide.header" :id="'header'+id+index" class="content-header redtext">{{ slide.header }}</p>
                                     <div v-if="banner && slide.video" class="watch-video" @click="seturl(slide.video)">
                                         <img src="assets/customs/VideoPlaybutton-black.png" class="play-img">
                                         <p class="body-font redtext">WATCH VIDEO</p>
                                     </div>
                                   </div>
 
-                                  <div :id="'text'+id+index" :class="['scrolling-text margins',(canScroll && !scrollEnd ? 'shadow-scroll': 'removed')]" @scroll="handleScroll">
+                                  <div :id="'text'+id+index" class="scrolling-text margins" @scroll="handleScroll">
                                     <p v-if="slide.header" class="content-header invis">{{ slide.header }}</p>
                                     <div v-if="banner && slide.video" class="watch-video invis">
                                         <img src="assets/customs/VideoPlaybutton-black.png" class="play-img">

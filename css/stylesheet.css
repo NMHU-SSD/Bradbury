@@ -93,6 +93,7 @@
     margin-top: 1em;
     padding-bottom: 2em;
     overflow-y: auto;
+    transition: .3s;
 }
 .img-main{
     max-height: 100%;

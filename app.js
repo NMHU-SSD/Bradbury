@@ -61,6 +61,7 @@ var app = new Vue({
         },
         toDefault:function(){
             this.showData = true;
+            this.$refs.top.reset();
             this.$refs.style1.reset();
             this.$refs.style2.reset();
             console.log("toDefault");
