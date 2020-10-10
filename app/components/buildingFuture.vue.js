@@ -125,11 +125,11 @@ var buildingFuture= {
                                 </div>
                             </div>
 
-                            <div :class="['col', (slide.media ? 'side-widget scrolling mb-3' : 'words-holder')]">
+                            <div :class="['col', (slide.media ? 'side-widget offset-2 scrolling mb-3' : 'words-holder')]">
                                   <p v-if="slide.title" class="content-body">{{ slide.title }}</p>
                                   <p v-if="slide.body" class="content-body">{{ slide.body }}</p>
                         <!--- In Their Words----->
-                                <div v-if="slide.videoSlide" class="words-holder container-fluid pt-5 mr-md-5 fix-width">
+                                <div v-if="slide.videoSlide" class="words-holder container-fluid mr-md-5 fix-width">
                                     <div class="row words-holder">
                                         <div class="words-holder col-12 col-sm-6 col-lg-6 order-2 order-sm-1">
                                             <div class="vid-container">

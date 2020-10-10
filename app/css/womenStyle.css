@@ -182,10 +182,6 @@
 }
     
 /************ Women in Computing Layout ********/
-.text-side{
-    height: 60%;
-    overflow-y: auto;
-}
 /******* Title Circle *****/
 .section-header-computing{
     width: 30vw;
@@ -239,7 +235,6 @@
 /******* Content Side *****/
 .side-widget{
     padding: 0;
-    margin-left: 26%;
     margin-top: 2%;
     height: 55%;
 }
@@ -301,7 +296,7 @@
 }
 /******* Thumbnails images *****/
 .vid-thumb{
-    box-shadow: 8px 8px 13px 1px #2a2b2b;
+    box-shadow: .5em .7em .5em .1em #2a2b2b;
     object-fit: cover;
     width: 100%;
 }

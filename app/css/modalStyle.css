@@ -2,7 +2,6 @@
 .modal{
     max-width: 100%;
     padding-right: 0px !important;
-    font-size: 24px;
 }
 .modal-open{
     padding-right: 0px !important;
@@ -16,6 +15,9 @@
     width: 80%;
     margin: auto;
     overflow-y: auto;
+}
+.modal-header{
+    padding: 1em;
 }
 .modal-title{
     font-size: 2em;

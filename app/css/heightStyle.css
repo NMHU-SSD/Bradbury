@@ -16,7 +16,7 @@
 }
 #carouselComputing{
     height: 20vh;
-    margin-bottom: 2.5%;
+    margin-bottom: 2.5vh;
 }
 #carouselHistory{
     height: 20vh;
@@ -45,7 +45,6 @@
     }
     #carousel-carouselComputing, #carouselComputing{
         height: 20vh;
-        margin-bottom: 2.5vh;
     }
     #carousel-carouselHistory, #carouselHistory, .fix-width{
         height: 20vh;
@@ -56,13 +55,22 @@
 }
 
 /********* Phone Devices **********/
-@media only screen and (max-width:576px){
+@media only screen and (max-width:1200px){
     .side-widget{
         height:45em;
-        margin: 0em 3em;
     }
     .fix-width{
         width: 80%;
+        padding-top: 3em;
+    }
+    .timer{
+        font-size: 8px;
+    }
+    .modal-header,.video-js{
+        font-size: 8px;
+    }
+    .modal-body{
+        padding: 0.3em;
     }
     .vid-container{
         height: 55vw;
@@ -76,12 +84,9 @@
     .modal-dialog{
         width: 100%;
     }
-    .modal{
-        font-size: 14px;
-    }
     .tubie-container-left{
-        height: 15vw;
-        width: 33vw;
+        height: 20vw;
+        width: 44vw;
     }
     .tubie-container-right{
         height: 30vw;
@@ -90,17 +95,21 @@
     }
 }
 
-@media only screen and (max-width:576px){
+@media only screen and (max-width:1200px){
     #titleBar{
-        padding: 1em;
+        height: 10vh;
+        padding: 0.5em;
         font-size: 22px;
     }
     #carousel-carouselComputing, #carouselComputing{
         height: 100vh;
+        max-height: 160vw;
+        margin-bottom: 0;
         font-size: 10px;
     }
     #carousel-carouselHistory, #carouselHistory, .fix-width{
         height: 100vh;
+        max-height: 160vw;
         font-size: 10px;
     }
     #timeline{
@@ -108,55 +117,50 @@
     }
 }
 
-/********* Tablet Devices
-@media only screen and (min-width:1200px){
-    .vid-container{
-        height: 100%;
-        max-height: 700px;
-    }
-    .fix-width, .row, .fix-col{
-        max-height: 100%;
-        height: 100%;
-    }
-    .inner-row{
-        margin-bottom: 0px;
-    }
-    .modal{
-        font-size: 34px;
-    }
-    .timer h5, .timer p{
-    font-size: 1.5em;
-    }
-    .vjs-control-bar{
-        font-size: calc(10px + 1vw); 
-    }
-    .video-js .vjs-big-play-button{
-        font-size: calc(4em + 1.5vw);
-        line-height: 1.5em;
-        height: 1.5em;
-        width: 3em; 
-    }
-}
+/********* Tablet Devices**********/
 @media only screen and (min-width:576px) and (max-width:1200px){
     .tubie-container-right{
         height: 14vw;
         width: 32vw;
     }
+    .side-widget{
+        padding-left: 5em;
+        height: 60%;
+    }
+    .fix-width{
+        width: 80%;
+        margin-left: 20%;
+        padding-top: 3em;
+    }
+    .vid-container{
+        height: 100%;
+    }
+    .timeline-header{
+        height: 80%;
+        top: 20%;
+    }
+    .tubie-container-left{
+        height: 20vw;
+        width: 35vw;
+    }
 }
-@media only screen and (min-width:576px) and (max-width: 1200px){
+@media only screen and (min-width:576px) and (max-width:1200px){
+    #titleBar{
+        height: 10vh;
+        padding: 0.2em;
+        font-size: 4em;
+    }
     #carousel-carouselComputing, #carouselComputing{
-        height: 50vw;
-        min-height: 600px;
-        max-height: 800px;
+        height: 100vh;
+        max-height: 600px;
+        margin-bottom: 0;
     }
     #carousel-carouselHistory, #carouselHistory, .fix-width{
-        height: 50vw;
-        min-height: 600px;
-        max-height: 100vh;
+        height: 100vh;
+        max-height: 600px;
     }
     #timeline{
-        min-height: 600px;
-        max-height: 1200px;
+        height: 120vh;
     }
 }
 
