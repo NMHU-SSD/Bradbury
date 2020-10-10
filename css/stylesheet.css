@@ -150,14 +150,12 @@
     margin: 0 0;
     font-family: Open-Sans-Bold;
 }
-.vid-button{
-    background: url(/assets/tubie/tubie_info.png) no-repeat;
-    background-position: top left;
-    background-size: contain;
+.play-img{
     height: 2em;
-    width: 2em;
+    object-fit: contain;
     float: right;
 }
+
 /** slideshow **/
 .next-section{
     background: url(../assets/customs/Arrow-right.svg)no-repeat;
