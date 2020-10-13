@@ -11,19 +11,21 @@ var buildingFuture= {
             scrollEnd: false,
             canScroll:false,
             count:0,
-            height:0
+            lastScroll:null
         }
     },
     updated:function(){
-        //this.getScroll();
+        //this.scrollpanel(0);
+    },
+    mounted:function(){
+        //this.scrollpanel(0);
     },
     methods:{
         reset:function(){
-            //console.log(this.id);
             this.first=true;
             this.end=false;
+            this.toTop();
             $("#carousel-"+this.id).carousel(0);
-            this.jumpSlide(0);
         },
         seturl:function(url){
             this.$emit('seturl', url);
@@ -39,6 +41,7 @@ var buildingFuture= {
                 this.end=true;
             }
             $("#carousel-"+this.buddy+" .carousel-control-next").trigger('click');
+            this.toTop();
         },
         prevSlide:function(){
             this.count--;
@@ -47,9 +50,11 @@ var buildingFuture= {
                 this.first=true;
             }
             $("#carousel-"+this.buddy+" .carousel-control-prev").trigger('click');
+            this.toTop();
         },
         jumpSlide:function(index){
             this.count=index;
+            this.toTop();
             $("#carousel-"+this.buddy).carousel(index);
             if(index==0){
                 this.first=true;
@@ -68,29 +73,29 @@ var buildingFuture= {
             }else{
                 $('#'+el.srcElement.id).addClass("shadow-scroll");
             }
+            this.lastScroll = el.srcElement.id;
             console.log(el.srcElement.id);
         },
-        textsideColor(){
-            var styling;
-            const classes = 'col text-side ';
-            if(this.mono){
-                if(this.banner){
-                    styling= 'background-color: #bcd1bc;';
-                }
-                else{
-                    styling= 'background-color: #bcd1bc;';
-                }
+        toTop:function(){
+            if(this.lastScroll != null){
+                let scrollDiv = document.getElementById(this.lastScroll);
+                scrollDiv.scrollTop=0;
             }
-            else{
-                styling= 'yellow';
+        },
+        scrollpanel:function(index){
+            var divId = document.getElementById('text'+this.id+index);
+            console.log(divId);
+            if((divId.offsetHeight + divId.scrollTop) >= divId.scrollHeight){
+                $('#'+divId.id).removeClass("shadow-scroll");
+            }else{
+                $('#'+divId.id).addClass("shadow-scroll");
             }
-            return styling+upCase;
         }
     },
     template:
     `<div :id="id">
 
-        <div :id="'carousel-'+id" class="carousel" data-wrap="false" data-interval="false">
+        <div :id="'carousel-'+id" class="carousel" data-wrap="false" data-interval="false" data-ride="carousel">
             <div class="carousel-inner">
                 <template v-for="(slide, index) in slides">
                     <div :class="['carousel-item', (index==0 ? 'active' : '')]" >

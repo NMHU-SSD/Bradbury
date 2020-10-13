@@ -152,6 +152,7 @@
     font-family: Open-Sans-Bold;
 }
 .play-img{
+    margin-left: .5em;
     height: 2em;
     object-fit: contain;
     float: right;

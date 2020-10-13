@@ -94,7 +94,7 @@ p{
 }
 /******** Shadows ********/
 .shadow-scroll{
-    box-shadow: inset 0 -4em 2em -2em rgba(0, 0, 0, 1);
+    box-shadow: inset 0.5em -5em 3em -3em rgba(0, 0, 0, 1);
     transition: .3s;
 }
 .shadow-text-big{

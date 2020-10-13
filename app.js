@@ -63,7 +63,9 @@ var app = new Vue({
             this.showData = true;
             this.$refs.top.reset();
             this.$refs.style1.reset();
+            this.$refs.dyk.reset();
             this.$refs.style2.reset();
+            this.$refs.dyk2.reset();
             console.log("toDefault");
         },
         displayModal:function(){
@@ -88,12 +90,6 @@ var app = new Vue({
         passVids:function(videos){
             this.$refs[this.modalVideo].setVideos(videos);
         },
-        getNextVid:function(index){
-            this.$refs[this.historyId].setNext(index);
-        },
-        getPrevVid:function(index){
-            this.$refs[this.historyId].setPrev(index);
-        },
         //video modal popups
         videoModalClose:function(){
             this.active=true;
@@ -105,10 +101,14 @@ var app = new Vue({
         switchData:function(){
             if(this.showData){
                 this.$refs.style1.reset();
+                this.$refs.dyk.reset();
             }
-            else{this.$refs.style2.reset();}
+            else{
+                this.$refs.style2.reset();
+                this.$refs.dyk2.reset();
+            }
             this.showData = !this.showData;
-            console.log(this.showData);
+            //console.log(this.showData);
         }
     }
 })
