@@ -14,21 +14,23 @@ var tubieOverlay = {
         initTubie:function(){
             $('[data-toggle="popover"]').popover();
         },
-        seturl:function(){
-            this.$emit('seturl');
+        seturl:function(data){
+            //this.$emit('seturl');
+            console.log(data);
         },
         hopAnimation:function(){
             var tubieId = $('#'+this.id);
             $(tubieId).css({'margin-top':'-10%', 'transition':this.animationTime+'ms'});
-            setTimeout(function(){
-                $(tubieId).css('margin-top', '0');}, this.animationTime);
-        //
+            setTimeout(function(){$(tubieId).css('margin-top', '0');}, this.animationTime);
+        //data-trigger="focus"
         }
     },
     template:
     `<div :id="id" :class="['tubie-wrapper tubie-'+position]" @click="hopAnimation">
         <div class="tubie-img" data-container="body" tabindex="0" data-toggle="popover" 
-            data-placement="top" data-trigger="focus" :title="display.header" :data-content="display.body"/>
-        <!--div v-else class="tubie-img-left" @click="seturl"/-->
+            data-placement="top"  data-html="true" :title="display.body" 
+            data-content="<img src='assets/customs/VideoPlaybutton-black.png' class='play-img'>
+            <p class='body-font redtext'>WATCH VIDEO</p>"
+        />
     </div>`
 }

@@ -27,8 +27,9 @@ var app = new Vue({
             })
             .then(response => response.json())
             .then(data =>{
-                this.comp = data.comp;
                 this.timeData = data.timeData;
+                this.pageTubie = data.pageTubie;
+                this.comp = data.comp;
                 this.rd100=data.rd100;
             })
             .catch((error) => {

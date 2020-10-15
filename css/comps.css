@@ -132,3 +132,8 @@
     position: absolute;
     left: 25%;
 }
+
+.play-img{
+    height: 4em;
+    object-fit: contain;
+}

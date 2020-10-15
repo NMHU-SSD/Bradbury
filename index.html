@@ -40,7 +40,7 @@
                 <h1 class="title-font">High-Performance
                     Computing Technologies</h1>
             </div>
-            <trans-comp id="top" :data="comp" @seturl="displayTech($event)"></trans-comp>
+            <trans-comp id="top" :data="comp" :tubie="pageTubie" @seturl="displayTech($event)"></trans-comp>
             <rd-comp id="rd" :body="rd100.body" :covers="rd100.covers" @setcover="displayCover($event)"></rd-comp>
                     
         </main>

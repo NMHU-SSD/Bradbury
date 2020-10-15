@@ -1,6 +1,6 @@
 var transComp= {
     name: "trans-comp",
-    props: ['id', 'data'],
+    props: ['id', 'data','tubie'],
     data:function(){
         return{
             
@@ -16,10 +16,6 @@ var transComp= {
         },
         seturl:function(index,modal){
             this.$emit('seturl', {index:index, ob:modal});
-        },
-        selected:function(){
-            console.log("selected");
-            //this.$emit('selected', this.id);
         }
     },
     template:
@@ -27,11 +23,17 @@ var transComp= {
         <img :src=data.header class="comp-header">
         <p class="title-text-box body-font half-shadow">{{ data.body }}</p>
         <div class="left-circle circle dark-yellow">
+            <div class="tubie-circle tubie-circle-left">
+                <tubie-overlay id="tubie-been" :display="tubie.tubie_been" position="none"/>
+            </div>
             <ol class="carousel-indicators">
                 <li v-for="(slide, index) in data.been" class="yellow" @click="seturl(index,1)"></li>
             </ol>
         </div>
         <div class="right-circle circle yellow">
+            <div class="tubie-circle tubie-circle-right">
+                <tubie-overlay id="tubie-headed" :display="tubie.tubie_headed" position="none"/>
+            </div>
             <ol class="carousel-indicators">
                 <li v-for="(slide, index) in data.headed" class="dark-yellow" @click="seturl(index,2)"></li>
             </ol>

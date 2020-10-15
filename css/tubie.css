@@ -1,4 +1,19 @@
 /****** Tubie ******/
+.tubie-circle{
+    background-color: #c86b2c;
+    height: 50%;
+    width: 50%;
+    border-radius: 50%;
+    position: absolute;
+}
+.tubie-circle-left{
+    left: -12%;
+    bottom: 1em;
+}
+.tubie-circle-right{
+    right: -10%;
+    top: 1em;
+}
 .tubie-container-left{
     background: url(/assets/tubie/Tubie-orangebkgd-left.svg) no-repeat;
     background-position: bottom right;
@@ -19,15 +34,18 @@
     z-index: 3;
 }
 .tubie-wrapper{
-    width: 40%;
     max-height: 100%;
+    height: 100%;
+}
+.tubie-none{
+    width: 100%;
 }
 .tubie-left{
-    height: 100%;
+    width: 40%;
     margin-left: 2%;
 }
 .tubie-right{
-    height: 100%;
+    width: 40%;
     margin-left: 50%;
 }
 .tubie-img{
@@ -41,16 +59,14 @@
 }
 /**** Pop Over ****/
 .popover .popover-header {
-    font-size: 2.1em;
+    font-size: 2em;
     background-color: rgba(0,0,0,0) !important;
-    text-align: center;
-    border-bottom: .1em solid #ebebeb;
-    margin: .1em 1em;
-    margin-top: -.3em;
+    margin: .1em .3em;
+    max-height: 15em;
+    overflow-y: auto;
 }
 .popover .popover-body{ 
     font-size: 1.7em;
-    overflow-y: auto;
     max-height: 33em;
     padding: .5em;
     margin-top: -.3em;
