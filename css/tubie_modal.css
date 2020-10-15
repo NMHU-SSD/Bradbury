@@ -15,7 +15,7 @@
 }
 /*****Tubie******/
 .tubie-container{
-    background: url(/assets/tubie/Tubie-orangebkgd-left.svg) no-repeat;
+    background: url(../assets/tubie/Tubie-orangebkgd-left.svg) no-repeat;
     background-position: bottom right;
     height: 14vw;
     width: 30vw;
@@ -27,7 +27,7 @@
     z-index: 7;
 }
 .tubie-container-left{
-    background: url(/assets/tubie/Tubie-orangebkgd-left.svg) no-repeat;
+    background: url(../assets/tubie/Tubie-orangebkgd-left.svg) no-repeat;
     background-position: bottom right;
     height: 14vw;
     width: 30vw;
@@ -44,7 +44,7 @@
     bottom: -11%;
 }
 .tubie-img{
-    background: url(/assets/tubie/tubie_info.png) no-repeat;
+    background: url(../assets/tubie/tubie_info.png) no-repeat;
     background-position: right bottom;
     background-size: contain;
     height: 100%;
@@ -52,7 +52,7 @@
     outline: none;
 }
 .tubie-def{
-    background: url(/assets/tubie/def_tubie.png) no-repeat;
+    background: url(../assets/tubie/def_tubie.png) no-repeat;
     background-position: right bottom;
     background-size: contain;
     height: 100%;
@@ -60,7 +60,7 @@
     outline: none;
 }
 .tubie-consider{
-    background: url(/assets/tubie/consider_tubie.png) no-repeat;
+    background: url(../assets/tubie/consider_tubie.png) no-repeat;
     background-position: right bottom;
     background-size: contain;
     height: 100%;
@@ -68,7 +68,7 @@
     outline: none;
 }
 .tubie-dyk{
-    background: url(/assets/tubie/dyk_tubie.png) no-repeat;
+    background: url(../assets/tubie/dyk_tubie.png) no-repeat;
     background-position: right bottom;
     background-size: contain;
     height: 100%;

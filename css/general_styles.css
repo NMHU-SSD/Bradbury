@@ -45,7 +45,7 @@ p{
 /***** Muesuem Fonts ****/
 @font-face{
     font-family: 'HelveMedCon';
-    src: url(../../assets/MuseumFonts2012/HelveNeuMedCon.otf);
+    src: url(../assets/MuseumFonts2012/HelveNeuMedCon.otf);
 }
 @font-face{
     font-family: 'SerifBlack';
