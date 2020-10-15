@@ -15,7 +15,7 @@
     top: 1em;
 }
 .tubie-container-left{
-    background: url(/assets/tubie/Tubie-orangebkgd-left.svg) no-repeat;
+    background: url(../assets/tubie/Tubie-orangebkgd-left.svg) no-repeat;
     background-position: bottom right;
     height: 100%;
     width: 8em;
@@ -24,7 +24,7 @@
     left: -3em;
 }
 .tubie-container-right{
-    background: url(/assets/tubie/Tubie-orangebkgd-right.svg) no-repeat;
+    background: url(../assets/tubie/Tubie-orangebkgd-right.svg) no-repeat;
     background-position: bottom left;
     height: 5em;
     width: 11em;
@@ -49,7 +49,7 @@
     margin-left: 50%;
 }
 .tubie-img{
-    background: url(/assets/tubie/tubie_info.png) no-repeat;
+    background: url(../assets/tubie/tubie_info.png) no-repeat;
     background-position: bottom center;
     background-size: contain;
     height: 90%;
