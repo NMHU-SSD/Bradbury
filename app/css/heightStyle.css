@@ -14,7 +14,7 @@
     max-height: calc(3840px * .075);
 }
 #carouselComputing{
-    margin-bottom: 2.5vh;
+    margin-bottom: calc(3840px * .025);
 }
 #timeline{
     background-color: black;
