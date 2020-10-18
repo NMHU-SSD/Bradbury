@@ -24,7 +24,7 @@ var transComp= {
         <p class="title-text-box body-font half-shadow">{{ data.body }}</p>
         <div class="left-circle circle dark-yellow">
             <div class="tubie-circle tubie-circle-left">
-                <tubie-overlay id="tubie-been" :display="tubie.tubie_been" position="none" 
+                <tubie-overlay id="tubie-been" :display="tubie.tubie_been" position="none" spec="def"
                 @seturl="seturl(tubie.tubie_been.video,0)"/>
             </div>
             <ol class="carousel-indicators">
@@ -33,7 +33,7 @@ var transComp= {
         </div>
         <div class="right-circle circle yellow">
             <div class="tubie-circle tubie-circle-right">
-                <tubie-overlay id="tubie-headed" :display="tubie.tubie_headed" position="none" 
+                <tubie-overlay id="tubie-headed" :display="tubie.tubie_headed" position="none" spec="dyk"
                 @seturl="seturl(tubie.tubie_headed.video,0)"/>
             </div>
             <ol class="carousel-indicators">

@@ -193,12 +193,14 @@ var infoOverlay= {
                             <img src="assets/customs/R&D100logo-gold.svg" class="rd-ribbon">
                             <img :src="logo" class="rd-topic">
                             <div class="tubie-container-right">
-                                <tubie-overlay :id="'tubie-'+id+index" :display="slide.tubie" position="left" @seturl="seturl(slide.tubie.video)"/>
+                                <tubie-overlay :id="'tubie-'+id+index" :display="slide.tubie" position="left" spec="con"
+                                @seturl="seturl(slide.tubie.video)"/>
                             </div>
                         </div>
                         <div v-if="spec=='vid'" class="ribbon red row whitetext title-font">
                             <div class="col-4 tubie-container-left">
-                                <tubie-overlay :id="'tubie-'+id+index" :display="slide.tubie" position="right" @seturl="seturl(slide.tubie.video)"/>
+                                <tubie-overlay :id="'tubie-'+id+index" :display="slide.tubie" position="right" 
+                                @seturl="seturl(slide.tubie.video)"/>
                             </div>
                             <img v-if="id=='modalVideo1'" src="assets/customs/where_weve_been.svg" class="vid-head col-3 offset-2 align-self-center">
                             <img v-if="id=='modalVideo2'" src="assets/customs/where_were_headed.svg" class="vid-head col-3 offset-2 align-self-center">

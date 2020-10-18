@@ -1,3 +1,25 @@
+/******** Tubie Images *********/
+.tubie-undefined{
+    background: url(../assets/tubie/tubie_info.png) no-repeat;
+}
+.tubie-def{
+    background: url(../assets/tubie/def_tubie.png) no-repeat;
+}
+.tubie-con{
+    background: url(../assets/tubie/consider_tubie.png) no-repeat;
+}
+.tubie-dyk{
+    background: url(../assets/tubie/dyk_tubie.png) no-repeat;
+}
+.tubieBasic{
+    background-position: bottom center;
+    background-size: contain;
+    height: 90%;
+    width: 100%;
+    margin-top: 15%;
+    outline: none;
+}
+
 /****** Tubie ******/
 .tubie-circle{
     background-color: #c86b2c;
@@ -8,11 +30,11 @@
 }
 .tubie-circle-left{
     left: -18%;
-    bottom: 5%;
+    bottom: 12%;
 }
 .tubie-circle-right{
     right: -10%;
-    top: 5%;
+    top: 10%;
 }
 .tubie-container-left{
     background: url(../assets/tubie/Tubie-orangebkgd-left.svg) no-repeat;
@@ -47,15 +69,6 @@
 .tubie-right{
     width: 40%;
     margin-left: 50%;
-}
-.tubie-img{
-    background: url(../assets/tubie/tubie_info.png) no-repeat;
-    background-position: bottom center;
-    background-size: contain;
-    height: 90%;
-    width: 100%;
-    margin-top: 15%;
-    outline: none;
 }
 /**** Pop Over ****/
 .popover .popover-header {

@@ -1,6 +1,6 @@
 var tubieOverlay = {
     name:"tubie-overlay",
-    props:['id','display','position'],
+    props:['id','display','position','spec'],
     data:function(){
         return{
             setRight:true,
@@ -54,7 +54,7 @@ var tubieOverlay = {
     },
     template:
     `<div :id="id" :class="['tubie-wrapper tubie-'+position]" @click="hopAnimation() + videoButton()">
-        <div :id="'pop-'+id" class="tubie-img" data-container="body" tabindex="0" data-toggle="popover" 
+        <div :id="'pop-'+id" :class="'tubieBasic tubie-'+spec" data-container="body" tabindex="0" data-toggle="popover" 
             data-placement="top" data-trigger="focus" :title="display.body"/>
     </div>`
 }
