@@ -4,33 +4,57 @@ var tubieOverlay = {
     data:function(){
         return{
             setRight:true,
-            animationTime:200
+            animationTime:200,
+            showFooter:false
         }
     },
     mounted:function(){
+        if(this.display.video != undefined){
+            this.showFooter = true;
+            console.log(this.id, "footer");
+        }
         this.initTubie();
     },
     methods:{
         initTubie:function(){
-            $('[data-toggle="popover"]').popover();
+            //inject footer html
+            const foot = "<div class='footer-div'>"+
+            "<img src='assets/customs/VideoPlaybutton-black.png' class='play-img'>"+
+            "<p class='body-font redtext'>WATCH VIDEO</p>"+
+            "</div>";
+
+            $('#pop-'+this.id).popover({
+                html:true,
+                content: foot
+            });
+            
+            //add on click listener
+            $(document).on("click", ".popover #"+this.id, this.seturl);
         },
-        seturl:function(data){
-            //this.$emit('seturl');
-            console.log(data);
+        seturl:function(){
+            this.$emit('seturl');
         },
         hopAnimation:function(){
             var tubieId = $('#'+this.id);
             $(tubieId).css({'margin-top':'-10%', 'transition':this.animationTime+'ms'});
             setTimeout(function(){$(tubieId).css('margin-top', '0');}, this.animationTime);
-        //data-trigger="focus"
+        },
+        videoButton:function(){
+            //id play button
+            $('.play-img').last().attr('id',this.id);
+            //remove footer
+            if(this.display.video == undefined){
+                var popover = $('#pop-'+this.id).data('bs.popover');
+                popover.config.content = "";
+                popover.setContent();
+                //console.log(popover);
+            }
+            //data-trigger="focus"
         }
     },
     template:
-    `<div :id="id" :class="['tubie-wrapper tubie-'+position]" @click="hopAnimation">
-        <div class="tubie-img" data-container="body" tabindex="0" data-toggle="popover" 
-            data-placement="top"  data-html="true" :title="display.body" 
-            data-content="<img src='assets/customs/VideoPlaybutton-black.png' class='play-img'>
-            <p class='body-font redtext'>WATCH VIDEO</p>"
-        />
+    `<div :id="id" :class="['tubie-wrapper tubie-'+position]" @click="hopAnimation() + videoButton()">
+        <div :id="'pop-'+id" class="tubie-img" data-container="body" tabindex="0" data-toggle="popover" 
+            data-placement="top" data-trigger="focus" :title="display.body"/>
     </div>`
 }

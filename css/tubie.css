@@ -7,12 +7,12 @@
     position: absolute;
 }
 .tubie-circle-left{
-    left: -12%;
-    bottom: 1em;
+    left: -18%;
+    bottom: 5%;
 }
 .tubie-circle-right{
     right: -10%;
-    top: 1em;
+    top: 5%;
 }
 .tubie-container-left{
     background: url(../assets/tubie/Tubie-orangebkgd-left.svg) no-repeat;
@@ -68,8 +68,8 @@
 .popover .popover-body{ 
     font-size: 1.7em;
     max-height: 33em;
-    padding: .5em;
-    margin-top: -.3em;
+    padding: 0;
+    margin-top: .5em;
     color: #212529;
 }
 /****Popover Bubble****/

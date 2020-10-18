@@ -35,7 +35,7 @@ var modalOverlay= {
     },
     mounted(){
         this.player= videojs(this.$refs.videoPlayer, this.setup, function onPlayerReady() {
-            console.log('onPlayerReady', this);
+            //console.log('onPlayerReady', this);
         });
         this.videoOverlay();
     },
@@ -70,6 +70,7 @@ var modalOverlay= {
             console.log(url);
             this.player.src({type: 'video/mp4', src: url});
             this.source=true;
+            this.player.volume(0.5);
             if(this.nextVid==null && this.prevVid==null){
                 $('#videoWindow .vjs-overlay-next').css('display', 'none');
                 $('#videoWindow .vjs-overlay-prev').css('display', 'none');

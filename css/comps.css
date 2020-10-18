@@ -44,16 +44,16 @@
     max-width: 75%;
     position: absolute;
     z-index: 3;
-    left: 5%;
+    left: 10%;
     top: 3%;
     pointer-events: none;
 }
 .left-circle{
-    left: 2%;
-    top: 20%;
+    left: 8%;
+    top: 18%;
 }
 .right-circle{
-    left: 45%;
+    left: 52%;
     top: 3%;
 }
 .arrows{
@@ -133,6 +133,23 @@
     left: 25%;
 }
 
+.footer-div{
+    float: right;
+    position: relative;
+    left: -5%;
+    width: 75%;
+    height: 4em;
+    display: flex;
+    align-items: center;
+}
+.footer-div p{
+    float: left;
+    margin-left: 5%;
+    font-size: 1.5em;
+}
+.footer-div img{
+    float: left;
+}
 .play-img{
     height: 4em;
     object-fit: contain;
