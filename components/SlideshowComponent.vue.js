@@ -73,7 +73,7 @@ var slideshowComponent={
         }
     },
     template:
-    `<div class="slideshow-container whitetext">
+    `<div id="top-slide" class="slideshow-container whitetext">
         <h1 v-show=head class="top yellow title-font shadow-text-big">Sustainable Supercomputing</h1>
         <h1 v-show=!head class="top green title-font">Supercomputers Drive Sustainablilty</h1>
         <img :id="id" :src="currentImg">

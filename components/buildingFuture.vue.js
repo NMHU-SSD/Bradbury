@@ -90,6 +90,7 @@ var buildingFuture= {
             }else{
                 $('#'+divId.id).addClass("shadow-scroll");
             }
+            //:style="banner ? 'height: calc(100% - 4em);' : 'height: 100%;'"
         }
     },
     template:
@@ -116,7 +117,7 @@ var buildingFuture= {
                                 <i v-if=slide.featuredMedia.caption class="bottom-right body-font shadow-text" :style="banner ? 'bottom: 5em;' : 'bottom: 2em;'">{{ slide.featuredMedia.caption }}</i>
                             </div>
 
-                            <div :class="['col text-side',(mono ? 'lgt-green' : 'yellow')]" :style="banner ? 'height: calc(33vh - 3em);' : 'height: 33vh;'">
+                            <div :class="['col text-side',(mono ? 'lgt-green' : 'yellow')]" >
                                   <div :class="['margins stay',(mono ? 'lgt-green' : 'yellow')]">
                                     <p v-if="slide.header" :id="'header'+id+index" class="content-header redtext">{{ slide.header }}</p>
                                     <div v-if="banner && slide.video" class="watch-video" @click="seturl(slide.video)">

@@ -5,8 +5,7 @@
 }
 /*****carousel***********/
 .carousel-inner, .img-main,.slideshow-container{
-    height:calc(33vh - 1em);
-    /*height: calc(177.6vw / 3 - 1em);*/
+    
 }
 .carousel-caption{
     max-width: 100%;
@@ -82,8 +81,7 @@
     background: #000;
 }
 .text-side{
-    max-height: 33vh;
-    /*max-height: calc(177.7vw / 3);*/
+    height:calc(3840px * .30);
 }
 .margins{
     padding: 8% 15% 3% 5%;
