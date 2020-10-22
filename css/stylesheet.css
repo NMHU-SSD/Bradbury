@@ -166,6 +166,8 @@
     max-width: 40%;
     right: 5%;
     text-align: right;
+    padding: 2%;
+    background-color: rgba(0,0,0,0.3);
 }
 /***** Watch Video Button *****/
 .watch-video{
