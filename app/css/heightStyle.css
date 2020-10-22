@@ -74,6 +74,10 @@
 @media only screen and (max-width:576px){
     .side-widget{
         height:45em;
+        margin-right: 16%;
+    }
+    .text-side{
+        margin-right: 16%;
     }
     .fix-width{
         width: 80%;
