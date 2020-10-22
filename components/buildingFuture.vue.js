@@ -103,7 +103,7 @@ var buildingFuture= {
                         <div class="row no-gutters">
 
                     <!--- Base Layout Appearence --->
-                            <div v-if="slide.featuredMedia" class="col-8 img-main green whitetext">
+                            <div v-if="slide.featuredMedia" class="col-12 col-sm-8 img-main green whitetext">
                                 <img :src="slide.featuredMedia.src" :class="[banner ? 'fill-img' : 'cropped-img']" 
                                     :style="slide.featuredMedia.position" alt="slide.alt">
                                 <div class="shadow-box"/>
@@ -117,7 +117,7 @@ var buildingFuture= {
                                 <i v-if=slide.featuredMedia.caption class="bottom-right body-font shadow-text" :style="banner ? 'bottom: 5em;' : 'bottom: 2em;'">{{ slide.featuredMedia.caption }}</i>
                             </div>
 
-                            <div :class="['col text-side',(mono ? 'lgt-green' : 'yellow')]" >
+                            <div :class="['col-12 col-sm-4',(mono? 'lgt-green': 'yellow'),(banner? 'banner-text': 'text-side')]">
                                   <div :class="['margins stay',(mono ? 'lgt-green' : 'yellow')]">
                                     <p v-if="slide.header" :id="'header'+id+index" class="content-header redtext">{{ slide.header }}</p>
                                     <div v-if="banner && slide.video" class="watch-video" @click="seturl(slide.video)">

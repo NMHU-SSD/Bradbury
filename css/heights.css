@@ -4,13 +4,73 @@ body{
 }
 /******** 4K monitor ********/
 @media only screen and (min-width:2159px){
-    .carousel-inner, .slideshow-container, .text-side{
-        height:calc(33% - 1.5em);
+    .carousel-inner, .slideshow-container{
+        height: calc(3840px * .33 - 1em);
     }
     body,#app,main{
         height: 3840px;
     }
+}
+
+/********** Mobile Phones **********/
+@media only screen and (max-width:576px){
+    .slideshow-container{
+        font-size: calc(10px + 1.2vw);
+    }
+    .slideshow-container h1{
+        font-size: 3em;
+    }
+    .carousel-inner, .slideshow-container{
+        height: 100vh;
+    }
+    .top,{
+        font-size: calc(10px + 10vw);
+    }
+    .center{
+        left: 2em;
+        margin-right: 2em;
+    }
+    .tubie-container,.tubie-container-left{
+        height: 7em;
+        width: 18em;
+        left: -6em;
+    }
+    .carousel .carousel-indicators{
+        height: 1.5em;
+    }
+    .margins{
+        font-size: calc(10px + 1.2vw);
+        padding: 8% 5% 3% 5%;
+    }
+    .img-main{
+        font-size: calc(8px + .3vw);
+        height: 40vh;
+    }
+    .bottom-right{
+        max-width: 80%;
+        font-size: 1.4em;
+        padding: 2%;
+        background-color: rgba(0,0,0,0.3);
+    }
+    .banner-text{
+        height: calc(60vh - 3em);
+        margin-top: -3em;
+    }
     .text-side{
-        max-height: calc(3840px * .33);
+        height: 60vh;
+    }
+    .scrolling-text{
+        padding-bottom: 7em;
+    }
+    .popover{
+        font-size: calc(8px + .2vw);
+        max-width: 80vw !important;
+        min-width: 200px;
+    }
+    .popover .popover-body{ 
+        max-height: 10em;
+    }
+    .modal,.video-js{
+        font-size: 8px;
     }
 }
