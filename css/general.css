@@ -1,8 +1,8 @@
-body{
+body,#app,main{
     background-color: black;
     max-width: 2160px;
     max-height: 3840px;
-    width: 100%;
+    width: 100vw;
     height: auto;
     font-size: calc(10px + 1vw);
 }
@@ -45,7 +45,7 @@ body{
     color: white;
 }
 .size{
-    width: 100%;
+    width: 100vw;
     height: 70vw;
 }
 .background{
