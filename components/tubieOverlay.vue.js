@@ -55,6 +55,6 @@ var tubieOverlay = {
     template:
     `<div :id="id" :class="['tubie-wrapper tubie-'+position]" @click="hopAnimation() + videoButton()">
         <div :id="'pop-'+id" :class="'tubieBasic tubie-'+spec" data-container="body" tabindex="0" data-toggle="popover" 
-            data-placement="top" data-trigger="focus" :title="display.body"/>
+            data-placement="top"  :title="display.body"/>
     </div>`
 }
