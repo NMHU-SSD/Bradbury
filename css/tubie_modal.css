@@ -78,6 +78,7 @@
 /**** Pop Over ****/
 .popover .popover-header {
     font-size: 1.8em;
+    font-family:'Komika-Hand', sans-serif;
     background-color: rgba(0,0,0,0) !important;
     text-align: center;
     border-bottom: .1em solid #ebebeb;
