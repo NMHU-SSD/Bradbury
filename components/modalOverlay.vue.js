@@ -6,9 +6,6 @@ var modalOverlay= {
             count:null,
             player:null,
             index:0,
-            currVid:null,
-            prevVid:null,
-            nextVid:null,
             setup:{
                 autoplay: true,
 				controls: true,
@@ -71,20 +68,16 @@ var modalOverlay= {
             this.player.src({type: 'video/mp4', src: url});
             this.source=true;
             this.player.volume(0.5);
-            if(this.nextVid==null && this.prevVid==null){
-                $('#videoWindow .vjs-overlay-next').css('display', 'none');
-                $('#videoWindow .vjs-overlay-prev').css('display', 'none');
-            }
         },
         //Video Modal on-events
         stopVideo:function(){
-            this.prevVid=null;
-            this.nextVid=null;
-            this.player.pause();
-            this.player.src('');
-            this.player.muted(false);
-            this.source=false;
-            this.$emit('stopvideo',this.id);
+            if(this.player!=null){
+                this.player.pause();
+                this.player.src('');
+                this.player.muted(false);
+                this.source=false;
+                this.$emit('stopvideo',this.id);
+            }
             //console.log("video closed");
         },
         endOfVideo:function(){
@@ -97,10 +90,6 @@ var modalOverlay= {
             this.player.getChild('bigPlayButton').on('click', function() {
               this.player.play();
             })
-            if(this.nextVid!=null){
-                $('#videoWindow .vjs-overlay-next').css('display', 'block');
-                $('#videoWindow .vjs-overlay-prev').css('display', 'block');
-            }
             clearTimeout(this.videoTimeout);
             this.videoTimeout = setTimeout(this.stopVideo, this.countdown);
         },
@@ -127,26 +116,12 @@ var modalOverlay= {
                   start: 'ended',
                   end: 'play',
                   align: 'top-center'
-                },{
-                    content:'Next',
-                    showBackground: true,
-                    start: 'ended',
-                    end: 'play',
-                    align: 'right',
-                    class:'vjs-overlay-next'
-                },{
-                    content:'Prev',
-                    showBackground: true,
-                    start: 'ended',
-                    end: 'play',
-                    align: 'left',
-                    class:'vjs-overlay-prev'
                 }]
               });
         }
     },
     template:
-    `<div :id="id" class="modal fade" tabindex="-1" role="dialog" data-backdrop="true" @:displayModal="timer">
+    `<div :id="id" class="modal fade" tabindex="-1" role="dialog" data-backdrop="true" @:displayModal="timer" @click.self="stopVideo">
       <div class="modal-dialog modal-xl modal-dialog-centered vid" role="document">
 
         <div v-if="id=='modalTimer'" class="modal-content">

@@ -14,7 +14,8 @@ var app = new Vue({
         rd100:"",
         t: null,
         afk: null,
-        active:false
+        active:false,
+        open:""
     },
     mounted: function(){
         this.GetData();
@@ -59,7 +60,7 @@ var app = new Vue({
             clearTimeout(this.t);
             clearTimeout(this.afk);
             console.log("toDefault");
-            $('#modalInfo').modal('hide');
+            $('#'+this.open).modal('hide');
         },
         displayModal:function(){
             $('#modalTimer').modal();
@@ -80,6 +81,7 @@ var app = new Vue({
         },
         displayCover:function(info){
             this.active=true;
+            this.open = info.name;
             this.$refs[info.name].getCover(info.logo);
             $('#'+info.name).modal();
             this.resetTimer();

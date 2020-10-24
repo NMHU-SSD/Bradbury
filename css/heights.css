@@ -1,0 +1,81 @@
+/******** 4K Monitor **********/
+@media only screen and (min-width:576px){
+    body{
+        font-size: calc(10px + 1vw);
+    }
+}
+/****** Mobile Phones *****/
+@media only screen and (max-width:576px){
+    .size{
+        height: 90vh;
+    }
+    body, .carousel,
+    #modalTimer, #modalVid{
+        font-size: calc(8px + 1.5vw);
+    }
+}
+@media only screen and (max-width:576px){
+    .title-text-box{
+        width: 100%;
+    }
+    .comp-header{
+        max-width: 90%;
+        left: 5%;
+    }
+    .circle{
+        width: 45vw;
+        height: 45vw;
+    }
+    .left-circle{
+        top: 9%;
+        left: 5%;
+    }
+    .carousel .carousel-indicators{
+        height: .25em;
+    }
+    .carousel .circle .carousel-indicators li{
+        height: 1em;
+        width: 1em;
+    }
+    .carousel .right-circle .carousel-indicators,
+    .carousel .left-circle .carousel-indicators{
+        bottom: 0;
+        height: .7em;
+    }
+    .tubie-circle-right{
+        top: 90%;
+    }
+    .tubie-circle-left{
+        top: 90%;
+        left: -10%;
+    }
+    .cover-holder{
+        height: 35vw;
+        margin-top: 6em;
+    }
+    .cover-img{
+        left: 0;
+    }
+    .sum-row img{
+        padding-left: 0;
+        padding-right: 0;
+        margin-right: 2%;
+    }
+    .rd-text-box{
+        margin-left: 0%;
+    }
+    .popover {
+        font-size: 0.5em;
+    }
+    .footer-div{
+        width: 100%;
+        left: 0;
+    }
+    .ribbon h2{
+        font-size: 1em;
+    }
+    .video-js {
+        margin: 0 auto !important;
+        font-size: 0.4em;
+    }
+}

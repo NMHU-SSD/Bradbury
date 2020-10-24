@@ -4,7 +4,6 @@ body,#app,main{
     max-height: 3840px;
     width: 100vw;
     height: auto;
-    font-size: calc(10px + 1vw);
 }
 /****** Google Fonts *****/
 @font-face{
