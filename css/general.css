@@ -26,6 +26,10 @@ body,#app,main{
     font-family:Roboto-Cond;
     src: url(../assets/fonts/Roboto_Condensed/RobotoCondensed-Regular.ttf);
 }
+@font-face{
+    font-family:Komika-Hand;
+    src: url(../assets/fonts/Komika-Hand/KOMIKAHB.ttf);
+}
 .redtext{
     color: #590820;
 }
