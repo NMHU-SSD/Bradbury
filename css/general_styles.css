@@ -1,4 +1,6 @@
 body{
+    max-height: 3840px;
+    max-width: 2160px;
     background-color: black;
     font-size: calc(8px + 1.2vw);
 }
@@ -75,9 +77,13 @@ p{
 /*************** Text Classes ***************/
 .content-body{
     font-size: 1em;
+    padding-left: 5%;
+    padding-right: 15%;
 }
 .content-title{
     font-size: 1.7em;
+    padding-left: 5%;
+    padding-right: 15%;
 }
 .title-font{
     font-family: 'Anton', sans-serif;
@@ -91,6 +97,8 @@ p{
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bolder;
     font-size: 1.1em;
+    padding-left: 5%;
+    padding-right: 15%;
 }
 /******** Shadows ********/
 .shadow-scroll{

@@ -39,7 +39,7 @@
 .tubie-wrapper{
     width: 30%;
     height: 100%;
-    margin-left: 10em;
+    margin-left: 50%;
     position: relative;
     bottom: -11%;
 }
@@ -88,6 +88,7 @@
     font-size: 1.7em;
     padding: 1em .5em;
     margin-top: -.3em;
+    max-height: 10em;
     overflow-y: auto;
     color: #212529;
 }
@@ -97,7 +98,7 @@
     font-family: 'Roboto-Cond', sans-serif;
     max-width: 55vw !important;
     min-width: 200px;
-    border-radius: 45%;
+    border-radius: 40%;
     padding: 4em 5em;
     white-space: pre-line;
 }

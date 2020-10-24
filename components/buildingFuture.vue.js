@@ -27,8 +27,9 @@ var buildingFuture= {
             this.toTop();
             $("#carousel-"+this.id).carousel(0);
         },
-        seturl:function(url){
-            this.$emit('seturl', url);
+        seturl:function(url,name){
+            let title = name;
+            this.$emit('seturl', {src:url,title:title});
         },
         selected:function(){
             console.log("selected");
@@ -90,7 +91,6 @@ var buildingFuture= {
             }else{
                 $('#'+divId.id).addClass("shadow-scroll");
             }
-            //:style="banner ? 'height: calc(100% - 4em);' : 'height: 100%;'"
         }
     },
     template:
@@ -109,7 +109,7 @@ var buildingFuture= {
                                 <div class="shadow-box"/>
                                 <h3 class="top-center shadow-text">{{ header }}</h3>
                                 <h2 v-if=!banner class="top-left title-font shadow-text-big">Did You Know...</h2>
-                                <div v-if="!banner && slide.video" class="watch-video" @click="seturl(slide.video)">
+                                <div v-if="!banner && slide.video" class="watch-video" @click="seturl(slide.video,slide.videoTitle)">
                                     <img src="assets/customs/VideoPlaybutton-black.png" class="play-img" style="margin-right: 5%;">
                                     <p class="body-font" style="color: #bcd1bc;">WATCH VIDEO</p>
                                 </div>
@@ -117,16 +117,16 @@ var buildingFuture= {
                                 <i v-if=slide.featuredMedia.caption class="bottom-right body-font shadow-text" :style="banner ? 'bottom: 5em;' : 'bottom: 2em;'">{{ slide.featuredMedia.caption }}</i>
                             </div>
 
-                            <div :class="['col-12 col-sm-4',(mono? 'lgt-green': 'yellow'),(banner? 'banner-text': 'text-side')]">
-                                  <div :class="['margins stay',(mono ? 'lgt-green' : 'yellow')]">
+                            <div :class="['col-12 col-sm-4 margins',(mono? 'lgt-green': 'yellow'),(banner? 'banner-text': 'text-side')]">
+                                  <div :class="['stay',(mono ? 'lgt-green' : 'yellow')]">
                                     <p v-if="slide.header" :id="'header'+id+index" class="content-header redtext">{{ slide.header }}</p>
-                                    <div v-if="banner && slide.video" class="watch-video" @click="seturl(slide.video)">
+                                    <div v-if="banner && slide.video" class="watch-video" @click="seturl(slide.video, slide.videoTitle)">
                                         <img src="assets/customs/VideoPlaybutton-black.png" class="play-img">
                                         <p class="body-font redtext">WATCH VIDEO</p>
                                     </div>
                                   </div>
 
-                                  <div :id="'text'+id+index" class="scrolling-text margins" @scroll="handleScroll">
+                                  <div :id="'text'+id+index" class="scrolling-text" @scroll="handleScroll">
                                     <p v-if="slide.header" class="content-header invis">{{ slide.header }}</p>
                                     <div v-if="banner && slide.video" class="watch-video invis">
                                         <img src="assets/customs/VideoPlaybutton-black.png" class="play-img">

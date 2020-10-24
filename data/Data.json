@@ -67,6 +67,7 @@
                 "header": "Cooling towers for the supercomputers of the Strategic Computing Center account for a large proportion of the total water used at the lab.",
                 "body": "To conserve the limited water supply of arid Northern New Mexico, reclaimed water from across the Lab is cleaned and filtered through the Sanitary Effluent Reclamation Facility (SERF).  Water from SERF supplies almost 100% of Los Alamos National Labs’ cooling tower demand, and allows the same water to be reused up to four times.",
 				"video": "data/videos/oceans.mp4",
+                "videoTitle":"",
                 "featuredMedia": {
 		           	"src": "data/sustain/SERF.jpg",
                     "title":"Keeping cool while conserving water"
@@ -110,6 +111,7 @@
                 "header":"Los Alamos used the high-energy beam from LANSCE (the Los Alamos Neutron Science Center) to shoot running processor boards taken from Roadrunner?",
                 "body":"The results helped Lab computer experts better identify and mitigate the effects of cosmic rays on full-scale supercomputers, preventing wasteful computer downtime and errors.",
                 "video": "data/videos/oceans.mp4",
+                "videoTitle":"",
                 "featuredMedia":{
                     "src": "data/sustain/cosmicrays.jpg"
                     },
@@ -123,6 +125,7 @@
                 "header":"Gary Grider, leader of the Lab's High-Performance Computing Division, came up with the idea of creating a cluster of 750 Raspberry Pi computers as a “pilot cluster” to develop scalable systems software for the Trinity supercomputer?",
                 "body":"This test-bed cluster let the Lab’s supercomputing experts replicate the extreme scale of Trinity, while only using 4,000 watts of electricity!  Grider said, “The Raspberry Pi modules let developers figure out how to write this software and get it to work reliably without having a dedicated testbed of the same size, which would cost a quarter billion dollars and use 25 megawatts of electricity.",
                 "video": "data/videos/oceans.mp4",
+                "videoTitle":"",
                 "featuredMedia":{
                     "src": "data/sustain/bitscope-2.jpg"
                     },
@@ -154,6 +157,7 @@
                  "header":"There are over 250 million internal-combustion-engine vehicles in the United States alone.",
                  "body": "The Fast, Easy, Accurate, and Robust Continuum Engineering (FEARCE) software developed at Los Alamos is a cost-effective near- to mid-term sustainability solution that helps automotive engineers improve and optimize engine designs through computer modeling.  \n\nBecause the FEARCE software allows engineers to simulate how possible design changes impact the efficiency of an engine (without having to build the engine in the real world), new, more efficient engines can be developed in much less time, and for lower cost.",
                  "video": "data/videos/oceans.mp4",
+                 "videoTitle":"",
 		          "featuredMedia": {
 		              "src": "data/drive/engine.jpg",
 		              "caption": "Computer simulations allow automotive engineers to develop more efficient engines by modeling what will happen inside an engine that does not yet exist.",
@@ -169,6 +173,7 @@
                   "header":"Converting carbon-dioxide emissions into a liquid and burying it deep underground has, for a long time, been an alternative to releasing greenhouse gases into the atmosphere.",
                   "body": "Carbon capture has struggled to become economically viable.  Linking up carbon producers, like power plants and other industries, with places geologically suitable for storing the carbon underground was the biggest hurdle, until now.  \n\nThe SimCCS software, developed and distributed for free by Los Alamos, uses computer models to identify and link together the carbon sources, pipelines, and storage sinks that need to find one another.  \n\nBy being able to turn a profit from selling the carbon dioxide they produce, commercial and government agencies are incentivized to capture and dispose of greenhouse gases safely.",
                   "video": "data/videos/oceans.mp4",
+                  "videoTitle":"",
 				  "featuredMedia": {
 		              "src": "data/drive/carboncapture.jpg",
 		              "caption": "LANL's SimCCS software identifies cost-effective links between carbon sources (red dots) with storage sinks (blue dots) using pipelines (green lines).",
@@ -199,6 +204,7 @@
                  "header":"As sea levels rise, the rapid erosion of US coastlines impacts national security, threatening power stations, water-treatment facilities, and military bases.",
                  "body": "Most extreme weather models do not take the threat into account.  The Los Alamos-developed NESMA (New Science for Multisector Adaptation) computer model uses complex algorithms (instructions that tell a computer how to solve a problem) and machine learning (the ability of a computer program to improve through experience, without needing to be programmed) to simulate the impact of coastline erosion on the infrastructure we depend upon.  \n\nHaving access to this information allows policy makers to prevent and reduce the severity of property damage, power outages, and other consequences of erosion.  According to Donatella Pasqualini, leader of the NeSMA team, the model forecasts \"every imaginable situation, which helps you understand the things you could do to best prepare.\"",
                  "video": "data/videos/oceans.mp4",
+                 "videoTitle":"",
 		          "featuredMedia": {
 		              "src": "data/drive/seaice-2.jpg",
                       "title":"Modeling Eroding Coastlines to Prepare for Hurricanes"
@@ -216,6 +222,7 @@
                 "header":"...That asteroids and other Near-Earth Objects vary wildly in composition, density, and behavior?",
                 "body":"Knowing how to deflect a potential killer requires fast and accurate computer modeling for every object.",
                 "video": "data/videos/oceans.mp4",
+                "videoTitle":"",
                 "featuredMedia":{
                     "src": "data/drive/asteroid.jpg"
                     },

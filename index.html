@@ -25,7 +25,8 @@
             <modal-overlay id="modalTimer" exitout="true" :countdown="timeData.quitout" :message="timeData.message" ref="timeModal"></modal-overlay> 
             
             <!--- Main Layout components---->
-            <slideshow-component id="slideshow" ref="top" :images="title.slideshow" :title1="drive.header" :title2="sustainable.header" :memo1="title.memo1" :memo2="title.memo2" :tubie="title.tubie" :speed=timeData.slideshow @switchout="switchData"></slideshow-component>
+            <slideshow-component id="slideshow" ref="top" :images="title.slideshow" :title1="drive.header" :title2="sustainable.header" :memo1="title.memo1" :memo2="title.memo2"
+                                 :tubie="title.tubie" :speed=timeData.slideshow @switchout="switchData"></slideshow-component>
             <building-future v-show=showData id="index" ref="style1" :slides="sustainable.slides" :header="sustainable.header" banner=true buddy="dyk" @seturl="displayVideo($event)"></building-future>
             <building-future v-show=showData id="dyk" ref="dyk" :slides="sustainable.didYouKnow" :header="sustainable.header" @seturl="displayVideo($event)"></building-future>
             <!--- Second Data set---->

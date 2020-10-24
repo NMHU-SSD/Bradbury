@@ -7,9 +7,6 @@ var modalOverlay= {
             title: null,
             player:null,
             index:0,
-            currVid:null,
-            prevVid:null,
-            nextVid:null,
             setup:{
                 autoplay: true,
 				controls: true,
@@ -69,48 +66,15 @@ var modalOverlay= {
         //Video Modal Functions
         geturl:function(video){
             //console.log(video);
-            this.player.src({type: 'video/mp4', src: video});
+            this.player.src({type: 'video/mp4', src: video.src});
             this.source=true;
-            //this.title=video.videoTitle;
-            this.title='testvideo run';
-            //this.currVid=video;
-            if(this.nextVid==null && this.prevVid==null){
-                $('#videoWindow .vjs-overlay-next').css('display', 'none');
-                $('#videoWindow .vjs-overlay-prev').css('display', 'none');
-            }
-        },
-        setVideos:function(videos){
-            if(videos.prev){
-                this.prevVid=videos.prev;
-            }
-            if(videos.next){
-                this.nextVid=videos.next;
-            }
-            this.index=videos.index;
-            //console.log("current index is: "+this.index);
-        },
-        nextClick:function(){
-            this.index+=1;
-            //console.log("current index: "+this.index);
-            this.$emit('getnext', this.index);
-            this.prevVid= this.currVid;
-            this.geturl(this.nextVid);
-            this.player.play();
-        },
-        prevClick:function(){
-            this.index-=1;
-            //console.log("current index: "+this.index);
-            this.$emit('getprev', this.index);
-            this.nextVid= this.currVid;
-            this.geturl(this.prevVid);
-            this.player.play();
+            this.title=video.title;
+            this.player.volume(0.5);
         },
         //Video Modal on-events
         stopVideo:function(){
-            this.prevVid=null;
-            this.nextVid=null;
             this.player.pause();
-            this.player.src('');
+            //this.player.src('');
             this.player.muted(false);
             this.source=false;
             this.$emit('stopvideo');
@@ -126,10 +90,6 @@ var modalOverlay= {
             this.player.getChild('bigPlayButton').on('click', function() {
               this.player.play();
             })
-            if(this.nextVid!=null){
-                $('#videoWindow .vjs-overlay-next').css('display', 'block');
-                $('#videoWindow .vjs-overlay-prev').css('display', 'block');
-            }
             clearTimeout(this.videoTimeout);
             this.videoTimeout = setTimeout(this.inactiveUser, this.countdown);
         },
@@ -147,6 +107,9 @@ var modalOverlay= {
             //console.log("playing");
         },
         inactiveUser:function(){
+            if(this.player.isFullscreen()){
+               this.player.exitFullscreen();
+               }
             this.stopVideo();
             $('#modalVideo').modal('hide');
         },
@@ -160,20 +123,6 @@ var modalOverlay= {
                   start: 'ended',
                   end: 'play',
                   align: 'top-center'
-                },{
-                    content:'Next',
-                    showBackground: true,
-                    start: 'ended',
-                    end: 'play',
-                    align: 'right',
-                    class:'vjs-overlay-next'
-                },{
-                    content:'Prev',
-                    showBackground: true,
-                    start: 'ended',
-                    end: 'play',
-                    align: 'left',
-                    class:'vjs-overlay-prev'
                 }]
               });
         }
@@ -201,8 +150,6 @@ var modalOverlay= {
           <div class="modal-body">
             <video id="videoWindow" ref="videoPlayer" preload="none" class="video-js vjs-big-play-centered web-video" @ended="endOfVideo" @pause="pausedVideo" @play="playingVideo">
             </video>
-            <div v-show="isEnded" class="playlist-buttons next-button" @click="nextClick"></div>
-            <div v-show="isEnded" class="playlist-buttons prev-button" @click="prevClick"></div>
           </div>
         </div>
 

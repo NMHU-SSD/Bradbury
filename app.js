@@ -82,7 +82,7 @@ var app = new Vue({
                 this.active=false;
             }
             //this.stillActive=info.active;
-            //console.log(info);
+            console.log(info);
             this.$refs.modalVideo.geturl(info);
             $('#modalVideo').modal();
         },
