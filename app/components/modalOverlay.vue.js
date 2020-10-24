@@ -70,6 +70,7 @@ var modalOverlay= {
         geturl:function(video){
             this.player.src({type: video.type, src: video.link});
             this.source=true;
+            this.player.volume(0.5);
             this.title=video.videoTitle;
             this.currVid=video;
             if(this.nextVid==null && this.prevVid==null){
@@ -108,6 +109,7 @@ var modalOverlay= {
             this.prevVid=null;
             this.nextVid=null;
             this.player.pause();
+            this.player.muted(false);
             this.player.src('');
             this.source=false;
             this.$emit('stopvideo');
@@ -144,6 +146,9 @@ var modalOverlay= {
             //console.log("playing");
         },
         inactiveUser:function(){
+            if(this.player.isFullscreen()){
+               this.player.exitFullscreen();
+               }
             this.stopVideo();
             $('#modalVideo').modal('hide');
         },
