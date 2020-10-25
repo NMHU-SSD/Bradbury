@@ -59,7 +59,7 @@ var infoOverlay= {
             console.log("covers timer");
             this.timer=true;
             clearTimeout(this.timeout);
-            this.timeout = setTimeout(this.stopVideo, this.countdown);
+            //this.timeout = setTimeout(this.stopVideo, this.countdown);
             //document.onmousedown = this.startTimer;
         },
         getCover:function(logo){

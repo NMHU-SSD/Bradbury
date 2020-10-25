@@ -23,7 +23,7 @@
 .modal-dialog{
     max-width: 100vw;
     margin: auto;
-    overflow-y: hidden;
+    overflow-y: visible;
 }
 .modal-body{
     padding: 0;
@@ -43,6 +43,7 @@
 .page-cover{
     max-height: 100%;
     max-width: 100%;
+    width: 100%;
     object-fit: contain;
     object-position: bottom;
 }
@@ -55,12 +56,14 @@
 }
 .rd-topic{
     width: 30%;
-    height: 100%;
+    height: 90%;
     position: absolute;
-    left: 12%;
+    left: 5%;
+    bottom: 0;
 }
 .rd-ribbon{
-    height: 70%;
+    height: 60%;
+    max-width: 15%;
     margin-top: 1%;
     margin-left: 2%;
     filter: brightness(0.9)
@@ -97,19 +100,19 @@
 /*** carousel controller **/
 .carousel-control-prev,
 .carousel-control-next{
-    height: 100%;
-    width: 7%;
+    width: 10%;
 }
 .control-info{
+    height: 10%;
     margin-top: 55%;
 }
 .control-vid{
-    margin-top: -6em;
+    height: 50%;
+    margin-top: -8em;
 }
 .carousel-control-prev-icon,
 .carousel-control-next-icon{
     height: 100%;
-    width: 0.7em;
 }
 .carousel-control-prev-icon{
     background: url(../assets/customs/Arrow-left.svg)no-repeat;
@@ -119,6 +122,8 @@
 }
 .vid-head{
     margin-left: 4em;
+    max-height: 100%;
+    padding-right: 0;
 }
 .ribbon h2{
     font-size: 1.1em;

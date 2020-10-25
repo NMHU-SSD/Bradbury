@@ -15,12 +15,12 @@
     }
 }
 @media only screen and (max-width:576px){
-    .title-text-box{
-        width: 100%;
-    }
     .comp-header{
         max-width: 90%;
         left: 5%;
+    }
+    .title-text-box{
+        width: 100%;
     }
     .circle{
         width: 45vw;
@@ -72,10 +72,40 @@
         left: 0;
     }
     .ribbon h2{
-        font-size: 1em;
+        font-size: .9em;
     }
     .video-js {
         margin: 0 auto !important;
         font-size: 0.4em;
+    }
+}
+
+/********* Tablet/Computer Devices**********/
+@media only screen and (max-width:1200px) and (min-width:576px){
+    body, .carousel{
+        font-size: calc(10px + 1vw);
+    }
+    .size{
+        height: 90vw;
+    }
+    .title-text-box{
+        width: 90%;
+    }
+    .carousel .right-circle .carousel-indicators,
+    .carousel .left-circle .carousel-indicators{
+        height: .7em;
+    }
+    .carousel .circle .carousel-indicators li{
+        height: 1.5em;
+        width: 1.5em;
+    }
+    .carousel .carousel-indicators{
+        height: .5em;
+    }
+    .cover-img{
+        left: 5%;
+    }
+    .popover {
+        font-size: 0.5em;
     }
 }
