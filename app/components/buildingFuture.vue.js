@@ -9,7 +9,8 @@ var buildingFuture= {
             splash: true,
             first:true,
             end: false,
-            count:0
+            count:0,
+            lastScroll:null
         }
     },
     methods:{
@@ -18,6 +19,7 @@ var buildingFuture= {
             this.first=true;
             this.end=false;
             this.count=0;
+            this.toTop();
         },
         seturl:function(url){
             this.$emit('seturl', {'video':url, 'active':true});
@@ -67,6 +69,8 @@ var buildingFuture= {
             if(this.count==this.infoSlides.length-1){
                 this.end=true;
             }
+            //this.scrollpanel(this.count);
+            this.toTop();
         },
         prevSlide:function(){
             this.count--;
@@ -74,6 +78,8 @@ var buildingFuture= {
             if(this.count==0){
                 this.first=true;
             }
+            //this.scrollpanel(this.count);
+            this.toTop();
         },
         jumpSlide:function(index){
             this.count=index;
@@ -86,6 +92,30 @@ var buildingFuture= {
             }else{
                 this.end=false;
                 this.first=false;
+            }
+            //this.scrollpanel(this.count);
+            this.toTop();
+        },
+        handleScroll: function(el) {
+            if((el.srcElement.offsetHeight + el.srcElement.scrollTop) >= el.srcElement.scrollHeight) {
+                $('#'+el.srcElement.id).removeClass("shadow-scroll");
+            }else{
+                //$('#'+el.srcElement.id).addClass("shadow-scroll");
+            }
+            this.lastScroll = el.srcElement.id;
+            //console.log(el.srcElement.id);
+        },
+        scrollpanel:function(index){
+            var divId = $('#text'+this.id+index);
+            if((divId.offsetHeight + divId.scrollTop) != divId.scrollHeight){
+                $(divId).addClass("shadow-scroll");
+            }
+            //console.log(divId);
+        },
+        toTop:function(){
+            if(this.lastScroll != null){
+                let scrollDiv = document.getElementById(this.lastScroll);
+                scrollDiv.scrollTop=0;
             }
         }
     },
@@ -125,7 +155,7 @@ var buildingFuture= {
                                 </div>
                             </div>
 
-                            <div :class="['col', (slide.media ? 'side-widget offset-2 offset-sm-3 scrolling mb-3' : 'words-holder pt-sm-5')]">
+                            <div :id="'text'+id+index" :class="['col', (slide.media ? 'side-widget offset-2 offset-sm-3 scrolling mb-3' : 'words-holder pt-sm-5')]" @scroll="handleScroll">
                                   <p v-if="slide.body" class="content-body">{{ slide.body }}</p>
                         <!--- In Their Words----->
                                 <div v-if="slide.videoSlide" class="words-holder container-fluid mr-md-5 fix-width">

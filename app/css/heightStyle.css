@@ -146,7 +146,7 @@
         max-width: 400px;
     }
     .side-widget{
-        height: 60%;
+        height: calc(100% - 9em);
     }
     .fix-width{
         width: 80%;
