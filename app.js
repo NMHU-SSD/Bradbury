@@ -20,7 +20,7 @@ var app = new Vue({
     },
     mounted: function(){
         this.GetData();
-        //this.resetTimer();
+        this.resetTimer();
     },
     
     methods:{

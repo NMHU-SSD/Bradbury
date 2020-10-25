@@ -43,6 +43,7 @@ p{
 }
 .stay{
     position: absolute;
+    top: 1em;
 }
 /***** Muesuem Fonts ****/
 @font-face{

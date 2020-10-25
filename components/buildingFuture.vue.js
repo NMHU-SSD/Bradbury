@@ -42,6 +42,7 @@ var buildingFuture= {
                 this.end=true;
             }
             $("#carousel-"+this.buddy+" .carousel-control-next").trigger('click');
+            this.scrollpanel(this.count);
             this.toTop();
         },
         prevSlide:function(){
@@ -51,6 +52,7 @@ var buildingFuture= {
                 this.first=true;
             }
             $("#carousel-"+this.buddy+" .carousel-control-prev").trigger('click');
+            this.scrollpanel(this.count);
             this.toTop();
         },
         jumpSlide:function(index){
@@ -75,21 +77,19 @@ var buildingFuture= {
                 $('#'+el.srcElement.id).addClass("shadow-scroll");
             }
             this.lastScroll = el.srcElement.id;
-            console.log(el.srcElement.id);
+            //console.log(el.srcElement.id);
+        },
+        scrollpanel:function(index){
+            var divId = $('#text'+this.id+index);
+            if((divId.offsetHeight + divId.scrollTop) != divId.scrollHeight){
+                $(divId).addClass("shadow-scroll");
+            }
+            //console.log(divId);
         },
         toTop:function(){
             if(this.lastScroll != null){
                 let scrollDiv = document.getElementById(this.lastScroll);
                 scrollDiv.scrollTop=0;
-            }
-        },
-        scrollpanel:function(index){
-            var divId = document.getElementById('text'+this.id+index);
-            console.log(divId);
-            if((divId.offsetHeight + divId.scrollTop) >= divId.scrollHeight){
-                $('#'+divId.id).removeClass("shadow-scroll");
-            }else{
-                $('#'+divId.id).addClass("shadow-scroll");
             }
         }
     },
