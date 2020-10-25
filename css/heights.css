@@ -23,6 +23,10 @@ body{
     .carousel-inner, .slideshow-container{
         height: 100vh;
     }
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon{
+        height: 30%;
+    }
     .top,{
         font-size: calc(10px + 10vw);
     }
@@ -68,9 +72,6 @@ body{
     .modal-dialog{
         width: 100vw;
     }
-    .modal-body{
-        padding: .3em;
-    }
     .modal,.video-js{
         font-size: 8px;
     }
@@ -83,7 +84,7 @@ body{
         font-size: calc(6px + 1vw);
     }
     .slideshow-container h1{
-        font-size: 3em;
+        font-size: 3.5em;
     }
     .center{
         left: 35%;

@@ -152,6 +152,7 @@
 }
 .modal-body{
     font-size: 2em;
+    padding: .3em;
 }
 .close{
     font-size: 3em;
