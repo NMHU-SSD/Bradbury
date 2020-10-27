@@ -135,7 +135,7 @@ var buildingFuture= {
     template:
     `<div :id="id" @click="selected">
         <a :data-target="['#' + 'carousel-'+id]" data-slide-to="0" :href="['#' + 'carousel-'+id]">
-            <div v-show="splash" class="row no-gutters row-full">
+            <div v-show="splash" class="row no-gutters">
                 <slideshow-component :id="'slide-'+id" :images="slideImages" :speed="speed" :header="header"/>
             </div>
         </a>
@@ -146,8 +146,8 @@ var buildingFuture= {
                     <div :class="['carousel-item', (index==0 ? 'active' : '')]" >
 
                         <!--- Slides Layout Appearence --->
-                        <div class="row row-full">
-                            <div v-if="slide.media" class="d-none d-sm-block col-sm-4 red">
+                        <div class="row row-full no-gutters align-items-start">
+                            <div v-if="slide.media" class="col-12 col-sm-4 red">
                                 <div class="img-main-large">
                                     <div class="circle-wrap img-shadow">
                                         <img :src="slide.media" :alt="slide.alt">
@@ -155,7 +155,7 @@ var buildingFuture= {
                                 </div>
                             </div>
 
-                            <div :id="'text'+id+index" :class="['col', (slide.media ? 'side-widget offset-2 offset-sm-3 scrolling mb-3' : 'words-holder pt-sm-5')]" @scroll="handleScroll">
+                            <div :id="'text'+id+index" :class="['col', (slide.media ? 'side-widget offset-2 offset-sm-3' : 'words-holder pt-sm-5')]" @scroll="handleScroll">
                                   <p v-if="slide.body" class="content-body">{{ slide.body }}</p>
                         <!--- In Their Words----->
                                 <div v-if="slide.videoSlide" class="words-holder container-fluid mr-md-5 fix-width">

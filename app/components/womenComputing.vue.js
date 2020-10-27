@@ -94,7 +94,7 @@ var womanComputing = {
     template:
     `<div :id="id" @click="selected">
         <a :data-target="['#' + 'carousel-'+id]" data-slide-to="0" :href="['#' + 'carousel-'+id]">
-            <div v-show="splash" class="row no-gutters row-full">
+            <div v-show="splash" class="row no-gutters">
                 <slideshow-component :id="'slide-'+id" :images="slideImages" :speed="speed" :header="header" position="left"/>
             </div>
         </a>
@@ -105,7 +105,7 @@ var womanComputing = {
                     <div :class="['carousel-item', (index==0 ? 'active' : '')]" >
                         <div class="row row-full no-gutters">
                     <!--- Slides Layout Appearence --->
-                              <div class="d-none d-sm-block col-sm-6 col-xl-9 img-main">
+                              <div class="col-12 col-sm-6 col-xl-9 img-main">
                                   <img :src="slide.media" :alt="slide.alt">
                               </div>
                               <div :id="'text'+id+index" class="col text-side offset-2 offset-sm-0" @scroll="handleScroll">
