@@ -146,8 +146,8 @@ var buildingFuture= {
                     <div :class="['carousel-item', (index==0 ? 'active' : '')]" >
 
                         <!--- Slides Layout Appearence --->
-                        <div class="row row-full no-gutters align-items-start">
-                            <div v-if="slide.media" class="col-12 col-sm-4 red">
+                        <div :class="['row no-gutters align-items-start',(slide.videoSlide ?'':'row-full')]">
+                            <div v-if="slide.media" class="col-12 col-sm-4 red pic-holder">
                                 <div class="img-main-large">
                                     <div class="circle-wrap img-shadow">
                                         <img :src="slide.media" :alt="slide.alt">
@@ -156,7 +156,7 @@ var buildingFuture= {
                             </div>
 
                             <div :id="'text'+id+index" :class="['col', (slide.media ? 'side-widget offset-2 offset-sm-3' : 'words-holder pt-sm-5')]" @scroll="handleScroll">
-                                  <p v-if="slide.body" class="content-body">{{ slide.body }}</p>
+                                  <p v-if="slide.body" class="content-body content-pad">{{ slide.body }}</p>
                         <!--- In Their Words----->
                                 <div v-if="slide.videoSlide" class="words-holder container-fluid mr-md-5 fix-width">
                                     <div class="row words-holder">

@@ -105,11 +105,11 @@ var womanComputing = {
                     <div :class="['carousel-item', (index==0 ? 'active' : '')]" >
                         <div class="row row-full no-gutters">
                     <!--- Slides Layout Appearence --->
-                              <div class="col-12 col-sm-6 col-xl-9 img-main">
+                              <div class="col-12 col-sm-6 col-xl-9 img-main pic-holder">
                                   <img :src="slide.media" :alt="slide.alt">
                               </div>
                               <div :id="'text'+id+index" class="col text-side offset-2 offset-sm-0" @scroll="handleScroll">
-                                  <p v-if="slide.body" class="content-body ">{{ slide.body }}</p>
+                                  <p v-if="slide.body" class="content-body content-pad">{{ slide.body }}</p>
                               </div>
                     <!-- End of slides --->
                         </div>

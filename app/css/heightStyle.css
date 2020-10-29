@@ -75,10 +75,10 @@
     .row-full{
         height: 60%;
     }
-    .col-12{
+    .pic-holder{
         height: 50%;
     }
-    .content-body{
+    .content-pad{
         padding-bottom: 30vw;
     }
     .text-side, .side-widget{

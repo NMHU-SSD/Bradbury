@@ -244,6 +244,7 @@
     overflow-y: auto;
 }
 /******* Image Side *****/
+
 .img-main-large{
     position: relative;
     width: 100%;
@@ -296,8 +297,6 @@
     padding-right: 7%;
     padding-bottom: 5%;
     overflow-y: auto;
-}
-.inner-row{
 }
 /******* Thumbnails images *****/
 .vid-thumb{
