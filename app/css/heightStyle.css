@@ -170,6 +170,7 @@
     }
     .side-widget{
         height: calc(100% - 9em);
+        margin-left: 30%;
     }
     .fix-width{
         width: 80%;

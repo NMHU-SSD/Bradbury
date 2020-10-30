@@ -81,6 +81,20 @@ var womanComputing = {
                 let scrollDiv = document.getElementById(this.lastScroll);
                 scrollDiv.scrollTop=0;
             }
+        },
+        changeImg:function(){
+            var slideId = $('#'+this.id);
+            this.currentImg = this.images[this.index].img;
+            if(this.images[this.index].position){
+                $(slideId).css('object-position', this.images[this.index].position);
+            }else{
+                $(slideId).css('object-position', 'center');
+            }
+            if(this.index < this.images.length-1){
+                this.index++;
+            }else{
+                this.index=0;
+            }
         }
     },
     watch:{

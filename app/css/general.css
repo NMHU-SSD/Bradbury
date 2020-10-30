@@ -42,13 +42,14 @@
 .content-body{
     font-size: calc(14px + 1vw);
     padding-left: 5%;
-    padding-bottom: 11vw;
-    margin-top: 20px;
     overflow: hidden;
     color: white;
     font-family: Oswald;
     font-weight: 300;
     white-space: pre-line;
+}
+.content-pad{
+    padding-bottom: 11vw;
 }
 .scrolling{
     overflow-y: auto;

@@ -240,11 +240,14 @@
 .side-widget{
     padding: 0;
     margin-top: 2%;
+    margin-right: 5%;
     white-space: pre-line;
     overflow-y: auto;
 }
 /******* Image Side *****/
-
+.pic-holder{
+    height: 100%;
+}
 .img-main-large{
     position: relative;
     width: 100%;

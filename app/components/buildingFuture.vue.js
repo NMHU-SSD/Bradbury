@@ -155,7 +155,7 @@ var buildingFuture= {
                                 </div>
                             </div>
 
-                            <div :id="'text'+id+index" :class="['col', (slide.media ? 'side-widget offset-2 offset-sm-3' : 'words-holder pt-sm-5')]" @scroll="handleScroll">
+                            <div :id="'text'+id+index" :class="['col', (slide.media ? 'side-widget offset-2' : 'words-holder pt-sm-5')]" @scroll="handleScroll">
                                   <p v-if="slide.body" class="content-body content-pad">{{ slide.body }}</p>
                         <!--- In Their Words----->
                                 <div v-if="slide.videoSlide" class="words-holder container-fluid mr-md-5 fix-width">
