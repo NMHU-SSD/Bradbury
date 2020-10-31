@@ -239,7 +239,8 @@
 /******* Content Side *****/
 .side-widget{
     padding: 0;
-    margin-top: 2%;
+    height: calc(100% - 8em);
+    margin-top: 2em;
     margin-right: 5%;
     white-space: pre-line;
     overflow-y: auto;
@@ -289,7 +290,7 @@
 }
 /******* Slide Container *****/
 .fix-width{
-    padding-bottom: 4.5em;
+    height: calc(100% - 6em);
     width: 80%;
 }
 /******* Video Slider *****/

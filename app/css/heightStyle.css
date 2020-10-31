@@ -46,7 +46,7 @@
         height: 15em;
     }
     .side-widget{
-        padding-left: 3em;
+        margin-left: 30%;
     }
 }
 
@@ -62,7 +62,7 @@
         max-height: 160vw;
         font-size: 10px;
     }
-    #carousel-carouselHistory, #carouselHistory, .fix-width{
+    #carousel-carouselHistory, #carouselHistory{
         height: 100vh;
         max-height: 160vw;
         font-size: 10px;
@@ -116,13 +116,13 @@
         padding: 0.3em;
     }
     .vid-container{
-        height: 55vw;
+        height: calc(70% - 33vw);
         max-height: 400px;
         padding: 2% 3%;
         padding-right: 8%;
     }
     .vid-thumb{
-        height: 10vw;
+        height: 15vw;
     }
     .modal-dialog{
         width: 100%;
@@ -175,7 +175,7 @@
     .fix-width{
         width: 80%;
         margin-left: 20%;
-        padding-top: 3em;
+        height: calc(100% - 6em);
     }
     .vid-container{
         height: 100%;

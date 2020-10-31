@@ -82,18 +82,11 @@ var womanComputing = {
                 scrollDiv.scrollTop=0;
             }
         },
-        changeImg:function(){
-            var slideId = $('#'+this.id);
-            this.currentImg = this.images[this.index].img;
-            if(this.images[this.index].position){
-                $(slideId).css('object-position', this.images[this.index].position);
+        imgPosition:function(position){
+            if(position != undefined){
+                return "object-position: "+position;
             }else{
-                $(slideId).css('object-position', 'center');
-            }
-            if(this.index < this.images.length-1){
-                this.index++;
-            }else{
-                this.index=0;
+                return "";
             }
         }
     },
@@ -120,7 +113,7 @@ var womanComputing = {
                         <div class="row row-full no-gutters">
                     <!--- Slides Layout Appearence --->
                               <div class="col-12 col-sm-6 col-xl-9 img-main pic-holder">
-                                  <img :src="slide.media" :alt="slide.alt">
+                                  <img :src="slide.media" :style="imgPosition(slide.position)" :alt="slide.alt">
                               </div>
                               <div :id="'text'+id+index" class="col text-side offset-2 offset-sm-0" @scroll="handleScroll">
                                   <p v-if="slide.body" class="content-body content-pad">{{ slide.body }}</p>

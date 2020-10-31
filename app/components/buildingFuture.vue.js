@@ -117,6 +117,13 @@ var buildingFuture= {
                 let scrollDiv = document.getElementById(this.lastScroll);
                 scrollDiv.scrollTop=0;
             }
+        },
+        imgPosition:function(position){
+            if(position != undefined){
+                return "object-position: "+position;
+            }else{
+                return "";
+            }
         }
     },
     watch:{
@@ -150,7 +157,7 @@ var buildingFuture= {
                             <div v-if="slide.media" class="col-12 col-sm-4 red pic-holder">
                                 <div class="img-main-large">
                                     <div class="circle-wrap img-shadow">
-                                        <img :src="slide.media" :alt="slide.alt">
+                                        <img :src="slide.media" :style="imgPosition(slide.position)" :alt="slide.alt">
                                     </div>
                                 </div>
                             </div>

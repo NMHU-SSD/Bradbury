@@ -92,6 +92,7 @@
                 {
                     "body":"The first computers at Los Alamos were mostly women from the town's civilian community. Professional computers from the Woman's Army Corps (WACs) soon grew the ranks of human computers at the Lab to about twenty. Without their skilled and tireless computing work, Los Alamos' wartime mission would not have succeeded.",
                     "media": "data/images/WACs%20Los%20Alamos%202.jpg",
+                    "position":"top",
                     "alt":"",
                     "tubie":{
                         "header":"title data",
@@ -101,6 +102,7 @@
                 {
                     "body":"After World War II, women from the Lab's hand-computing group became the world's first programmers (then called \"coders\").\n\nHuman computers had the skills needed to translate complex problems into the software \"code\" that an electronic computer could understand. Women with degrees in science and mathematics came to Los Alamos from all over the United States to meet the Lab's urgent Cold War need for computing expertise.",
                     "media": "data/images/Lois%20Cook%20Leurgans.jpg",
+                    "position":"50% 10%",
                     "alt":"",
                     "tubie":{
                         "header":"title data",
@@ -110,6 +112,7 @@
                 {
                     "body":"The 1970's brought many changes to Los Alamos. The Cray-1 revolutionized supercomputer performance and computer networking made the lab a smaller (and faster) place.\n\nWomen stepped up to a growing number of roles in computing - from networking technicians to group leaders - to make sure Los Alamos continued to set the pace in supercomputer technology and scientific research.",
                     "media": "data/images/001%20Cray%201%201977.jpg",
+                    "position":"100% 30%",
                     "alt":"",
                     "tubie":{
                         "header":"title data",
