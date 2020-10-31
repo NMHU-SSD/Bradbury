@@ -79,6 +79,7 @@
 .popover .popover-header {
     font-size: 1.8em;
     font-family:'Komika-Hand', sans-serif;
+    line-height: 1.6;
     background-color: rgba(0,0,0,0) !important;
     text-align: center;
     border-bottom: .1em solid #ebebeb;
@@ -87,11 +88,13 @@
 }
 .popover .popover-body{ 
     font-size: 1.7em;
-    padding: 1em .5em;
+    text-align: center;
     margin-top: -.3em;
+    margin-bottom: .5em;
     max-height: 10em;
     overflow-y: auto;
     color: #212529;
+    border-radius: 0% 0% 3em 3em;
 }
 /****Popover Bubble****/
 .popover {
@@ -100,7 +103,7 @@
     max-width: 55vw !important;
     min-width: 200px;
     border-radius: 40%;
-    padding: 4em 5em;
+    padding: 2em 4em;
     white-space: pre-line;
 }
 /****** TOP ******/

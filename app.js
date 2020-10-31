@@ -21,8 +21,8 @@ var app = new Vue({
     mounted: function(){
         this.GetData();
         this.resetTimer();
+        this.listeners();
     },
-    
     methods:{
         GetData: function(){
             fetch("data/Data.json",{
@@ -40,6 +40,13 @@ var app = new Vue({
             });
         },
          //Timer modal functions
+        listeners: function(){
+            $(".interest").on('click', function(){
+                this.active = true;
+                this.resetTimer();
+                console.log(this.active);
+            });
+        },
         resetTimer:function(){
             clearTimeout(this.t);
             clearTimeout(this.afk);
@@ -51,6 +58,7 @@ var app = new Vue({
                 this.active=true;
             }
             document.onmousedown = this.resetTimer;
+            //console.log("reset timer", this.active);
         },
         toAlert:function(){
             console.log("toAlert");

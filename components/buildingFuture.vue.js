@@ -25,6 +25,7 @@ var buildingFuture= {
             this.first=true;
             this.end=false;
             this.toTop();
+            this.scrollpanel(0);
             $("#carousel-"+this.id).carousel(0);
         },
         seturl:function(url,name){
@@ -71,13 +72,12 @@ var buildingFuture= {
             }
         },
         handleScroll: function(el) {
-            if((el.srcElement.offsetHeight + el.srcElement.scrollTop) >= el.srcElement.scrollHeight) {
+            if((el.srcElement.offsetHeight + el.srcElement.scrollTop) + 5 >= el.srcElement.scrollHeight) {
                 $('#'+el.srcElement.id).removeClass("shadow-scroll");
             }else{
                 $('#'+el.srcElement.id).addClass("shadow-scroll");
             }
             this.lastScroll = el.srcElement.id;
-            //console.log(el.srcElement.id);
         },
         scrollpanel:function(index){
             var divId = $('#text'+this.id+index);
