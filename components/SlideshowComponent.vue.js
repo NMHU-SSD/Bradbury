@@ -83,7 +83,7 @@ var slideshowComponent={
             <tubie-overlay id="tubie-show" :display="tubie" spec="def"/>
         </div>
         <div class="banner red">
-            <div class="next-section" @click="switchOut()"></div>
+            <div class="interest next-section" @click="switchOut()"></div>
             <p v-show=head class="title-font">See how supercomputers drive a sustainable future</p>
             <p v-show=!head class="title-font">Sustainable supercomputing</p>
         </div>

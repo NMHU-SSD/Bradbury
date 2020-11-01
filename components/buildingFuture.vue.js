@@ -14,12 +14,6 @@ var buildingFuture= {
             lastScroll:null
         }
     },
-    updated:function(){
-        //this.scrollpanel(0);
-    },
-    mounted:function(){
-        //this.scrollpanel(0);
-    },
     methods:{
         reset:function(){
             this.first=true;
@@ -149,14 +143,14 @@ var buildingFuture= {
 
         <div v-show=banner>
         <ol class="carousel-indicators">
-            <li v-for="(slide, index) in slides" :data-target="['#' + 'carousel-'+id]" :data-slide-to="index" :class="(index==0 ? 'active' : '')" :style="mono?'background: #bcd1bc;':'background: #BBC356;'" @click="jumpSlide(index)"></li>
+            <li v-for="(slide, index) in slides" :data-target="['#' + 'carousel-'+id]" :data-slide-to="index" :class="['interest',(index==0 ? 'active' : '')]" :style="mono?'background: #bcd1bc;':'background: #BBC356;'" @click="jumpSlide(index)"></li>
         </ol>
 
-          <a v-show="!first" class="carousel-control-prev" :href="['#' + 'carousel-'+id]" role="button" data-slide="prev" @click="prevSlide">
+          <a v-show="!first" class="interest carousel-control-prev" :href="['#' + 'carousel-'+id]" role="button" data-slide="prev" @click="prevSlide">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="sr-only">Previous</span>
           </a>
-          <a v-show="!end" class="carousel-control-next" :href="['#' + 'carousel-'+id]" role="button" data-slide="next" @click="nextSlide">
+          <a v-show="!end" class="interest carousel-control-next" :href="['#' + 'carousel-'+id]" role="button" data-slide="next" @click="nextSlide">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="sr-only">Next</span>
           </a>

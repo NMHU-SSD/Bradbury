@@ -20,8 +20,11 @@ var app = new Vue({
     },
     mounted: function(){
         this.GetData();
-        this.resetTimer();
+        //this.resetTimer();
+    },
+    updated: function(){
         this.listeners();
+        this.resetTimer();
     },
     methods:{
         GetData: function(){
@@ -40,11 +43,11 @@ var app = new Vue({
             });
         },
          //Timer modal functions
-        listeners: function(){
+        listeners:function(){
             $(".interest").on('click', function(){
-                this.active = true;
-                this.resetTimer();
-                console.log(this.active);
+                app.active= true;
+                app.resetTimer();
+                //console.log("interest class");
             });
         },
         resetTimer:function(){
@@ -54,20 +57,17 @@ var app = new Vue({
                 this.t = setTimeout(this.toAlert, this.timeData.timeout);
                 console.log("timer set");
             }
-            else if(this.active==null){
-                this.active=true;
-            }
             document.onmousedown = this.resetTimer;
             //console.log("reset timer", this.active);
         },
         toAlert:function(){
             console.log("toAlert");
-            document.onmousedown = this.resetTimer;
             this.$refs.timeModal.reset();
             this.displayModal();
             this.afk = setTimeout(this.toDefault, this.timeData.quitout);
         },
         toDefault:function(){
+            app.active = false;
             this.showData = true;
             this.$refs.top.reset();
             this.$refs.style1.reset();
@@ -79,8 +79,7 @@ var app = new Vue({
         displayModal:function(){
             $('#'+'modalTimer').modal();
             this.$refs.timeModal.timer();
-            setTimeout(function(){
-                $('#'+'modalTimer').modal('hide')}, this.timeData.quitout);
+            setTimeout(function(){$('#'+'modalTimer').modal('hide')}, this.timeData.quitout);
             document.onmousedown = this.resetTimer;
         },
         displayVideo:function(info){

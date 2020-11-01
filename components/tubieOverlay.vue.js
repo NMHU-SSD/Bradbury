@@ -17,6 +17,9 @@ var tubieOverlay = {
         seturl:function(){
             this.$emit('seturl');
         },
+        active:function(){
+            this.$emit('active');
+        },
         hopAnimation:function(){
             var tubieId = $('#'+this.id);
             $(tubieId).css({'margin-top':'-10%', 'transition':this.animationTime+'ms'});
@@ -29,6 +32,5 @@ var tubieOverlay = {
     `<div :id="id" class="tubie-wrapper" @click="hopAnimation">
         <div :class="'interest tubie-'+spec" data-container="body" tabindex="0" data-toggle="popover" data-placement="top" 
          data-trigger="focus" :title="display.header" :data-content="display.body"/>
-        <!--div v-else class="tubie-img-left" @click="seturl"/-->
     </div>`
 }
