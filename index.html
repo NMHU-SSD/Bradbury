@@ -22,11 +22,11 @@
 		<main>
             <!--Pop overs-->
             <info-overlay id="modalHard" ref="modalHard" spec="info" :slides="rd100.hardware"
-                          :countdown="timeData.timeout" @stopvideo="videoModalClose($event)" @seturl="displayVideo($event)"></info-overlay>
+                          :countdown="timeData.timeout" @stopvideo="toDefault" @seturl="displayVideo($event)"></info-overlay>
             <info-overlay id="modalNet" ref="modalNet" spec="info" :slides="rd100.networking"
-                          :countdown="timeData.timeout" @stopvideo="videoModalClose($event)" @seturl="displayVideo($event)"></info-overlay>
+                          :countdown="timeData.timeout" @stopvideo="toDefault" @seturl="displayVideo($event)"></info-overlay>
             <info-overlay id="modalSoft" ref="modalSoft" spec="info" :slides="rd100.software"
-                          :countdown="timeData.timeout" @stopvideo="videoModalClose($event)" @seturl="displayVideo($event)"></info-overlay>
+                          :countdown="timeData.timeout" @stopvideo="toDefault" @seturl="displayVideo($event)"></info-overlay>
             
             <info-overlay id="modalVideo1" ref="modalVideo1" spec="vid" :slides="comp.been"
                           :countdown="timeData.videotimer" @stopvideo="videoModalClose($event)" @seturl="displayTech($event)"></info-overlay>

@@ -20,7 +20,6 @@ var app = new Vue({
     mounted: function(){
         this.GetData();
     },
-    
     methods:{
         GetData: function(){
             fetch("data/Data.json",{
@@ -46,7 +45,7 @@ var app = new Vue({
                 console.log("timer set");
             }
             document.onmousedown = this.resetTimer;
-            console.log(this.active);
+            console.log("timer ", this.active);
         },
         toAlert:function(){
             console.log("toAlert");
