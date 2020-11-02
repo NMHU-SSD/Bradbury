@@ -199,6 +199,13 @@
         max-width: 350px;
         max-height: 70%;
     }
+    .popover{
+        font-size:calc(6px + .7vw);
+        max-width: 50vw !important;
+    }
+    .modal-header,.video-js{
+        font-size: 1em;
+    }
 }
 
 /********* PC Devices

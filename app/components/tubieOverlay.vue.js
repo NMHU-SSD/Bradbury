@@ -22,12 +22,13 @@ var tubieOverlay = {
             $(tubieId).css({'margin-top':'-10%', 'transition':this.animationTime+'ms'});
             setTimeout(function(){
                 $(tubieId).css('margin-top', '0');}, this.animationTime);
-            //
+            //data-trigger="focus"
         }
     },
     template:
     `<div v-if="display!=null" :id="id" class="tubie-wrapper" @click="hopAnimation">
-        <div v-if="display.header" class="tubie-img" data-container="body" tabindex="0" data-toggle="popover" data-placement="bottom" data-trigger="focus" :title="display.header" :data-content="display.body"/>
+        <div v-if="display.header" class="tubie-img" data-container="body" tabindex="0" data-toggle="popover" data-placement="bottom" 
+         data-trigger="focus" :title="display.header" :data-content="display.body"/>
 
         <div v-else class="tubie-img-left" @click="seturl"/>
     </div>`

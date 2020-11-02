@@ -52,9 +52,11 @@
     margin-top: -1em;
 }
 .popover .popover-body{ 
-    font-size: 1.7em;
+    font-size: 1.5em;
+    text-align: center;
     padding: 1em .5em;
     margin-top: -.3em;
+    max-height: 8em;
     overflow-y: auto;
     color: #212529;
 }
@@ -67,12 +69,6 @@
     border-radius: 45%;
     padding: 4em 5em;
     margin: 0 5%;
-}
-@media only screen and (max-width:1200px){
-    .popover{
-        font-size:calc(6px + .7vw);
-        max-width: 90vw !important;
-    }
 }
 
 /*****Arrow Placements ***********/

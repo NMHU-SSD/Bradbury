@@ -54,7 +54,7 @@ var app = new Vue({
             clearTimeout(this.afk);
             if(this.active){
                 this.t = setTimeout(this.toAlert, this.timeData.timeout);
-                //console.log("timer set");
+                console.log("timer set");
             }
             else if(this.active==null){
                 this.active=true;
