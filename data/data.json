@@ -26,28 +26,28 @@
         "been":
         [
             {
-                "video":"data/tfComp/LongHistorySupercomputing.mp4",
+                "video":"data/videos/LongHistorySupercomputing.mp4",
                 "title":"A Long History of Supercomputing",
                 "tubie":{
                     "body":"From bringing the first problem to the world's first electronic computer to building the first machine to break the petaflop barrier, Los Alamos holds many “firsts” in HPC breakthroughs.\nToday, supercomputers are integral to stockpile stewardship and the Laboratory continues to work with industry partners to develop the future of HPC."
                 }
             },
             {
-                "video":"data/tfComp/BigDataJustGotBigger.mp4",
+                "video":"data/videos/BigDataJustGotBigger.mp4",
                 "title":"Big Data just got bigger",
                 "tubie":{
                     "body":"Everything about a supercomputer is big; from its gargantuan size, to its vast number of processors.  Supercomputers also generate a lot of data, making it a growing challenge for scientists to find the information they need, much like searching for a needle in a very large haystack.  Los Alamos scientists and the Lab’s storage research team made history when they brought solutions from \"Big Data\" to the aid of \"Big Science.\""
                 }
             },
             {
-                "video":"data/tfComp/PreventingCyberZombieApocalypse.mp4",
+                "video":"data/videos/PreventingCyberZombieApocalypse.mp4",
                 "title":"Preventing the cyber zombie apocalypse",
                 "tubie":{
                     "body":"Cybercrime rates are on the rise, but what exactly does that mean? Cybercrime is any sort of crime using a computer—simple enough. And now that most people in the United States have a computer or access to one, cybercrime is more common than ever. Los Alamos National Laboratory has been working on cybersecurity techniques, processes, and tools to prevent and detect cyberattacks."
                 }
             },
             {
-                "video":"data/tfComp/LayeredSolutionSupercomputingStorage.mp4",
+                "video":"data/videos/LayeredSolutionSupercomputingStorage.mp4",
                 "title":"A layered solution for supercomputing storage",
                 "tubie":{
                     "body":"A major challenge in supercomputing is moving large amounts of simulation data off the computer and into storage.  This has to happen quickly enough to keep from wasting valuable computer processing time, but even the fastest hard-drive storage can't keep up with the huge volumes of data supercomputers generate today.  To solve this challenge, a team at Los Alamos developed two innovative memory management and storage technologies.  \"Burst buffers\" peel off data from the supercomputer's memory and place it onto solid-state drives (SSDs).  This allows the supercomputer to go back to work, while the SSDs send that data to inexpensive but slow spinning disk drives and tape archives, using new Lab-developed management software called MarFS to make the process seamless for the user. "
@@ -57,7 +57,7 @@
         "headed":
         [
             {
-                "video":"data/tfComp/TheNextFrontierSupercomputing.mp4",
+                "video":"data/videos/TheNextFrontierSupercomputing.mp4",
                 "title":"The Next Frontier in Supercomputing",
                 "tubie":{
                     "video":"data/videos/oceans.mp4",
@@ -72,14 +72,14 @@
                 }
             },
             {
-                "video":"data/tfComp/ScienceFirstBestPathQuantumSupremacy.mp4",
+                "video":"data/videos/ScienceFirstBestPathQuantumSupremacy.mp4",
                 "title":"\"Science First\" - The Best Path to Quantum Supremacy",
                 "tubie":{
                     "body":"The potential of quantum computing seems limitless. \nIt promises faster internet searches, lightning-quick financial data analysis, shorter commutes, more effective cancer drugs, revolutionary new materials, and much more.  Los Alamos National Laboratory is finding ways to develop algorithms that get the most out of today’s very limited quantum computers."
                 }
             },
             {
-                "video":"data/tfComp/WorksBiologicallyRealisticComputerNetwork.mp4",
+                "video":"data/videos/WorksBiologicallyRealisticComputerNetwork.mp4",
                 "title":"Los Alamos works on a biologically realistic computer network",
                 "tubie":{
                     "body":"How do the billions of small, biological \"switches,\" called neurons, in the brain store and process information, and how do they do it so efficiently?  Neuroscientists and computer scientists use supercomputers at Los Alamos to simulate how the brain operates, which could lead to more capable and efficient computers."
