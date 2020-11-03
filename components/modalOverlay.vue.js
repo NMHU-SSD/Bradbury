@@ -136,6 +136,7 @@ var modalOverlay= {
         <div v-if="id=='modalVid'" class="modal-content">
           <div class="modal-body">
             <video id="videoWindow" ref="videoPlayer" preload="none" class="video-js vjs-big-play-centered web-video" @ended="endOfVideo" @pause="pausedVideo" @play="playingVideo">
+            <!--track kind='captions' src='https://dotsub.com/media/5d5f008c-b5d5-466f-bb83-2b3cfa997992/c/eng/vtt' srclang='en' label='English' /-->
             </video>
           </div>
         </div>
