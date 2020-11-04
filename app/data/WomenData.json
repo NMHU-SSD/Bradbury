@@ -215,6 +215,24 @@
             "type": "video/mp4",
             "videoTitle":"Tubie Tutorial"
         }
-    }
+    },
+    
+    "tubie":[
+        {"body":"The term \"computer\" was first used over 400 years ago. A \"computer\" was a person who did calculations by hand."},
+        {"body":"Human computers often did a calculation twice to check for errors."},
+        {"body":"Electronic computers didn't replace human computers right away. Human computers were still better than early electronic computers at some important tasks."},
+        {"body":"Los Alamos employed a group of human computers until 1955."},
+        {"body":"Many of the first computer programmers at Los Alamos were women who started out as human computers."},
+        {"body":"Most of the MANIAC computer's operators were women. They knew the computer so well, they could hear a program bug by listening to the sounds the MANIAC made."},
+        {"body":"Before the term \"programmer\" was coined in the late 1950s, the people who wrote computer software were called \"coders.\""},
+        {"body":"During the Manhattan Project, Naomi Livesay and Eleanor Ewing were the mathematicians who managed the IBM punched-card calculating machines at Los Alamos."},
+        {"body":"Human computers and IBM punched-card calculating machines worked together on the simulations needed to complete the Trinity \"Gadget.\""},
+        {"body":"In the 1950s, women came to Los Alamos from many parts of the US to work on the MANIAC, one of the few computers in the world at the time."},
+        {"body":"Los Alamos programmer Mary Tsingou Menzel wrote the first scientific experiment conducted entirely on a computer, called the Fermi-Pasta-Ulam-Tsingou Problem."},
+        {"body":"Klara von Neumann wrote some of the first programs for the MANIAC computer."},
+        {"body":"Los Alamos wrote the first large program for an electronic computer. It took up one-million punched cards!"},
+        {"body":"The only patents issued for the Cray-1 computer were for its cooling system."},
+        {"body":"\"Debugging\" originally referred to removing insects from mechanical equipment. It was later applied to removing errors from computer software."}
+    ]
 
 }
