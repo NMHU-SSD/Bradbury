@@ -1,6 +1,5 @@
 body,#app,main{
     background-color: black;
-    max-width: 2160px;
     max-height: 3840px;
     width: 100vw;
     height: auto;
@@ -33,6 +32,9 @@ body,#app,main{
 .redtext{
     color: #590820;
 }
+.whitetext{
+    color: white;
+}
 .title-font{
     font-family: Anton;
 }
@@ -44,9 +46,6 @@ body,#app,main{
     font-family: 'Roboto-Cond', sans-serif;
 }
 
-.whitetext{
-    color: white;
-}
 .size{
     width: 100vw;
     height: 70vw;

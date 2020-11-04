@@ -4,6 +4,7 @@
         font-size: calc(10px + 1vw);
     }
 }
+
 /****** Mobile Phones *****/
 @media only screen and (max-width:576px){
     .size{
@@ -88,6 +89,8 @@
     .size{
         height: 90vw;
     }
+}
+@media only screen and (max-width:1200px) and (min-width:576px){
     .title-text-box{
         width: 90%;
     }
