@@ -52,7 +52,9 @@
 				"title": "Roadrunner",
                 "header": "In 2008, the Roadrunner supercomputer proved that performance did not have to mean sacrificing energy efficiency.",
 				"body": "Co-designed by LANL and IBM, Roadrunner was equipped with multiple kinds of processing chips, rather than the usual single type of microprocessor.  This made Roadrunner the first large \"hybrid\" supercomputer, an approach considered \"radical\" at the time.  \n\nWith careful programming, Roadrunner used the chip best suited for a task; either its conventional AMD microprocessors—like those in a desktop computer—or its energy-efficient \"Cell\" accelerator chips from IBM—similar to the Cell chip found in the Sony Playstation 3.  \n\nThis \"hybrid\" approach made Roadrunner the fastest in the world, and extremely efficient, using only 1/3 of the power of equivalent, non-hybrid supercomputers.  \n\nAfter Roadrunner pioneered the concept, hybrid supercomputers have since become the norm.",
-		        "featuredMedia": {
+		        "video": "data/videos/RoadrunnerSupercomputerBreaks.mp4",
+                "videoTitle":"Roadrunner Supercomputer Breaks the Petaflop Barrier",
+                "featuredMedia": {
 		           	"src": "data/sustain/anefficientrevolution-1.jpg",
 		           	"caption": "The Cell accelerator chip helped LANL's Roadrunner break speed and efficiency records.",
                     "title":"An Efficient Revolution"
@@ -66,8 +68,8 @@
                 "title": "Sanitary Effluent Reclamation Facility",
                 "header": "Cooling towers for the supercomputers of the Strategic Computing Center account for a large proportion of the total water used at the lab.",
                 "body": "To conserve the limited water supply of arid Northern New Mexico, reclaimed water from across the Lab is cleaned and filtered through the Sanitary Effluent Reclamation Facility (SERF).  Water from SERF supplies almost 100% of Los Alamos National Labs’ cooling tower demand, and allows the same water to be reused up to four times.",
-				"video": "data/videos/oceans.mp4",
-                "videoTitle":"",
+				"video": "data/videos/SavingWaterLosAlamosNationalLaboratory.mp4",
+                "videoTitle":"Saving Water at Los Alamos National Laboratory",
                 "featuredMedia": {
 		           	"src": "data/sustain/SERF.jpg",
                     "title":"Keeping cool while conserving water"
@@ -110,8 +112,8 @@
                 "title":"Cosmic rays and supercomputers",
                 "header":"Los Alamos used the high-energy beam from LANSCE (the Los Alamos Neutron Science Center) to shoot running processor boards taken from Roadrunner?",
                 "body":"The results helped Lab computer experts better identify and mitigate the effects of cosmic rays on full-scale supercomputers, preventing wasteful computer downtime and errors.",
-                "video": "data/videos/oceans.mp4",
-                "videoTitle":"",
+                "video": "data/videos/ProbingCosmicCauses.mp4",
+                "videoTitle":"Probing the Cosmic Causes of Errors in Supercomputers",
                 "featuredMedia":{
                     "src": "data/sustain/cosmicrays.jpg"
                     },
@@ -124,8 +126,8 @@
                 "title":"BitScope Raspberry Pi cluster",
                 "header":"Gary Grider, leader of the Lab's High-Performance Computing Division, came up with the idea of creating a cluster of 750 Raspberry Pi computers as a “pilot cluster” to develop scalable systems software for the Trinity supercomputer?",
                 "body":"This test-bed cluster let the Lab’s supercomputing experts replicate the extreme scale of Trinity, while only using 4,000 watts of electricity!  Grider said, “The Raspberry Pi modules let developers figure out how to write this software and get it to work reliably without having a dedicated testbed of the same size, which would cost a quarter billion dollars and use 25 megawatts of electricity.",
-                "video": "data/videos/oceans.mp4",
-                "videoTitle":"",
+                "video": "data/videos/AffordableSupercomputingTestbed.mp4",
+                "videoTitle":"An Affordable Supercomputing Testbed Based on Raspberry Pi",
                 "featuredMedia":{
                     "src": "data/sustain/bitscope-2.jpg"
                     },
@@ -156,8 +158,8 @@
                  "title": "FEARCE software",
                  "header":"There are over 250 million internal-combustion-engine vehicles in the United States alone.",
                  "body": "The Fast, Easy, Accurate, and Robust Continuum Engineering (FEARCE) software developed at Los Alamos is a cost-effective near- to mid-term sustainability solution that helps automotive engineers improve and optimize engine designs through computer modeling.  \n\nBecause the FEARCE software allows engineers to simulate how possible design changes impact the efficiency of an engine (without having to build the engine in the real world), new, more efficient engines can be developed in much less time, and for lower cost.",
-                 "video": "data/videos/oceans.mp4",
-                 "videoTitle":"",
+                 "video": "data/videos/FEARCE.mp4",
+                 "videoTitle":"FEARCE - Fast, Easy, Accurate & Robust Continuum Engineering",
 		          "featuredMedia": {
 		              "src": "data/drive/engine.jpg",
 		              "caption": "Computer simulations allow automotive engineers to develop more efficient engines by modeling what will happen inside an engine that does not yet exist.",
@@ -172,8 +174,8 @@
                   "title": "Carbon capture SimCCS software",
                   "header":"Converting carbon-dioxide emissions into a liquid and burying it deep underground has, for a long time, been an alternative to releasing greenhouse gases into the atmosphere.",
                   "body": "Carbon capture has struggled to become economically viable.  Linking up carbon producers, like power plants and other industries, with places geologically suitable for storing the carbon underground was the biggest hurdle, until now.  \n\nThe SimCCS software, developed and distributed for free by Los Alamos, uses computer models to identify and link together the carbon sources, pipelines, and storage sinks that need to find one another.  \n\nBy being able to turn a profit from selling the carbon dioxide they produce, commercial and government agencies are incentivized to capture and dispose of greenhouse gases safely.",
-                  "video": "data/videos/oceans.mp4",
-                  "videoTitle":"",
+                  "video": "data/videos/RemovingCO2.mp4",
+                  "videoTitle":"Removing CO2 from the atmosphere with the help of software",
 				  "featuredMedia": {
 		              "src": "data/drive/carboncapture.jpg",
 		              "caption": "LANL's SimCCS software identifies cost-effective links between carbon sources (red dots) with storage sinks (blue dots) using pipelines (green lines).",
@@ -189,7 +191,9 @@
                  "header":"The CICE (pronounced \"sise\") computer model simulates the growth, melt, and movement of sea ice.",
                  "title": "Los Alamos sea ice model",
                  "body": "Elizabeth Hunke, lead developer of CICE, began development of the model at Los Alamos in 1994, with the first version being released in 1998.  Now on version 6.0 of CICE, Hunke states that \"our model is essential to helping agencies predict the polar sea conditions for developing infrastructure, shipping, and transportation plans.\"  \n\nCICE is now maintained and developed by the CICE Consortium, an international group of institutions in North America and Europe.  \n\nA key part of the Arctic predictive capability for the U.S. Navy, the National Oceanic and Atmospheric Association, and the National Ice Center, CICE is also widely used for earth-system research in academic and government institutions worldwide.",
-		          "featuredMedia": {
+		         "video":"data/videos/ModelingSeaIce.mp4",
+                 "videoTitle":"Modeling sea ice has impact far beyond the poles",
+                 "featuredMedia": {
 		              "src": "data/drive/Elizabeth-Hunke-with-CICE-simulation.jpg",
 		              "caption": "Elizabeth Hunke with a simulation of Arctic sea ice thickness produced by the Los Alamos sea ice model, CICE. Hunke’s work promotes a better understanding of how sea ice responds to and helps modulate the global climate.",
                       "title":"Modeling sea ice"
@@ -203,8 +207,8 @@
                  "title": "Coastal erosion",
                  "header":"As sea levels rise, the rapid erosion of US coastlines impacts national security, threatening power stations, water-treatment facilities, and military bases.",
                  "body": "Most extreme weather models do not take the threat into account.  The Los Alamos-developed NESMA (New Science for Multisector Adaptation) computer model uses complex algorithms (instructions that tell a computer how to solve a problem) and machine learning (the ability of a computer program to improve through experience, without needing to be programmed) to simulate the impact of coastline erosion on the infrastructure we depend upon.  \n\nHaving access to this information allows policy makers to prevent and reduce the severity of property damage, power outages, and other consequences of erosion.  According to Donatella Pasqualini, leader of the NeSMA team, the model forecasts \"every imaginable situation, which helps you understand the things you could do to best prepare.\"",
-                 "video": "data/videos/oceans.mp4",
-                 "videoTitle":"",
+                 "video": "data/videos/ModelingErodingCoastlines.mp4",
+                 "videoTitle":"Modeling eroding coastlines to prepare for hurricanes",
 		          "featuredMedia": {
 		              "src": "data/drive/seaice-2.jpg",
                       "title":"Modeling Eroding Coastlines to Prepare for Hurricanes"
@@ -221,8 +225,8 @@
                 "title":"Deflecting an asteroid",
                 "header":"...That asteroids and other Near-Earth Objects vary wildly in composition, density, and behavior?",
                 "body":"Knowing how to deflect a potential killer requires fast and accurate computer modeling for every object.",
-                "video": "data/videos/oceans.mp4",
-                "videoTitle":"",
+                "video": "data/videos/VisualizationAnalysisThreats.mp4",
+                "videoTitle":"Visualization and Analysis of Threats from Asteroid Ocean Impacts",
                 "featuredMedia":{
                     "src": "data/drive/asteroid.jpg"
                     },

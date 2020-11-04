@@ -17,11 +17,13 @@ body{
     .slideshow-container{
         font-size: calc(10px + 1.2vw);
     }
-    .slideshow-container h1{
-        font-size: 3em;
-    }
     .carousel-inner, .slideshow-container{
         height: 100vh;
+    }
+}
+@media only screen and (max-width:576px){
+    .slideshow-container h1{
+        font-size: 3em;
     }
     .carousel-control-prev-icon,
     .carousel-control-next-icon{
@@ -83,14 +85,16 @@ body{
         height: auto;
         font-size: calc(6px + 1vw);
     }
+    .carousel-inner, .slideshow-container{
+        height: 60vw;
+    }
+}
+@media only screen and (min-width:576px) and (max-width:2159px){
     .slideshow-container h1{
         font-size: 3.5em;
     }
     .center{
         left: 35%;
-    }
-    .carousel-inner, .slideshow-container{
-        height: 60vw;
     }
     .carousel .carousel-indicators{
         height: 1.5em;

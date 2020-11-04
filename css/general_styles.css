@@ -1,8 +1,7 @@
 body{
     max-height: 3840px;
-    max-width: 2160px;
     background-color: black;
-    font-size: calc(8px + 1.2vw);
+    font-size: calc(8px + 1.1vw);
 }
 /*
 body, main, #app{

@@ -163,7 +163,7 @@
 .bottom-right{
     position: absolute;
     max-width: 40%;
-    right: 5%;
+    right: 2%;
     text-align: right;
     padding: 2%;
     background-color: rgba(0,0,0,0.3);
@@ -182,7 +182,7 @@
 }
 .play-img{
     margin-left: .5em;
-    height: 2em;
+    height: 1.8em;
     object-fit: contain;
     float: right;
 }

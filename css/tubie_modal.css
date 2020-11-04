@@ -77,7 +77,7 @@
 }
 /**** Pop Over ****/
 .popover .popover-header {
-    font-size: 1.8em;
+    font-size: 2em;
     font-family:'Komika-Hand', sans-serif;
     line-height: 1.6;
     background-color: rgba(0,0,0,0) !important;
@@ -164,5 +164,5 @@
 /*************** video JS ***********/
 .video-js {
     margin: 0 auto !important;
-    font-size: 1em;
+    font-size: .6em;
 }
