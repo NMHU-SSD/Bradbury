@@ -8,6 +8,17 @@
     bottom: 6em;
     right: -5em;
 }
+.tubie-splash-right{
+    background: url(../assets/CustomImages/Tubie-orangebkgd-right.svg) no-repeat;
+    background-position:right bottom;
+    height: 13vw;
+    width: 30vw;
+    position: absolute;
+    bottom: 0;
+    right: -5em;
+    overflow: hidden;
+    transition: .5s;
+}
 .tubie-container-left{
     background: url(../assets/CustomImages/Tubie-orangebkgd-left.svg) no-repeat;
     background-position: bottom left;
