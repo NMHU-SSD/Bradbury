@@ -1,6 +1,6 @@
 var womanComputing = {
     name: "woman-computing",
-    props: ['id', 'slides', 'header', 'speed'],
+    props: ['id', 'slides', 'header', 'speed','tubie'],
     data:function(){
         return{
             slideImages: null,
@@ -88,6 +88,14 @@ var womanComputing = {
             }else{
                 return "";
             }
+        },
+        tubieObject:function(){
+            var rand = Math.floor(Math.random()*this.tubie.length);
+            //var set_body = this.tubie[rand].body;
+            var tub_data={
+                body:this.tubie[rand].body
+            };
+            return tub_data;
         }
     },
     watch:{
@@ -99,13 +107,16 @@ var womanComputing = {
         }
     },
     template:
-    `<div :id="id" @click="selected">
+    `<div :id="id" @click="selected()">
         <a :data-target="['#' + 'carousel-'+id]" data-slide-to="0" :href="['#' + 'carousel-'+id]">
             <div v-show="splash" class="row no-gutters">
                 <slideshow-component :id="'slide-'+id" :images="slideImages" :speed="speed" :header="header" position="left"/>
+                <div class="tubie-container-right tubie-splash">
+                    <tubie-overlay :id="'tubie-'+id" :display=tubieObject() />
+                </div>
             </div>
         </a>
-
+        
         <div v-show="!splash" :id="'carousel-'+id" class="carousel" data-ride="carousel" data-wrap="false" data-interval="false">
             <div class="carousel-inner gradient-green">
                 <template v-for="(slide, index) in infoSlides">

@@ -15,7 +15,7 @@ var timeLine={
         
         <div class="timeline-banner">
             <div v-if="tubie!=null" class="tubie-container-left">
-                <tubie-overlay id="tubie-timeline" :display="tubie" @seturl="seturl"/>
+                <tubie-overlay id="tubie-timeline" :display="tubie" spec="vid" @seturl="seturl"/>
             </div>
             <div class="timeline-header red row no-gutters">
                 <h2 class="offset-4 offset-sm-3 col-8 col-sm-6 align-self-center title-font">{{ title }}</h2>

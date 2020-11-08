@@ -55,6 +55,7 @@ var slideshowComponent={
             var slideId = $('#'+this.id);
             if(this.images!=null){
                 this.currentImg = this.images[this.index].img;
+                //console.log(this.images[this.index].img);
                 if(this.images[this.index].position){
                     $(slideId).css('object-position', this.images[this.index].position);
                 }
@@ -73,19 +74,5 @@ var slideshowComponent={
         <div v-show=true class="splash-background">
             <img v-if=true :id="id" class="splash-img" :src="currentImg">
         </div>
-
-        <!--div v-if="images" class="row">
-            <div v-for="(video, int) in 3" class="col-4 vid-col">
-                <img :id="[id+'int']" :src="images[index].img" class="vid-thumb">
-            </div>
-        </div>
-          <a v-show="true" class="carousel-control-prev" role="button" @click="prevSlide">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-          </a>
-          <a v-show="true" class="carousel-control-next" role="button" @click="nextSlide">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-          </a-->
     </div>`
 }

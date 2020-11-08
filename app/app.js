@@ -16,6 +16,7 @@ var app = new Vue({
         inTheirWordsData:"",
         timelineData:"",
         timeData:"",
+        tubie:"",
         modalTimer:'modalTimer',
         modalVideo:'modalVideo',
         historyId:'carouselHistory',
@@ -43,6 +44,7 @@ var app = new Vue({
                 this.inTheirWordsData = data.inTheirWordsData;
                 this.timelineData = data.timelineData;
                 this.timeData = data.timeData;
+                this.tubie = data.tubie;
             })
             .catch((error) => {
                 console.error('Error:', error);

@@ -1,4 +1,10 @@
 /********* Carousel ************/
+#carouselComputing{
+    position: relative;
+}
+.tubie-splash{
+    z-index: 10;
+}
 #carouselHistory, #carouselComputing, #timeline{
     overflow-x: hidden;
 }
