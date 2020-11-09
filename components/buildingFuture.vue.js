@@ -53,6 +53,7 @@ var buildingFuture= {
         jumpSlide:function(index){
             this.count=index;
             this.toTop();
+            this.scrollpanel(this.count);
             $("#carousel-"+this.buddy).carousel(index);
             if(index==0){
                 this.first=true;

@@ -68,8 +68,11 @@ body{
     }
     .popover{
         font-size: calc(8px + .2vw);
-        max-width: 80vw !important;
+        max-width: 90vw !important;
         min-width: 200px;
+    }
+    .popover .popover-header{
+        font-size: 1.7em;
     }
     .modal-dialog{
         width: 100vw;
@@ -113,5 +116,8 @@ body{
     }
     .popover{
         font-size: .6em;
+    }
+    .popover .popover-body{
+        max-height: 8em;
     }
 }

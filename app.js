@@ -20,11 +20,12 @@ var app = new Vue({
     },
     mounted: function(){
         this.GetData();
-        //this.resetTimer();
     },
     updated: function(){
         this.listeners();
         this.resetTimer();
+        this.$refs.style1.scrollpanel(0);
+        this.$refs.dyk.scrollpanel(0);
     },
     methods:{
         GetData: function(){
@@ -77,9 +78,9 @@ var app = new Vue({
             console.log("toDefault");
         },
         displayModal:function(){
-            $('#'+'modalTimer').modal();
+            $('#modalTimer').modal();
             this.$refs.timeModal.timer();
-            setTimeout(function(){$('#'+'modalTimer').modal('hide')}, this.timeData.quitout);
+            setTimeout(function(){$('#modalTimer').modal('hide')}, this.timeData.quitout);
             document.onmousedown = this.resetTimer;
         },
         displayVideo:function(info){

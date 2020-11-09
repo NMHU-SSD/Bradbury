@@ -31,6 +31,6 @@ var tubieOverlay = {
     template:
     `<div :id="id" class="tubie-wrapper" @click="hopAnimation">
         <div :class="'interest tubie-'+spec" data-container="body" tabindex="0" data-toggle="popover" data-placement="top" 
-         data-trigger="focus" :title="display.header" :data-content="display.body"/>
+          :title="display.header" :data-content="display.body"/>
     </div>`
 }
