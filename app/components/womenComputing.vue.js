@@ -111,10 +111,10 @@ var womanComputing = {
     template:
     `
     <div :id="id">
-    <div v-show="splash" class="tubie-splash-right tubie-splash" @click="changeLine()">
+    <div v-show="splash" class="tubie-splash-right tubie-splash" @focusout="changeLine()">
         <tubie-overlay :id="'tubie-'+id" :display=line />
     </div>
-    <div class="row-full" @click="selected()">
+    <div class="screen" @click="selected()">
         <a :data-target="['#' + 'carousel-'+id]" data-slide-to="0" :href="['#' + 'carousel-'+id]">
             <div v-show="splash" class="row no-gutters">
                 <slideshow-component :id="'slide-'+id" :images="slideImages" :speed="speed" :header="header" position="left"/>

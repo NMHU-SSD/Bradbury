@@ -1,6 +1,6 @@
 var buildingFuture= {
     name: "building-future",
-    props: ['id', 'slides', 'header', 'speed', 'videosdata'],
+    props: ['id', 'slides', 'header', 'speed', 'videosdata','tubie'],
     data:function(){
         return{
             slideImages: null,
@@ -10,7 +10,8 @@ var buildingFuture= {
             first:true,
             end: false,
             count:0,
-            lastScroll:null
+            lastScroll:null,
+            line:null
         }
     },
     methods:{
@@ -124,6 +125,10 @@ var buildingFuture= {
             }else{
                 return "";
             }
+        },
+        changeLine:function(){
+            var rand = Math.floor(Math.random()*this.tubie.length);
+            this.line = this.tubie[rand];
         }
     },
     watch:{
@@ -133,6 +138,11 @@ var buildingFuture= {
                 this.infoSlides = this.slides.slides;
             }
         },
+        tubie:function(){
+            if(this.tubie!=null){
+                this.changeLine();
+            }
+        },
         videosdata:function(){
             if(this.videosdata !=null){
                 this.videoData = this.videosdata;
@@ -140,7 +150,12 @@ var buildingFuture= {
         }
     },
     template:
-    `<div :id="id" @click="selected">
+    `
+    <div :id="id">
+    <div v-show="splash" class="tubie-splash-right tubie-splash" @focusout="changeLine()">
+        <tubie-overlay :id="'tubie-'+id" :display=line />
+    </div>
+    <div class="screen" @click="selected()">
         <a :data-target="['#' + 'carousel-'+id]" data-slide-to="0" :href="['#' + 'carousel-'+id]">
             <div v-show="splash" class="row no-gutters">
                 <slideshow-component :id="'slide-'+id" :images="slideImages" :speed="speed" :header="header"/>
@@ -211,5 +226,6 @@ var buildingFuture= {
           </a>
 
     </div>
+</div>
 </div>`
 }

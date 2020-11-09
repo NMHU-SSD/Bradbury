@@ -1,4 +1,7 @@
 /********Tubie CSS********/
+.tubie-splash{
+    z-index: 10;
+}
 .tubie-container-right{
     background: url(../assets/CustomImages/Tubie-orangebkgd-right.svg) no-repeat;
     background-position:right bottom;
@@ -12,12 +15,11 @@
     background: url(../assets/CustomImages/Tubie-orangebkgd-right.svg) no-repeat;
     background-position:right bottom;
     height: 13vw;
-    width: 30vw;
+    width: 30%;
     position: absolute;
     bottom: 0;
-    right: -5em;
+    right: -5%;
     overflow: hidden;
-    transition: .5s;
 }
 .tubie-container-left{
     background: url(../assets/CustomImages/Tubie-orangebkgd-left.svg) no-repeat;

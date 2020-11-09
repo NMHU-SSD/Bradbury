@@ -136,6 +136,18 @@
         width: 70vw;
         bottom: 5em;
     }
+    .tubie-splash-right{
+        width: 70%;
+        height: 30vw;
+        right: -20%;
+    }
+    .popover {
+        font-size: calc(6px + 1vw);
+        max-width: 90vw !important;
+    }
+    .popover .popover-body{
+        max-height: 18em;
+    }
 }
 
 /********* Tablet/Computer Devices**********/

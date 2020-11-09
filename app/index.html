@@ -29,7 +29,7 @@
             <title-bar :title="timeData.pageTitle"></title-bar>
             <woman-computing :id="computeId" :ref="computeId" :slides="womenComputingData" :header="womenComputingData.header" :tubie="tubie"
                              :speed="womenComputingData.slidespeed" @selected="itemselect($event)"></woman-computing>
-            <building-future :id="historyId" :ref="historyId" :slides="buildingFutureData" :header="buildingFutureData.header"
+            <building-future :id="historyId" :ref="historyId" :slides="buildingFutureData" :header="buildingFutureData.header" :tubie="tubie" 
                              :speed="buildingFutureData.slidespeed" :videosdata="inTheirWordsData" 
                              @seturl="displayVideo($event)" @othervids="passVids($event)" @selected="itemselect($event)"></building-future>
             <time-line v-if=true id="timeline" :tubie="timelineData.tubie" :webpage="timelineData.url" :title="timelineData.title" :subtitle="timelineData.subtitle" 
