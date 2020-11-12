@@ -146,7 +146,7 @@ var modalOverlay= {
             //console.log("playing");
         },
         inactiveUser:function(){
-            if(this.player.isFullscreen()){
+            if(this.player!=null && this.player.isFullscreen()){
                this.player.exitFullscreen();
                }
             this.stopVideo();
