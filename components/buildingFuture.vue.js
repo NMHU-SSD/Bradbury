@@ -26,19 +26,21 @@ var buildingFuture= {
             let title = name;
             this.$emit('seturl', {src:url,title:title});
         },
+        /*
         selected:function(){
             console.log("selected");
             //this.$emit('selected', this.id);
-        },
+        },*/
         nextSlide:function(){
             this.count++;
             this.first=false;
             if(this.count==this.slides.length-1){
                 this.end=true;
             }
-            $("#carousel-"+this.buddy+" .carousel-control-next").trigger('click');
             this.scrollpanel(this.count);
             this.toTop();
+            $("#carousel-"+this.buddy+" .carousel-control-next").trigger('click');
+            this.$emit('change', this.count);
         },
         prevSlide:function(){
             this.count--;
@@ -46,15 +48,17 @@ var buildingFuture= {
             if(this.count==0){
                 this.first=true;
             }
-            $("#carousel-"+this.buddy+" .carousel-control-prev").trigger('click');
             this.scrollpanel(this.count);
             this.toTop();
+            $("#carousel-"+this.buddy+" .carousel-control-prev").trigger('click');
+            this.$emit('change', this.count);
         },
         jumpSlide:function(index){
             this.count=index;
             this.toTop();
             this.scrollpanel(this.count);
             $("#carousel-"+this.buddy).carousel(index);
+            this.$emit('change', this.count);
             if(index==0){
                 this.first=true;
                 this.end=false;
@@ -76,10 +80,16 @@ var buildingFuture= {
         },
         scrollpanel:function(index){
             var divId = $('#text'+this.id+index);
-            if((divId.offsetHeight + divId.scrollTop) != divId.scrollHeight){
+            var height = divId.offsetHeight;
+            var scroll = divId.scrollHeight;
+            if((divId[0].scrollHeight - divId[0].offsetHeight) > 0){
                 $(divId).addClass("shadow-scroll");
+                console.log("added", divId[0].scrollHeight, divId[0].id);
+            }else{
+                var dif = (divId[0].scrollHeight - divId[0].offsetHeight);
+                console.log("no class", divId[0].id, divId[0].scrollHeight, divId.innerHeight());
             }
-            //console.log(divId);
+            //this.$nextTick(this.scrollpanel);
         },
         toTop:function(){
             if(this.lastScroll != null){
