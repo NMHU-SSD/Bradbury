@@ -12,6 +12,7 @@ var app = new Vue({
         timeData:"",
         comp:"",
         rd100:"",
+        pageTubie: "",
         t: null,
         afk: null,
         active:false,
