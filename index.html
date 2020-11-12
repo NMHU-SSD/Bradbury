@@ -18,8 +18,8 @@
     <title>Transformative Computing</title>
   </head> 
   <body>	
-	<div id="app">	
-		<main>
+	<main id="app">	
+		
             <!--Pop overs-->
             <info-overlay id="modalHard" ref="modalHard" spec="info" :slides="rd100.hardware"
                           :countdown="timeData.timeout" @stopvideo="toDefault" @seturl="displayVideo($event)"></info-overlay>
@@ -41,11 +41,11 @@
                 <h1 class="title-font">High-Performance
                     Computing Technologies</h1>
             </div>
-            <trans-comp id="top" :data="comp" :tubie="pageTubie" @seturl="displayTech($event)"></trans-comp>
+            <trans-comp v-if="pageTubie" id="top" :data="comp" :tubie="pageTubie" @seturl="displayTech($event)"></trans-comp>
             <rd-comp id="rd" :body="rd100.body" :covers="rd100.covers" @setcover="displayCover($event)"></rd-comp>
                     
-        </main>
-      </div>
+		
+      </main>
 
 
     <!-- Optional JavaScript -->
@@ -60,11 +60,11 @@
     <!--- VideoJS Overlay---->
     <script src="libraries/videojs-overlay/videojs-overlay.js"></script>
     <!-- Vue Components -->
-      <script src="components/tubieOverlay.vue.js"></script>
-      <script src="components/modalOverlay.vue.js"></script>
-      <script src="components/rdComp.vue.js"></script>
-      <script src="components/transComp.vue.js"></script>
-      <script src="components/infoOverlay.vue.js"></script>
+    <script src="components/tubieOverlay.vue.js"></script>
+    <script src="components/modalOverlay.vue.js"></script>
+    <script src="components/rdComp.vue.js"></script>
+    <script src="components/transComp.vue.js"></script>
+    <script src="components/infoOverlay.vue.js"></script>
 	<!-- Vue App / Router -->
 	<script src="app.js"></script>
 	
