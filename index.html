@@ -25,7 +25,7 @@
             <modal-overlay id="modalTimer" exitout="true" :countdown="timeData.quitout" :message="timeData.message" ref="timeModal"></modal-overlay> 
             
             <!--- Main Layout components---->
-            <slideshow-component id="slideshow" ref="top" :images="title.slideshow" :title1="drive.header" :title2="sustainable.header" :memo1="title.memo1" :memo2="title.memo2"
+            <slides-component id="slideshow" ref="top" :images="title.slideshow" :title1="drive.header" :title2="sustainable.header" :memo1="title.memo1" :memo2="title.memo2"
                                  :tubie="title.tubie" :speed=timeData.slideshow @switchout="switchData"></slideshow-component>
             
             <building-future v-show=showData id="index" ref="style1" :slides="sustainable.slides" :header="sustainable.header" 
@@ -37,6 +37,7 @@
                              banner=true buddy="dyk2" mono=true @seturl="displayVideo($event)" @change="callBuddy($event,dyk2.id)"></building-future>
             <building-future v-show=!showData id="dyk2" ref="dyk2" :slides="drive.didYouKnow" :header="drive.header" 
                              mono=true @seturl="displayVideo($event)"></building-future>
+
         </main>
       </div>
 
@@ -54,7 +55,7 @@
     <script src="libraries/videojs-overlay/videojs-overlay.js"></script>
     <!-- Vue Components -->
       <script src="components/buildingFuture.vue.js"></script>
-      <script src="components/slideshowComponent.vue.js"></script>
+      <script src="components/slidesComponent.vue.js"></script>
       <script src="components/tubieOverlay.vue.js"></script>
       <script src="components/modalOverlay.vue.js"></script>
 	<!-- Vue App / Router -->
