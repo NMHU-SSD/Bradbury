@@ -11,7 +11,8 @@ var buildingFuture= {
             scrollEnd: false,
             canScroll:false,
             count:0,
-            lastScroll:null
+            lastScroll:null,
+            divId:null
         }
     },
     methods:{
@@ -79,22 +80,23 @@ var buildingFuture= {
             this.lastScroll = el.srcElement.id;
         },
         scrollpanel:function(index){
-            var divId = $('#text'+this.id+index);
-            var height = divId.offsetHeight;
-            var scroll = divId.scrollHeight;
-            if((divId[0].scrollHeight - divId[0].offsetHeight) > 0){
-                $(divId).addClass("shadow-scroll");
-                console.log("added", divId[0].scrollHeight, divId[0].id);
-            }else{
-                var dif = (divId[0].scrollHeight - divId[0].offsetHeight);
-                console.log("no class", divId[0].id, divId[0].scrollHeight, divId.innerHeight());
-            }
-            //this.$nextTick(this.scrollpanel);
+            this.divId = $('#text'+this.id+index);
         },
         toTop:function(){
             if(this.lastScroll != null){
                 let scrollDiv = document.getElementById(this.lastScroll);
                 scrollDiv.scrollTop=0;
+            }
+        }
+    },
+    watch:{
+        divId:function(){
+            if((this.divId[0].scrollHeight - this.divId[0].offsetHeight) > 0){
+                $(this.divId).addClass("shadow-scroll");
+                console.log("added", this.divId[0].scrollHeight, this.divId[0].id);
+            }else{
+                var dif = (this.divId[0].scrollHeight - this.divId[0].offsetHeight);
+                console.log("no class", this.divId[0].id, this.divId[0].scrollHeight, this.divId.innerHeight());
             }
         }
     },

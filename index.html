@@ -26,7 +26,7 @@
             
             <!--- Main Layout components---->
             <slides-component id="slideshow" ref="top" :images="title.slideshow" :title1="drive.header" :title2="sustainable.header" :memo1="title.memo1" :memo2="title.memo2"
-                                 :tubie="title.tubie" :speed=timeData.slideshow @switchout="switchData"></slideshow-component>
+                                 :tubie="title.tubie" :speed=timeData.slideshow @switchout="switchData"></slides-component>
             
             <building-future v-show=showData id="index" ref="style1" :slides="sustainable.slides" :header="sustainable.header" 
                              banner=true buddy="dyk" @seturl="displayVideo($event)" @change="callBuddy($event,dyk.id)"></building-future>
