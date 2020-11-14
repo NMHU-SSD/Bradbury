@@ -80,23 +80,18 @@ var buildingFuture= {
             this.lastScroll = el.srcElement.id;
         },
         scrollpanel:function(index){
-            this.divId = $('#text'+this.id+index);
+            var divId = $('#text'+this.id+index);
+            setTimeout(function() {
+                if((divId[0].scrollHeight - divId[0].offsetHeight) > 0){
+                    $(divId).addClass("shadow-scroll");
+                    //console.log("added", divId[0].scrollHeight, divId[0].id);
+                }
+            }, 0);
         },
         toTop:function(){
             if(this.lastScroll != null){
                 let scrollDiv = document.getElementById(this.lastScroll);
                 scrollDiv.scrollTop=0;
-            }
-        }
-    },
-    watch:{
-        divId:function(){
-            if((this.divId[0].scrollHeight - this.divId[0].offsetHeight) > 0){
-                $(this.divId).addClass("shadow-scroll");
-                console.log("added", this.divId[0].scrollHeight, this.divId[0].id);
-            }else{
-                var dif = (this.divId[0].scrollHeight - this.divId[0].offsetHeight);
-                console.log("no class", this.divId[0].id, this.divId[0].scrollHeight, this.divId.innerHeight());
             }
         }
     },
