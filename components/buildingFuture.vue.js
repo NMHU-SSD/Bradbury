@@ -11,8 +11,7 @@ var buildingFuture= {
             scrollEnd: false,
             canScroll:false,
             count:0,
-            lastScroll:null,
-            divId:null
+            lastScroll:null
         }
     },
     methods:{
@@ -32,6 +31,7 @@ var buildingFuture= {
             console.log("selected");
             //this.$emit('selected', this.id);
         },*/
+        //carousel controls
         nextSlide:function(){
             this.count++;
             this.first=false;
@@ -71,6 +71,7 @@ var buildingFuture= {
                 this.first=false;
             }
         },
+        //scroll actions
         handleScroll: function(el) {
             if((el.srcElement.offsetHeight + el.srcElement.scrollTop) + 5 >= el.srcElement.scrollHeight) {
                 $('#'+el.srcElement.id).removeClass("shadow-scroll");
@@ -82,9 +83,12 @@ var buildingFuture= {
         scrollpanel:function(index){
             var divId = $('#text'+this.id+index);
             setTimeout(function() {
-                if((divId[0].scrollHeight - divId[0].offsetHeight) > 0){
+                if((divId[0].scrollHeight - divId[0].offsetHeight) > 10){
                     $(divId).addClass("shadow-scroll");
-                    //console.log("added", divId[0].scrollHeight, divId[0].id);
+                    console.log("added", divId[0].scrollHeight,divId[0].offsetHeight, divId[0].id);
+                }
+                else{
+                    $(divId).removeClass("shadow-scroll");
                 }
             }, 0);
         },

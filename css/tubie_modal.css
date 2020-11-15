@@ -79,7 +79,7 @@
 .popover .popover-header {
     font-size: 2em;
     font-family:'Komika-Hand', sans-serif;
-    line-height: 1.6;
+    line-height: 1.5;
     background-color: rgba(0,0,0,0) !important;
     text-align: center;
     border-bottom: .1em solid #ebebeb;
@@ -87,23 +87,24 @@
     margin-top: -1em;
 }
 .popover .popover-body{ 
-    font-size: 1.7em;
+    font-size: 1.8em;
     text-align: center;
     margin-top: -.3em;
-    margin-bottom: .5em;
-    max-height: 10em;
+    padding: .5em 1em;
+    max-height: 8em;
     overflow-y: auto;
     color: #212529;
     border-radius: 0% 0% 3em 3em;
 }
 /****Popover Bubble****/
 .popover {
-    font-size: .5em;
+    font-size: calc(8px + .5vw);
     font-family: 'Roboto-Cond', sans-serif;
-    max-width: 55vw !important;
+    max-height: 80%;
+    max-width: 60vw !important;
     min-width: 200px;
-    border-radius: 45%;
-    padding: 4em 4em;
+    border-radius: 43%;
+    padding: 4em 5em;
     margin: 0 3%;
     white-space: pre-line;
 }
@@ -117,7 +118,7 @@
 	.bs-popover-top .arrow::before, .bs-popover-auto[x-placement^="top"] .arrow::before,
 	.bs-popover-top .arrow::after,
 	.bs-popover-auto[x-placement^="top"] .arrow::after {
-	  border-width: 6.5em 0.5rem 0;
+	  border-width: 6.8em 0.5rem 0;
 	}
 	.bs-popover-top .arrow::before, .bs-popover-auto[x-placement^="top"] .arrow::before {
 	  bottom: 0px;

@@ -50,7 +50,6 @@ var app = new Vue({
             $(".interest").on('click', function(){
                 app.active= true;
                 app.resetTimer();
-                //console.log("interest class");
             });
         },
         resetTimer:function(){
@@ -58,10 +57,8 @@ var app = new Vue({
             clearTimeout(this.afk);
             if(this.active){
                 this.t = setTimeout(this.toAlert, this.timeData.timeout);
-                //console.log("timer set");
             }
             document.onmousedown = this.resetTimer;
-            //console.log("reset timer", this.active);
         },
         toAlert:function(){
             console.log("toAlert");
@@ -92,7 +89,6 @@ var app = new Vue({
                 this.active=false;
             }
             //this.stillActive=info.active;
-            //console.log(info);
             this.$refs.modalVideo.geturl(info);
             $('#modalVideo').modal();
         },
@@ -118,11 +114,9 @@ var app = new Vue({
                 this.$refs.dyk2.reset();
             }
             this.showData = !this.showData;
-            //console.log(this.showData);
         },
         callBuddy:function(count, buddy){
             this.$refs[buddy].jumpSlide(count);
-            console.log("called ",buddy, count);
         }
     }
 })

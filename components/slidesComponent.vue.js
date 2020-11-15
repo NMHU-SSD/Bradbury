@@ -1,6 +1,6 @@
 var slidesComponent={
     name:"slides-component",
-    props:['images','speed','id','tubie','title1','title2','memo1','memo2'],
+    props:['images','speed','id','tubie','page1','page2'],
     data:function(){
         return{
             index:0,
@@ -76,18 +76,18 @@ var slidesComponent={
     template:
     `
     <div id="top-slide" class="slideshow-container whitetext">
-            <h1 v-show=head class="top yellow title-font shadow-text-big">Sustainable Supercomputing</h1>
-            <h1 v-show=!head class="top green title-font">Supercomputers Drive Sustainablilty</h1>
+            <h1 v-show=head class="top yellow title-font shadow-text-big">{{ page1.head }}</h1>
+            <h1 v-show=!head class="top green title-font">{{ page2.head }}</h1>
             <img :id="id" :src="currentImg">
-            <div v-show=head class="center body-font shadow-text">{{ memo1 }}</div>
-            <div v-show=!head class="center body-font shadow-text">{{ memo2 }}</div>
+            <div v-show=head class="center body-font shadow-text">{{ page1.memo }}</div>
+            <div v-show=!head class="center body-font shadow-text">{{ page2.memo }}</div>
             <div class="tubie-container">
                 <tubie-overlay id="tubie-show" :display="tubie" spec="def"/>
             </div>
             <div class="banner red">
                 <div class="interest next-section" @click="switchOut()"></div>
-                <p v-show=head class="title-font">See how supercomputers drive a sustainable future</p>
-                <p v-show=!head class="title-font">Sustainable supercomputing</p>
+                <p v-show=head class="title-font">{{ page1.banner }}</p>
+                <p v-show=!head class="title-font">{{ page2.banner }}</p>
             </div>
         </div>`
 }

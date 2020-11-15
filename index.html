@@ -25,7 +25,7 @@
             <modal-overlay id="modalTimer" exitout="true" :countdown="timeData.quitout" :message="timeData.message" ref="timeModal"></modal-overlay> 
             
             <!--- Main Layout components---->
-            <slides-component id="slideshow" ref="top" :images="title.slideshow" :title1="drive.header" :title2="sustainable.header" :memo1="title.memo1" :memo2="title.memo2"
+            <slides-component id="slideshow" ref="top" :images="title.slideshow" :page1="title.drive" :page2="title.sustainable"
                                  :tubie="title.tubie" :speed=timeData.slideshow @switchout="switchData"></slides-component>
             
             <building-future v-show=showData id="index" ref="style1" :slides="sustainable.slides" :header="sustainable.header" 
