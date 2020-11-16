@@ -72,31 +72,31 @@
 }
 /**** Pop Over ****/
 .popover .popover-header {
-    font-size: 2em;
+    font-size: 1.7em;
     background-color: rgba(0,0,0,0) !important;
-    margin: .1em .3em;
-    max-height: 15em;
+    padding: 1em .5em;
+    max-height: 12em;
     overflow-y: auto;
 }
 .popover .popover-body{ 
     font-size: 1.7em;
-    max-height: 33em;
     padding: 0;
     margin-top: .5em;
     color: #212529;
 }
 /****Popover Bubble****/
 .popover {
-    font-size: 0.7em;
+    font-size: calc(8px + .5vw);
     font-family: 'Roboto-Cond', sans-serif;
+    text-align: center;
     white-space: pre-line;
     width: 40em;
+    max-height: 80%;
     max-width: 55vw !important;
     min-width: 200px;
-    border-radius: 10%;
-    padding: 1em 1em;
-    margin-right: 2%;
-    margin-left: 2%;
+    border-radius: 40%;
+    padding: 4em 4em;
+    margin: 0 3%;
 }
 /****** TOP ******/
 	.bs-popover-top, .bs-popover-auto[x-placement^="top"] {
