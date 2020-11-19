@@ -46,7 +46,6 @@ var app = new Vue({
                 console.log("timer set");
             }
             document.onmousedown = this.resetTimer;
-            console.log("timer ", this.active);
         },
         toAlert:function(){
             console.log("toAlert");
@@ -69,15 +68,10 @@ var app = new Vue({
                 $('#modalTimer').modal('hide')}, this.timeData.quitout);
             document.onmousedown = this.resetTimer;
         },
-        displayVideo:function(info){
-            if(this.active){
-                clearTimeout(this.t);
-                clearTimeout(this.afk);
-                this.active=false;
-            }
-            //console.log(info);
-            this.$refs.modalVid.geturl(info);
-            $('#modalVid').modal();
+        //video modal popups
+        videoModalClose:function(id){
+            this.active=false;
+            $('#'+id).modal('hide');
         },
         displayCover:function(info){
             this.active=true;
@@ -85,7 +79,6 @@ var app = new Vue({
             this.$refs[info.name].getCover(info.logo);
             $('#'+info.name).modal();
             this.resetTimer();
-            //console.log(name);
         },
         displayTech:function(data){
             if(this.active){
@@ -100,16 +93,9 @@ var app = new Vue({
                 this.$refs.modalVideo2.geturl(data.index);
                 $('#modalVideo2').modal();
             }else if(data.ob==0){
-                console.log("modalVid");
                 this.$refs.modalVid.geturl(data.index);
                 $('#modalVid').modal();
             }
-        },
-        //video modal popups
-        videoModalClose:function(id){
-            this.active=false;
-            $('#'+id).modal('hide');
-            console.log(this.active);
         }
     }
 })

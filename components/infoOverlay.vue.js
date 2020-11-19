@@ -50,18 +50,31 @@ var infoOverlay= {
         }
     },
     methods:{
-        seturl:function(info){
-            $('#'+this.id).modal('hide');
-            console.log(info);
-            //this.$emit('seturl',{index:info});
+        //Video Modal Functions
+        changeVid:function(){
+            vid=this.slides[this.count];
+            this.player.src({type: 'video/mp4', src: vid.video});
         },
-        startTimer:function(){
+        geturl:function(index){
+            $('#carousel-'+this.id).carousel(index);
+            this.jumpSlide(index);
+            var ind = this.slides[index];
+            this.player.src({type: 'video/mp4', src: ind.video});
+            this.source=true;
+            this.player.volume(0.5);
+        },
+        seturl:function(info, modal){
+            this.stopVideo();
+            this.$emit('seturl',{index:info, ob:modal});
+            //console.log(info, modal);
+        },
+        /*startTimer:function(){
             console.log("covers timer");
             this.timer=true;
             clearTimeout(this.timeout);
             //this.timeout = setTimeout(this.stopVideo, this.countdown);
             //document.onmousedown = this.startTimer;
-        },
+        },*/
         getCover:function(logo){
             $('#carousel-'+this.id).carousel(0);
             this.logo = logo;
@@ -103,20 +116,6 @@ var infoOverlay= {
             if(this.player != null){//video
                 this.changeVid();
             }
-        },
-        //Video Modal Functions
-        changeVid:function(){
-            vid=this.slides[this.count];
-            this.player.src({type: 'video/mp4', src: vid.video});
-        },
-        geturl:function(index){
-            //console.log(this.slides);
-            $('#carousel-'+this.id).carousel(index);
-            this.jumpSlide(index);
-            ind = this.slides[index];
-            this.player.src({type: 'video/mp4', src: ind.video});
-            this.source=true;
-            this.player.volume(0.5);
         },
         //Video Modal on-events
         stopVideo:function(){
@@ -194,13 +193,13 @@ var infoOverlay= {
                             <img :src="logo" class="rd-topic">
                             <div class="tubie-container-right">
                                 <tubie-overlay :id="'tubie-'+id+index" :display="slide.tubie" position="left" spec="con"
-                                @seturl="seturl(slide.tubie.video)"/>
+                                @seturl="seturl(slide.tubie.video,0)"/>
                             </div>
                         </div>
                         <div v-if="spec=='vid'" class="ribbon red row whitetext title-font">
                             <div class="col-4 tubie-container-left">
                                 <tubie-overlay :id="'tubie-'+id+index" :display="slide.tubie" position="right" 
-                                @seturl="seturl(slide.tubie.video)"/>
+                                @seturl="seturl(slide.tubie.video,0)"/>
                             </div>
                             <img v-if="id=='modalVideo1'" src="assets/customs/where_weve_been.svg" class="vid-head col-3 offset-2 align-self-center">
                             <img v-if="id=='modalVideo2'" src="assets/customs/where_were_headed.svg" class="vid-head col-3 offset-2 align-self-center">

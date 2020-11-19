@@ -1,8 +1,8 @@
 {
     "timeData":{
         "slideshow":5000,
-        "timeout":30000,
-        "quitout":10000,
+        "timeout":3000,
+        "quitout":100000,
         "message":{
             "header":"Are you still there?",
             "body":"Please touch the screen in "
@@ -120,6 +120,7 @@
             {
                 "img":"data/rd100/R&D100icon-networking.jpg",
                 "tubie":{
+                    "video":"data/videos/oceans.mp4",
                     "body":"Can you think once considered?"
                 }
             }

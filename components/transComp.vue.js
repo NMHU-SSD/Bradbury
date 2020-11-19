@@ -8,7 +8,6 @@ var transComp= {
     },
     methods:{
         reset:function(){
-            //console.log(this.id);
             this.first=true;
             this.end=false;
             $("#carousel-"+this.id).carousel(0);
@@ -16,6 +15,7 @@ var transComp= {
         },
         seturl:function(index,modal){
             this.$emit('seturl', {index:index, ob:modal});
+            //console.log("seturl", index, modal);
         }
     },
     template:

@@ -3,6 +3,7 @@ body,#app,main{
     max-height: 3840px;
     width: 100vw;
     height: auto;
+    overflow-x: hidden;
 }
 /****** Google Fonts *****/
 @font-face{

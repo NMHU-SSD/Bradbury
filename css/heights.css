@@ -66,14 +66,24 @@
         margin-left: 0%;
     }
     .popover {
-        font-size: 0.5em;
+        font-size: calc(5px + 1vw);
+        max-width: 90vw !important;
+        max-height: 50%;
+        margin: 0 0%;
+    }
+    .popover .popover-header{
+        max-height: 8em;
     }
     .footer-div{
+        height: 3em;
         width: 100%;
-        left: 0;
+        left: 5%;
     }
     .ribbon h2{
         font-size: .9em;
+    }
+    #modalTimer h5, #modalTimer p{
+        font-size: 1em;
     }
     .video-js {
         margin: 0 auto !important;
@@ -108,7 +118,8 @@
     .cover-img{
         left: 5%;
     }
-    .popover {
-        font-size: 0.5em;
+    .popover{
+        font-size:calc(6px + .7vw);
+        width: 70vw !important;
     }
 }
