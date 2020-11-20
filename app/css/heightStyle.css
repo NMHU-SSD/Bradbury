@@ -41,6 +41,7 @@
     body{
         height: 3840px;
         width: 100%;
+        overflow: hidden;
     }
     .vid-thumb{
         height: 15em;
