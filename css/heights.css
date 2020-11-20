@@ -9,6 +9,7 @@ body{
     }
     body,#app,main{
         height: 3840px;
+        overflow: hidden;
     }
 }
 
