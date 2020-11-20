@@ -9,10 +9,6 @@ var slidesComponent={
             head:true
         }
     },
-    mounted:function(){
-        //this.initShow();
-        //setTimeout(this.changeMult, this.speed);
-    },
     methods:{
         switchOut:function(){
             this.head= !this.head;

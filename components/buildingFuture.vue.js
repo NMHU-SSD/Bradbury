@@ -85,7 +85,6 @@ var buildingFuture= {
             setTimeout(function() {
                 if((divId[0].scrollHeight - divId[0].offsetHeight) > 10){
                     $(divId).addClass("shadow-scroll");
-                    console.log("added", divId[0].scrollHeight,divId[0].offsetHeight, divId[0].id);
                 }
                 else{
                     $(divId).removeClass("shadow-scroll");
