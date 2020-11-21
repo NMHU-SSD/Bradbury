@@ -98,6 +98,21 @@
     padding: 4em 4em;
     margin: 0 3%;
 }
+
+/*****Arrow Placements ***********/
+	.popover .arrow {
+        width: 3rem;
+        height: 1em;
+        margin: .1rem .1rem;
+	}
+	.popover .arrow::before, .popover .arrow::after {
+	  position: absolute;
+	  display: block;
+	  content: "";
+	  border-color: transparent;
+	  border-style: solid;
+	}
+
 /****** TOP ******/
 	.bs-popover-top, .bs-popover-auto[x-placement^="top"] {
 	  margin-bottom: 0.1rem;
@@ -108,7 +123,7 @@
 	.bs-popover-top .arrow::before, .bs-popover-auto[x-placement^="top"] .arrow::before,
 	.bs-popover-top .arrow::after,
 	.bs-popover-auto[x-placement^="top"] .arrow::after {
-	  border-width: 8.5em 0.5rem 0;
+	  border-width: 8em 0.5rem 0;
 	}
 	.bs-popover-top .arrow::before, .bs-popover-auto[x-placement^="top"] .arrow::before {
 	  bottom: 0px;

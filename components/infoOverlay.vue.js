@@ -126,7 +126,6 @@ var infoOverlay= {
             }
             this.source=false;
             this.$emit('stopvideo',this.id);
-            console.log("video closed");
         },
         endOfVideo:function(){
             //console.log('video ended');
@@ -167,7 +166,6 @@ var infoOverlay= {
             if(this.slides.length > 1){
                 this.end=false;
             }
-            console.log(this.slides.length);
         }
     },
     template:

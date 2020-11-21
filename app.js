@@ -43,12 +43,10 @@ var app = new Vue({
             clearTimeout(this.afk);
             if(this.active){
                 this.t = setTimeout(this.toAlert, this.timeData.timeout);
-                console.log("timer set");
             }
             document.onmousedown = this.resetTimer;
         },
         toAlert:function(){
-            console.log("toAlert");
             document.onmousedown = this.resetTimer;
             this.$refs.timeModal.reset();
             this.displayModal();

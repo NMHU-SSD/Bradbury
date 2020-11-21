@@ -4,22 +4,30 @@ var tubieOverlay = {
     data:function(){
         return{
             setRight:true,
-            animationTime:200
+            animationTime:200,
+            vid:false
         }
     },
     mounted:function(){
         if(this.display.video != undefined){
-            console.log(this.id, "footer");
+            this.vid = true;
+            //console.log(this.id, "footer");
         }
         this.initTubie();
+    },
+    updated:function(){
+        this.videoButton();
     },
     methods:{
         initTubie:function(){
             //inject footer html
-            const foot = "<div class='footer-div'>"+
+            var foot = ""
+            if(this.vid){
+                foot = "<div class='footer-div'>"+
             "<img src='assets/customs/VideoPlaybutton-black.png' class='play-img'>"+
             "<p class='body-font redtext'>WATCH VIDEO</p></div>";
-
+            }
+            
             $('#pop-'+this.id).popover({
                 html:true,
                 content: foot
@@ -39,18 +47,12 @@ var tubieOverlay = {
         videoButton:function(){
             //id play button
             $('.play-img').attr('id',this.id);
-            //remove footer
-            if(this.display.video == undefined){
-                var popover = $('#pop-'+this.id).data('bs.popover');
-                popover.config.content = "";
-                popover.setContent();
-            }
             //data-trigger="focus"
         }
     },
     template:
     `<div :id="id" :class="['tubie-wrapper tubie-'+position]" @click="hopAnimation()+videoButton()">
         <div :id="'pop-'+id" :class="'tubieBasic tubie-'+spec" data-container="body" tabindex="0" data-toggle="popover" 
-            data-placement="top" :title="display.body"/>
+             data-placement="top" :title="display.body"/>
     </div>`
 }
