@@ -15,6 +15,7 @@ var buildingFuture= {
         }
     },
     methods:{
+        //interactions
         reset:function(){
             this.splash=true;
             this.first=true;
@@ -22,6 +23,11 @@ var buildingFuture= {
             this.count=0;
             this.toTop();
         },
+        selected:function(){
+            this.splash=false;
+            this.$emit('selected', this.id);
+        },
+        //video handles
         seturl:function(url){
             this.$emit('seturl', {'video':url, 'active':true});
         },
@@ -60,10 +66,7 @@ var buildingFuture= {
             }
             this.$emit('othervids', {'prev':prevVid, 'next':nextVid, 'index':index});
         },
-        selected:function(){
-            this.splash=false;
-            this.$emit('selected', this.id);
-        },
+        //carousel actions
         nextSlide:function(){
             this.count++;
             this.first=false;
@@ -97,6 +100,7 @@ var buildingFuture= {
             //this.scrollpanel(this.count);
             this.toTop();
         },
+        //scroll actions
         handleScroll: function(el) {
             if((el.srcElement.offsetHeight + el.srcElement.scrollTop) >= el.srcElement.scrollHeight) {
                 $('#'+el.srcElement.id).removeClass("shadow-scroll");
@@ -119,6 +123,7 @@ var buildingFuture= {
                 scrollDiv.scrollTop=0;
             }
         },
+        //splash screen
         imgPosition:function(position){
             if(position != undefined){
                 return "object-position: "+position;
@@ -127,8 +132,8 @@ var buildingFuture= {
             }
         },
         changeLine:function(){
-            var rand = Math.floor(Math.random()*this.tubie.length);
-            this.line = this.tubie[rand];
+            var rand = Math.floor(Math.random()*this.tubie.lines.length);
+            this.line = this.tubie.lines[rand];
         }
     },
     watch:{

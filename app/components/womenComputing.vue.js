@@ -14,6 +14,7 @@ var womanComputing = {
         }
     },
     methods:{
+        //interaction
         reset:function(){
             this.splash=true;
             this.count=0;
@@ -28,6 +29,7 @@ var womanComputing = {
             this.splash=false;
             this.$emit('selected', this.id);
         },
+        //slide actions
         nextSlide:function(){
             this.count++;
             this.first=false;
@@ -61,6 +63,7 @@ var womanComputing = {
             //this.scrollpanel(this.count);
             this.toTop();
         },
+        //scroll action
         handleScroll: function(el) {
             if((el.srcElement.offsetHeight + el.srcElement.scrollTop) >= el.srcElement.scrollHeight) {
                 $('#'+el.srcElement.id).removeClass("shadow-scroll");
@@ -83,6 +86,7 @@ var womanComputing = {
                 scrollDiv.scrollTop=0;
             }
         },
+        //splash screen
         imgPosition:function(position){
             if(position != undefined){
                 return "object-position: "+position;
@@ -91,8 +95,15 @@ var womanComputing = {
             }
         },
         changeLine:function(){
-            var rand = Math.floor(Math.random()*this.tubie.length);
-            this.line = this.tubie[rand];
+            var rand = Math.floor(Math.random()*this.tubie.lines.length);
+            this.line = this.tubie.lines[rand];
+        },
+        perSlideLines:function(index){
+            if(this.tubie.active){
+                return this.line;
+            }else{
+                return this.infoSlides.tubie[index];
+            }
         }
     },
     watch:{
@@ -140,8 +151,8 @@ var womanComputing = {
                                 <img :src="header">
                             </div>
                         </div>
-                        <div class="tubie-container-right">
-                              <tubie-overlay :id="'tubie-'+id+index" :display="slide.tubie"/>
+                        <div class="tubie-container-right" @focusout="changeLine()">
+                              <tubie-overlay :id="'tubie-'+id+index" :display="perSlideLines(index)"/>
                         </div> 
                         <div class="banner yellow"></div>         
                     </div>          

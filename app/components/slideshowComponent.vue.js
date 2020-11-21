@@ -10,7 +10,6 @@ var slideshowComponent={
     },
     mounted:function(){
         this.initShow();
-        //setTimeout(this.changeMult, this.speed);
     },
     methods:{
         slideshow:function(){
@@ -47,7 +46,6 @@ var slideshowComponent={
         },
         initShow:function(){
             this.seconds = Math.floor(this.speed / 1000);
-            console.log(this.currentImg);
             //:style="'animation: kenburns 20s infinite'"
         }
     },
@@ -56,7 +54,6 @@ var slideshowComponent={
             var slideId = $('#'+this.id);
             if(this.images!=null){
                 this.currentImg = this.images[this.index].img;
-                console.log(this.id, this.currentImg);
                 if(this.images[this.index].position){
                     $(slideId).css('object-position', this.images[this.index].position);
                 }

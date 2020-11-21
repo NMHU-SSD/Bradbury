@@ -217,10 +217,10 @@
         }
     },
     
-    "tubie":[
-        {
-            "body":"The term \"computer\" was first used over 400 years ago. A \"computer\" was a person who did calculations by hand."
-        },
+    "tubie":{
+        "active":"yes",
+        "lines":[
+        {"body":"The term \"computer\" was first used over 400 years ago. A \"computer\" was a person who did calculations by hand."},
         {"body":"Human computers often did a calculation twice to check for errors."},
         {"body":"Electronic computers didn't replace human computers right away. Human computers were still better than early electronic computers at some important tasks."},
         {"body":"Los Alamos employed a group of human computers until 1955."},
@@ -235,6 +235,7 @@
         {"body":"Los Alamos wrote the first large program for an electronic computer. It took up one-million punched cards!"},
         {"body":"The only patents issued for the Cray-1 computer were for its cooling system."},
         {"body":"\"Debugging\" originally referred to removing insects from mechanical equipment. It was later applied to removing errors from computer software."}
-    ]
+        ]
+    }
 
 }
