@@ -76,6 +76,10 @@
     .row-full{
         height: 60%;
     }
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon{
+    width: 100%;
+    }
     .pic-holder{
         height: 50%;
     }

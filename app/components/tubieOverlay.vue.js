@@ -4,11 +4,15 @@ var tubieOverlay = {
     data:function(){
         return{
             setRight:true,
-            animationTime:200
+            animationTime:200,
+            img:"img"
         }
     },
     mounted:function(){
         this.initTubie();
+        if(this.spec){
+            this.img = this.spec;
+        }
     },
     methods:{
         initTubie:function(){
@@ -28,9 +32,9 @@ var tubieOverlay = {
     },
     template:
     `<div v-if="display!=null" :id="id" class="tubie-wrapper" @click="hopAnimation">
-        <div v-if="spec=='vid'" class="tubie-img-left" @click="seturl"/>
-
-        <div v-else class="tubie-img" data-container="body" tabindex="0" data-toggle="popover" data-placement="bottom" 
+        <div v-if="spec=='vid'" class="tubie-wrench" @click="seturl"/>
+        
+        <div v-else :class="'tubie-'+img" data-container="body" tabindex="0" data-toggle="popover" data-placement="bottom" 
          data-trigger="focus" :title="display.header" :data-content="display.body"/>
     </div>`
 }

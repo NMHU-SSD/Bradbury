@@ -235,7 +235,11 @@
         {"body":"Los Alamos wrote the first large program for an electronic computer. It took up one-million punched cards!"},
         {"body":"The only patents issued for the Cray-1 computer were for its cooling system."},
         {"body":"\"Debugging\" originally referred to removing insects from mechanical equipment. It was later applied to removing errors from computer software."}
-        ]
+        ],
+        "tutorial":[
+            {"body":"These panels works like a smartphone. Tap a section on the panel to see more."},
+            {"body":"The timeline also works by touch. Tap the stories below to see more."}
+            ]
     }
 
 }

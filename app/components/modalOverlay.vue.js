@@ -146,10 +146,10 @@ var modalOverlay= {
             //console.log("playing");
         },
         inactiveUser:function(){
-            if(this.player!=null && this.player.isFullscreen()){
+            if(this.player!=null){
                this.player.exitFullscreen();
+                this.stopVideo();
                }
-            this.stopVideo();
             $('#modalVideo').modal('hide');
         },
         //Video JS Overlay Plugin

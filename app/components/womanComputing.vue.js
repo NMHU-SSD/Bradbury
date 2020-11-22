@@ -10,7 +10,8 @@ var womanComputing = {
             end: false,
             count:0,
             lastScroll:null,
-            line:null
+            line:null,
+            tutorial:null
         }
     },
     methods:{
@@ -64,22 +65,6 @@ var womanComputing = {
             this.toTop();
         },
         //scroll action
-        handleScroll: function(el) {
-            if((el.srcElement.offsetHeight + el.srcElement.scrollTop) >= el.srcElement.scrollHeight) {
-                $('#'+el.srcElement.id).removeClass("shadow-scroll");
-            }else{
-                //$('#'+el.srcElement.id).addClass("shadow-scroll");
-            }
-            this.lastScroll = el.srcElement.id;
-            //console.log(el.srcElement.id);
-        },
-        scrollpanel:function(index){
-            var divId = $('#text'+this.id+index);
-            if((divId.offsetHeight + divId.scrollTop) != divId.scrollHeight){
-                $(divId).addClass("shadow-scroll");
-            }
-            //console.log(divId);
-        },
         toTop:function(){
             if(this.lastScroll != null){
                 let scrollDiv = document.getElementById(this.lastScroll);
@@ -98,11 +83,12 @@ var womanComputing = {
             var rand = Math.floor(Math.random()*this.tubie.lines.length);
             this.line = this.tubie.lines[rand];
         },
-        perSlideLines:function(index){
-            if(this.tubie.active){
+        //tubie dialouge
+        perSlideLines:function(slide){
+            if(this.tubie.active == "yes"){
                 return this.line;
             }else{
-                return this.infoSlides.tubie[index];
+                return slide.tubie;
             }
         }
     },
@@ -116,6 +102,7 @@ var womanComputing = {
         tubie:function(){
             if(this.tubie!=null){
                 this.changeLine();
+                this.tutorial = this.tubie.tutorial[0];
             }
         }
     },
@@ -123,7 +110,7 @@ var womanComputing = {
     `
     <div :id="id">
     <div v-show="splash" class="tubie-splash-right tubie-splash" @focusout="changeLine()">
-        <tubie-overlay :id="'tubie-'+id" :display=line />
+        <tubie-overlay :id="'tubie-'+id" spec="def" :display="tutorial" />
     </div>
     <div class="screen" @click="selected()">
         <a :data-target="['#' + 'carousel-'+id]" data-slide-to="0" :href="['#' + 'carousel-'+id]">
@@ -137,14 +124,12 @@ var womanComputing = {
                 <template v-for="(slide, index) in infoSlides">
                     <div :class="['carousel-item', (index==0 ? 'active' : '')]" >
                         <div class="row row-full no-gutters">
-                    <!--- Slides Layout Appearence --->
                               <div class="col-12 col-sm-6 col-xl-9 img-main pic-holder">
                                   <img :src="slide.media" :style="imgPosition(slide.position)" :alt="slide.alt">
                               </div>
-                              <div :id="'text'+id+index" class="col text-side offset-2 offset-sm-0" @scroll="handleScroll">
+                              <div :id="'text'+id+index" class="col text-side offset-2 offset-sm-0">
                                   <p v-if="slide.body" class="content-body content-pad">{{ slide.body }}</p>
                               </div>
-                    <!-- End of slides --->
                         </div>
                         <div class="section-header-computing">
                             <div class="d-none d-sm-block mb-md-2 computing-header red">
@@ -152,7 +137,7 @@ var womanComputing = {
                             </div>
                         </div>
                         <div class="tubie-container-right" @focusout="changeLine()">
-                              <tubie-overlay :id="'tubie-'+id+index" :display="perSlideLines(index)"/>
+                              <tubie-overlay :id="'tubie-'+id+index" :display="perSlideLines(slide)"/>
                         </div> 
                         <div class="banner yellow"></div>         
                     </div>          

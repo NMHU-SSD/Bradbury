@@ -1,4 +1,4 @@
-/********Tubie CSS********/
+/********Tubie Containers ********/
 .tubie-splash{
     z-index: 10;
 }
@@ -33,6 +33,7 @@
     left: -5%;
     z-index: 7;
 }
+/********Tubie Images ********/
 .tubie-wrapper{
     width: 50%;
     height: 100%;
@@ -45,7 +46,15 @@
     height: 100%;
     outline: none;
 }
-.tubie-img-left{
+.tubie-def{
+    background: url(../assets/Toobie/def_tubie.png) no-repeat;
+    background-position: center bottom;
+    background-size: contain;
+    margin-top: 7%;
+    height: 100%;
+    outline: none;
+}
+.tubie-wrench{
     background: url(../assets/Toobie/tubie_help.png) no-repeat;
     background-position: right bottom;
     background-size: contain;

@@ -26,7 +26,9 @@
             <modal-overlay :id="modalVideo" :countdown="timeData.videotimer" :ref="modalVideo" @stopvideo="videoModalClose()" @getnext="getNextVid($event)" @getprev="getPrevVid($event)"></modal-overlay>
             <modal-overlay :id="modalTimer" :countdown="timeData.quitout" :message="timeData.message" ref="timeModal"></modal-overlay> 
             <!--- Main Layout components---->
-            <title-bar :title="timeData.pageTitle"></title-bar>
+            <div id="titleBar" class="title-header row">
+                <h1 class="title-font align-self-center">{{ timeData.pageTitle }}</h1>
+            </div>
             <woman-computing :id="computeId" :ref="computeId" :slides="womenComputingData" :header="womenComputingData.header" :tubie="tubie"
                              :speed="womenComputingData.slidespeed" @selected="itemselect($event)"></woman-computing>
             <building-future :id="historyId" :ref="historyId" :slides="buildingFutureData" :header="buildingFutureData.header" :tubie="tubie" 
@@ -51,9 +53,9 @@
     <!--- VideoJS Overlay---->
     <script src="libraries/videojs-overlay/videojs-overlay.js"></script>
 	<!-- Vue Components-->
-    <script src="components/titleBar.vue.js"></script>
+    <script src="components/carouselCom.vue.js"></script>
     <script src="components/buildingFuture.vue.js"></script>
-    <script src="components/womenComputing.vue.js"></script>
+    <script src="components/womanComputing.vue.js"></script>
     <script src="components/modalOverlay.vue.js"></script>
     <script src="components/timeLine.vue.js"></script>
     <script src="components/tubieOverlay.vue.js"></script>

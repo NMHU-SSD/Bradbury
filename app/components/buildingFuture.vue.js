@@ -11,7 +11,8 @@ var buildingFuture= {
             end: false,
             count:0,
             lastScroll:null,
-            line:null
+            line:null,
+            tutorial:null
         }
     },
     methods:{
@@ -102,13 +103,7 @@ var buildingFuture= {
         },
         //scroll actions
         handleScroll: function(el) {
-            if((el.srcElement.offsetHeight + el.srcElement.scrollTop) >= el.srcElement.scrollHeight) {
-                $('#'+el.srcElement.id).removeClass("shadow-scroll");
-            }else{
-                //$('#'+el.srcElement.id).addClass("shadow-scroll");
-            }
             this.lastScroll = el.srcElement.id;
-            //console.log(el.srcElement.id);
         },
         scrollpanel:function(index){
             var divId = $('#text'+this.id+index);
@@ -134,6 +129,14 @@ var buildingFuture= {
         changeLine:function(){
             var rand = Math.floor(Math.random()*this.tubie.lines.length);
             this.line = this.tubie.lines[rand];
+        },
+        //tubie dialogue
+        perSlideLines:function(slide){
+            if(this.tubie.active=="yes"){
+                return this.line;
+            }else{
+                return slide.tubie;
+            }
         }
     },
     watch:{
@@ -146,6 +149,7 @@ var buildingFuture= {
         tubie:function(){
             if(this.tubie!=null){
                 this.changeLine();
+                this.tutorial = this.tubie.tutorial[1];
             }
         },
         videosdata:function(){
@@ -158,7 +162,7 @@ var buildingFuture= {
     `
     <div :id="id">
     <div v-show="splash" class="tubie-splash-right tubie-splash" @focusout="changeLine()">
-        <tubie-overlay :id="'tubie-'+id" :display=line />
+        <tubie-overlay :id="'tubie-'+id" :display=tutorial />
     </div>
     <div class="screen" @click="selected()">
         <a :data-target="['#' + 'carousel-'+id]" data-slide-to="0" :href="['#' + 'carousel-'+id]">
@@ -209,8 +213,8 @@ var buildingFuture= {
                         <div class="d-none d-sm-block section-header dark">
                                 <img :src="header">
                             </div>
-                            <div class="tubie-container-right">
-                                  <tubie-overlay :id="'tubie-'+id+index" :display="slide.tubie"/>
+                            <div class="tubie-container-right" @focusout="changeLine()">
+                                  <tubie-overlay :id="'tubie-'+id+index" :display="perSlideLines(slide)"/>
                             </div>
                         <div class="banner yellow"></div>
                     </div>          

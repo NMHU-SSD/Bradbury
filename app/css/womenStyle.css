@@ -22,7 +22,7 @@
 /******carousel controllers*/
 .carousel-control-prev-icon,
 .carousel-control-next-icon{
-    height: 50%;
+    height: 20%;
     width: 50%;
 }
 .carousel-control-prev,
