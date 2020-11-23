@@ -1,31 +1,9 @@
-/***** spaning banner*/
-.banner,.tubie-container-left{
+/***** set positions *******/
+.banner,.tubie-container-left,.tubie-container{
     position: absolute;
 }
-.banner{
-    bottom: 0;
-    height: 3em;
-    width: 100%;
-    z-index: 9;
-    text-align: right;
-}
-.banner p{
-    font-size: 2em;
-    margin-right: 2em;
-}
-/*****Tubie******/
-.tubie-container{
-    background: url(../assets/tubie/Tubie-orangebkgd-left.svg) no-repeat;
-    background-position: bottom right;
-    height: 14vw;
-    width: 30vw;
-    max-width: 700px;
-    max-height: 30%;
-    position: absolute;
-    bottom: 3em;
-    left: -10%;
-    z-index: 7;
-}
+
+/******* Tubie **************/
 .tubie-container-left{
     background: url(../assets/tubie/Tubie-orangebkgd-left.svg) no-repeat;
     background-position: bottom right;
@@ -75,50 +53,64 @@
     width: 100%;
     outline: none;
 }
-/**** Pop Over ****/
+/********* Pop Over *****************/
 .popover .popover-header {
     font-size: 2em;
-    font-family:'Komika-Hand', sans-serif;
-    line-height: 1.5;
+    font-family:'Komika-Hand';
     background-color: rgba(0,0,0,0) !important;
     text-align: center;
     border-bottom: .1em solid #ebebeb;
-    margin: .1em 1em;
+    margin: .2em 1em;
     margin-top: -1em;
+    line-height: 1.5;
 }
 .popover .popover-body{ 
     font-size: 1.8em;
     text-align: center;
+    padding: 1em .5em;
     margin-top: -.3em;
-    padding: .5em 1em;
     max-height: 8em;
     overflow-y: auto;
     color: #212529;
-    border-radius: 0% 0% 3em 3em;
+    border-radius: 0% 0% 4em 4em;
 }
-/****Popover Bubble****/
+/*********** Popover Bubble ***************/
 .popover {
     font-size: calc(8px + .5vw);
-    font-family: 'Roboto-Cond', sans-serif;
     max-height: 80%;
-    max-width: 60vw !important;
+    max-width: 50vw !important;
     min-width: 200px;
-    border-radius: 43%;
+    border-radius: 45%;
     padding: 4em 5em;
     margin: 0 3%;
     white-space: pre-line;
+    font-family: 'Roboto-Cond';
 }
+
+/*****Arrow Placements ***********/
+	.popover .arrow {
+        width: 2.5rem;
+        height: 1em;
+        margin: .1rem .1rem;
+	}
+	.popover .arrow::before, .popover .arrow::after {
+	  position: absolute;
+	  display: block;
+	  content: "";
+	  border-color: transparent;
+	  border-style: solid;
+	}
 /****** TOP ******/
 .bs-popover-top, .bs-popover-auto[x-placement^="top"] {
 	  margin-bottom: 0.1rem;
 	}
 	.bs-popover-top .arrow, .bs-popover-auto[x-placement^="top"] .arrow {
-	  bottom: calc((1em + 1px) * -1);
+	  bottom: calc((2em + 1px) * -1);
 	}
 	.bs-popover-top .arrow::before, .bs-popover-auto[x-placement^="top"] .arrow::before,
 	.bs-popover-top .arrow::after,
 	.bs-popover-auto[x-placement^="top"] .arrow::after {
-	  border-width: 6.8em 0.5rem 0;
+	  border-width: 7em 0.5rem 0;
 	}
 	.bs-popover-top .arrow::before, .bs-popover-auto[x-placement^="top"] .arrow::before {
 	  bottom: 0px;
@@ -130,15 +122,10 @@
 	  border-top-color: #fff;
 	}
 
-/************** Modals ****/
-/******* Basics *****/
-#modalTimer{
-    text-align: center;
-}
+/************** Modals ***************/
 .modal{
     max-width: 100%;
     padding-right: 0px !important;
-    font-size: 24px;
 }
 .modal-open{
     padding-right: 0px !important;
@@ -153,19 +140,27 @@
     margin: auto;
     overflow-y: auto;
 }
+.modal-header{
+    padding: .5em;
+}
 .modal-title{
     font-size: 2em;
 }
 .modal-body{
-    font-size: 2em;
     padding: .3em;
 }
 .close{
-    font-size: 3em;
+    font-size: 2.5em;
 }
-
+/******* Timer Font *****/
+.timer h5, .timer p{
+    font-size: 2em;
+    text-align: center;
+    padding: 2%;
+    margin: 0 auto;
+}
 /*************** video JS ***********/
 .video-js {
     margin: 0 auto !important;
-    font-size: .6em;
+    font-size: 1.5em;
 }

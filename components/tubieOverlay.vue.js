@@ -3,7 +3,6 @@ var tubieOverlay = {
     props:['id','display','spec'],
     data:function(){
         return{
-            setRight:true,
             animationTime:200
         }
     },
@@ -16,9 +15,6 @@ var tubieOverlay = {
         },
         seturl:function(){
             this.$emit('seturl');
-        },
-        active:function(){
-            this.$emit('active');
         },
         hopAnimation:function(){
             var tubieId = $('#'+this.id);

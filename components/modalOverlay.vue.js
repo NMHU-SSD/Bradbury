@@ -44,14 +44,6 @@ var modalOverlay= {
     },
     methods:{
         //Timer Modal Functions
-        setPurpose:function(){
-            if(this.exitout){
-                return 'true';
-                this.reset();
-            }else{
-                return 'static';
-            }
-        },
         timer:function(){
             if(this.count > 0){
                 setTimeout(()=> {
@@ -74,11 +66,9 @@ var modalOverlay= {
         //Video Modal on-events
         stopVideo:function(){
             this.player.pause();
-            //this.player.src('');
             this.player.muted(false);
             this.source=false;
             this.$emit('stopvideo');
-            //console.log("video closed");
         },
         endOfVideo:function(){
             //console.log('video ended');
@@ -94,7 +84,6 @@ var modalOverlay= {
             this.videoTimeout = setTimeout(this.inactiveUser, this.countdown);
         },
         pausedVideo:function(){
-            //console.log('video paused');
             clearTimeout(this.videoTimeout);
             this.videoTimeout = setTimeout(this.inactiveUser, this.countdown);
         },
@@ -104,12 +93,11 @@ var modalOverlay= {
             if(this.isEnded){
                 this.isEnded=false;
             }
-            //console.log("playing");
         },
         inactiveUser:function(){
             if(this.player.isFullscreen()){
                this.player.exitFullscreen();
-               }
+            }
             this.stopVideo();
             $('#modalVideo').modal('hide');
         },

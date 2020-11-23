@@ -1,3 +1,13 @@
+/*
+*   Break points for different screen sizes:
+*
+*        Mobile phones:  0px -> 576px
+*        Tablets+        
+*        Computers:      576px -> 2160px
+*        4K:             2160px
+*
+*
+*/
 /****** General *****/
 body,#app,main{
     width: 100%;
@@ -27,9 +37,10 @@ body,#app,main{
     .slideshow-container h1{
         font-size: 3em;
     }
-    .carousel-control-prev-icon,
-    .carousel-control-next-icon{
-        height: 30%;
+    .carousel-control-prev,
+    .carousel-control-next{
+        width: 15%;
+        margin-top: 70%;
     }
     .top,{
         font-size: calc(10px + 10vw);

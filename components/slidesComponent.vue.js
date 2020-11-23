@@ -19,7 +19,6 @@ var slidesComponent={
         },
         slideshow:function(){
             var fadeId = $('#'+this.id);
-            //$(fadeId).css('filter', 'brightness(0)');
             setTimeout(this.changeImg, 1000);
             setTimeout(function(){
                 $(fadeId).css('filter', 'brightness(50%)')}, 1000);
@@ -72,12 +71,12 @@ var slidesComponent={
     template:
     `
     <div id="top-slide" class="slideshow-container whitetext">
-            <h1 v-show=head class="top yellow title-font shadow-text-big">{{ page1.head }}</h1>
-            <h1 v-show=!head class="top green title-font">{{ page2.head }}</h1>
+            <h1 v-show=head class="top yellow shadow-text-big">{{ page1.header }}</h1>
+            <h1 v-show=!head class="top green">{{ page2.header }}</h1>
             <img :id="id" :src="currentImg">
             <div v-show=head class="center body-font shadow-text">{{ page1.memo }}</div>
             <div v-show=!head class="center body-font shadow-text">{{ page2.memo }}</div>
-            <div class="tubie-container">
+            <div class="tubie-container-left" style="bottom: 3em;">
                 <tubie-overlay id="tubie-show" :display="tubie" spec="def"/>
             </div>
             <div class="banner red">

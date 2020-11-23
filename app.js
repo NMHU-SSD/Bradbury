@@ -50,6 +50,7 @@ var app = new Vue({
             $(".interest").on('click', function(){
                 app.active= true;
                 app.resetTimer();
+                //console.log("reset timer", app.active);
             });
         },
         resetTimer:function(){
@@ -61,12 +62,12 @@ var app = new Vue({
             document.onmousedown = this.resetTimer;
         },
         toAlert:function(){
-            console.log("toAlert");
             this.$refs.timeModal.reset();
             this.displayModal();
             this.afk = setTimeout(this.toDefault, this.timeData.quitout);
         },
         toDefault:function(){
+            $('#modalTimer').modal('hide');
             app.active = false;
             this.showData = true;
             this.$refs.top.reset();
@@ -74,12 +75,10 @@ var app = new Vue({
             this.$refs.dyk.reset();
             this.$refs.style2.reset();
             this.$refs.dyk2.reset();
-            console.log("toDefault");
         },
         displayModal:function(){
             $('#modalTimer').modal();
             this.$refs.timeModal.timer();
-            setTimeout(function(){$('#modalTimer').modal('hide')}, this.timeData.quitout);
             document.onmousedown = this.resetTimer;
         },
         displayVideo:function(info){
@@ -100,9 +99,6 @@ var app = new Vue({
         videoModalClose:function(){
             this.active=true;
             this.resetTimer();
-            /*if(this.stillActive){
-                this.resetTimer();
-            }*/
         },
         switchData:function(){
             if(this.showData){
@@ -112,6 +108,10 @@ var app = new Vue({
             else{
                 this.$refs.style2.reset();
                 this.$refs.dyk2.reset();
+                setTimeout(function(){
+                    app.active=false;
+                    app.resetTimer();
+                },1);
             }
             this.showData = !this.showData;
         },
