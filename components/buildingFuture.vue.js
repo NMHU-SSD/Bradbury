@@ -26,11 +26,6 @@ var buildingFuture= {
             let title = name;
             this.$emit('seturl', {src:url,title:title});
         },
-        /*
-        selected:function(){
-            console.log("selected");
-            //this.$emit('selected', this.id);
-        },*/
         //carousel controls
         nextSlide:function(){
             this.count++;
@@ -39,6 +34,7 @@ var buildingFuture= {
                 this.end=true;
             }
             this.scrollpanel(this.count);
+            //console.log("nextSlide", this.count);
             this.toTop();
             $("#carousel-"+this.buddy+" .carousel-control-next").trigger('click');
             this.$emit('change', this.count);
@@ -57,7 +53,7 @@ var buildingFuture= {
         jumpSlide:function(index){
             this.count=index;
             this.toTop();
-            this.scrollpanel(this.count);
+            this.scrollpanel(index);
             $("#carousel-"+this.buddy).carousel(index);
             this.$emit('change', this.count);
             if(index==0){
@@ -82,12 +78,10 @@ var buildingFuture= {
         },
         scrollpanel:function(index){
             var divId = $('#text'+this.id+index);
+            //console.log("scrollpanel",divId);
             setTimeout(function() {
                 if((divId[0].scrollHeight - divId[0].offsetHeight) > 10){
                     $(divId).addClass("shadow-scroll");
-                }
-                else{
-                    $(divId).removeClass("shadow-scroll");
                 }
             }, 0);
         },
@@ -114,12 +108,12 @@ var buildingFuture= {
                                 <div class="shadow-box"/>
                                 <h3 class="top-center shadow-text">{{ header }}</h3>
                                 <h2 v-if=!banner class="top-left title-font shadow-text-big">Did You Know...</h2>
-                                <div v-if="!banner && slide.video" class="watch-video" @click="seturl(slide.video,slide.videoTitle)">
+                                <div v-if="!banner && slide.video" :class="['watch-video',(banner ? '' : 'cropped-vid')]" @click="seturl(slide.video,slide.videoTitle)">
                                     <img src="assets/customs/VideoPlaybutton-black.png" class="play-img" style="margin-right: 5%;">
                                     <p class="body-font" style="color: #bcd1bc;">WATCH VIDEO</p>
                                 </div>
                                 <h2 class="top-left title-font shadow-text-big">{{ slide.featuredMedia.title }}</h2>
-                                <i v-if=slide.featuredMedia.caption class="bottom-right body-font shadow-text" :style="banner ? 'bottom: 5em;' : 'bottom: 2em;'">{{ slide.featuredMedia.caption }}</i>
+                                <i v-if=slide.featuredMedia.caption :class="['bottom-right body-font shadow-text',(banner ? 'with-banner':'')]">{{ slide.featuredMedia.caption }}</i>
                             </div>
 
                             <div :class="['col-12 col-sm-4 margins',(mono? 'lgt-green': 'yellow'),(banner? 'banner-text': 'text-side')]">

@@ -22,7 +22,7 @@
     font-size: 1.2em;
 }
 .slideshow-container img{
-    height: calc(90% - 3em);
+    height: calc(100% - 7em);
     width: 100%;
     object-fit: cover;
     filter: brightness(50%);
@@ -141,6 +141,7 @@
     margin-bottom: 5%;
     overflow: hidden;
 }
+/** Img Positioning **/
 .top-center{
     position: absolute;
     top: 3%;
@@ -167,6 +168,10 @@
     text-align: right;
     padding: 2%;
     background-color: rgba(0,0,0,0.3);
+    bottom: 2em;
+}
+.with-banner{
+    bottom: 5em;
 }
 /***** Watch Video Button *****/
 .watch-video{

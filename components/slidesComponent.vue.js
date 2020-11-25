@@ -20,9 +20,6 @@ var slidesComponent={
         slideshow:function(){
             var fadeId = $('#'+this.id);
             setTimeout(this.changeImg, 1000);
-            setTimeout(function(){
-                $(fadeId).css('filter', 'brightness(50%)')}, 1000);
-            
             setTimeout(this.slideshow, this.speed);
         },
         changeImg:function(){
@@ -59,7 +56,6 @@ var slidesComponent={
             var slideId = $('#'+this.id);
             if(this.images!=null){
                 this.currentImg = this.images[this.index].img;
-                //console.log(this.id, this.currentImg);
                 if(this.images[this.index].position){
                     $(slideId).css('object-position', this.images[this.index].position);
                 }

@@ -30,7 +30,7 @@ body,#app,main{
         font-size: calc(10px + 1.2vw);
     }
     .carousel-inner, .slideshow-container{
-        height: 100vh;
+        height: 110vh;
     }
 }
 @media only screen and (max-width:576px){
@@ -39,8 +39,8 @@ body,#app,main{
     }
     .carousel-control-prev,
     .carousel-control-next{
-        width: 15%;
-        margin-top: 70%;
+        width: 3em;
+        margin-top: 40vh;
     }
     .top,{
         font-size: calc(10px + 10vw);
@@ -57,24 +57,37 @@ body,#app,main{
     .carousel .carousel-indicators{
         height: 1.5em;
     }
-    .margins{
-        font-size: calc(10px + 1.2vw);
-        padding: 8% 5% 0% 5%;
-    }
     .img-main{
         font-size: calc(8px + .3vw);
         height: 40vh;
     }
     .bottom-right{
-        max-width: 80%;
+        max-width: 100%;
         font-size: 1.4em;
+        right: 0;
+        padding: 1% 2%;
+        height: 25%;
+    }
+    .with-banner,.bottom-right{
+        bottom: 0;
+    }
+    .cropped-vid{
+        position: absolute;
+        width: 50%;
+        top:22%;
         padding: 2%;
+        right: 0;
     }
     .banner-text{
-        height: calc(60vh - 3em);
+        height: calc(70vh - 2.5em);
+        margin-top: -2.5em;
     }
     .text-side{
-        height: 60vh;
+        height: 70vh;
+    }
+    .content-side{
+        padding-left: 3em;
+        padding-right: 3em;
     }
     .scrolling-text{
         padding-bottom: 7em;
@@ -99,7 +112,7 @@ body,#app,main{
 @media only screen and (min-width:576px) and (max-width:2159px){
     body,#app,main{
         height: auto;
-        font-size: calc(6px + 1vw);
+        font-size: calc(10px + .7vw);
     }
     .carousel-inner, .slideshow-container{
         height: 60vw;
