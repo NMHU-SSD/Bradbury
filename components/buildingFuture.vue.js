@@ -102,7 +102,7 @@ var buildingFuture= {
                         <div class="row row-full no-gutters">
 
                     <!--- Base Layout Appearence --->
-                            <div v-if="slide.featuredMedia" class="col-12 col-sm-8 img-main green whitetext">
+                            <div v-if="slide.featuredMedia" class="col-12 col-sm-6 col-md-8 img-main green whitetext">
                                 <img :src="slide.featuredMedia.src" :class="[banner ? 'fill-img' : 'cropped-img']" 
                                     :style="slide.featuredMedia.position" alt="slide.alt">
                                 <div class="shadow-box"/>
@@ -116,7 +116,7 @@ var buildingFuture= {
                                 <i v-if=slide.featuredMedia.caption :class="['bottom-right body-font shadow-text',(banner ? 'with-banner':'')]">{{ slide.featuredMedia.caption }}</i>
                             </div>
 
-                            <div :class="['col-12 col-sm-4 margins',(mono? 'lgt-green': 'yellow'),(banner? 'banner-text': 'text-side')]">
+                            <div :class="['col-12 col-sm-6 col-md-4 margins',(mono? 'lgt-green': 'yellow'),(banner? 'banner-text': 'text-side')]">
                                   <div :class="['stay',(mono ? 'lgt-green' : 'yellow')]">
                                     <p v-if="slide.header" :id="'header'+id+index" class="content-header content-side redtext">{{ slide.header }}</p>
                                     <div v-if="banner && slide.video" class="watch-video" @click="seturl(slide.video, slide.videoTitle)">
@@ -126,10 +126,12 @@ var buildingFuture= {
                                   </div>
 
                                   <div :id="'text'+id+index" class="scrolling-text" @scroll="handleScroll">
-                                    <p v-if="slide.header" class="content-header content-side invis">{{ slide.header }}</p>
-                                    <div v-if="banner && slide.video" class="watch-video invis">
-                                        <img src="assets/customs/VideoPlaybutton-black.png" class="play-img">
-                                        <p class="body-font">WATCH VIDEO</p>
+                                    <div class="invis">
+                                        <p v-if="slide.header" class="content-header content-side">{{ slide.header }}</p>
+                                        <div v-if="banner && slide.video" class="watch-video">
+                                            <img src="assets/customs/VideoPlaybutton-black.png" class="play-img">
+                                            <p class="body-font">WATCH VIDEO</p>
+                                        </div>
                                     </div>
                                     <p v-if="slide.title" class="bluetext content-title content-side title-font">{{ slide.title }}</p>
                                     <p v-if="slide.body" class="bluetext content-body content-side body-font">{{ slide.body }}</p>

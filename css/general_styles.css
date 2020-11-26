@@ -63,9 +63,17 @@
     margin: 0;
 }
 .content-header{
-    font-size: 1.2em;
+    font-size: 1.15em;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bolder;
+    margin-bottom: 0;
+}
+.invis{
+    visibility: hidden;
+}
+.stay{
+    position: absolute;
+    top: .95em;
 }
 /****** General CSS ******/
 body{
@@ -103,13 +111,6 @@ p,h1,h2,h3{
 }
 .whitetext{
     color: white;
-}
-.invis{
-    visibility: hidden;
-}
-.stay{
-    position: absolute;
-    top: 1em;
 }
 
 /******** Shadows ********/

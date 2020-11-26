@@ -164,6 +164,7 @@
 .bottom-right{
     position: absolute;
     max-width: 40%;
+    min-width: 15em;
     right: 2%;
     text-align: right;
     padding: 2%;
