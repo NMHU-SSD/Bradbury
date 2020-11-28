@@ -84,16 +84,16 @@ var app = new Vue({
                 clearTimeout(this.afk);
                 this.active=false;
             }
+            var name='';
             if(data.ob ==1){
-                this.$refs.modalVideo1.geturl(data.index);
-                $('#modalVideo1').modal();
+                name='modalVideo1';
             }else if(data.ob ==2){
-                this.$refs.modalVideo2.geturl(data.index);
-                $('#modalVideo2').modal();
+                name='modalVideo2';
             }else if(data.ob==0){
-                this.$refs.modalVid.geturl(data.index);
-                $('#modalVid').modal();
+                name='modalVid';
             }
+            this.$refs[name].geturl(data.index,data.caps);
+            $('#'+name).modal();
         }
     }
 })

@@ -5,7 +5,6 @@ var modalOverlay= {
         return{
             count:null,
             player:null,
-            index:0,
             setup:{
                 autoplay: true,
 				controls: true,
@@ -26,8 +25,7 @@ var modalOverlay= {
                   }
             },
             videoTimeout: null,
-            source:false,
-            isEnded:false
+            captions:null
         }
     },
     mounted(){
@@ -43,14 +41,6 @@ var modalOverlay= {
     },
     methods:{
         //Timer Modal Functions
-        setPurpose:function(){
-            if(this.exitout){
-                return 'true';
-                this.reset();
-            }else{
-                return 'static';
-            }
-        },
         timer:function(){
             if(this.count > 0){
                 setTimeout(()=> {
@@ -63,28 +53,25 @@ var modalOverlay= {
             this.count = Math.floor(this.countdown / 1000);
         },
         //Video Modal Functions
-        geturl:function(url){
-            console.log(url);
+        geturl:function(url,capts){
             this.player.src({type: 'video/mp4', src: url});
-            this.source=true;
             this.player.volume(0.5);
+            if(capts!=null)
+                this.captions = capts;
         },
         //Video Modal on-events
         stopVideo:function(){
             if(this.player!=null){
                 this.player.pause();
-                this.player.src('');
                 this.player.muted(false);
-                this.source=false;
+                if(this.player.isFullscreen()){
+                   this.player.exitFullscreen();
+                }
+                this.captions = null;
                 this.$emit('stopvideo',this.id);
             }
-            //console.log("video closed");
         },
         endOfVideo:function(){
-            //console.log('video ended');
-            if(this.nextVid!=null){
-                this.isEnded=true;
-            }
             this.player.currentTime(0);
             $('#videoWindow .vjs-big-play-button').css('display', 'block');
             this.player.getChild('bigPlayButton').on('click', function() {
@@ -94,17 +81,12 @@ var modalOverlay= {
             this.videoTimeout = setTimeout(this.stopVideo, this.countdown);
         },
         pausedVideo:function(){
-            //console.log('video paused');
             clearTimeout(this.videoTimeout);
             this.videoTimeout = setTimeout(this.stopVideo, this.countdown);
         },
         playingVideo:function(){
             clearTimeout(this.videoTimeout);
             $('#videoWindow .vjs-big-play-button').css('display', 'none');
-            if(this.isEnded){
-                this.isEnded=false;
-            }
-            //console.log("playing");
         },
         //Video JS Overlay Plugin
         videoOverlay:function(){
@@ -136,7 +118,10 @@ var modalOverlay= {
         <div v-if="id=='modalVid'" class="modal-content">
           <div class="modal-body">
             <video id="videoWindow" ref="videoPlayer" preload="none" class="video-js vjs-big-play-centered web-video" @ended="endOfVideo" @pause="pausedVideo" @play="playingVideo">
-            <!--track kind='captions' src='https://dotsub.com/media/5d5f008c-b5d5-466f-bb83-2b3cfa997992/c/eng/vtt' srclang='en' label='English' /-->
+            <!--track kind='captions' src='data/captions/Oceans_eng.vtt' srclang='en' label='English' /-->
+            <template v-for="(caps, index) in captions">
+                <track kind='captions' :src="caps.file" :srclang="caps.lang" :label="caps.label" />
+            </template>
             </video>
           </div>
         </div>

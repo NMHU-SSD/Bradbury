@@ -12,6 +12,11 @@
     "pageTubie":{
         "tubie_been":{
             "video":"data/videos/oceans.mp4",
+            "captions":[
+                {"file": "data/captions/Oceans_eng.vtt",
+                 "label":"English",
+                 "lang":"en"}
+            ],
             "body":"As part of its national-security science mission, Los Alamos has a long history of creating cutting-edge computer hardware and software, both on its own, and in collaboration with HPC partners.  Explore some examples of Los Alamos driving HPC technologies forward."
         },
         "tubie_headed":{

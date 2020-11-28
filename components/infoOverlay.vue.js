@@ -18,7 +18,7 @@ var infoOverlay= {
                       seekBar: true
                     },
                     volumePanel: true,
-                    fullscreenToggle: false,
+                    fullscreenToggle: true,
                     pictureInPictureToggle: false,
                     playbackRateMenuButton: false,
                     captionsButton: false,
@@ -68,13 +68,6 @@ var infoOverlay= {
             this.$emit('seturl',{index:info, ob:modal});
             //console.log(info, modal);
         },
-        /*startTimer:function(){
-            console.log("covers timer");
-            this.timer=true;
-            clearTimeout(this.timeout);
-            //this.timeout = setTimeout(this.stopVideo, this.countdown);
-            //document.onmousedown = this.startTimer;
-        },*/
         getCover:function(logo){
             $('#carousel-'+this.id).carousel(0);
             this.logo = logo;
@@ -121,14 +114,15 @@ var infoOverlay= {
         stopVideo:function(){
             if(this.player!=null){
                 this.player.pause();
-                this.player.src('');
                 this.player.muted(false);
+                if(this.player.isFullscreen()){
+                   this.player.exitFullscreen();
+                }
             }
             this.source=false;
             this.$emit('stopvideo',this.id);
         },
         endOfVideo:function(){
-            //console.log('video ended');
             this.player.currentTime(0);
             $('#videoWindow .vjs-big-play-button').css('display', 'block');
             this.player.getChild('bigPlayButton').on('click', function() {
@@ -138,14 +132,12 @@ var infoOverlay= {
             this.timeout = setTimeout(this.stopVideo, this.countdown);
         },
         pausedVideo:function(){
-            //console.log('video paused');
             clearTimeout(this.timeout);
             this.timeout = setTimeout(this.stopVideo, this.countdown);
         },
         playingVideo:function(){
             clearTimeout(this.timeout);
             $('#videoWindow .vjs-big-play-button').css('display', 'none');
-            //console.log("playing");
         },
         //Video JS Overlay Plugin
         videoOverlay:function(){

@@ -1,11 +1,3 @@
-body,#app,main{
-    background-color: black;
-    max-height: 3840px;
-    width: 100vw;
-    height: auto;
-    overflow-x: hidden;
-}
-
 /***** Mac OSx scrollbar *****/
 ::-webkit-scrollbar {
   -webkit-appearance: none;
@@ -43,23 +35,35 @@ body,#app,main{
     font-family:Komika-Hand;
     src: url(../assets/fonts/Komika-Hand/KOMIKAHB.ttf);
 }
-.redtext{
-    color: #590820;
-}
-.whitetext{
-    color: white;
-}
+/********** Text Classes ***************/
 .title-font{
     font-family: Anton;
+}
+.body-font{
+    font-family: 'Roboto-Cond', sans-serif;
 }
 .skinny-font{
     font-family: Open-Sans-Con;
     text-transform: uppercase;
 }
-.body-font{
-    font-family: 'Roboto-Cond', sans-serif;
+.content-body{
+    font-size: calc(14px + 1vw);
 }
-
+/********** General CSS *****************/
+body{
+    background-color: black;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-size: calc(8px + 1.1vw);
+}
+#app,main{
+    height: 100%;
+    width: 100%;
+}
+p,h1,h2,h3{
+    white-space: pre-line;
+}
 .size{
     width: 100vw;
     height: 70vw;
@@ -71,6 +75,7 @@ body,#app,main{
 .half-shadow{
     background-color: rgb(0,0,0,.5);
 }
+/******* Colors *****************/
 .green{
     background-color: #4a6c6a;
 }
@@ -82,4 +87,10 @@ body,#app,main{
 }
 .yellow{
     background-color: #c6bf18;
+}
+.redtext{
+    color: #590820;
+}
+.whitetext{
+    color: white;
 }

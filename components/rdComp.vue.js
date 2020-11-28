@@ -22,7 +22,6 @@ var rdComp= {
             let name = 'modal'+cover.name;
             let logo = cover.logo;
             this.$emit('setcover', {name, logo});
-            //console.log(name);
         },
         selected:function(){
             console.log("selected");
@@ -79,8 +78,8 @@ var rdComp= {
     `<div :id="id" class="background size red">
         <div class="rd-dark"/>
         <div class="row sum-row">
-            <img src="assets/customs/R&D100logo-gold.svg" class="col-5 col-sm-4 offset-1">
-            <p class="col rd-text-box body-font align-self-center half-shadow">{{ body }}</p>
+            <img src="assets/customs/R&D100logo-gold.svg" class="col-5 col-sm-3 col-md-4">
+            <p class="col rd-text-box body-font content-body align-self-center half-shadow">{{ body }}</p>
         </div>
         <div class="cover-holder row no-gutters">
             <template v-for="(cover, index) in covers">
