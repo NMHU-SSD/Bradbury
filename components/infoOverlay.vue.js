@@ -27,7 +27,6 @@ var infoOverlay= {
                   }
             },
             timeout: null,
-            source:false,
             videoData:null,
             timer:false,
             logo:null
@@ -50,23 +49,50 @@ var infoOverlay= {
         }
     },
     methods:{
+        //Caption Functions
+        setCaptions:function(capts){
+            for(var item in capts){
+                var lang = {
+                    kind:'captions',
+                    srclang:capts[item].lang,
+                    label:capts[item].label,
+                    src:capts[item].file
+                };
+                this.player.addRemoteTextTrack(lang, false);
+            }
+        },
+        resetCaptions:function(){
+            var tracks = this.player.remoteTextTracks();
+            var num = tracks.length;
+            if(num>0){
+                while(num--){
+                    //this.player.textTracks()[num].mode = 'disabled';
+                    this.player.removeRemoteTextTrack(tracks[num]);
+                }
+            }
+        },
         //Video Modal Functions
         changeVid:function(){
-            vid=this.slides[this.count];
+            this.resetCaptions();
+            var vid=this.slides[this.count];
             this.player.src({type: 'video/mp4', src: vid.video});
+            if(vid.captions){
+                this.setCaptions(vid.captions);
+            }
         },
         geturl:function(index){
             $('#carousel-'+this.id).carousel(index);
             this.jumpSlide(index);
             var ind = this.slides[index];
             this.player.src({type: 'video/mp4', src: ind.video});
-            this.source=true;
             this.player.volume(0.5);
+            if(ind.captions){
+                this.setCaptions(ind.captions);
+            }
         },
-        seturl:function(info, modal){
+        seturl:function(obj, modal){
             this.stopVideo();
-            this.$emit('seturl',{index:info, ob:modal});
-            //console.log(info, modal);
+            this.$emit('seturl',{index:obj.video, ob:modal, caps:obj.captions});
         },
         getCover:function(logo){
             $('#carousel-'+this.id).carousel(0);
@@ -118,8 +144,8 @@ var infoOverlay= {
                 if(this.player.isFullscreen()){
                    this.player.exitFullscreen();
                 }
+                this.resetCaptions();
             }
-            this.source=false;
             this.$emit('stopvideo',this.id);
         },
         endOfVideo:function(){
@@ -183,13 +209,13 @@ var infoOverlay= {
                             <img :src="logo" class="rd-topic">
                             <div class="tubie-container-right">
                                 <tubie-overlay :id="'tubie-'+id+index" :display="slide.tubie" position="left" spec="con"
-                                @seturl="seturl(slide.tubie.video,0)"/>
+                                @seturl="seturl(slide.tubie,0)"/>
                             </div>
                         </div>
                         <div v-if="spec=='vid'" class="ribbon red row whitetext title-font">
                             <div class="col-4 tubie-container-left">
                                 <tubie-overlay :id="'tubie-'+id+index" :display="slide.tubie" position="right" 
-                                @seturl="seturl(slide.tubie.video,0)"/>
+                                @seturl="seturl(slide.tubie,0)"/>
                             </div>
                             <img v-if="id=='modalVideo1'" src="assets/customs/where_weve_been.svg" class="vid-head col-3 offset-2 align-self-center">
                             <img v-if="id=='modalVideo2'" src="assets/customs/where_were_headed.svg" class="vid-head col-3 offset-2 align-self-center">

@@ -15,7 +15,10 @@
             "captions":[
                 {"file": "data/captions/Oceans_eng.vtt",
                  "label":"English",
-                 "lang":"en"}
+                 "lang":"en"},
+                {"file": "data/captions/Oceans_eng.vtt",
+                 "label":"French",
+                 "lang":"fr"}
             ],
             "body":"As part of its national-security science mission, Los Alamos has a long history of creating cutting-edge computer hardware and software, both on its own, and in collaboration with HPC partners.  Explore some examples of Los Alamos driving HPC technologies forward."
         },
@@ -66,11 +69,27 @@
                 "title":"The Next Frontier in Supercomputing",
                 "tubie":{
                     "video":"data/videos/oceans.mp4",
+                    "captions":[
+                        {"file": "data/captions/Oceans_eng.vtt",
+                         "label":"English",
+                         "lang":"en"},
+                        {"file": "data/captions/Oceans_eng.vtt",
+                         "label":"French",
+                         "lang":"fr"}
+                    ],
                     "body":"The idea of building a computer as powerful as the human brain was once science-fiction, but it's become a reality with \"exascale.\"  Exascale supercomputers represent a thousand-fold performance increase over the most powerful computers of only a decade ago, but what exactly does \"exascale\" mean, and how is Los Alamos using these large-scale simulation resources to solve some of today’s most pressing problems?  Watch the video to find out!"
                 }
             },
             {
                 "video":"data/videos/oceans.mp4",
+                "captions":[
+                    {"file": "data/captions/Oceans_eng.vtt",
+                     "label":"English",
+                     "lang":"en"},
+                    {"file": "data/captions/Oceans_eng.vtt",
+                     "label":"French",
+                     "lang":"fr"}
+                ],
                 "title":"What Makes a Quantum Computer Different",
                 "tubie":{
                     "body":"A lot of buzz surrounds the new field of quantum computing, but how is a quantum computer different from the computers we have used for decades?  Watch the video to find out!"

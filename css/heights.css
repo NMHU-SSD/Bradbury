@@ -8,6 +8,11 @@
 *
 *
 */
+/*Caption Settings: 'none' or 'block'*/
+.vjs-texttrack-settings {
+  display:none;
+}
+
 /****** General *****/
 body,#app,main{
     width: 100%;

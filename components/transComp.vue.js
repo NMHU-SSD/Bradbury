@@ -14,7 +14,10 @@ var transComp= {
             this.jumpSlide(0);
         },
         seturl:function(obj,modal){
-            this.$emit('seturl', {index:obj.video, ob:modal, caps:obj.captions});
+            if(modal==0)
+                this.$emit('seturl', {index:obj.video, ob:modal, caps:obj.captions});
+            else
+                this.$emit('seturl', {index:obj, ob:modal});
         }
     },
     template:

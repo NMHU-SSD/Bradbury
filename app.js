@@ -78,21 +78,22 @@ var app = new Vue({
             $('#'+info.name).modal();
             this.resetTimer();
         },
-        displayTech:function(data){
+        displayTech:function(data){ //displayVideo
             if(this.active){
                 clearTimeout(this.t);
                 clearTimeout(this.afk);
                 this.active=false;
             }
             var name='';
-            if(data.ob ==1){
+            if(data.ob==0){
+                this.$refs.modalVid.geturl(data.index,data.caps);
+                $('#modalVid').modal();
+                return
+            }else if(data.ob ==1)
                 name='modalVideo1';
-            }else if(data.ob ==2){
+            else if(data.ob ==2)
                 name='modalVideo2';
-            }else if(data.ob==0){
-                name='modalVid';
-            }
-            this.$refs[name].geturl(data.index,data.caps);
+            this.$refs[name].geturl(data.index);
             $('#'+name).modal();
         }
     }

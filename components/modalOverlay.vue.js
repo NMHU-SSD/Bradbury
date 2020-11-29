@@ -24,8 +24,7 @@ var modalOverlay= {
                     subtitlesButton: false,
                   }
             },
-            videoTimeout: null,
-            captions:null
+            videoTimeout: null
         }
     },
     mounted(){
@@ -52,12 +51,35 @@ var modalOverlay= {
         reset:function(){
             this.count = Math.floor(this.countdown / 1000);
         },
+        //VideoJS captions
+        setCaptions:function(capts){
+            for(var item in capts){
+                var lang = {
+                    kind:'captions',
+                    srclang:capts[item].lang,
+                    label:capts[item].label,
+                    src:capts[item].file
+                };
+                this.player.addRemoteTextTrack(lang, false);
+            }
+        },
+        resetCaptions:function(){
+            var tracks = this.player.remoteTextTracks();
+            var num = tracks.length;
+            if(num>0){
+                while(num--){
+                    //this.player.textTracks()[num].mode = 'disabled';
+                    this.player.removeRemoteTextTrack(tracks[num]);
+                }
+            }
+        },
         //Video Modal Functions
         geturl:function(url,capts){
             this.player.src({type: 'video/mp4', src: url});
             this.player.volume(0.5);
-            if(capts!=null)
-                this.captions = capts;
+            if(capts!=null){
+                this.setCaptions(capts);
+            }
         },
         //Video Modal on-events
         stopVideo:function(){
@@ -67,7 +89,7 @@ var modalOverlay= {
                 if(this.player.isFullscreen()){
                    this.player.exitFullscreen();
                 }
-                this.captions = null;
+                this.resetCaptions();
                 this.$emit('stopvideo',this.id);
             }
         },
@@ -118,10 +140,6 @@ var modalOverlay= {
         <div v-if="id=='modalVid'" class="modal-content">
           <div class="modal-body">
             <video id="videoWindow" ref="videoPlayer" preload="none" class="video-js vjs-big-play-centered web-video" @ended="endOfVideo" @pause="pausedVideo" @play="playingVideo">
-            <!--track kind='captions' src='data/captions/Oceans_eng.vtt' srclang='en' label='English' /-->
-            <template v-for="(caps, index) in captions">
-                <track kind='captions' :src="caps.file" :srclang="caps.lang" :label="caps.label" />
-            </template>
             </video>
           </div>
         </div>
