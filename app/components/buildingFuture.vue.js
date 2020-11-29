@@ -29,8 +29,8 @@ var buildingFuture= {
             this.$emit('selected', this.id);
         },
         //video handles
-        seturl:function(url){
-            this.$emit('seturl', {'video':url, 'active':true});
+        seturl:function(obj){
+            this.$emit('seturl', {'video':obj, 'active':true});
         },
         setNext:function(currIndex){
             let nextIndex=currIndex;

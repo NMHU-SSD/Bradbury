@@ -155,7 +155,14 @@
             [
                 {
                     "link":"data/videos/mov_bbb.mp4",
-                    "type": "video/mp4",
+                    "captions":[
+                        {"file": "data/captions/Oceans_eng.vtt",
+                         "label":"English",
+                         "lang":"en"},
+                        {"file": "data/captions/Oceans_eng.vtt",
+                         "label":"French",
+                         "lang":"fr"}
+                    ],
                     "img":"data/images/WACs%20Los%20Alamos%202.jpg",
                     "alt":"",
                     "videoTitle":"videoTest"

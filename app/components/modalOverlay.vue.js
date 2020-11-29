@@ -30,7 +30,6 @@ var modalOverlay= {
                   }
             },
             videoTimeout: null,
-            source:false,
             isEnded:false
         }
     },
@@ -47,14 +46,6 @@ var modalOverlay= {
     },
     methods:{
         //Timer Modal Functions
-        setPurpose:function(){
-            if(this.exitout){
-                return 'true';
-                this.reset();
-            }else{
-                return 'static';
-            }
-        },
         timer:function(){
             if(this.count > 0){
                 setTimeout(()=> {
@@ -66,11 +57,34 @@ var modalOverlay= {
         reset:function(){
             this.count = Math.floor(this.countdown / 1000);
         },
+        //VideoJS Captions
+        setCaptions:function(capts){
+            for(var item in capts){
+                var lang = {
+                    kind:'captions',
+                    srclang:capts[item].lang,
+                    label:capts[item].label,
+                    src:capts[item].file
+                };
+                this.player.addRemoteTextTrack(lang, false);
+            }
+        },
+        resetCaptions:function(){
+            var tracks = this.player.remoteTextTracks();
+            var num = tracks.length;
+            if(num>0){
+                while(num--){
+                    this.player.removeRemoteTextTrack(tracks[num]);
+                }
+            }
+        },
         //Video Modal Functions
         geturl:function(video){
-            this.player.src({type: video.type, src: video.link});
-            this.source=true;
+            this.player.src({type: 'video/mp4', src: video.link});
             this.player.volume(0.5);
+            if(video.captions){
+                this.setCaptions(video.captions);
+            }
             this.title=video.videoTitle;
             this.currVid=video;
             if(this.nextVid==null && this.prevVid==null){
@@ -86,21 +100,20 @@ var modalOverlay= {
                 this.nextVid=videos.next;
             }
             this.index=videos.index;
-            //console.log("current index is: "+this.index);
         },
         nextClick:function(){
             this.index+=1;
-            //console.log("current index: "+this.index);
             this.$emit('getnext', this.index);
             this.prevVid= this.currVid;
+            this.resetCaptions();
             this.geturl(this.nextVid);
             this.player.play();
         },
         prevClick:function(){
             this.index-=1;
-            //console.log("current index: "+this.index);
             this.$emit('getprev', this.index);
             this.nextVid= this.currVid;
+            this.resetCaptions();
             this.geturl(this.prevVid);
             this.player.play();
         },
@@ -110,13 +123,10 @@ var modalOverlay= {
             this.nextVid=null;
             this.player.pause();
             this.player.muted(false);
-            this.player.src('');
-            this.source=false;
+            this.resetCaptions();
             this.$emit('stopvideo');
-            //console.log("video closed");
         },
         endOfVideo:function(){
-            //console.log('video ended');
             if(this.nextVid!=null){
                 this.isEnded=true;
             }

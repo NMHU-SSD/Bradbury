@@ -8,6 +8,10 @@
 *
 *
 */
+/*Caption Settings: 'none' or 'block'*/
+.vjs-texttrack-settings {
+  display:none;
+}
 
 /**********General Basics***********/
 #titleBar{
