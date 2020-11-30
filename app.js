@@ -87,7 +87,6 @@ var app = new Vue({
                 clearTimeout(this.afk);
                 this.active=false;
             }
-            //this.stillActive=info.active;
             this.$refs.modalVideo.geturl(info);
             $('#modalVideo').modal();
         },

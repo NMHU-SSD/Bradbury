@@ -22,9 +22,8 @@ var buildingFuture= {
             this.scrollpanel(0);
             $("#carousel-"+this.id).carousel(0);
         },
-        seturl:function(url,name){
-            let title = name;
-            this.$emit('seturl', {src:url,title:title});
+        seturl:function(url,name,capts){
+            this.$emit('seturl', {src:url,title:name,capts:capts});
         },
         //carousel controls
         nextSlide:function(){
@@ -119,7 +118,7 @@ var buildingFuture= {
                             <div :class="['col-12 col-sm-6 col-md-4 margins',(mono? 'lgt-green': 'yellow'),(banner? 'banner-text': 'text-side')]">
                                   <div :class="['stay',(mono ? 'lgt-green' : 'yellow')]">
                                     <p v-if="slide.header" :id="'header'+id+index" class="content-header content-side redtext">{{ slide.header }}</p>
-                                    <div v-if="banner && slide.video" class="watch-video" @click="seturl(slide.video, slide.videoTitle)">
+                                    <div v-if="banner && slide.video" class="watch-video" @click="seturl(slide.video, slide.videoTitle, slide.captions)">
                                         <img src="assets/customs/VideoPlaybutton-black.png" class="play-img">
                                         <p class="body-font redtext">WATCH VIDEO</p>
                                     </div>

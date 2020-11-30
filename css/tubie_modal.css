@@ -144,10 +144,11 @@
     padding: .5em;
 }
 .modal-title{
-    font-size: 2em;
+    font-size: 1.5em;
 }
 .modal-body{
     padding: .3em;
+    height: auto;
 }
 .close{
     font-size: 2.5em;

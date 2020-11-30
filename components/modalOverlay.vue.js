@@ -55,23 +55,49 @@ var modalOverlay= {
         reset:function(){
             this.count = Math.floor(this.countdown / 1000);
         },
+        //VideoJS captions
+        setCaptions:function(capts){
+            for(var item in capts){
+                var lang = {
+                    kind:'captions',
+                    srclang:capts[item].lang,
+                    label:capts[item].label,
+                    src:capts[item].file
+                };
+                this.player.addRemoteTextTrack(lang, false);
+            }
+        },
+        resetCaptions:function(){
+            var tracks = this.player.remoteTextTracks();
+            var num = tracks.length;
+            if(num>0){
+                while(num--){
+                    this.player.removeRemoteTextTrack(tracks[num]);
+                }
+            }
+        },
         //Video Modal Functions
         geturl:function(video){
-            //console.log(video);
             this.player.src({type: 'video/mp4', src: video.src});
             this.source=true;
             this.title=video.title;
             this.player.volume(0.5);
+            if(video.capts){
+                this.setCaptions(video.capts);
+            }
         },
         //Video Modal on-events
         stopVideo:function(){
             this.player.pause();
             this.player.muted(false);
             this.source=false;
+            if(this.player.isFullscreen()){
+               this.player.exitFullscreen();
+            }
+            this.resetCaptions();
             this.$emit('stopvideo');
         },
         endOfVideo:function(){
-            //console.log('video ended');
             if(this.nextVid!=null){
                 this.isEnded=true;
             }

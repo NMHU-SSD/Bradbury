@@ -138,7 +138,7 @@ body,#app,main{
         font-size: 2.0em;
     }
     .modal,.video-js{
-        font-size: .6em;
+        font-size: 1em;
     }
     .popover{
         font-size: .6em;
