@@ -123,6 +123,9 @@ var modalOverlay= {
             this.nextVid=null;
             this.player.pause();
             this.player.muted(false);
+            if(this.player.isFullscreen()){
+               this.player.exitFullscreen();
+            }
             this.resetCaptions();
             this.$emit('stopvideo');
         },
@@ -157,7 +160,6 @@ var modalOverlay= {
         },
         inactiveUser:function(){
             if(this.player!=null){
-               this.player.exitFullscreen();
                 this.stopVideo();
                }
             $('#modalVideo').modal('hide');
