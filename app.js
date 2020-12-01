@@ -56,7 +56,6 @@ var app = new Vue({
             this.active=false;
             clearTimeout(this.t);
             clearTimeout(this.afk);
-            console.log("toDefault");
             $('#'+this.open).modal('hide');
         },
         displayModal:function(){

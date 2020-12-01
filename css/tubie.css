@@ -25,10 +25,10 @@
     background: url(../assets/tubie/Tubie-orangebkgd-left.svg) no-repeat;
     background-position: bottom right;
     height: 100%;
-    width: 8em;
+    width: 9em;
     position: absolute;
     bottom: 0;
-    left: -3em;
+    left: -2em;
 }
 .tubie-container-right{
     background: url(../assets/tubie/Tubie-orangebkgd-right.svg) no-repeat;
@@ -143,7 +143,7 @@
 	.bs-popover-top .arrow::before, .bs-popover-auto[x-placement^="top"] .arrow::before,
 	.bs-popover-top .arrow::after,
 	.bs-popover-auto[x-placement^="top"] .arrow::after {
-	  border-width: 7em 1rem 0;
+	  border-width: 8em 1rem 0;
 	}
 	.bs-popover-top .arrow::before, .bs-popover-auto[x-placement^="top"] .arrow::before {
 	  bottom: 0px;

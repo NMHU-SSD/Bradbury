@@ -20,10 +20,6 @@
     margin: auto;
     overflow-y: auto;
 }
-/*.modal-title{
-    font-size: 2em;
-    text-align: center;
-}*/
 .modal-body{
     padding: 0;
     height: auto;
@@ -70,6 +66,7 @@
 .ribbon{
     position: relative;
     height: 70%;
+    font-size: calc(10px + 1vw);
 }
 .rd-topic{
     width: 30%;
@@ -139,7 +136,7 @@
     padding-right: 0;
 }
 .ribbon h2{
-    font-size: 1.1em;
+    font-size: 1.3em;
     text-align: right;
     margin-top: 1%;
     margin-right: 2%;

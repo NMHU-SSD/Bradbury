@@ -30,6 +30,9 @@ body,#app,main{
 
 /****** Mobile Phones *****/
 @media only screen and (max-width:576px){
+    .content-body{
+        font-size: calc(6px + 2.3vw);
+    }
     .size{
         height: 100vh;
     }
@@ -48,8 +51,8 @@ body,#app,main{
         width: 100%;
     }
     .circle{
-        width: 12em;
-        height: 12em;
+        width: 45vw;
+        height: 45vw;
     }
     .left-circle{
         top: 4em;
@@ -57,7 +60,7 @@ body,#app,main{
     }
     .right-circle{
         right:1em;
-        top:1em;
+        top:2em;
     }
     .carousel .right-circle .carousel-indicators,
     .carousel .left-circle .carousel-indicators,
@@ -108,13 +111,14 @@ body,#app,main{
     .popover .popover-header{
         max-height: 8em;
     }
-    .footer-div{
-        height: 3em;
-        width: 100%;
-        left: 5%;
-    }
     .ribbon h2{
         font-size: .9em;
+    }
+    .modal-dialog{
+        width: 90vw;
+    }
+    .main-footer{
+        height: 5em;
     }
     #modalTimer h5, #modalTimer p{
         font-size: 1em;
@@ -126,7 +130,7 @@ body,#app,main{
 
 /********* Tablet/Computer Devices**********/
 @media only screen and (min-width:576px) and (max-width:2159px){
-    body, .carousel{
+    body,#app,main, .carousel{
         height: auto;
         font-size: calc(10px + .7vw);
     }
