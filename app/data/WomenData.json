@@ -225,7 +225,7 @@
     },
     
     "tubie":{
-        "active":"yes",
+        "active":true,
         "lines":[
         {"body":"The term \"computer\" was first used over 400 years ago. A \"computer\" was a person who did calculations by hand."},
         {"body":"Human computers often did a calculation twice to check for errors."},

@@ -35,34 +35,29 @@
 }
 /********Tubie Images ********/
 .tubie-wrapper{
-    width: 50%;
+    width: 100%;
     height: 100%;
 }
 .tubie-img{
     background: url(../assets/Toobie/tubie_info.png) no-repeat;
-    background-position: center bottom;
-    background-size: contain;
-    margin-top: 7%;
-    height: 100%;
-    outline: none;
+    margin-left: 10%;
 }
 .tubie-def{
     background: url(../assets/Toobie/def_tubie.png) no-repeat;
-    background-position: center bottom;
-    background-size: contain;
-    margin-top: 7%;
-    height: 100%;
-    outline: none;
+    margin-left: 10%;
 }
 .tubie-wrench{
     background: url(../assets/Toobie/tubie_help.png) no-repeat;
-    background-position: right bottom;
-    background-size: contain;
-    height: 100%;
-    outline: none;
-    margin-right: -50%;
+    margin-left: 40%;
 }
-
+.tubie-img,.tubie-def,.tubie-wrench{
+    background-position:bottom;
+    background-size: contain;
+    margin-top: 7%;
+    height: 100%;
+    width: 50%;
+    outline: none;
+}
 /*****Tubie Popover******/
 .popover .popover-header {
     font-size: 2em;

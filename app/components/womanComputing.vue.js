@@ -85,7 +85,7 @@ var womanComputing = {
         },
         //tubie dialouge
         perSlideLines:function(slide){
-            if(this.tubie.active == "yes"){
+            if(this.tubie.active){
                 return this.line;
             }else{
                 return slide.tubie;
@@ -109,7 +109,7 @@ var womanComputing = {
     template:
     `
     <div :id="id">
-    <div v-show="splash" class="tubie-splash-right tubie-splash" @focusout="changeLine()">
+    <div v-show="splash & tubie.active" class="tubie-splash-right tubie-splash" @focusout="changeLine()">
         <tubie-overlay :id="'tubie-'+id" spec="def" :display="tutorial" />
     </div>
     <div class="screen" @click="selected()">
