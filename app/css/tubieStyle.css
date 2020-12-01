@@ -65,23 +65,23 @@
 
 /*****Tubie Popover******/
 .popover .popover-header {
-    font-size: 1.8em;
+    font-size: 2em;
     font-family: 'Komika-Hand';
     background-color: rgba(0,0,0,0) !important;
     text-align: center;
     border-bottom: .1em solid #ebebeb;
-    margin: .1em 1em;
+    margin: .2em 1em;
     margin-top: -1em;
 }
 .popover .popover-body{ 
-    font-size: 1.5em;
-    font-family: 'Roboto-Cond';
+    font-size: 1.8em;
     text-align: center;
     padding: 1em .5em;
     margin-top: -.3em;
     max-height: 8em;
     overflow-y: auto;
     color: #212529;
+    border-radius: 0% 0% 4em 4em;
 }
 /****Popover Bubble****/
 .popover {
@@ -93,6 +93,7 @@
     padding: 4em 5em;
     margin: 0 5%;
     white-space: pre-line;
+    font-family: 'Roboto-Cond';
 }
 
 /*****Arrow Placements ***********/

@@ -224,7 +224,7 @@
         max-height: 70%;
     }
     .popover{
-        font-size:calc(8px + .2vw);
+        font-size:calc(6px + .7vw);
         max-width: 50vw !important;
     }
     .modal-header,.video-js{
