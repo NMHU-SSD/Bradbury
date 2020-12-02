@@ -35,17 +35,17 @@
                     "media":"data/images/HumanComputersAtNASA-PublicDomain.jpg",
                     "alt":"Women calculating at desks in NASA 1967",
                     "tubie":{
-                        "header":"Lorem ipsum dolor",
-                        "body":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore"
+                        "header":"",
+                        "body":"In the 1950s, women came to Los Alamos from many parts of the US to work on the MANIAC, one of the few computers in the world at the time."
                     }
                 },
                 {
-                    "body":"when electronic computers were introduced, women were often the first programmers and computer operators.\n\nTheir pioneering application of the new machines to scientific and national security challenges mad possible the rapid technical advances in the years that followed.",
+                    "body":"When electronic computers were introduced, women were often the first programmers and computer operators.\n\nTheir pioneering application of the new machines to scientific and national security challenges mad possible the rapid technical advances in the years that followed.",
                     "media":"data/images/001%20MANIAC%20II%201958.jpg",
                     "alt":"",
                     "tubie":{
-                        "header":"fugiat nulla",
-                        "body":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dolor morbi non arcu risus quis varius quam quisque."
+                        "header":"",
+                        "body":"Los Alamos programmer Mary Tsingou Menzel wrote the first scientific experiment conducted entirely on a computer, called the Fermi-Pasta-Ulam-Tsingou Problem."
                     }
                 },
                 {
@@ -53,8 +53,8 @@
                     "media": "data/images/feature15.jpg",
                     "alt":"",
                     "tubie":{
-                        "header":"culpa qui officia",
-                        "body":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dolor morbi non arcu risus quis varius quam quisque. Tellus in metus vulputate eu scelerisque felis imperdiet."
+                        "header":"",
+                        "body":"Most of the MANIAC computer's operators were women. They knew the computer so well, they could hear a program bug by listening to the sounds the MANIAC made."
                     }
                 }
             ]
@@ -95,7 +95,7 @@
                     "position":"top",
                     "alt":"",
                     "tubie":{
-                        "header":"title data",
+                        "header":"",
                         "body":"The term \"computer\" was first used over 400 years ago. A \"computer\" was a person who did calculations by hand."
                     }
                 },
@@ -105,7 +105,7 @@
                     "position":"50% 10%",
                     "alt":"",
                     "tubie":{
-                        "header":"title data",
+                        "header":"",
                         "body":"Human computers often did a calculation twice to check for errors."
                     }
                 },
@@ -115,7 +115,7 @@
                     "position":"100% 30%",
                     "alt":"",
                     "tubie":{
-                        "header":"title data",
+                        "header":"",
                         "body":"Electronic computers didn't replace human computers right away. Human computers were still better than early electronic computers at some important tasks."
                     }
                 },
@@ -124,8 +124,8 @@
                     "media": "data/images/Ann%20Hayes%20LA%2011216%20MS%20page%2024%20(3).jpg",
                     "alt":"",
                     "tubie":{
-                        "header":"title data",
-                        "body":"body contents"
+                        "header":"",
+                        "body":"Los Alamos employed a group of human computers until 1955."
                     }
                 },
                 {
@@ -133,15 +133,15 @@
                     "media": "data/images/Cindy%20Martin%20and%20Joann%20Campbell.jpg",
                     "alt":"",
                     "tubie":{
-                        "header":"title data",
-                        "body":"body contents"
+                        "header":"",
+                        "body":"Los Alamos wrote the first large program for an electronic computer. It took up one-million punched cards!"
                     }
                 },
                 {
                     "videoSlide":true,
                     "tubie":{
-                        "header":"title data",
-                        "body":"body contents"
+                        "header":"",
+                        "body":"During the Manhattan Project, Naomi Livesay and Eleanor Ewing were the mathematicians who managed the IBM punched-card calculating machines at Los Alamos."
                     }
                 }
             ]
