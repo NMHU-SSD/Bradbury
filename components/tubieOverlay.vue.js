@@ -11,7 +11,6 @@ var tubieOverlay = {
     mounted:function(){
         if(this.display.video != undefined){
             this.vid = true;
-            //console.log(this.id, "footer");
         }
         this.initTubie();
     },

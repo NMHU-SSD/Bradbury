@@ -66,7 +66,6 @@ var infoOverlay= {
             var num = tracks.length;
             if(num>0){
                 while(num--){
-                    //this.player.textTracks()[num].mode = 'disabled';
                     this.player.removeRemoteTextTrack(tracks[num]);
                 }
             }
@@ -207,13 +206,13 @@ var infoOverlay= {
                         <div v-if="spec=='info'" class="ribbon red">
                             <img src="assets/customs/R&D100logo-gold.svg" class="rd-ribbon">
                             <img :src="logo" class="rd-topic">
-                            <div class="tubie-container-right">
+                            <div v-if="slide.tubie" class="tubie-container-right">
                                 <tubie-overlay :id="'tubie-'+id+index" :display="slide.tubie" position="left" spec="con"
                                 @seturl="seturl(slide.tubie,0)"/>
                             </div>
                         </div>
                         <div v-if="spec=='vid'" class="ribbon red row whitetext title-font">
-                            <div class="col-4 tubie-container-left">
+                            <div v-if="slide.tubie" class="col-4 tubie-container-left">
                                 <tubie-overlay :id="'tubie-'+id+index" :display="slide.tubie" position="right" 
                                 @seturl="seturl(slide.tubie,0)"/>
                             </div>
