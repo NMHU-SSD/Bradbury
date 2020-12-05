@@ -29,7 +29,7 @@
 @media only screen and (min-width:2159px){
     #titleBar{
         height: 7.5%;
-        font-size: 9em;
+        font-size: calc(28px + 2.5vw);
     }
     #carouselComputing{
         height: 20%;
@@ -47,9 +47,6 @@
         width: 100%;
         overflow: hidden;
     }
-    .vid-thumb{
-        height: 15em;
-    }
     .side-widget{
         margin-left: 30%;
     }
@@ -65,15 +62,16 @@
     #carousel-carouselComputing, #carouselComputing{
         height: 100vh;
         max-height: 160vw;
-        font-size: 10px;
     }
     #carousel-carouselHistory, #carouselHistory{
         height: 100vh;
         max-height: 160vw;
-        font-size: 10px;
     }
     #timeline{
         height: 100vh;
+    }
+    body,#app, main{
+        overflow-x: hidden;
     }
 }
 @media only screen and (max-width:576px){
@@ -82,7 +80,11 @@
     }
     .carousel-control-prev-icon,
     .carousel-control-next-icon{
-    width: 100%;
+        width: 100%;
+    }
+    .carousel-control-prev,
+    .carousel-control-next{
+        margin-top: 30vh;
     }
     .pic-holder{
         height: 50%;
@@ -115,14 +117,8 @@
     .img-main-large{
         height: 100%;
     }
-    .timer{
-        font-size: 8px;
-    }
-    .modal-header,.video-js{
-        font-size: 8px;
-    }
-    .modal-body{
-        padding: 0.3em;
+    .carousel .carousel-indicators{
+        height: 1.5em;
     }
     .vid-container{
         height: calc(70% - 33vw);
@@ -130,8 +126,18 @@
         padding: 2% 3%;
         padding-right: 8%;
     }
-    .vid-thumb{
-        height: 15vw;
+    .inner-row{
+        height: 20vw;
+    }
+    .timer{
+        font-size: 8px;
+    }
+    .modal,.modal-header,.video-js{
+        font-size: .8em;
+        overflow: hidden;
+    }
+    .modal-body{
+        padding: 0.3em;
     }
     .modal-dialog{
         width: 100%;
@@ -143,7 +149,6 @@
     .tubie-container-right{
         height: 30vw;
         width: 70vw;
-        bottom: 5em;
     }
     .tubie-splash-right{
         width: 70%;
@@ -151,7 +156,7 @@
         right: -20%;
     }
     .popover {
-        font-size: calc(6px + 1vw);
+        font-size: calc(8px + .2vw);
         max-width: 90vw !important;
     }
     .popover .popover-body{
@@ -193,19 +198,18 @@
         max-width: 400px;
     }
     .side-widget{
-        height: calc(100% - 9em);
         margin-left: 30%;
+    }
+    .content-pad{
+        padding-bottom: 14vw;
     }
     .fix-width{
         width: 80%;
         margin-left: 20%;
         height: calc(100% - 6em);
     }
-    .vid-container{
-        height: 100%;
-    }
-    .vid-thumb{
-        height: 10vh;
+    .vid-col{
+        height: 70%;
     }
     .timeline-banner{
         height: 15%;
@@ -223,8 +227,11 @@
         font-size:calc(6px + .7vw);
         max-width: 50vw !important;
     }
-    .modal-header,.video-js{
-        font-size: 1.1em;
+    .modal{
+        font-size: 1em;
+    }
+    .video-js{
+        font-size: 1em;
     }
 }
 

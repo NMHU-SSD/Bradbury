@@ -130,7 +130,6 @@ var buildingFuture= {
             var rand = Math.floor(Math.random()*this.tubie.lines.length);
             this.line = this.tubie.lines[rand];
         },
-        //tubie dialogue
         perSlideLines:function(slide){
             if(this.tubie.active){
                 return this.line;
@@ -161,7 +160,7 @@ var buildingFuture= {
     template:
     `
     <div :id="id">
-    <div v-show="splash & tubie.active" class="tubie-splash-right tubie-splash" @focusout="changeLine()">
+    <div v-show="splash & tubie.act_tutorial" class="tubie-splash-right tubie-splash" @focusout="changeLine()">
         <tubie-overlay :id="'tubie-'+id" :display=tutorial />
     </div>
     <div class="screen" @click="selected()">
@@ -201,7 +200,7 @@ var buildingFuture= {
                                             </div>
                                         </div>
 
-                                        <div class="col-12 col-sm-4 pl-md-5 pr-md-5 order-1 order-sm-2">
+                                        <div class="col-12 col-sm-5 pl-lg-5 pr-lg-5 order-1 order-sm-2">
                                             <img class="words-header" :src="videoData.header">
                                             <p class="content-body pl-0 mr-0">{{ videoData.body }}</p>
                                         </div>
@@ -210,12 +209,12 @@ var buildingFuture= {
                             </div>
                         </div>
                 <!-- End of slides --->
-                        <div class="d-none d-sm-block section-header dark">
-                                <img :src="header">
-                            </div>
-                            <div class="tubie-container-right" @focusout="changeLine()">
-                                  <tubie-overlay :id="'tubie-'+id+index" :display="perSlideLines(slide)"/>
-                            </div>
+                        <div :class="['d-none d-sm-block section-header', (slide.videoSlide ?'':'dark')]">
+                            <img :src="header">
+                        </div>
+                        <div v-if="slide.tubie" class="tubie-container-right" @focusout="changeLine()">
+                              <tubie-overlay :id="'tubie-'+id+index" :display="perSlideLines(slide)"/>
+                        </div>
                         <div class="banner yellow"></div>
                     </div>          
             </template>

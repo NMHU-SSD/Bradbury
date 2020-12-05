@@ -20,10 +20,11 @@
     padding: .5em;
 }
 .modal-title{
-    font-size: 1.5em;
+    font-size: 1.2em;
 }
 .modal-body{
     padding: .3em;
+    height: auto;
 }
 .close{
     font-size: 2.5em;

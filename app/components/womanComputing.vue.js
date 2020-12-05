@@ -83,14 +83,14 @@ var womanComputing = {
             var rand = Math.floor(Math.random()*this.tubie.lines.length);
             this.line = this.tubie.lines[rand];
         },
-        //tubie dialouge
         perSlideLines:function(slide){
             if(this.tubie.active){
                 return this.line;
             }else{
                 return slide.tubie;
             }
-        }
+        },
+        
     },
     watch:{
         slides:function(){
@@ -109,7 +109,7 @@ var womanComputing = {
     template:
     `
     <div :id="id">
-    <div v-show="splash & tubie.active" class="tubie-splash-right tubie-splash" @focusout="changeLine()">
+    <div v-show="splash & tubie.act_tutorial" class="tubie-splash-right tubie-splash" @focusout="changeLine()">
         <tubie-overlay :id="'tubie-'+id" spec="def" :display="tutorial" />
     </div>
     <div class="screen" @click="selected()">
@@ -136,7 +136,7 @@ var womanComputing = {
                                 <img :src="header">
                             </div>
                         </div>
-                        <div class="tubie-container-right" @focusout="changeLine()">
+                        <div v-if="slide.tubie" class="tubie-container-right" @focusout="changeLine()">
                               <tubie-overlay :id="'tubie-'+id+index" :display="perSlideLines(slide)"/>
                         </div> 
                         <div class="banner yellow"></div>         

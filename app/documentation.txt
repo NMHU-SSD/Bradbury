@@ -1,0 +1,59 @@
+JSON documentation - Women of Los Alamos Computing:
+
+General items
+"slideShow": List of images in slideshow
+    "img": Location of image file (.jpg,.png,.svg)
+    "position": Where to focus and recenter the image (left or 10% or 20px)
+
+"captions": List of language captions
+    "file": Location of caption file - VTT format (data/captions/{name}.vtt)
+    "label": Label for caption option
+    "lang": Language of captions
+    
+"tubie": Tubie data holder - (Remove this holder if Tubie is not needed)
+    "body": Tubie's dialogue
+    "link": Video file to load - MP4 format (data/videos/{name}.mp4)
+    "videoTitle": Video title
+
+Timers
+"timeData": Set duration of various timers
+    "pageTitle": The panel's title
+"timeout": Timer for inactivity message (milliseconds)
+"quitout": Timer countdown inside message (milliseconds)
+"message": The message if the user becomes inactive
+"videotimer": Timer for closing out video after it ended or paused (milliseconds)
+
+Women in Computing & Building the Future
+"womenComputingData": Data holder
+"header": The logo image for the panel (assets/TitleLogo/{logo}.svg)
+"slidespeed": Timer for slideshow component (milliseconds)
+"slides": List of slides to display
+    "body": Text inside the slide
+    "media": Image to feature
+    "alt": Description of image for visually impaired
+
+Building the Future
+"slides"->"videoSlide": Indicate data switch to "inTheirWordsData"
+
+In Their Words
+"inTheirWordsData": Data holder
+"header": The logo image for panel (assets/TitleLogo/{logo}.svg)
+"body": Text inside the panel
+"videos": List of videos to present
+    "link": Location of video file - MP4 format (data/videos/{name}.mp4)
+    "img": Thumbnail placeholder for video
+    "videoTitle": Title of the video
+    
+TimeLine
+"timelineData": Data holder
+"url": Website to present - embedded link avoid site being blocked
+"title": Main header title
+"subtitle": Subtitle - hidden in mobile view
+
+Tubie Dialogue Cycle
+"tubie": Data holder
+"active": On/Off switch for cycling lines function (true/false)
+"lines": List of available lines to randomly cycle
+"act_tutorial": On/Off switch for tutorial-splash Tubies (true/false)
+"tutorial": Hard-coded tutorial dialogue on splash screen
+    

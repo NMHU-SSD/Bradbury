@@ -112,7 +112,6 @@
                 {
                     "body":"The 1970's brought many changes to Los Alamos. The Cray-1 revolutionized supercomputer performance and computer networking made the lab a smaller (and faster) place.\n\nWomen stepped up to a growing number of roles in computing - from networking technicians to group leaders - to make sure Los Alamos continued to set the pace in supercomputer technology and scientific research.",
                     "media": "data/images/001%20Cray%201%201977.jpg",
-                    "position":"100% 30%",
                     "alt":"",
                     "tubie":{
                         "header":"",
@@ -123,6 +122,7 @@
                     "body":"Stockpile Stewardship gave new importance to supercomputer simulations at Los Alamos in the 1990s. Women played key roles in researching and evaluating new technologies (such as cluster computing) that would guide Los Alamos into the twenty-first century of supercomputing, and without the need for live weapons testing.",
                     "media": "data/images/Ann%20Hayes%20LA%2011216%20MS%20page%2024%20(3).jpg",
                     "alt":"",
+                    "position": "20% 0%",
                     "tubie":{
                         "header":"",
                         "body":"Los Alamos employed a group of human computers until 1955."
@@ -219,13 +219,12 @@
         "subtitle":"Legacy of Women in \n Los Alamos Computing",
         "tubie":{
             "link":"data/videos/mov_bbb.mp4",
-            "type": "video/mp4",
             "videoTitle":"Tubie Tutorial"
         }
     },
     
     "tubie":{
-        "active":true,
+        "active":false,
         "lines":[
         {"body":"The term \"computer\" was first used over 400 years ago. A \"computer\" was a person who did calculations by hand."},
         {"body":"Human computers often did a calculation twice to check for errors."},
@@ -243,6 +242,7 @@
         {"body":"The only patents issued for the Cray-1 computer were for its cooling system."},
         {"body":"\"Debugging\" originally referred to removing insects from mechanical equipment. It was later applied to removing errors from computer software."}
         ],
+        "act_tutorial":true,
         "tutorial":[
             {"body":"These panels works like a smartphone. Tap a section on the panel to see more."},
             {"body":"The timeline also works by touch. Tap the stories below to see more."}

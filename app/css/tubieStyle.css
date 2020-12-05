@@ -8,7 +8,7 @@
     height: 11vw;
     width: 25vw;
     position: absolute;
-    bottom: 6em;
+    bottom: 3em;
     right: -5em;
 }
 .tubie-splash-right{
@@ -60,16 +60,17 @@
 }
 /*****Tubie Popover******/
 .popover .popover-header {
-    font-size: 2em;
+    font-size: 1.5em;
     font-family: 'Komika-Hand';
     background-color: rgba(0,0,0,0) !important;
     text-align: center;
     border-bottom: .1em solid #ebebeb;
     margin: .2em 1em;
     margin-top: -1em;
+    line-height: 1.5;
 }
 .popover .popover-body{ 
-    font-size: 1.8em;
+    font-size: 1.7em;
     text-align: center;
     padding: 1em .5em;
     margin-top: -.3em;
@@ -88,7 +89,7 @@
     padding: 4em 5em;
     margin: 0 5%;
     white-space: pre-line;
-    font-family: 'Roboto-Cond';
+    font-family: 'Roboto-Cond', sans-serif;
 }
 
 /*****Arrow Placements ***********/
@@ -114,7 +115,7 @@
 	.bs-popover-top .arrow::before, .bs-popover-auto[x-placement^="top"] .arrow::before,
 	.bs-popover-top .arrow::after,
 	.bs-popover-auto[x-placement^="top"] .arrow::after {
-	  border-width: 4.5em 0.5rem 0;
+	  border-width: 7.5em 0.5rem 0;
 	}
 	.bs-popover-top .arrow::before, .bs-popover-auto[x-placement^="top"] .arrow::before {
 	  bottom: 0px;
