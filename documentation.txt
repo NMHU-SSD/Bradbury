@@ -1,0 +1,41 @@
+JSON documentation:
+
+General items
+"img" or "src": Location of image file (.jpg,.png,.svg)
+"video": Location of video file - MP4 format (data/videos/{name}.mp4)
+
+"captions": List of language captions
+    "file": Location of caption file - VTT format (data/captions/{name}.vtt)
+    "label": Label for caption option
+    "lang": Language of captions
+    
+"tubie": Tubie data holder - (Remove this holder if Tubie is not needed)
+    "body": Tubie's dialogue
+    "video": Optional video footer - ("header" unavailable in Transformative)
+
+Timers
+"timeData": Set duration of various timers
+"slideshow": Timer for slideshow component (milliseconds)
+"timeout": Timer for inactivity message (milliseconds)
+"quitout": Timer countdown inside message (milliseconds)
+"message": The message if the user becomes inactive
+"videotimer": Timer for closing out video after it ended or paused (milliseconds)
+
+Top Title Panel
+"title": Data holder
+"sustainable": "Sustainable Supercomputig" data
+"drive": "Supercomputers Drive Sustainabilty" data
+    "header": Title header
+    "memo": Text inside the textbox
+    "banner": Text inside the banner
+
+Information panels ("drive" and "sustainable")
+"header": Title at top of image box
+"slides": List of slides in TOP carousel
+    "header": The static red text in text panel
+    "title": Title in text panel
+    "body": Text in text panel
+    "featureMedia": Data holder for image panel
+        "title": Optional title for photo
+        "caption": Optional caption for photo
+"didYouKnow": List of slides in BOTTOM carousel

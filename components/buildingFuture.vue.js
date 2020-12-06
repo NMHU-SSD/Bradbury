@@ -18,6 +18,7 @@ var buildingFuture= {
         reset:function(){
             this.first=true;
             this.end=false;
+            this.count = 0;
             this.toTop();
             this.scrollpanel(0);
             $("#carousel-"+this.id).carousel(0);
@@ -89,6 +90,14 @@ var buildingFuture= {
                 let scrollDiv = document.getElementById(this.lastScroll);
                 scrollDiv.scrollTop=0;
             }
+        },
+        //image position
+        imgPosition:function(pos){
+            if(pos != undefined){
+                return "object-position: "+pos;
+            }else{
+                return "";
+            }
         }
     },
     template:
@@ -103,7 +112,7 @@ var buildingFuture= {
                     <!--- Base Layout Appearence --->
                             <div v-if="slide.featuredMedia" class="col-12 col-sm-6 col-md-8 img-main green whitetext">
                                 <img :src="slide.featuredMedia.src" :class="[banner ? 'fill-img' : 'cropped-img']" 
-                                    :style="slide.featuredMedia.position" alt="slide.alt">
+                                    :style="imgPosition(slide.featuredMedia.position)" alt="slide.alt">
                                 <div class="shadow-box"/>
                                 <h3 class="top-center shadow-text">{{ header }}</h3>
                                 <h2 v-if=!banner class="top-left title-font shadow-text-big">Did You Know...</h2>

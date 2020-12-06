@@ -11,12 +11,12 @@
     },
     
     "title":{
-        "drive":{
+        "sustainable":{
             "header":"Sustainable Supercomputing",
             "memo":"Supercomputers have large appetites for electricity and cooling, but smarter design and support strategies are making even the largest of these simulation powerhouses more sustainable.  Read more about how LANL and the supercomputing community are responding to the need for greater sustainability, while still pushing the performance envelope.",
             "banner":"See how supercomputers drive a sustainable future"
         },
-        "sustainable":{
+        "drive":{
             "header":"Supercomputers Drive Sustainablilty",
             "memo":"Supercomputers play an invaluable role in driving sustainability through research and simulations that provide us with solutions to build a sustainable future.  Learn more about how supercomputers are finding solutions to the world's most pressing challenges.",
             "banner":"Sustainable supercomputing"
@@ -49,7 +49,7 @@
                 "body": "They created an experimental, sustainable cluster computer called \"Green Destiny\" using energy-efficient processors and a fault-tolerant design that eliminated the need for the costly cooling systems found on other supercomputers.\n\nDespite being as powerful as a high-end supercomputer of just a few years before, Green Destiny used only as much electricity as two hairdryers.\n\nGreen Destiny was a successful proof-of-concept for energy-saving features that found their way into mainstream supercomputers, winning the coveted R&D 100 Award for innovation in science and technology in the process.",
 				"featuredMedia": { 
 					"src": "data/sustain/greendestiny-2.jpg",
-					"caption": "Los Alamos National Laboratory's Green Destiny sustainable cluster computer.",
+                    "caption": "Los Alamos National Laboratory's Green Destiny sustainable cluster computer.",
                     "title":"Inventing sustainable supercomputing"
 				    },
                 "tubie":{
