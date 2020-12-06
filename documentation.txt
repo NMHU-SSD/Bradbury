@@ -15,7 +15,6 @@ General items
 
 Timers
 "timeData": Set duration of various timers
-"slideshow": Timer for slideshow component (milliseconds)
 "timeout": Timer for inactivity message (milliseconds)
 "quitout": Timer countdown inside message (milliseconds)
 "message": The message if the user becomes inactive
