@@ -68,7 +68,6 @@ var modalOverlay= {
             var num = tracks.length;
             if(num>0){
                 while(num--){
-                    //this.player.textTracks()[num].mode = 'disabled';
                     this.player.removeRemoteTextTrack(tracks[num]);
                 }
             }
