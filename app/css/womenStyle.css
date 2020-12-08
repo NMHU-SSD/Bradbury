@@ -210,6 +210,8 @@
 /******* Background Image *****/
 .img-main{
     overflow: hidden;
+    height: 100%;
+    width: 100%;
 }
 .img-main img{
     object-fit: cover;

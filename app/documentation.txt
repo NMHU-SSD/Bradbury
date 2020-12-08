@@ -56,4 +56,21 @@ Tubie Dialogue Cycle
 "lines": List of available lines to randomly cycle
 "act_tutorial": On/Off switch for tutorial-splash Tubies (true/false)
 "tutorial": Hard-coded tutorial dialogue on splash screen
-    
+
+
+--------------------
+CSS Captions Settings - Video display captions
+
+.video-js .vjs-text-track-display > div > div > div
+The CSS control options for the text shown on video screen.
+- background
+- color
+- opacity
+- font-size
+- line-height
+- padding
+
+.vjs-texttrack-settings
+The CSS block that controls the visiability of 'caption setting' option
+in the captions list.
+- display ('none' or 'block')
