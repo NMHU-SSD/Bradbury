@@ -39,3 +39,21 @@ Information panels ("drive" and "sustainable")
         "title": Optional title for photo
         "caption": Optional caption for photo
 "didYouKnow": List of slides in BOTTOM carousel
+
+
+--------------------
+CSS Captions Settings - (heights.css file)
+
+.video-js .vjs-text-track-display > div > div > div
+The CSS control options for the text shown on video screen.
+- background
+- color
+- opacity
+- font-size
+- line-height
+- padding
+
+.vjs-texttrack-settings
+The CSS block that controls the visiability of 'caption setting' option
+in the captions list.
+- display ('none' or 'block')
