@@ -41,7 +41,7 @@ body,#app,main{
 
 /********** Mobile Phones **********/
 @media only screen and (max-width:576px){
-    .slideshow-container{
+    .slideshow-container, #modalTimer{
         font-size: calc(10px + 1.2vw);
     }
     .carousel-inner, .slideshow-container{
@@ -107,23 +107,28 @@ body,#app,main{
     .scrolling-text{
         padding-bottom: 7em;
     }
-    .popover{
-        font-size: calc(8px + .2vw);
-        max-width: 90vw !important;
-        min-width: 200px;
-    }
     #modalTimer h5, #modalTimer p{
         font-size: 1em;
     }
     .modal-dialog{
         width: 100vw;
     }
-    .modal,.video-js{
+    .video-js{
         font-size: .8em;
     }
+    .popover{
+        font-size: calc(8px + .2vw);
+        max-width: 90vw !important;
+        min-width: 200px;
+    }
+    .bs-popover-top .arrow::before, .bs-popover-auto[x-placement^="top"] .arrow::before,
+	.bs-popover-top .arrow::after,
+	.bs-popover-auto[x-placement^="top"] .arrow::after {
+	  border-width: 6em .5rem 0;
+	}
 }
 
-/********** Computer **********/
+/********** Tablet/Computer **********/
 @media only screen and (min-width:576px) and (max-width:2159px){
     body,#app,main{
         height: auto;
@@ -158,8 +163,5 @@ body,#app,main{
     }
     .popover .popover-body{
         max-height: 7em;
-    }
-    .modal,.video-js{
-        font-size: 1em;
     }
 }
