@@ -13,8 +13,9 @@ General items
     "body": Tubie's dialogue
     "video": Optional video footer - ("header" unavailable in Transformative)
 
-Timers
-"timeData": Set duration of various timers
+Timers & Title
+"timeData": Data holder
+"pageTitle": Set the title of the page
 "timeout": Timer for inactivity message (milliseconds)
 "quitout": Timer countdown inside message (milliseconds)
 "message": The message if the user becomes inactive

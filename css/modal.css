@@ -44,7 +44,7 @@
 /********* Video JS ***********/
 .video-js {
     margin: 0 auto !important;
-    font-size: 1.5em;
+    font-size: 1em;
 }
 /****** Modal carousel *****/
 .main-vid{
@@ -128,7 +128,7 @@
     margin-top: -8em;
 }
 .vid-head{
-    margin-left: 4em;
+    margin-left: -.5em;
     max-height: 100%;
     padding-right: 0;
 }

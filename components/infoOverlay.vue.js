@@ -211,13 +211,13 @@ var infoOverlay= {
                                 @seturl="seturl(slide.tubie,0)"/>
                             </div>
                         </div>
-                        <div v-if="spec=='vid'" class="ribbon red row whitetext title-font">
-                            <div v-if="slide.tubie" class="col-4 tubie-container-left">
+                        <div v-if="spec=='vid'" class="ribbon red row no-gutters whitetext title-font">
+                            <div v-if="slide.tubie" class="col-3 col-sm-2 align-self-end tubie-container-left">
                                 <tubie-overlay :id="'tubie-'+id+index" :display="slide.tubie" position="right" 
                                 @seturl="seturl(slide.tubie,0)"/>
                             </div>
-                            <img v-if="id=='modalVideo1'" src="assets/customs/where_weve_been.svg" class="vid-head col-3 offset-2 align-self-center">
-                            <img v-if="id=='modalVideo2'" src="assets/customs/where_were_headed.svg" class="vid-head col-3 offset-2 align-self-center">
+                            <img v-if="id=='modalVideo1'" src="assets/customs/where_weve_been.svg" class="vid-head col-2 align-self-center">
+                            <img v-if="id=='modalVideo2'" src="assets/customs/where_were_headed.svg" class="vid-head col-2 align-self-center">
                             <h2 class="col ml-auto">{{ slide.title }}</h2>
                         </div>
                         <div class="banner green"></div>

@@ -1,5 +1,6 @@
 {
     "timeData":{
+        "pageTitle":"High-Performance \nComputing Technologies",
         "timeout":30000,
         "quitout":10000,
         "message":{
@@ -8,6 +9,7 @@
         },
         "videotimer":10000
     },
+    
     "pageTubie":{
         "tubie_been":{
             "video":"data/videos/oceans.mp4",
