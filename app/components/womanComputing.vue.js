@@ -18,9 +18,9 @@ var womanComputing = {
         //interaction
         reset:function(){
             this.splash=true;
-            this.count=0;
             this.first=true;
             this.end=false;
+            this.count=0;
             this.toTop();
         },
         seturl:function(url){
