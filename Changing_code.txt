@@ -1,0 +1,73 @@
+Code Documentation - for Tubie
+This document contains reference code for implimenting different
+Tubie functionality options. Code was not implimented to limit
+unnecessary storage usage.
+
+Listed:
+Tubie code for Header/Body or Body/Footer speech bubble.
+Tubie code for assigned dialogue or random dialogue
+
+
+------------------ Tubie Pop-Up Structure 
+-------------------(tubieOverlay.vue.js)
+
+Tubie Pop-up (Body & Header)
+    initTubie:function(){
+            $('[data-toggle="popover"]').popover();
+        }
+    
+    
+Tubie Pop-up (Body & Footer)
+    initTubie:function(){
+            //inject footer html
+            var foot = ""
+            if(this.vid){
+                foot = "<div class='footer-div'>"+
+            "<img src='assets/customs/VideoPlaybutton-black.png' class='play-img'>"+
+            "<p class='body-font redtext'>WATCH VIDEO</p></div>";
+            }
+            
+            $('#pop-'+this.id).popover({
+                html:true,
+                content: foot
+            });
+            
+            //add on click listener
+            $(document).on("click", ".popover #"+this.id, this.seturl);
+        }
+    (Add)videoButton:function(){
+            //id play button
+            $('.play-img').attr('id',this.id);
+        }
+
+
+
+----------- Tubie Dialogue
+ -----------(buildingFuture.vue.js & womanComputing.vue.js)
+ 
+Assigned Dialogue
+    HTML
+    <tubie-overlay ... :display="slide.tubie" />
+   
+   
+Cycling Random Dialogue
+    props:['tubie'],
+    data:line:null,
+    ...
+    changeLine:function(){ (on:focusout)
+            var rand = Math.floor(Math.random()*this.tubie.lines.length);
+            this.line = this.tubie.lines[rand];
+        },
+    perSlideLines:function(slide){
+            if(this.tubie.active){
+                return this.line;
+            }else{
+                return slide.tubie;
+            }
+        }
+    HTML
+    <div ... class="tubie-container-right" @focusout="changeLine()">
+        <tubie-overlay ... :display="perSlideLines(slide)" />
+    </div>
+    
+    

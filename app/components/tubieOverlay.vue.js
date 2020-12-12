@@ -26,7 +26,6 @@ var tubieOverlay = {
             $(tubieId).css({'margin-top':'-10%', 'transition':this.animationTime+'ms'});
             setTimeout(function(){
                 $(tubieId).css('margin-top', '0');}, this.animationTime);
-            //console.log(this.display);
             //data-trigger="focus"
         }
     },
