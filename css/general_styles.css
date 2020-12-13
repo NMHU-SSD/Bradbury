@@ -90,6 +90,10 @@ body{
 p,h1,h2,h3{
     white-space: pre-line;
 }
+.fixedPos{
+    position: fixed;
+    transition: .5s;
+}
 /********  Colors *********/
 .green{
     background-color: #4a6c6a;

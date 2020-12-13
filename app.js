@@ -29,6 +29,9 @@ var app = new Vue({
         this.$refs.style2.scrollpanel(0);
         this.$refs.dyk2.scrollpanel(0);
     },
+    destroyed: function(){
+        window.removeEventListener('scroll',this.scrollHandle);
+    },
     methods:{
         GetData: function(){
             fetch("data/Data.json",{
@@ -52,6 +55,7 @@ var app = new Vue({
                 app.resetTimer();
                 //console.log("reset timer", app.active);
             });
+            window.addEventListener('scroll',this.scrollHandle);
         },
         resetTimer:function(){
             clearTimeout(this.t);
@@ -81,6 +85,7 @@ var app = new Vue({
             this.$refs.timeModal.timer();
             document.onmousedown = this.resetTimer;
         },
+        //video modal popups
         displayVideo:function(info){
             if(this.active){
                 clearTimeout(this.t);
@@ -90,15 +95,11 @@ var app = new Vue({
             this.$refs.modalVideo.geturl(info);
             $('#modalVideo').modal();
         },
-        //getter and setter videos
-        passVids:function(videos){
-            this.$refs[this.modalVideo].setVideos(videos);
-        },
-        //video modal popups
         videoModalClose:function(){
             this.active=true;
             this.resetTimer();
         },
+        //Data Switch
         switchData:function(){
             if(this.showData){
                 this.$refs.style1.reset();
@@ -116,6 +117,18 @@ var app = new Vue({
         },
         callBuddy:function(count, buddy){
             this.$refs[buddy].jumpSlide(count);
+        },
+        //Scroll Event
+        scrollHandle:function(el){
+            // scroll top using ems
+            var toVH = window.innerHeight/3 *2;
+            var ele = $('.carousel-control-prev, .carousel-control-next');
+            if(window.top.scrollY > toVH){
+                ele.addClass("fixedPos");
+            }else{
+                ele.removeClass("fixedPos");
+            }
+            //console.log(window.top.scrollY);
         }
     }
 })

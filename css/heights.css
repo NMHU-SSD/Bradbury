@@ -145,6 +145,10 @@ body,#app,main{
     .center{
         left: 35%;
     }
+    .carousel-control-prev,
+    .carousel-control-next{
+        height: 9em;
+    }
     .carousel .carousel-indicators{
         height: 1.5em;
     }

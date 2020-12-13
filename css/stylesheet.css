@@ -65,6 +65,8 @@
     height: 30%;
     width: 5%;
     margin-top: 15%;
+    transition: .5s;
+    z-index: 10;
 }
 .carousel-control-prev-icon{
     background: url(../assets/customs/Arrow-left.svg)no-repeat;
@@ -77,6 +79,7 @@
     height: 2em;
 }
 .carousel .carousel-indicators li{
+    display: inline-block;
     height: 2em;
     width: 2em;
     border-radius: 50%;
