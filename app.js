@@ -21,6 +21,9 @@ var app = new Vue({
     mounted: function(){
         this.GetData();
     },
+    updated: function(){
+        this.listener();
+    },
     methods:{
         GetData: function(){
             fetch("data/data.json",{

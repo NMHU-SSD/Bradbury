@@ -28,7 +28,7 @@ body,#app,main{
     width: 100%;
 }
 /******** 4K Monitor **********/
-@media only screen and (min-width:2159px){
+@media only screen and (min-width:1400px){
     body,#app,main{
         height: 3840px;
         overflow: hidden;
@@ -148,7 +148,7 @@ body,#app,main{
 }
 
 /********* Tablet/Computer Devices**********/
-@media only screen and (min-width:576px) and (max-width:2159px){
+@media only screen and (min-width:576px) and (max-width:1400px){
     body,#app,main, .carousel{
         height: auto;
         font-size: calc(10px + .7vw);
@@ -157,7 +157,7 @@ body,#app,main{
         height: 90vw;
     }
 }
-@media only screen and (min-width:576px) and (max-width:2159px){
+@media only screen and (min-width:576px) and (max-width:1400px){
     .title-text-box{
         width: 90%;
     }
