@@ -3,7 +3,7 @@
   <head>
     <!-- Required meta tags -->
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">      
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no">      
         <!--Bootstrap---> 
         <link href="libraries/bootstrap-4.5.2-dist/css/bootstrap.min.css" rel="stylesheet">
         <!---videoJS--->
@@ -28,15 +28,21 @@
             <slides-component id="slideshow" ref="top" :images="title.slideshow" :page1="title.sustainable" :page2="title.drive"
                                  :tubie="title.tubie" :speed=timeData.slideshow @switchout="switchData"></slides-component>
             
+            <template  v-if="sustainable.header">
             <building-future v-show=showData id="index" ref="style1" :slides="sustainable.slides" :header="sustainable.header" 
                              banner=true buddy="dyk" @seturl="displayVideo($event)" @change="callBuddy($event,dyk.id)"></building-future>
-            <building-future v-show=showData id="dyk" ref="dyk" :slides="sustainable.didYouKnow" :header="sustainable.header" 
+            <building-future v-show=showData id="dyk" ref="dyk" :slides="sustainable.didYouKnow"  :header="sustainable.header" 
                              @seturl="displayVideo($event)"></building-future>
+            </template>
+            
             <!--- Second Data set---->
-            <building-future v-show=!showData id="index2" ref="style2" :slides="drive.slides" :header="drive.header" 
+            <template  v-if="drive.header">
+            <building-future v-show=!showData id="index2" ref="style2" :slides="drive.slides"  :header="drive.header" 
                              banner=true buddy="dyk2" mono=true @seturl="displayVideo($event)" @change="callBuddy($event,dyk2.id)"></building-future>
-            <building-future v-show=!showData id="dyk2" ref="dyk2" :slides="drive.didYouKnow" :header="drive.header" 
+            
+            <building-future v-show=!showData id="dyk2" ref="dyk2" :slides="drive.didYouKnow"   :header="drive.header" 
                              mono=true @seturl="displayVideo($event)"></building-future>
+            </template>
 
         </main>
       </div>
