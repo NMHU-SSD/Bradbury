@@ -31,7 +31,9 @@ var app = new Vue({
         this.GetData();
         this.resetTimer();
     },
-    
+    updated: function(){
+        this.listeners();
+    },
     methods:{
         GetData: function(){
             fetch("data/WomenData.json",{
@@ -51,6 +53,14 @@ var app = new Vue({
             });
         },
         //Timer modal functions
+        listeners:function(){
+			//prevent multitouch zoom in
+			document.addEventListener('touchmove', e => {
+			  if (e.touches.length > 1) {  
+			     e.preventDefault();
+			  }
+			}, {passive: false})
+        },
         resetTimer:function(){
             clearTimeout(this.t);
             clearTimeout(this.afk);
