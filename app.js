@@ -22,7 +22,7 @@ var app = new Vue({
         this.GetData();
     },
     updated: function(){
-        this.listener();
+        this.listeners();
     },
     methods:{
         GetData: function(){
@@ -41,6 +41,14 @@ var app = new Vue({
             });
         },
          //Timer modal functions
+        listeners:function(){
+			//prevent multitouch zoom in
+			document.addEventListener('touchmove', e => {
+			  if (e.touches.length > 1) {  
+			     e.preventDefault();
+			  }
+			}, {passive: false})
+        },
         resetTimer:function(){
             clearTimeout(this.t);
             clearTimeout(this.afk);
