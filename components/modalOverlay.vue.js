@@ -32,10 +32,14 @@ var modalOverlay= {
         }
     },
     mounted(){
-        this.player= videojs(this.$refs.videoPlayer, this.setup, function onPlayerReady() {
+        window.addEventListener('DOMContentLoaded', (event) => {
+            this.player= videojs(this.$refs.videoPlayer, this.setup, function onPlayerReady() {
             //console.log('onPlayerReady', this);
         });
         this.videoOverlay();
+    
+        });
+        
     },
     beforeDestroy(){
         if(this.player){
@@ -161,6 +165,7 @@ var modalOverlay= {
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
+
           <div class="modal-body">
             <video id="videoWindow" ref="videoPlayer" preload="none" class="video-js vjs-big-play-centered web-video" @ended="endOfVideo" @pause="pausedVideo" @play="playingVideo">
             </video>

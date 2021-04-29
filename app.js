@@ -50,6 +50,13 @@ var app = new Vue({
         },
          //Timer modal functions
         listeners:function(){
+			//prevent multitouch zoom in
+			document.addEventListener('touchmove', e => {
+			  if (e.touches.length > 1) {  
+			     e.preventDefault();
+			  }
+			}, {passive: false})
+			
             $(".interest").on('click', function(){
                 app.active= true;
                 app.resetTimer();
