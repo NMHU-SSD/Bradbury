@@ -129,16 +129,16 @@ body,#app,main{
 }
 
 /********** Tablet/Computer **********/
-@media only screen and (min-width:576px) and (max-width:2150px){
+@media only screen and (min-width:576px) and (max-width:2160px){
     body,#app,main{
         height: auto;
         font-size: calc(10px + .7vw);
     }
     .carousel-inner, .slideshow-container{
-        height: 60vw;
+        height: 56vw;
     }
 }
-@media only screen and (min-width:576px) and (max-width:2150px){
+@media only screen and (min-width:576px) and (max-width:2160px){
     .slideshow-container h1{
         font-size: 3.5em;
     }
@@ -168,4 +168,5 @@ body,#app,main{
     .popover .popover-body{
         max-height: 7em;
     }
+    
 }
