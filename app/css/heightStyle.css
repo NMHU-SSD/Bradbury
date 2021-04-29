@@ -180,29 +180,30 @@
 }
 
 /********* Tablet/Computer Devices**********/
-@media only screen and (min-width:576px) and (max-width:2159px){
+@media only screen and (min-width:576px) and (max-width:2160px){
     #titleBar{
-        height: 10vw;
+        height: 7.5vh;
         padding: 0.2em;
         font-size: 4em;
         max-height: 1000px;
     }
     #carousel-carouselComputing, #carouselComputing{
-        height: 100vh;
+        height: 20vh;
         max-height: 600px;
     }
     #carousel-carouselHistory, #carouselHistory, .fix-width{
-        height: 100vh;
+        height: 20vh;
         max-height: 600px;
     }
     #timeline{
-        height: 120vh;
+        height: 50vh;
     }
     body,#app,main{
+        height: 3840px;
         font-size: calc(10px +.7vw);
     }
 }
-@media only screen and (min-width:576px) and (max-width:2159px){
+@media only screen and (min-width:576px) and (max-width:2160px){
     .title-header h1{
         font-size: 5vw;
     }
