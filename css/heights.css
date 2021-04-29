@@ -135,7 +135,7 @@ body,#app,main{
         font-size: calc(10px + .7vw);
     }
     .carousel-inner, .slideshow-container{
-        height: 56vw;
+        height: 58vw;
     }
 }
 @media only screen and (min-width:576px) and (max-width:2160px){
