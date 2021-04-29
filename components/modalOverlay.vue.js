@@ -32,13 +32,11 @@ var modalOverlay= {
         }
     },
     mounted(){
-        window.addEventListener('DOMContentLoaded', (event) => {
-            this.player= videojs(this.$refs.videoPlayer, this.setup, function onPlayerReady() {
+         this.player= videojs('#videoWindow', this.setup, function onPlayerReady() {
             //console.log('onPlayerReady', this);
         });
         this.videoOverlay();
-    
-        });
+        
         
     },
     beforeDestroy(){

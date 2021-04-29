@@ -93,6 +93,8 @@ body{
     margin: 0;
     padding: 0;
     font-size: calc(8px + 1.1vw);
+    height: 3840px;
+    overflow: hidden;
 }
 #app, main{
     height: 100%;
