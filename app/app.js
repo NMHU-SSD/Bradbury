@@ -28,6 +28,15 @@ var app = new Vue({
         stillActive:null
     },
     mounted: function(){
+        
+        //prevent multitouch zoom in
+            document.addEventListener('touchmove', e => {
+			  if (e.touches.length > 1) {  
+			     e.preventDefault();
+			  }
+			}, {passive: false})
+            
+            },
         this.GetData();
         this.resetTimer();
     },
@@ -54,13 +63,7 @@ var app = new Vue({
         },
         //Timer modal functions
         listeners:function(){
-			//prevent multitouch zoom in
-			document.addEventListener('touchmove', e => {
-			  if (e.touches.length > 1) {  
-			     e.preventDefault();
-			  }
-			}, {passive: false})
-        },
+			
         resetTimer:function(){
             clearTimeout(this.t);
             clearTimeout(this.afk);
