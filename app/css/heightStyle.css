@@ -188,12 +188,10 @@
         max-height: 1000px;
     }
     #carousel-carouselComputing, #carouselComputing{
-        height: 20vh;
-        max-height: 600px;
+        height: 22vh;
     }
     #carousel-carouselHistory, #carouselHistory, .fix-width{
-        height: 20vh;
-        max-height: 600px;
+        height: 22vh;
     }
     #timeline{
         height: 50vh;
