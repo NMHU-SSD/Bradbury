@@ -28,7 +28,7 @@ var modalOverlay= {
         }
     },
     mounted(){
-        this.player= videojs(this.$refs.videoPlayer, this.setup, function onPlayerReady() {
+        this.player= videojs('#videoWindow', this.setup, function onPlayerReady() {
             //console.log('onPlayerReady', this);
         });
         this.videoOverlay();

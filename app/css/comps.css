@@ -1,15 +1,14 @@
 /********* Title *************/
 .title{
-    height: 25vw;
-    font-size: 1.2vw;
-    padding-left: 4em;
+    padding: 2em;
+    height: 8vh;
     pointer-events: none;
     display: flex;
     align-items: center;
     width: 100vw;
 }
 .title h1{
-    font-size: 7em;
+    font-size: 3.7em;
 }
 .bold-title{
     font-size: 5em;
