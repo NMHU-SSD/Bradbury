@@ -4,19 +4,20 @@ Vue.component('slides-component', slidesComponent)
 Vue.component('tubie-overlay', tubieOverlay)
 Vue.component('modal-overlay', modalOverlay)
 
-
 //Vue
 var app = new Vue({
     el: '#app',
     data:{
-        title:"",
-        drive:"",
-        sustainable:"",
+        title: "",
+        drive: "",
+        sustainable: "",
         timeData:"",
-        t: null,
+        t: "",
         afk: null,
-        active:null,
-        showData:true
+        active:false,
+        showData:true,
+        isLoaded: false
+
     },
     mounted: function(){
         this.GetData();
@@ -43,6 +44,7 @@ var app = new Vue({
                 this.title = data.title;
                 this.drive = data.drive;
                 this.sustainable = data.sustainable;
+                this.isLoaded = true;
             })
             .catch((error) => {
                 console.error('Error:', error);

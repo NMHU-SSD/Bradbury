@@ -66,7 +66,8 @@ var slidesComponent={
     },
     template:
     `
-    <div id="top-slide" class="slideshow-container whitetext">
+    <div id="top-slide" v-if="page1"
+class="slideshow-container whitetext">
             <h1 v-show=head class="top yellow shadow-text-big">{{ page1.header }}</h1>
             <h1 v-show=!head class="top green">{{ page2.header }}</h1>
             <img :id="id" :src="currentImg">
