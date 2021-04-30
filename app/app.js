@@ -28,8 +28,7 @@ var app = new Vue({
         stillActive:null
     },
     mounted: function(){
-            
-    
+        
         this.GetData();
         this.resetTimer();
     },
