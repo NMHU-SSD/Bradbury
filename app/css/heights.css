@@ -24,12 +24,14 @@
 }
 
 /****** General *****/
+/*
 body,#app,main{
     width: 100%;
 }
+*/
 /******** 4K Monitor **********/
 @media only screen and (min-width:1400px){
-    body,#app,main{
+    #app{
         height: 3840px;
         overflow: hidden;
     }
