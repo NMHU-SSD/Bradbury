@@ -6,10 +6,10 @@
     background-color: #590820;
     color: white;
     font-size: 50px !important;
-    padding: 25px 50px;
+    padding: 110px 50px;
+    border-radius: 100%;
     border: 0px; 
     font-weight: bold;
-
 }
 #empty > button > span {
     font-size: 80px !important;
