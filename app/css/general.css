@@ -10,6 +10,7 @@ body {
 }
 
 /***** Mac OSx scrollbar *****/
+/*
 ::-webkit-scrollbar {
   -webkit-appearance: none;
   width: 7px;
@@ -20,6 +21,7 @@ body {
   background-color: rgba(0, 0, 0, .5);
   box-shadow: 0 0 1px rgba(255, 255, 255, .5);
 }
+*/
 
 /***** Muesuem Fonts ****/
 @font-face{
@@ -55,6 +57,29 @@ body {
     font-family:Komika-Hand;
     src: url(../assets/fonts/Komika-Hand/KOMIKAHB.ttf);
 }
+
+/*scroll up button*/
+#empty > button{
+    top: 80%;
+    bottom: 0px;
+    position: relative;
+    background-color: #590820;
+    color: white;
+    font-size: 50px !important;
+    padding: 110px 50px;
+    border-radius: 100%;
+    border: 0px; 
+    font-weight: bold;
+}
+#empty > button > span {
+    font-size: 80px !important;
+    font-weight: bolder;
+    display: block;
+    margin-bottom: -50px;
+    padding: 0px;
+}
+
+
 /********** Text Fonts ********/
 .title-font{
     font-family: Anton;
@@ -70,6 +95,7 @@ body {
     font-family: Oswald;
     font-weight: 300;
     white-space: pre-line;
+    border: 0px;
     margin-bottom: 0;
 }
 .content-pad{
@@ -85,11 +111,27 @@ body{
     margin: 0;
     padding: 0;
     font-size: calc(8px + 1.1vw);
+    height: 100%;
+    overflow: scroll;
 }
-#app, main{
+#empty {
+    height: 2610px;
+}
+
+#app{
+    background-color: black;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-size: calc(8px + 1.1vw);
+    height: 3840px;
+    overflow: hidden;
+}
+main{
     height: 100%;
     width: 100%;
 }
+
 p,h1,h2,h3{
     white-space: pre-line;
 }

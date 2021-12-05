@@ -31,6 +31,21 @@ var app = new Vue({
         
         this.GetData();
         this.resetTimer();
+        
+        //jump to section
+        window.scrollTo({
+            top: 3500, // scroll so that the element is at the top of the view
+            behavior: 'smooth' // smooth scroll
+        })
+        
+        //listener for scrollup
+        document.querySelector('#scrollUp').addEventListener('click', function(){
+            window.scrollTo({
+                top: 3500, // scroll so that the element is at the top of the view
+                behavior: 'smooth' // smooth scroll
+            })
+        })
+        
     },
     updated: function(){
         this.listeners();
@@ -57,11 +72,11 @@ var app = new Vue({
         listeners:function(){
             
             //prevent multitouch zoom in
-            document.addEventListener('touchmove', e => {
-			  if (e.touches.length > 1) {  
-			     e.preventDefault();
-			  }
-			}, {passive: false})
+//            document.addEventListener('touchmove', e => {
+//			  if (e.touches.length > 1) {  
+//			     e.preventDefault();
+//			  }
+//			}, {passive: false})
         },
 			
         resetTimer:function(){

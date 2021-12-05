@@ -52,7 +52,7 @@
     }
 }
 @media only screen and (min-width:2159px){
-    body{
+    #app{
         height: 3840px;
         width: 100%;
         overflow: hidden;
