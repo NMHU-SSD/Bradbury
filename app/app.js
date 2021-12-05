@@ -21,6 +21,22 @@ var app = new Vue({
     },
     mounted: function(){
         this.GetData();
+
+        //jump to section
+        window.scrollTo({
+            top: 3500, // scroll so that the element is at the top of the view
+            behavior: 'smooth' // smooth scroll
+        })
+        
+        //listener for scrollup
+        document.querySelector('#scrollUp').addEventListener('click', function(){
+            window.scrollTo({
+                top: 3500, // scroll so that the element is at the top of the view
+                behavior: 'smooth' // smooth scroll
+            })
+        })
+        
+       
     },
     updated: function(){
         this.listeners();
@@ -65,6 +81,10 @@ var app = new Vue({
                 //console.log("reset timer", app.active);
             });
             window.addEventListener('scroll',this.scrollHandle);
+            
+            
+            
+            
         },
         resetTimer:function(){
             clearTimeout(this.t);

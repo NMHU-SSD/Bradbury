@@ -1,3 +1,24 @@
+/*scroll up button*/
+#empty > button{
+    top: 80%;
+    bottom: 0px;
+    position: relative;
+    background-color: #590820;
+    color: white;
+    font-size: 50px !important;
+    padding: 25px 50px;
+    border: 0px; 
+    font-weight: bold;
+
+}
+#empty > button > span {
+    font-size: 80px !important;
+    font-weight: bolder;
+    display: block;
+    margin-bottom: -50px;
+    padding: 0px;
+}
+
 /***** Slideshow *****/
 .slideshow-container{
     overflow: hidden;

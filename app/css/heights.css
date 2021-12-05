@@ -24,19 +24,23 @@
 }
 
 /****** General *****/
+/*
 body,#app,main{
     width: 100%;
     height: auto;
 }
+*/
 /******** 4K monitor ********/
 @media only screen and (min-width:2150px){
     .carousel-inner, .slideshow-container{
         height: calc(3840px * .33 - 1em);
     }
+/*
     body,#app,main{
         height: 3840px;
         overflow: hidden;
     }
+*/
 }
 
 /********** Mobile Phones **********/
