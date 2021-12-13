@@ -24,22 +24,26 @@ var transComp= {
     `<div :id="id" class="carousel background tfc size">
         <img :src=data.header class="comp-header">
         <p class="title-text-box body-font content-body half-shadow">{{ data.body }}</p>
-        <div class="left-circle circle dark-yellow">
-            <div class="tubie-circle tubie-circle-left">
-                <tubie-overlay id="tubie-been" :display="tubie.tubie_been" position="none" spec="def"
-                @seturl="seturl(tubie.tubie_been,0)"/>
+        <div class="left-circle circle dark-yellow" @click="seturl(0,1)">
+            <!--
+            <div class="tubie-circle tubie-circle-left" >
+               <tubie-overlay id="tubie-been" :display="tubie.tubie_been" position="none" spec="def"
+                @click="seturl(tubie.tubie_been,0)"/> 
             </div>
+            -->
             <ol class="carousel-indicators">
-                <li v-for="(slide, index) in data.been" class="yellow" @click="seturl(index,1)"></li>
+                <li v-for="(slide, index) in data.been.slides" class="yellow" @click="seturl(index,1)"></li>
             </ol>
         </div>
-        <div class="right-circle circle yellow">
+        <div class="right-circle circle yellow" @click="seturl(0,2)">
+            <!--
             <div class="tubie-circle tubie-circle-right">
                 <tubie-overlay id="tubie-headed" :display="tubie.tubie_headed" position="none" spec="dyk"
                 @seturl="seturl(tubie.tubie_headed,0)"/>
             </div>
+            -->
             <ol class="carousel-indicators">
-                <li v-for="(slide, index) in data.headed" class="dark-yellow" @click="seturl(index,2)"></li>
+                <li v-for="(slide, index) in data.headed.slides" class="dark-yellow" @click="seturl(index,2)"></li>
             </ol>
         </div>
     </div>`

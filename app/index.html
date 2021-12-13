@@ -21,19 +21,23 @@
       <div id="empty" class="text-center "><button id="scrollUp" ><span>^</span> SCROLL UP</button></div>
 
 	<div id="app">	
-        <main>
+        <main v-if="comp">
 		
             <!--Pop overs-->
             <info-overlay id="modalHard" ref="modalHard" spec="info" :slides="rd100.hardware"
-                          :countdown="timeData.timeout" @stopvideo="toDefault" @seturl="displayTech($event)"></info-overlay>
+                          :countdown="timeData.timeout" @stopvideo="toDefault"  title="" @seturl="displayTech($event)"></info-overlay>
             <info-overlay id="modalNet" ref="modalNet" spec="info" :slides="rd100.networking"
-                          :countdown="timeData.timeout" @stopvideo="toDefault" @seturl="displayTech($event)"></info-overlay>
+                          :countdown="timeData.timeout" @stopvideo="toDefault"  title="" @seturl="displayTech($event)"></info-overlay>
             <info-overlay id="modalSoft" ref="modalSoft" spec="info" :slides="rd100.software"
-                          :countdown="timeData.timeout" @stopvideo="toDefault" @seturl="displayTech($event)"></info-overlay>
+                          :countdown="timeData.timeout" @stopvideo="toDefault"  title="" @seturl="displayTech($event)"></info-overlay>
             
-            <info-overlay id="modalVideo1" ref="modalVideo1" spec="vid" :slides="comp.been"
+            <info-overlay id="modalVideo1" ref="modalVideo1" spec="vid" 
+                          :title="comp.been.body"
+                          :slides="comp.been.slides" 
                           :countdown="timeData.videotimer" @stopvideo="videoModalClose($event)" @seturl="displayTech($event)"></info-overlay>
-            <info-overlay id="modalVideo2" ref="modalVideo2" spec="vid" :slides="comp.headed"
+            <info-overlay id="modalVideo2" ref="modalVideo2" spec="vid" 
+                          :title="comp.headed.body"
+                          :slides="comp.headed.slides"  
                           :countdown="timeData.videotimer" @stopvideo="videoModalClose($event)" @seturl="displayTech($event)"></info-overlay>
             
             <modal-overlay id="modalVid" ref="modalVid" :countdown="timeData.videotimer" @stopvideo="videoModalClose($event)"></modal-overlay>
@@ -44,6 +48,7 @@
                 <h1 class="title-font">{{ timeData.pageTitle }}</h1>
             </div>
             <trans-comp v-if="pageTubie" id="top" :data="comp" :tubie="pageTubie" @seturl="displayTech($event)"></trans-comp>
+            
             <rd-comp id="rd" :body="rd100.body" :covers="rd100.covers" @setcover="displayCover($event)"></rd-comp>
                     
 		

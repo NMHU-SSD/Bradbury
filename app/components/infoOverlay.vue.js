@@ -1,6 +1,6 @@
 var infoOverlay= {
     name:"info-overlay",
-    props:['id','spec','countdown','slides'],
+    props:['id','spec','countdown','slides', 'title'],
     data:function(){
         return{
             player:null,
@@ -179,7 +179,7 @@ var infoOverlay= {
         }
     },
     watch:{
-        slides:function(){
+        slides: function(){
             if(this.slides.length > 1){
                 this.end=false;
             }
@@ -188,8 +188,10 @@ var infoOverlay= {
     template:
     `<div :id="id" class="modal fade" tabindex="-1" role="dialog" data-backdrop=true @click.self="stopVideo">
 <div :class="['modal-dialog modal-xl modal-dialog-centered', spec]" role="document">
-<div class="modal-content">
+<div class="modal-content red whitetext">
+    <p class="p-5" :v-if="title">{{title}}</p>
  <div class="modal-body">
+   
     <video v-if="spec=='vid'" id="videoWindow" ref="videoPlayer" preload="none"
                         class="video-js vjs-fluid vjs-big-play-centered web-video"
                         @ended="endOfVideo" @pause="pausedVideo" @play="playingVideo"/>
