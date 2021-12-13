@@ -29,8 +29,12 @@ HPC Transformative Tech
 "comp": HPC Tech panel
 "header": The image used for the title header
 "body": Text inside the textbox
-"been": List of slides for "where we've been"
-"headed": List of slides for "where we're headed"
+"been": "where we've been" data holder 
+	"body": Text for "where we've been"
+	"slides": List of slides for "where we've been"
+"headed": "where we're headed"	data holder
+	"body": Text for "where we're headed"
+	"slides": List of slides for "where we're headed"
 
 RD100 Winners panel
 "rd100": RD100 panel
