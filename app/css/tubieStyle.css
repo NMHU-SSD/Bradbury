@@ -9,7 +9,7 @@
     width: 25vw;
     position: absolute;
     bottom: 3em;
-    right: -5em;
+    right: -4em;
 }
 .tubie-splash-right{
     background: url(../assets/CustomImages/Tubie-orangebkgd-right.svg) no-repeat;
@@ -17,8 +17,8 @@
     height: 13vw;
     width: 30%;
     position: absolute;
-    bottom: 0;
-    right: -5%;
+    bottom: -1em;
+    right: -8em;
     overflow: hidden;
 }
 .tubie-container-left{
@@ -94,8 +94,8 @@
 
 /*****Arrow Placements ***********/
 	.popover .arrow {
-        width: 2.5rem;
-        height: 1em;
+        width: 3rem;
+        height: 1.25em;
         margin: .1rem .1rem;
 	}
 	.popover .arrow::before, .popover .arrow::after {
@@ -110,7 +110,7 @@
 	  margin-bottom: 0.1rem;
 	}
 	.bs-popover-top .arrow, .bs-popover-auto[x-placement^="top"] .arrow {
-	  bottom: calc((2em + 1px) * -1);
+	  bottom: calc((2em + 1px) * -.5);
 	}
 	.bs-popover-top .arrow::before, .bs-popover-auto[x-placement^="top"] .arrow::before,
 	.bs-popover-top .arrow::after,

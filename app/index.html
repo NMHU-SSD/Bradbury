@@ -37,7 +37,7 @@
             <building-future :id="historyId" :ref="historyId" :slides="buildingFutureData" :header="buildingFutureData.header" :tubie="tubie" 
                              :speed="buildingFutureData.slidespeed" :videosdata="inTheirWordsData" 
                              @seturl="displayVideo($event)" @othervids="passVids($event)" @selected="itemselect($event)"></building-future>
-            <time-line v-if=true id="timeline" :tubie="timelineData.tubie" :webpage="timelineData.url" :title="timelineData.title" :subtitle="timelineData.subtitle" 
+            <time-line v-if=true id="timeline" :tubie="null" :webpage="timelineData.url" :title="timelineData.title" :subtitle="timelineData.subtitle" 
                        @seturl="displayVideo($event)" @selected="itemselect($event)"></time-line>
         </main>
 	</div>

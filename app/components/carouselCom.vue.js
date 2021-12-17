@@ -29,7 +29,7 @@ var carouselCom = {
     },
     template:
     `<div class="row row-full no-gutters">
-          <!--div class="col-12 col-sm-6 col-xl-9 img-main pic-holder">
+          <!--div class="col-12 col-sm-6 col-xl-8 img-main pic-holder">
               <img :src="slide.media" :style="imgPosition(slide.position)" :alt="slide.alt" >
           </div-->
           <div :id="'text'+id+index" class="col text-side offset-2 offset-sm-0" @scroll="handleScroll">

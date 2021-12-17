@@ -216,11 +216,8 @@
     {
         "url":"https://www.lanl.gov",
         "title":"Explore the timeline",
-        "subtitle":"Legacy of Women in \n Los Alamos Computing",
-        "tubie":{
-            "link":"data/videos/mov_bbb.mp4",
-            "videoTitle":"Tubie Tutorial"
-        }
+        "subtitle":"Legacy of Women in \n Los Alamos Computing"
+        
     },
     
     "tubie":{
@@ -242,7 +239,7 @@
         {"body":"The only patents issued for the Cray-1 computer were for its cooling system."},
         {"body":"\"Debugging\" originally referred to removing insects from mechanical equipment. It was later applied to removing errors from computer software."}
         ],
-        "act_tutorial":true,
+        "act_tutorial":false,
         "tutorial":[
             {"body":"These panels works like a smartphone. Tap a section on the panel to see more."},
             {"body":"The timeline also works by touch. Tap the stories below to see more."}
