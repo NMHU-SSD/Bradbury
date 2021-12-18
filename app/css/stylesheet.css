@@ -54,6 +54,7 @@
     bottom: 0;
     z-index: 9;
     text-align: right;
+    padding-bottom: 3.5em;
 }
 .banner p{
     font-size: calc(1.5em + 1vw);
@@ -61,7 +62,7 @@
     margin-bottom: 0;
 }
 .slideshow-container,#index,#index2{
-    margin-bottom: 2em;
+    margin-bottom: 1.7em;
 }
 /************** Carousel *****************/
 .carousel-item,.row-full,.text-side{
@@ -98,11 +99,13 @@
 /***** Carousel indicators***************/
 .carousel .carousel-indicators{
     height: 2em;
+    margin-bottom: 30px;
+    
 }
 .carousel .carousel-indicators li{
     display: inline-block;
-    height: 2em;
-    width: 2em;
+    height: 1.75em;
+    width: 1.75em;
     border-radius: 50%;
     border: .15em solid #FFF;
     margin-left: 2%;
@@ -111,6 +114,9 @@
 .carousel-indicators li.active{
     background-color: #BBC356;
     border: .15em solid #4a6c6a;
+    border-radius: 50%;
+    height: 1.75em;
+    width: 1.75em;
 }
 /**** Carousel Layouts ****/
 .vid-wrapper{

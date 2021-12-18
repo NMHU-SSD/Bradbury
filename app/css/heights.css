@@ -33,7 +33,7 @@ body,#app,main{
 /******** 4K monitor ********/
 @media only screen and (min-width:2150px){
     .carousel-inner, .slideshow-container{
-        height: calc(3840px * .33 - 1em);
+        height: calc(3840px * .33 - 1.5em);
     }
 /*
     body,#app,main{

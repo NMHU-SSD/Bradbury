@@ -21,7 +21,7 @@ var tubieOverlay = {
             $(tubieId).css({'margin-top':'-10%', 'transition':this.animationTime+'ms'});
             setTimeout(function(){
                 $(tubieId).css('margin-top', '0');}, this.animationTime);
-            //data-trigger="focus"
+            
         }
     },
     template:

@@ -1,6 +1,6 @@
 var buildingFuture= {
     name: "building-future",
-    props: ['id', 'slides','header','buddy','banner','mono'],
+    props: ['id', 'slides','header','buddy','banner','mono', 'indicators'],
     data:function(){
         return{
             slideImages: null,
@@ -115,7 +115,7 @@ var buildingFuture= {
                                     :style="imgPosition(slide.featuredMedia.position)" alt="slide.alt">
                                 <div class="shadow-box"/>
                                 <h3 class="top-center shadow-text">{{ header }}</h3>
-                                <h2 v-if=!banner class="top-left title-font shadow-text-big">Did You Know...</h2>
+                                <h1 v-if=!banner class="top-left title-font shadow-text-big">Did You Know...</h1>
                                 <div v-if="!banner && slide.video" :class="['watch-video',(banner ? '' : 'cropped-vid')]" @click="seturl(slide.video,slide.videoTitle)">
                                     <img src="assets/customs/VideoPlaybutton-black.png" class="play-img" style="margin-right: 5%;">
                                     <p class="body-font" style="color: #bcd1bc;">WATCH VIDEO</p>
@@ -147,18 +147,22 @@ var buildingFuture= {
                         </div>
                     </div>
                     <!--- End layout ---->
-                        <div class="tubie-container-left" :style="banner ? 'bottom: 3em;' : 'bottom: 0em;'">
+                        <div class="tubie-container-left" :style="'bottom: 3em;' ">
                             <tubie-overlay v-if="banner" :id="'tubie-'+id+index" :display="slide.tubie" spec="consider"/>
                             <tubie-overlay v-else :id="'tubie-'+id+index" :display="slide.tubie" spec="dyk"/>
                         </div>
-                        <div v-show=banner :class="['banner', (mono ? 'green':'red')]"></div>
-                    </div>          
+                    </div> 
+
             </template>
+
+           
         </div>
 
-        <div v-show=banner>
-        <ol class="carousel-indicators">
-            <li v-for="(slide, index) in slides" :data-target="['#' + 'carousel-'+id]" :data-slide-to="index" :class="['interest',(index==0 ? 'active' : '')]" :style="mono?'background: #bcd1bc;':'background: #BBC356;'" @click="jumpSlide(index)"></li>
+        <div :class="['banner', mono ? 'green':'red' ]"></div>
+        <div v-show="indicators" >
+
+        <ol class="carousel-indicators" >
+            <li v-for="(slide, index) in slides" :data-target="['#' + 'carousel-'+id]" :data-slide-to="index" :class="['interest',(index==0 ? 'active' : '')]" :style="mono ? 'background: #bcd1bc;':'background: #BBC356;'" @click="jumpSlide(index)"></li>
         </ol>
 
           <a v-show="!first" class="interest carousel-control-prev" :href="['#' + 'carousel-'+id]" role="button" data-slide="prev" @click="prevSlide">
@@ -170,6 +174,9 @@ var buildingFuture= {
             <span class="sr-only">Next</span>
           </a>
         </div>
+
+        
+
 
     </div>
 </div>`
