@@ -21,8 +21,8 @@ Timers & Title
 "message": The message if the user becomes inactive
 "videotimer": Timer for closing out video after it ended or paused (milliseconds)
 
-Main Page Tubies
-"pageTubie": The pair of header tubies (Must be implimented)
+Main Page Tubies - (no tubies implemented)
+"pageTubie": The pair of header tubies 
     "body": Tubie's pop-up dialogue
 
 HPC Transformative Tech
@@ -30,9 +30,11 @@ HPC Transformative Tech
 "header": The image used for the title header
 "body": Text inside the textbox
 "been": "where we've been" data holder 
+	"button": image for button
 	"body": Text for "where we've been"
 	"slides": List of slides for "where we've been"
 "headed": "where we're headed"	data holder
+	"button": image for button
 	"body": Text for "where we're headed"
 	"slides": List of slides for "where we're headed"
 
