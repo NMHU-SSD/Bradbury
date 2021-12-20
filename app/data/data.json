@@ -19,9 +19,10 @@
         }
     },
     "comp":{
-        "header":"assets/customs/Title-HPCtech.svg",
+        "header":"assets/customs/Title-HPCtech-noarrows.svg",
         "body":"If supercomputers are the tools, High-Performance Computing (HPC) is the application of those tools on computational problems that are too large or complex for ordinary computers.  The HPC field includes the people and organizations who take part in the advancement and application of supercomputers on a variety of scientific and engineering questions.\n\nExplore this panel to see the hard work and innovation that goes into making supercomputing truly super.",
         "been": {
+            "button":"assets/customs/Title-LeftArrow-Been.svg",
             "body": "As part of its national-security science mission, Los Alamos has a long history of creating cutting-edge computer hardware and software, both on its own, and in collaboration with HPC partners.  Explore some examples of Los Alamos driving HPC technologies forward.",
             "slides": [
             {
@@ -55,6 +56,7 @@
             ]
         },
         "headed": {
+            "button":"assets/customs/Title-RightArrow-Headed.svg",
             "body": "HPC technologies move fast, in more ways than one!  Learn more about the new and promising technologies that Los Alamos and the HPC industry are exploring and building to meet the computing challenges of tomorrow.",
             "slides": [
             {

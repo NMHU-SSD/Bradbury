@@ -10,7 +10,7 @@ body {
 }
 
 /***** Mac OSx scrollbar *****/
-/*
+
 ::-webkit-scrollbar {
   -webkit-appearance: none;
   width: 7px;
@@ -21,7 +21,7 @@ body {
   background-color: rgba(0, 0, 0, .5);
   box-shadow: 0 0 1px rgba(255, 255, 255, .5);
 }
-*/
+
 
 /****** Google Fonts *****/
 @font-face{
@@ -60,7 +60,7 @@ body {
     text-transform: uppercase;
 }
 .content-body{
-    font-size: calc(14px + 1vw);
+    font-size: calc(14px + 1.25vw);
 }
 
 /*scroll up button*/
@@ -95,7 +95,7 @@ body{
     overflow: scroll;
 }
 #empty {
-    height: 1900px;
+    height: 1800px;
 }
 
 #app{
@@ -116,7 +116,7 @@ p,h1,h2,h3{
 }
 .size{
     width: 100vw;
-    height: 70vw;
+    height: 78vw;
 }
 .background{
     position: relative;

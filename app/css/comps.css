@@ -18,7 +18,7 @@
 .tfc{
     background: url(../assets/customs/ASCI-bkgd.jpg)no-repeat;
     background-size: cover;
-    margin-bottom: 7%;
+    margin-bottom: 5%;
 }
 .circle{
     position: absolute;
@@ -40,21 +40,35 @@
     opacity: .7;
 }
 .comp-header{
-    max-width: 75%;
+    max-width: 55%;
     position: absolute;
     z-index: 3;
-    left: 10%;
+    left: 15%;
     top: 3%;
     pointer-events: none;
 }
 .left-circle{
-    left: 8%;
-    top: 18%;
+    left: 5%;
+    top: 20%;
 }
 .right-circle{
-    right: 10%;
-    top: 3%;
+    right: 5%;
+    top: 20%;
 }
+.right-circle img, .left-circle img{
+    position: relative;
+}
+.left-circle img{
+    width: 80%;
+    top: 15%;
+    left: 5%;
+}
+.right-circle img{
+    width: 65%;
+    top: 10%;
+    left: 20%;
+}
+
 .arrows{
     height: 60%;
     width: 30%;
@@ -71,8 +85,8 @@
 }
 .title-text-box{
     height: auto;
-    width: 85%;
-    padding: .1em .5em;
+    width: 90%;
+    padding: 1em 1em;
     margin: 0;
     position: absolute;
     right: 0;
@@ -102,7 +116,7 @@
 }
 .rd-text-box{
     margin-left: 5%;
-    padding: .8em;
+    padding: 1em;
     padding-right: 10%;
 }
 .cover-holder{
