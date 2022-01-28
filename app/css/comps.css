@@ -9,7 +9,7 @@
     width: 100vw;
 }
 .title h1{
-    font-size: 3.3em;
+    font-size: 3.2em;
 }
 .bold-title{
     font-size: 5em;
@@ -135,7 +135,7 @@
     z-index: 1;
     pointer-events: none;
     height: 70%;
-    width: 75%;
+    width: 75%x;
     right: 18%;
     top: 15%;
 }
