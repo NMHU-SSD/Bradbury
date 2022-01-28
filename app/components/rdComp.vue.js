@@ -82,7 +82,7 @@ var rdComp= {
             <p class="col rd-text-box body-font content-body align-self-center half-shadow">{{ body }}</p>
             
         </div>
-        <div class="cover-holder row no-gutters">
+        <div class="cover-holder row no-gutters pl-2">
             <template v-for="(cover, index) in covers">
                 <div class="col-4 cover">
                     <img :src="cover.img" class="cover-img" @click="setcover(cover)">
