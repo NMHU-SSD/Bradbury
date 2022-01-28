@@ -1,7 +1,7 @@
 /********* Title *************/
 .title{
     padding: 2em;
-    height: 8vh;
+    height: 6vh;
     pointer-events: none;
     display: flex;
     align-self: center;
@@ -23,8 +23,8 @@
 }
 .circle{
     position: absolute;
-    width: 38vw;
-    height: 38vw;
+    width: 30vw;
+    height: 30vw;
     border-radius: 50%;
 }
 .carousel .left-circle .carousel-indicators{
@@ -95,7 +95,7 @@
 }
 /***************** RD 100 *********/
 .sum-row{
-    height: 40%;
+    height: 42.5%;
     width: 100%;
     margin: 0;
 }
@@ -116,12 +116,12 @@
     margin-right: 0;
 }
 .rd-text-box{
-    margin-left: 5%;
+    margin-left: 3%;
     padding: 1em;
     padding-right: 10%;
 }
 .cover-holder{
-    height: 35%;
+    height: 30%;
     width: 90%;
     margin: 0 auto;
 }
@@ -134,8 +134,8 @@
     position: absolute;
     z-index: 1;
     pointer-events: none;
-    height: 70%;
-    width: 75%x;
+    height: 65%;
+    width: 70%x;
     right: 18%;
     top: 15%;
 }

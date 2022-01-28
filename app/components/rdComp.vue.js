@@ -83,14 +83,12 @@ var rdComp= {
             
         </div>
         <div class="row mt-0 mb-5 align-items-center">
-            <div class="col-7"></div>
-            <div class="col-3 p-2">
-                <p class="body-font p-5 content-body half-shadow">{{ qr.text }}</p>
+            <div class="col-5"></div>
+            <div class="col-4">
+                <p class="body-font p-5 half-shadow">{{ qr.text }}</p>
             </div>
-            <div class="col-2"><img :src="qr.img" ></div>
-            
-            
-            
+            <div class="col"><img :src="qr.img" class="img-responsive" ></div>
+            <div class="col-2"></div>
         </div>
         <div class="cover-holder row no-gutters pl-2 mt-3">
             <template v-for="(cover, index) in covers">
