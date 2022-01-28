@@ -46,7 +46,7 @@
 				{
 				"title": "Green Destiny",
 				"header": "In 2003, sustainable computing was still a novel concept, but LANL computer scientists Wu-chun Feng, Eric Weigle, and Michael Warren were ahead of the curve.",
-                "body": "They created an experimental, sustainable cluster computer called \"Green Destiny\" using energy-efficient processors and a fault-tolerant design that eliminated the need for the costly cooling systems found on other supercomputers.\n\nDespite being as powerful as a high-end supercomputer of just a few years before, Green Destiny used only as much electricity as two hairdryers.\n\nGreen Destiny was a successful proof-of-concept for energy-saving features that found their way into mainstream supercomputers, winning the coveted R&D 100 Award for innovation in science and technology in the process.",
+                "body": "They created an experimental, sustainable cluster computer called \"Green Destiny\" using energy-efficient processors and a fault-tolerant design that eliminated the need for the costly cooling systems found on other supercomputers.\n\nDespite being as powerful as a high-end supercomputer of just a few years before, Green Destiny used only as much electricity as two hairdryers.\n\nGreen Destiny was a successful proof-of-concept for energy-saving features that found their way into mainstream supercomputers, winning the coveted R&D 100 Award for innovation in science and technology in the process. \n",
 				"featuredMedia": { 
 					"src": "data/sustain/greendestiny-2.jpg",
                     "caption": "Los Alamos National Laboratory's Green Destiny sustainable cluster computer.",
@@ -116,7 +116,7 @@
                 {
                 "title":"Green500 List",
                 "header":"...In 2007, Los Alamos computer scientist Wu-chun Feng and his colleague Kirk. W. Cameron at Virginia Tech created the Green500 List?",
-                "body":"The Green500 List ranked supercomputers around the world based on their energy efficiency, bringing a shared set of sustainability assessment tools and criteria to the high-performance computing community.  \n\nThe List made it easier for supercomputer users and manufacturers alike to consider a machine's performance versus its energy-consumption when purchasing or designing new supercomputer systems.",
+                "body":"The Green500 List ranked supercomputers around the world based on their energy efficiency, bringing a shared set of sustainability assessment tools and criteria to the high-performance computing community.  \nThe List made it easier for supercomputer users and manufacturers alike to consider a machine's performance versus its energy-consumption when purchasing or designing new supercomputer systems. \n\n",
                 "featuredMedia":{
                     "src": "data/sustain/green500.jpg"
                     },

@@ -132,7 +132,8 @@ var buildingFuture= {
                                         <p class="body-font redtext">WATCH VIDEO</p>
                                     </div>
                                   </div>
-
+                                
+                                <div style="height: 95%">
                                   <div :id="'text'+id+index" class="scrolling-text" @scroll="handleScroll">
                                     <div class="invis">
                                         <p v-if="slide.header" class="content-header content-side">{{ slide.header }}</p>
@@ -144,6 +145,7 @@ var buildingFuture= {
                                     <p v-if="slide.title" class="bluetext content-title content-side title-font">{{ slide.title }}</p>
                                     <p v-if="slide.body" class="bluetext content-body content-side body-font">{{ slide.body }}</p>
                                   </div>
+                                </div>
                         </div>
                     </div>
                     <!--- End layout ---->

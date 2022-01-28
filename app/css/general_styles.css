@@ -66,14 +66,15 @@ body {
 .content-side{
     padding-left: 5%;
     padding-right: 3em;
+    margin: 0;
+}
+.content-title{
+    font-size: 1.2em;
 }
 .content-body{
     font-size: 1em;
 }
-.content-title{
-    font-size: 1.2em;
-    margin: 0;
-}
+/*red title*/
 .content-header{
     font-size: 1.1em;
     font-family: Arial, Helvetica, sans-serif;
