@@ -146,7 +146,7 @@ var modalOverlay= {
     },
     template:
     `<div :id="id" class="modal fade" tabindex="-1" role="dialog" :data-backdrop="(exitout=='true' ? 'true' : 'static')" @:displayModal="timer">
-      <div class="modal-dialog modal-xl modal-dialog-centered" role="document">
+      <div class="modal-dialog modal-xl modal-dialog-centered " role="document">
 
         <div v-if="id=='modalTimer'" class="modal-content timer">
           <div v-if="message" class="modal-header d-block">
@@ -158,10 +158,10 @@ var modalOverlay= {
         </div>
 
         <div v-if="id=='modalVideo'" class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title">{{ title }}</h5>
+          <div class="modal-header redbg">
+            <h5 class="modal-title text-white">{{ title }}</h5>
             <button @click="stopVideo" type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
+              <span aria-hidden="true" class="text-white">&times;</span>
             </button>
           </div>
 
