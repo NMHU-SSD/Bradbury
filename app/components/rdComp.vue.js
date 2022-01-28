@@ -80,6 +80,7 @@ var rdComp= {
         <div class="row sum-row">
             <img src="assets/customs/R&D100logo-gold.svg" class="col-5 col-sm-3 col-md-4">
             <p class="col rd-text-box body-font content-body align-self-center half-shadow">{{ body }}</p>
+            
         </div>
         <div class="cover-holder row no-gutters">
             <template v-for="(cover, index) in covers">

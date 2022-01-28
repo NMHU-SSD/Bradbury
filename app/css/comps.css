@@ -4,7 +4,8 @@
     height: 8vh;
     pointer-events: none;
     display: flex;
-    align-items: center;
+    align-self: center;
+    text-align: center;
     width: 100vw;
 }
 .title h1{
