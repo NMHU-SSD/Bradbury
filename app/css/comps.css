@@ -86,8 +86,8 @@
 }
 .title-text-box{
     height: auto;
-    width: 90%;
-    padding: 1em 1em;
+    width: 100%;
+    padding: 1em 1.15em;
     margin: 0;
     position: absolute;
     right: 0;
@@ -121,7 +121,7 @@
     padding-right: 10%;
 }
 .cover-holder{
-    height: 30%;
+    height: 25%;
     width: 90%;
     margin: 0 auto;
 }
@@ -134,8 +134,8 @@
     position: absolute;
     z-index: 1;
     pointer-events: none;
-    height: 65%;
-    width: 70%x;
+    height: 60%;
+    width: 65%x;
     right: 18%;
     top: 15%;
 }
