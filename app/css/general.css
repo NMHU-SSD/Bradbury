@@ -72,6 +72,7 @@ body {
     color: white;
     font-size: 50px !important;
     padding: 110px 50px;
+    
     border-radius: 100%;
     border: 0px; 
     font-weight: bold;
@@ -95,7 +96,7 @@ body{
     overflow: scroll;
 }
 #empty {
-    height: 1800px;
+    height: 1780px;
 }
 
 #app{
@@ -116,7 +117,7 @@ p,h1,h2,h3{
 }
 .size{
     width: 100vw;
-    height: 78vw;
+    height: 80vw;
 }
 .background{
     position: relative;
