@@ -1,6 +1,6 @@
 {
     "timeData":{
-        "pageTitle":"High Performance Computing Technologies",
+        "pageTitle":"High-Performance Computing Technologies",
         "timeout":30000,
         "quitout":10000,
         "message":{
@@ -71,7 +71,7 @@
                 }
             },
             {
-                "video":"data/videos/oceans.mp4",
+                "video":"data/videos/QC_1-16-20_FNL.mp4",
                 "captions":[
                     {"file": "data/captions/Oceans_eng.vtt",
                      "label":"English",
@@ -106,7 +106,7 @@
     
     "rd100": {
         "body":"R&D World magazine created the annual R&D 100 Awards in 1963 to recognize the top 100 product and technology innovations of each year.  179 Los Alamos R&D projects won the prestigious award between 1978 and 2019 alone.  Learn more about some of LANL's R&D 100 Award entries and winners for innovation in computing.",
-        "qr":{
+         "qr":{
             "img":"data/rd100/bsm-lanl-rd100-qr-code-20220128.png",
             "text": "Scan QR code to see more R&D100 covers."
         },
@@ -129,26 +129,212 @@
         ],
         "hardware":[
             {
-                "img":"data/rd100/R&D100icon-hardware.jpg",
-                 "tubie":{
-                    "body":"Can you think once considered?"
+                "img":"data/rd100/AtomicArmor.jpg",
+                "tubie":{
+                    "body":"The diamond-hard, flexible 2-D coating shields sensitive materials and devices from harsh environments while extending a device’s lifetime and maximizing its functionality. Atomic Armor can be coated on solid surfaces of any shape or material. The Materials by Design approach for the one-atom-thick tunable coating enables it to be customized for many applications, including selective permeability.\n\nNathan Moody and Hisato Yamaguchi led the team of Fangze Liu, Enrique Batista, Gaoxue Wang, Ping Yang, Vitaly Pavlenko, Philip Fernandes and Jeffrey DeFazio (Photonis Scientific, Inc).\n\nIn addition to the R&D 100 Award, Atomic Armor won a Gold Medal in the Market Disruptor-Products Special Recognition Category. This award is designed to highlight any product that has changed the game in any industry."
                 }
+            },
+	    {
+                "img":"data/rd100/Rad-Hard.jpg",
+                "tubie":{
+                    "body":"The lightweight, low-cost single board computer has radiation-hardened and mechanically-hardened electronics for satellites and other space applications. It is smaller and uses less power than any other space-grade computer currently available. Industry standard MicroTelecommunication Computing Architecture expands compatibility and interoperability. The invention leverages the Lab’s more than 50 years designing instruments for satellites and deep space missions.\n\nRobert Merl and Paul Graham led the team of Zachary Baker, Justin Tripp, John Michel and Richard Dutch."
+                }
+            },
+	    {
+                "img":"data/rd100/2007-CameraOnAChip.jpg"
+            },
+	    {
+                "img":"data/rd100/2006-ReLocATE.jpg"
             }
         ],
         "networking":[
             {
-                "img":"data/rd100/R&D100icon-networking.jpg",
+                "img":"data/rd100/UCX.jpg",
                 "tubie":{
-                    "body":"Can you think once considered?"
+                    "body":"As supercomputers move towards exascale—a quintillion calculations per second—they incorporate a variety of hardware and processing systems. All of the elements in these systems must communicate harmoniously to operate efficiently. UCX is an open-source software for high-performance computers that allows diverse hardware systems and architectures to communicate by creating common interface definitions.\n\nLos Alamos led the joint entry with Advanced Micro Devices, Argonne National Laboratory, Arm Ltd, Mellanox Technologies, NVIDIA, Stony Brook University, Oak Ridge National Laboratory, and Rice University. Stephen Poole directed the team of Jeffery Kuehn and Howard Pritchard and collaborators from Advanced Micro Devices, ANL, Arm Ltd, Mellanox Technologies, NVIDIA, Stony Brook University, ORNL, and Rice University."
                 }
+            },
+	    {
+                "img":"data/rd100/Pathscan.jpg",
+                "tubie":{
+                    "body":"PathScan provides security analytics for detecting computer network attacks. Traditional computer network security tools, which search for malware or network signatures, insufficiently protect from expensive data breaches. Traditional defense mechanisms 'perimeter controls and end-point antivirus protection' cannot keep pace with these increasingly innovative and sophisticated adversaries.\n\nRather than detecting something that 'looks' like a cyberthreat, PathScan searches for anomalous communications behavior within the network. The invention performs a statistical analysis of abnormal behavior across a network and identifies the lateral, reconnaissance and data staging behaviors of attackers.\n\nErnst & Young submitted PathScan, a joint entry with the Lab, based on technology licensed from the Lab. Michael Fisk, the Lab’s Chief Information Officer, led the Los Alamos team of Curtis Storlie of Statistical Sciences, Alexander D. Kent of the Intelligence and Emerging Threats Program Office and Melissa Turcotte of Advanced Research in Cyber Systems. Ernst & Young inventors include Joshua Neil, Curt Hash, Ben Uphoff, Alexander Brugh, Matt Morgan and Joseph Sexton"
+                }
+            },
+	    {
+                "img":"data/rd100/MarFS.jpg",
+                "tubie":{
+                    "body":"MarFS is a thin software layer that makes the technical advances generated by cloud-based storage available to classical POSIX use cases. The acronym 'MarFS' is a combination of the word mar (Spanish for 'sea,' alluding to the data lake) and File System. MarFS was written specifically to leverage cloud storage technology for high-performance parallel cold storage. The software maps directories and files in legacy systems, including those used by companies that handle vast amounts of data, to cloud-based object storage. MarFS is so flexible that it can adapt to new storage technologies as they are developed.\n\nGary Grider of the High Performance Computing-Division Office (HPC-DO) led the team of Kyle E. Lamb, David Bonnie, and Hsing Bung Chen of High Performance Computing-Design, Christopher Hoffman of High Performance Computing-Systems, Christopher DeJager, Jeff Inman, and Alfred Torrez of High Performance Computing Environments and Brett Kettering (HPC-DO.)"
+                }
+            },
+	    {
+                "img":"data/rd100/2006-PixelVision.jpg"
+            },
+	    {
+                "img":"data/rd100/2006-InfiniBand.jpg"
+            },
+	    {
+                "img":"data/rd100/2004-10gig_poster.jpg"
+            },
+	    {
+                "img":"data/rd100/2006-NARQ.jpg"
             }
         ],
         "software":[
-            {
-                "img":"data/rd100/R&D100icon-software.jpg",
+	    {
+                "img":"data/rd100/DeltaFS.jpg",
                 "tubie":{
-                    "body":"What other limited resources can be reused rather than discarded?"
+                    "body":"The DeltaFS open-source distributed file system for massively parallel applications creates, updates, and manages extreme numbers of files, alleviating the metadata bottleneck and accelerating highly selective queries. DeltaFS creates billions of files per second and does not require any additional compute resources or post-processing to create its data index. The performance and scalability capabilities that DeltaFS introduces are critical for storing and accessing data in the era of exascale computing.\nLos Alamos led the joint entry with Carnegie Mellon University. Bradley Settlemyer directed the team of Gary Grider and collaborators from Carnegie Mellon University."
                 }
+            },
+	    {
+                "img":"data/rd100/FEARCE.jpg",
+                "tubie":{
+                    "body":"The FEARCE software models engine motion, the motion of parts and their influence on the gases, multiphase injection of sprays and fuel droplets, the turbulent mixing of fuel and air, and subsequent chemical reactions in combustion engines. This modeling helps enable the design of engines for higher fuel efficiency and lower harmful emission. FEARCE models an engine’s operating properties and ranges that can’t be addressed readily with experiments. The software also enables designers to develop and optimize engines to run on alternative fuels, such as biofuels, which may require different operating conditions than those required for conventional fuels.\n\nDavid Carrington leads the team with Jiajia Waters."
+                }
+            },
+	    {
+                "img":"data/rd100/SCS.jpg",
+                "tubie":{
+                    "body":"Electric power transmission networks are critical for modern societies, but these networks are vulnerable to threats from extreme events. The Severe Contingency Solver open-source software analyzes severely damaged electric power networks that have hundreds to thousands of damaged components. The software removes the need for human intervention when assessing how damage from extreme events will restrict power delivery from utility grids.\n\nCarleton Coffrin led the team of James Arnold, Scott Backhaus, Russell Bent, David Fobes, Kaarthik Sundar, and Byron Tasseff."
+                }
+            },
+	    {
+                "img":"data/rd100/SimCCS.jpg",
+                "tubie":{
+                    "body":"The open-source software optimizes the design of carbon dioxide (CO2) capture, transport, and storage infrastructure while reducing industry’s carbon footprint and enhancing carbon tax credits and oil production. The fully integrated, end-to-end software package accounts for geographic and social constraints to geolocate pipelines in the real world. Industry, government, and stakeholders could use the software to design cost-effective pipeline networks linking CO2 sources (such as power plants) with sites where CO2 can be stored in deep saline aquifers or reused to increase oil and gas production.\nLos Alamos led the joint entry with Indiana University and Montana State University. Richard Middleton directed the team of Bailian Chen, Dylan Harp, Brendan Hoover, Rajesh Pawar, Philip Stauffer, and Hari Viswanathan plus collaborators from Indiana University and Montana State University.\nIn addition to the R&D 100 Award, SimCCS2.0 won a Silver Medal in the Corporate Social Responsibility Special Recognition Category. This award honors organizational efforts to be a greater corporate member of society, from a local to global level."
+                }
+            },
+	    {
+                "img":"data/rd100/RetroRx.jpg",
+                "tubie":{
+                    "body":"Rapid, easy tools for responding to outbreaks and re-emergence events uses web-based information to assess infectious disease outbreaks and then provides visual analytics and actionable information to mitigate them and protect the population. The analytic tools require minimal effort and expertise and can be used for research, decision-making, analysis, forecasting, and training and education.\nAlina Deshpande (Biosecurity and Public Health, B-10) led the team of Geoffrey Fairchild, Derek Aberle, William Rosenberger, Ashlynn Daughton, Nidhi Parikh, Antonietta Lillo, Nileena Velappan, Attelia Hollander, Emily Alipio Lyon, Forrest Altherr, Maneesha Chitanvis, Lauren Castro, Reid Priedhorsky, Grace Vuyisich, Eric Generous, Kristen Margevicius, Kirsten McCabe, and collaborators from University of New Mexico, University of Virginia, University of California, Santa Barbara, and Specifica Inc.\nIn addition to being an award finalist, RetroRx won the Gold Medal in the Corporate Social Responsibility Special Recognition Category. This award honors organizational efforts to be a greater corporate member of society, from a local to global level."
+                }
+            },
+	    {
+                "img":"data/rd100/Charliecloud.jpg",
+                "tubie":{
+                    "body":"Charliecloud enables software containers - packages of custom code, software or software environments - on high performance computers. The invention achieves portability, consistency, usability and security in 1,000 lines of open-source code. It runs on existing high performance computing systems with zero configuration, servers or extra processes.\nReid Priedhorsky and Tim Randles led the team of Michael Jennings, J. Lowell Wofford, and Jordan Ogas of Los Alamos and collaborators from the University of Bonn and Wellcome Trust Sanger Institute."
+                }
+            },
+	    {
+                "img":"data/rd100/GUFI.jpg",
+                "tubie":{
+                    "body":"The Grand Unified File Index is the fastest software for searching metadata at the scale used by supercomputer and enterprise datacenters. This open-source software allows simultaneous secure queries of ultrascale metadata by multiple users and system administrators. Users can search billions of files in the file system trees and receive query results in seconds, without sacrificing the performance of the file system itself or impacting security.\n\nGary Grider led the team of David Bonnie, Jeff Inman, Dominic Manno and Wendy Poole.\n\nIn addition to the R&D 100 Award, GUFI won an award in the Market Disruptor-Products category. This award is designed to highlight any product that has changed the game in any industry."
+                }
+            },
+	    {
+                "img":"data/rd100/VideoMagic.jpg",
+                "tubie":{
+                    "body":"ViDeoMAgic analyzes digital video of a vibrating structure to extract structural-dynamics response information in high spatial resolution. Unsupervised machine learning algorithms then analyze those dynamic responses and extract the structure’s dynamics properties (resonant frequencies, damping & mode shapes) from the video data That data, in turn, can be used to assess the system’s health (with respect to damage and defects). High fidelity, in situ damage detection of civil, mechanical, and aerospace structures enables identification and remedy of incipient damage before it reaches the critical level.\n\nYongchao Yang led the team of David Mascareñas, Charles Dorn, Charles Farrar and Garrett Kenyon."
+                }
+            },
+	    {
+                "img":"data/rd100/Edge.jpg",
+                "tubie":{
+                    "body":"Empowering the Development of Genomics Expertise (EDGE) Bioinformatics 'democratizes' the genomics revolution by enabling any researcher or physician to analyze complex genomics data quickly and easily. The intuitive, web-based platform, which can be applied to a wide variety of genome-sequencing samples, addresses the problem of handling big data, without requiring users to possess bioinformatics expertise. EDGE brings the power of complex, big-data sequencing analysis to smaller research laboratories, including clinics, hospitals, universities and remote sites.\n\nLos Alamos submitted EDGE as a joint entry with the Naval Medical Research Center. Patrick Chain led the Los Alamos team of Po-E Li, Chien-Chi Lo, Karen Davenport, Yan Xu, Pavel Senin, and Migun Shakya. Collaborators at the Naval Medical Center include Theron Hamilton, Kimberly Bishop-Lilly, Joseph Anderson, Logan Voegtly and Casandra Philipson."
+                }
+            },
+	    {
+                "img":"data/rd100/NRAP.png",
+                "tubie":{
+                    "body":"National Risk Assessment Partnership (NRAP) Toolset is a set of 10 science-based computational tools developed to assess long-term environmental risks of geologic carbon dioxide (CO2) storage sites. This novel toolset is the only product suite that allows rapid, site-specific quantitative and probabilistic risk performance evaluation of the whole geological CO2 storage system - from storage reservoir to overlying groundwater and the atmosphere. These tools support industry and regulatory stakeholders as they design and implement safe and effective geological CO2 storage projects to sequester large volumes of human-made CO2.\n\nThe National Energy Technology Laboratory submitted the joint entry with Los Alamos National Laboratory, Lawrence Berkeley National Laboratory, Lawrence Livermore National Laboratory and Pacific Northwest National Laboratory. Rajesh Pawar led the Los Alamos team of Chris Bradley, Elizabeth Keating, Phil Stauffer, Shaoping Chu, Dylan Harp, Richard Lee, Bill Carey and George Guthrie."
+                }
+            },
+	    {
+                "img":"data/rd100/Shields.jpg",
+                "tubie":{
+                    "body":"Space Hazards Induced near Earth by Large, Dynamic Storms (SHIELDS) protects communication, navigation and scientific satellites orbiting Earth’s magnetosphere by predicting hazards resulting from solar storms that cause space weather. Space weather could damage onboard electronics in satellites and thus interrupt radio and television reception, disrupt the operation of cellphones and GPS, shut down the Internet and endanger military and civilian operations. Researchers developed the software platform to understand, model and predict this weather about an hour before it hits satellites, enabling instruments to be placed in a safe mode.\n\nLos Alamos submitted SHIELDS as a joint entry with the University of Michigan. Vania Jordanova led the Los Alamos team of Gian Luca Delzanno, Humberto Godinez, J. David Moulton, Daniil Svyatsky, Michael Henderson, Steve Morley, Jesse Woodroffe, Thiago Brito, Christopher Jeffery, Alin-Daniel Panaitescu, Collin Meierbachtol, Earl Lawrence and Louis Vernon. University of Michigan collaborators included Gabor Toth, Daniel Welling, Yuxi Chen and John Haiducek."
+                }
+            },
+	    {
+                "img":"data/rd100/WikiEpiCast.jpg",
+                "tubie":{
+                    "body":"WikiEpiCast framework combines mathematical models with clinical surveillance data and readership traffic from Wikipedia to forecast the spread and severity of diseases around the world. Successfully demonstrated on forecasting influenza in the United States, WikiEpiCast’s framework can be applied to any communicable disease. The tools being developed within WikiEpiCast present probabilistic forecasts, similar to how nightly newscasts present weather updates. As a result, such forecasts are easy for non-scientist decision makers to digest and in turn make informed decisions that could save lives and potentially mitigate the potential impacts of an epidemic or pandemic of a burgeoning communicable disease.\n\nLos Alamos submitted the WikiEpiCast entry. Sara Del Valle led the team of Nicholas Generous, Geoffrey Fairchild, Kyle Hickmann, Reid Priedhorsky and David Osthus."
+                }
+            },
+	    {
+                "img":"data/rd100/EchoSoftware.png",
+                "tubie":{
+                    "body":"Echo Software revolutionizes how data are wrangled, managed, and analyzed. Echo is a MATLAB-based, object-oriented approach to data analysis. It streamlines complex workflows while eliminating opportunities for human error. The scripted data analysis environment replaces conventional data types, such as arrays of numbers and strings, with objects that contain data, metadata, and provenance. The software produces self-describing data, making it simpler to manage data workflows and develop reusable code. Echo makes it easy for analysts to explore and visualize records, enabling them to access and search for specific information in mountains of collected data.\n\nLos Alamos submitted the entry. Stuart Taylor led the team of Dustin Harvey, Joel Runnels, Colin Haynes, John Heit, and Eric Flynn."
+                }
+            },
+	    {
+                "img":"data/rd100/CCSI.jpg",
+                "tubie":{
+                    "body":"Carbon Capture Simulation Initiative (CCSI) Toolset is a suite of computational tools and models that supports and accelerates the development, scale-up and commercialization of carbon dioxide capture technology to reduce domestic and global carbon dioxide emissions.\n\nThe invention addresses key industrial challenges, including developing a baseline for the uncertainty in simulation results. It is the only suite of computational tools and models specifically tailored to help maximize learning during the scale-up process in order to reduce risk.\n\nNational Energy Technology Laboratory submitted the joint entry with Lawrence Berkeley National Laboratory, Lawrence Livermore National Laboratory, Los Alamos National Laboratory, Pacific Northwest National Laboratory, Princeton University, West Virginia University, University of Texas at Austin, Carnegie Mellon University, and Boston University. Joel Kress of Physics and Chemistry of Materials led the Los Alamos team, which included Jim Gattiker, Sham Bhat and Peter Marcy of Statistical Sciences; Brett Okhuysen of Systems Design and Analysis; David DeCroix of Intelligence and Emerging Threats Program Office and Susan Sprake of Richard P. Feynman Center for Innovation."
+                }
+            },
+	    {
+                "img":"data/rd100/EntropyEngine.jpg",
+                "tubie":{
+                    "body":"Entropy Engine is a random number generator that addresses a key fundamental flaw in modern crypto systems-predictability. The invention strengthens the foundation of computer security by producing an inexhaustible supply of pure random numbers at speeds of 200 million bits per second. Entropy Engine uses the unique properties of quantum mechanics to generate true entropy (random numbers) in a way that makes it immune from all external influences.\n\nLos Alamos submitted Entropy Engine as a joint entry with Whitewood Encryption Systems based on technology that Whitewood licensed from the Lab. Raymond Newell of Applied Modern Physics led the Los Alamos team of Glen Peterson of Applied Modern Physics and David Guenther of Space Electronics and Signal Processing, with collaborators Richard Moulds of Whitewood Encryption Systems, Jane E. Nordholt and Richard Hughes (retired Laboratory employees), Robert Van Rooyen of Summit Scientific Inc. and Alex Rosiewicz of A2E Partners, Inc."
+                }
+            },
+	    {
+                "img":"data/rd100/PulMo.jpg",
+                "tubie":{
+                    "body":"Pulmonary Lung Model (PuLMo) is a miniature, tissue-engineered lung developed to revolutionize the screening of new drugs or toxic agents. Current screening methods may not accurately predict response in humans. PuLMo has the potential to enable screening of new drugs more effectively by improving the reliability of pre-clinical testing and saving time, money and lives. PuLMo also could be used as a platform to study the flow dynamics of particles inside a lung for applications in drug delivery and particle/pathogen deposition studies.\n\nRashi S. Iyer of Information Systems and Modeling led the team of Pulak Nath of Applied Modern Physics; Jennifer Foster Harris, Ayesha Arefin, Yulin Shou, Kirill A. Balatsky and Jen-Huang Huang of Biosecurity and Public Health; Srinivas Iyer of Bioscience Division Office; Jan Henrik Sandin of Instrumentation and Controls; David Platts and John Avery William Neal of Applied Modern Physics; Timothy Charles Sanchez of Bioenergy and Biome Sciences and Miranda Huang Intrator of Richard Feynman Center for Innovation."
+                }
+            },
+	    {
+                "img":"data/rd100/Vera.jpg",
+                "tubie":{
+                    "body":"Virtual Environment for Reactor Applications (VERA) provides coupled, high-fidelity software capabilities to examine light water reactors’ operational and safety performance-defining phenomena at levels of detail previously unattainable.  The multiphysics simulation toolkit covers the range of physics necessary to predict the performance of currently operating commercial nuclear power reactors. This capability enables users to study, mitigate and manage problems identified by the industry to a level of understanding that is not available through other toolsets. VERA supports options for both high performance computing and industry-sized computing clusters in a manner that is accessible and easily understood for most users.\n\nOak Ridge National Laboratory submitted VERA, a joint entry with Core Physics, Electric Power Research Institute, Idaho National Laboratory, Los Alamos National Laboratory, Sandia National Laboratories, North Carolina State University, University of Michigan and Westinghouse Electric Company. Christopher Stanek of Materials Science in Radiation and Dynamics Extremes led the Los Alamos work."
+                }
+            },
+	    {
+                "img":"data/rd100/HOSS.jpg",
+                "tubie":{
+                    "body":"Hybrid Optimization Software Suite (HOSS) provides a simulation platform to conduct 'virtual experiments' that help model and analyze materials phenomena that cannot be readily produced or studied in a laboratory or real-world setting. It is the first to combine finite-element and discrete-element methods with an all-regime computational fluid dynamics solver to generate accurate simulations of complex multi-physics problems, such as material deformation, fracture and failure analyses.\n\nEarl E. Knight of Los Alamos’ Geophysics group led the team of Esteban Rougier and Zhou Lei of Geophysics and Antonio Munjiza of TetCognition LTD."
+                }
+            },
+	    {
+                "img":"data/rd100/SHMTools.jpg",
+                "tubie":{
+                    "body":"Structural Health Monitoring (SHM) is quickly becoming an essential tool for improving the safety - and efficient maintenance - of critical structures such as aircraft, pipelines, bridges and dams, buildings and stadiums, pressure vessels, ships, power plants, and mechanical structures such as amusement park rides and wind turbines. Los Alamos engineers have developed SHMTools, software that provides more than 100 advanced algorithms that can be assembled to quickly prototype and evaluate damage-detection processes. It is a virtual toolbox that can be used to detect damage in various types of structures, from aircraft and buildings to bridges and mechanical infrastructure.\n\nDustin Harvey, of the Laboratory’s Applied Engineering Technology, and his team of R&D engineers, including Professor Michael Todd of the University of California-San Diego, developed SHMTools."
+                }
+            },
+	    {
+                "img":"data/rd100/2009-TeraOpsSoftwareRadio.jpg"
+            },
+	    {
+                "img":"data/rd100/2007-RaveGrid.jpg"
+            },
+	    {
+                "img":"data/rd100/2007-EpiCast.jpg"
+            },
+	    {
+                "img":"data/rd100/WU_mpiblast_poster.jpg"
+            },
+	    {
+                "img":"data/rd100/2006-FileScrub.jpg"
+            },
+	    {
+                "img":"data/rd100/2006-ParaView.jpg"
+            },
+	    {
+                "img":"data/rd100/2006-Trident.jpg"
+            },
+	    {
+                "img":"data/rd100/2005-VICTOR.jpg"
+            },
+	    {
+                "img":"data/rd100/2005-ScenarioLibraryVisualizer.jpg"
+            },
+	    {
+                "img":"data/rd100/2005-NetworkExpress.jpg"
+            },
+	    {
+                "img":"data/rd100/2005-LUSTRE-poster.jpg"
+            },
+	    {
+                "img":"data/rd100/2005-Clustermatic_poster.jpg"
+            },
+	    {
+                "img":"data/rd100/2005-cartablanca-poster.jpg"
+            },
+	    {
+                "img":"data/rd100/2003-Resolve.jpg"
             }
         ]
     }

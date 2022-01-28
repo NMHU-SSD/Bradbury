@@ -82,12 +82,13 @@ var rdComp= {
             <p class="col rd-text-box body-font content-body align-self-center half-shadow">{{ body }}</p>
             
         </div>
-        <div class="row mt-0 mb-5">
-            <div class="col-5"></div>
-            <img :src="qr.img" class="col-2">
-            <div class="col-5 p-5">
-                <p class="body-font content-body half-shadow">{{ qr.text }}</p>
+        <div class="row mt-0 mb-5 align-items-center">
+            <div class="col-7"></div>
+            <div class="col-3 p-2">
+                <p class="body-font p-5 content-body half-shadow">{{ qr.text }}</p>
             </div>
+            <div class="col-2"><img :src="qr.img" ></div>
+            
             
             
         </div>
