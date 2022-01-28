@@ -121,7 +121,11 @@ main{
 p,h1,h2,h3{
     white-space: pre-line;
 }
-.size{
+#top.size{
+    width: 100vw;
+    height: 80vw;
+}
+#rd.size {
     width: 100vw;
     height: 79vw;
 }
