@@ -1,6 +1,6 @@
 var rdComp= {
     name: "rd-comp",
-    props: ['id', 'covers', 'body'],
+    props: ['id', 'covers', 'body', 'qr'],
     data:function(){
         return{
             slideImages: null,
@@ -77,12 +77,21 @@ var rdComp= {
     template:
     `<div :id="id" class="background size red">
         <div class="rd-dark"/>
-        <div class="row sum-row">
-            <img src="assets/customs/R&D100logo-gold.svg" class="col-5 col-sm-3 col-md-4">
+        <div class="row sum-row mb-0">
+            <img src="assets/customs/R&D100logo-gold.svg" class="col-5 col-sm-3 col-md-4" >
             <p class="col rd-text-box body-font content-body align-self-center half-shadow">{{ body }}</p>
             
         </div>
-        <div class="cover-holder row no-gutters pl-2">
+        <div class="row mt-0 mb-5">
+            <div class="col-5"></div>
+            <img :src="qr.img" class="col-2">
+            <div class="col-5 p-5">
+                <p class="body-font content-body half-shadow">{{ qr.text }}</p>
+            </div>
+            
+            
+        </div>
+        <div class="cover-holder row no-gutters pl-2 mt-3">
             <template v-for="(cover, index) in covers">
                 <div class="col-4 cover">
                     <img :src="cover.img" class="cover-img" @click="setcover(cover)">

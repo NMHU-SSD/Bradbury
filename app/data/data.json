@@ -106,6 +106,10 @@
     
     "rd100": {
         "body":"R&D World magazine created the annual R&D 100 Awards in 1963 to recognize the top 100 product and technology innovations of each year.  179 Los Alamos R&D projects won the prestigious award between 1978 and 2019 alone.  Learn more about some of LANL's R&D 100 Award entries and winners for innovation in computing.",
+        "qr":{
+            "img":"data/rd100/bsm-lanl-rd100-qr-code-20220128.png",
+            "text": "Scan QR code to see more R&D100 covers."
+        },
         "covers":[
             {
                     "img":"data/rd100/R&D100icon-hardware.jpg",

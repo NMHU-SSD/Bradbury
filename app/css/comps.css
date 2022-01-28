@@ -95,7 +95,7 @@
 }
 /***************** RD 100 *********/
 .sum-row{
-    height: 55%;
+    height: 40%;
     width: 100%;
     margin: 0;
 }
@@ -103,7 +103,7 @@
     background: url(../assets/customs/R&D100logo-black.svg)no-repeat;
     object-fit: contain;
     background-position: right bottom;
-    height: 95%;
+    height: 90%;
     width: 90%;
     position: absolute;
     right: 2%;
@@ -111,7 +111,7 @@
 }
 .rd-logo{
     width:35vw;
-    height:95%;
+    height:90%;
     padding:2% 0 0 5%;
     margin-right: 0;
 }
@@ -121,7 +121,7 @@
     padding-right: 10%;
 }
 .cover-holder{
-    height: 37%;
+    height: 35%;
     width: 90%;
     margin: 0 auto;
 }
