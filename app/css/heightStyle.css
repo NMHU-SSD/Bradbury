@@ -25,38 +25,38 @@
 
 /**********General Basics***********/
 #titleBar{
-    max-height: calc(3840px * .075);
+    height: 2% 5% !important;
+    padding: 0.5em;
+    font-size: calc(8px + 4vw);
 }
 #carouselComputing{
-    margin-bottom: calc(3840px * .025);
+    height: 18% !important;
+    margin-bottom: calc(3840px * .005);
+}
+#carouselHistory{
+    height: 18% !important;
+    margin-bottom: calc(3840px * .005);
 }
 #timeline{
+    height: 100% !important;
     background-color: black;
     margin: 0;
+}
+#timeline-holder{
+    height: 25% !important;
 }
 
 /********* 4K Monitor **********/
 @media only screen and (min-width:2159px){
-    #titleBar{
-        height: 7.5%;
-        font-size: calc(28px + 2.5vw);
+    #app{
+        height: 3840px !important;
+        width: 100%  !important;
+        overflow: hidden  !important;
     }
-    #carouselComputing{
-        height: 20%;
-    }
-    #carouselHistory{
-        height: 20%;
-    }
-    #timeline{
-        height: 50%;
-    }
+   }
 }
 @media only screen and (min-width:2159px){
-    #app{
-        height: 3840px;
-        width: 100%;
-        overflow: hidden;
-    }
+    
     .side-widget{
         margin-left: 30%;
     }
@@ -64,22 +64,7 @@
 
 /********* Phone Devices **********/
 @media only screen and (max-width:576px){
-    #titleBar{
-        height: 10vh;
-        padding: 0.5em;
-        font-size: 16px;
-    }
-    #carousel-carouselComputing, #carouselComputing{
-        height: 100vh;
-        max-height: 160vw;
-    }
-    #carousel-carouselHistory, #carouselHistory{
-        height: 100vh;
-        max-height: 160vw;
-    }
-    #timeline{
-        height: 100vh;
-    }
+    
     body,#app, main{
         overflow-x: hidden;
     }
@@ -181,12 +166,7 @@
 
 /********* Tablet/Computer Devices**********/
 @media only screen and (min-width:576px) and (max-width:2160px){
-    #titleBar{
-        height: 7.5vh;
-        padding: 0.2em;
-        font-size: 4em;
-        max-height: 1000px;
-    }
+    
     #carousel-carouselComputing, #carouselComputing{
         height: 22vh;
     }
@@ -195,6 +175,7 @@
     }
     #timeline{
         height: 50vh;
+        overflow: hidden !important;
     }
     body,#app,main{
         height: 3840px;
@@ -202,9 +183,6 @@
     }
 }
 @media only screen and (min-width:576px) and (max-width:2160px){
-    .title-header h1{
-        font-size: 5vw;
-    }
     .tubie-container-right{
         height: 14vw;
         width: 32vw;
@@ -223,14 +201,12 @@
         height: calc(100% - 6em);
     }
     .vid-col{
-        height: 70%;
+        height: 50%;
     }
     .timeline-banner{
-        height: 15%;
+        height: auto;
     }
-    .timeline-holder{
-        height: 85%;
-    }
+   
     .tubie-container-left{
         height: 15vw;
         width: 30%;

@@ -108,7 +108,7 @@ var womanComputing = {
     },
     template:
     `
-    <div :id="id">
+    <div :id="id" >
     <div v-show="splash & tubie.act_tutorial" class="tubie-splash-right tubie-splash" @focusout="changeLine()">
         <tubie-overlay :id="'tubie-'+id" spec="def" :display="tutorial" />
     </div>

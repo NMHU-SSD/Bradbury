@@ -34,14 +34,14 @@ var app = new Vue({
         
         //jump to section
         window.scrollTo({
-            top: 3500, // scroll so that the element is at the top of the view
+            top: 1800, // scroll so that the element is at the top of the view
             behavior: 'smooth' // smooth scroll
         })
         
         //listener for scrollup
         document.querySelector('#scrollUp').addEventListener('click', function(){
             window.scrollTo({
-                top: 3500, // scroll so that the element is at the top of the view
+                top: 1800, // scroll so that the element is at the top of the view
                 behavior: 'smooth' // smooth scroll
             })
         })

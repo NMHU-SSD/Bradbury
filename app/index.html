@@ -1,35 +1,37 @@
 <!doctype html>
 <html lang="en">
-  <head>
+<head>
     <!-- Required meta tags -->
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <!--Bootstrap---> 
-        <link href="libraries/bootstrap-4.5.2-dist/css/bootstrap.min.css" rel="stylesheet">
-        <!---videoJS--->
-        <link href="libraries/videojs/video-js.css" rel="stylesheet">
-        <link href="libraries/videojs-overlay/videojs-overlay.css" rel="stylesheet">
-        <!-- CSS --->
-        <link rel="stylesheet" href="css/general.css">
-        <link rel="stylesheet" href="css/womenStyle.css">
-        <link rel="stylesheet" href="css/tubieStyle.css">
-        <link rel="stylesheet" href="css/modalStyle.css">
-        <link rel="stylesheet" href="css/heightStyle.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!--Bootstrap---> 
+    <link href="libraries/bootstrap-4.5.2-dist/css/bootstrap.min.css" rel="stylesheet">
+    <!---videoJS--->
+    <link href="libraries/videojs/video-js.css" rel="stylesheet">
+    <link href="libraries/videojs-overlay/videojs-overlay.css" rel="stylesheet">
+    <!-- CSS --->
+    <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/womenStyle.css">
+    <link rel="stylesheet" href="css/tubieStyle.css">
+    <link rel="stylesheet" href="css/modalStyle.css">
+    <link rel="stylesheet" href="css/heightStyle.css">
 
     <title>Women in Computing</title>
-  </head>
- 
-  <body>
-      
-      <div id="empty" class="text-center "><button id="scrollUp" ><span>^</span> SCROLL UP</button></div>
+</head>
+<body>
+    <div id="empty" class="text-center ">
+        <button id="scrollUp" ><span>^</span> SCROLL UP</button>
+    </div>
 
 	<div id="app">	
 		<main>
             <!-- Pop overs --->
             <modal-overlay :id="modalVideo" :countdown="timeData.videotimer" :ref="modalVideo" @stopvideo="videoModalClose()" @getnext="getNextVid($event)" @getprev="getPrevVid($event)"></modal-overlay>
             <modal-overlay :id="modalTimer" :countdown="timeData.quitout" :message="timeData.message" ref="timeModal"></modal-overlay> 
+            
+            
             <!--- Main Layout components---->
-            <div id="titleBar" class="title-header row">
+            <div id="titleBar" class="title-header">
                 <h1 class="title-font align-self-center">{{ timeData.pageTitle }}</h1>
             </div>
             <woman-computing :id="computeId" :ref="computeId" :slides="womenComputingData" :header="womenComputingData.header" :tubie="tubie"
