@@ -66,10 +66,15 @@
 
 /************** SlideShow Screen *******/
 .slideshow-container{
-    height: 30%;
+    height: 30vh !important;
     width: 100%;
     overflow: hidden;
     position: relative;
+    background-image: linear-gradient(
+        to left,
+        #4A6C6A 20%,
+        #bcd1bc
+    );
 }
 /******* Background images **/
 .splash-background{
@@ -78,17 +83,21 @@
         #4A6C6A 20%,
         #bcd1bc
     );
-    height: 30%;
-    padding-top: 5%;
-    padding-bottom: 5%;
-    overflow: hidden;
+    height: 100% !important;
+    margin-top:  5%;
+    margin-bottom: 5%;
+   
+    position: relative;
 }
 .splash-img{
-    height: auto;
+    height: 25vh !important;
     width: 100%;
     object-fit: cover;
     object-position: center;
     transition: .5s;
+     overflow: hidden;
+        position: relative;
+
 }
 /******* Title Circles ******/
 .splash-title-holder{
@@ -348,7 +357,7 @@
     overflow: hidden;
     position: relative;
     width: 100%;
-    height: 20% !important;
+    height: 100% !important;
     z-index: 10;
 }
 .timeline-holder iframe{

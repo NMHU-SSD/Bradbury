@@ -30,20 +30,18 @@
     font-size: calc(8px + 4vw);
 }
 #carouselComputing{
-    height: 18% !important;
-    margin-bottom: calc(3840px * .005);
+    height: 20% !important;
+    margin-bottom: 20px;
 }
 #carouselHistory{
-    height: 18% !important;
-    margin-bottom: calc(3840px * .005);
+    height: 20% !important;
+    margin-bottom: 20px;
 }
 #timeline{
-    height: 100% !important;
     background-color: black;
     margin: 0;
-}
-#timeline-holder{
-    height: 25% !important;
+    height: 30vh !important;
+    overflow: hidden;
 }
 
 /********* 4K Monitor **********/
@@ -66,13 +64,11 @@
 @media only screen and (max-width:576px){
     
     body,#app, main{
-        overflow-x: hidden;
+        overflow: hidden;
     }
 }
 @media only screen and (max-width:576px){
-    .row-full{
-        height: 60%;
-    }
+    
     .carousel-control-prev-icon,
     .carousel-control-next-icon{
         width: 100%;
@@ -82,7 +78,7 @@
         margin-top: 30vh;
     }
     .pic-holder{
-        height: 50%;
+        height: 100%;
     }
     .content-pad{
         padding-bottom: 30vw;
@@ -174,8 +170,13 @@
         height: 22vh;
     }
     #timeline{
-        height: 50vh;
-        overflow: hidden !important;
+        background-color: black;
+        margin: 0;
+        height: 50vh !important;
+        overflow: hidden;
+    }
+    #timeline-holder{
+        height: 40vh !important;
     }
     body,#app,main{
         height: 3840px;
